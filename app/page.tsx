@@ -112,7 +112,7 @@ export default function Home() {
                     body: "Bad solder joint, our fault. New cable on the way.",
                   },
                   {
-                    title: 'It's just old',
+                    title: "It's just old",
                     body: "Doesn't matter. The guarantee doesn't expire.",
                   },
                 ].map((item) => (
