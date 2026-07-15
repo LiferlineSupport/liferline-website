@@ -1,6 +1,6 @@
 # Liferline Cable Company — Website
 
-Next.js + Stripe e-commerce site for Hatch Patch Cables by Liferline Cable Company.
+Next.js + Stripe e-commerce site for Forever Cables by Liferline Cable Company.
 
 ## Stack
 
