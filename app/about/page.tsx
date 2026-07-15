@@ -46,12 +46,12 @@ export default function About() {
         </p>
 
         <h2 className="font-serif text-3xl text-cream pt-4">
-          The Hatch Patch
+          Forever Cables
         </h2>
 
         <p>
-          The first batch of cables we made were called "Hatch Patches" — named for the
-          workshop where they were built. We gave them to friends, handed them out at
+          The first batch of cables we made were called "Forever Cables" — built for
+          players who are done replacing cables. We gave them to friends, handed them out at
           local jams, and waited to see what happened.
         </p>
 

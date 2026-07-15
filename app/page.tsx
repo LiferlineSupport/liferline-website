@@ -10,7 +10,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-24 md:py-36">
           <div className="max-w-2xl">
             <p className="text-xs tracking-[0.3em] uppercase text-accent mb-6 font-semibold">
-              Hatch Patch Cables by Liferline
+              Forever Cables by Liferline
             </p>
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-cream leading-[1.05] mb-8">
               Built to last.{' '}
@@ -58,7 +58,7 @@ export default function Home() {
       {/* Products */}
       <section id="products" className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
         <div className="mb-12">
-          <h2 className="section-heading">Hatch Patch Cables</h2>
+          <h2 className="section-heading">Forever Cables</h2>
           <p className="section-subheading">
             Premium patch cables and instrument cables built to spec with Mogami wire and
             Neutrik connectors. Every one guaranteed for life.
