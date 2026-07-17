@@ -2,9 +2,12 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Support — Liferline Cable Company',
+  title: 'Support & Contact',
   description:
-    'Get help with your Liferline cables. File a lifetime guarantee claim, ask a question, or just say hello.',
+    'Get help with your Forever Cables by Liferline. File a lifetime guarantee claim, ask about custom cables, or just say hello.',
+  alternates: {
+    canonical: 'https://liferline.com/contact',
+  },
 }
 
 export default function Contact() {

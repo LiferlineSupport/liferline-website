@@ -18,6 +18,17 @@ export default function ProductCard({ product }: Props) {
     setLoading(true)
     setError(null)
 
+    if (typeof window !== 'undefined' && (window as any).plausible) {
+      ;(window as any).plausible('add_to_cart', {
+        props: {
+          product_name: product.name,
+          product_id: product.id,
+          price: (product.price / 100).toFixed(2),
+          variant: selectedVariant,
+        },
+      })
+    }
+
     try {
       const res = await fetch('/api/checkout', {
         method: 'POST',

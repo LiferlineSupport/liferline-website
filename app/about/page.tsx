@@ -2,9 +2,12 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Our Story — Liferline Cable Company',
+  title: 'Our Story',
   description:
-    'Hand-built boutique guitar cables made in the USA. The story behind Liferline and why we guarantee every cable for life.',
+    'How Liferline Cable Company started: hand-built boutique guitar cables made in the USA with Mogami wire and Neutrik connectors. Why we guarantee every Forever Cable for life.',
+  alternates: {
+    canonical: 'https://liferline.com/about',
+  },
 }
 
 export default function About() {

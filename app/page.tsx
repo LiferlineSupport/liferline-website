@@ -2,9 +2,73 @@ import Link from 'next/link'
 import { products } from '@/lib/products'
 import ProductCard from '@/components/ProductCard'
 
+function OrganizationJsonLd() {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Liferline Cable Company',
+    url: 'https://liferline.com',
+    description:
+      'Boutique guitar patch cables hand-soldered in the USA. Every cable backed by a lifetime guarantee.',
+    brand: {
+      '@type': 'Brand',
+      name: 'Forever Cables',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'support@liferline.com',
+      contactType: 'customer service',
+    },
+  }
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  )
+}
+
+function ProductListJsonLd() {
+  const items = products.map((p, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'Product',
+      name: p.name,
+      description: p.description,
+      brand: { '@type': 'Brand', name: 'Forever Cables' },
+      manufacturer: { '@type': 'Organization', name: 'Liferline Cable Company' },
+      offers: {
+        '@type': 'Offer',
+        price: (p.price / 100).toFixed(2),
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock',
+        url: 'https://liferline.com/#products',
+        seller: { '@type': 'Organization', name: 'Liferline Cable Company' },
+      },
+    },
+  }))
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Forever Cables',
+    numberOfItems: products.length,
+    itemListElement: items,
+  }
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  )
+}
+
 export default function Home() {
   return (
     <>
+      <OrganizationJsonLd />
+      <ProductListJsonLd />
+
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-border">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-24 md:py-36">
@@ -19,7 +83,7 @@ export default function Home() {
             </h1>
             <p className="text-lg text-muted leading-relaxed mb-10 max-w-xl">
               Every cable is hand-soldered in the USA using premium components. No shortcuts.
-              No outsourcing. And if it ever fails — for any reason — we replace it. No questions asked.
+              No outsourcing. And if it ever fails, for any reason, we replace it. No questions asked.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="#products" className="btn-primary text-center">
@@ -72,7 +136,7 @@ export default function Home() {
         </div>
 
         <p className="text-center text-xs text-muted mt-10">
-          Need something custom? <Link href="/contact" className="text-accent hover:underline">Contact us</Link> — we build to spec.
+          Need something custom? <Link href="/contact" className="text-accent hover:underline">Contact us</Link>, we build to spec.
         </p>
       </section>
 
@@ -89,7 +153,7 @@ export default function Home() {
               </h2>
               <p className="text-muted leading-relaxed mb-6">
                 We don't put expiration dates on our guarantees because we don't put limits
-                on our craftsmanship. Every cable is built to last decades — and if one
+                on our craftsmanship. Every cable is built to last decades, and if one
                 doesn't, that's on us.
               </p>
               <p className="text-muted leading-relaxed mb-8">
