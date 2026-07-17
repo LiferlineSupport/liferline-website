@@ -21,7 +21,7 @@ const faqItems = [
   },
   {
     q: 'How long does shipping take?',
-    a: "Shipping is free on every order. We ship USPS Priority Mail, so typically 2–3 business days within the USA. We only ship to the US right now.",
+    a: "Shipping is free on every order. We ship USPS Priority Mail, so typically 2 to 3 business days within the USA. We only ship to the US right now.",
   },
   {
     q: 'Can you build something custom?',
