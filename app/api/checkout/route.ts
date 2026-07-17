@@ -61,6 +61,7 @@ export async function POST(req: NextRequest) {
         variantLabel: variantLabel ?? '',
         quantity: String(quantity),
       },
+      allow_promotion_codes: true,
       success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/cancel`,
       billing_address_collection: 'required',
