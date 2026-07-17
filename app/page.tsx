@@ -43,7 +43,7 @@ function ProductListJsonLd() {
         price: (p.price / 100).toFixed(2),
         priceCurrency: 'USD',
         availability: 'https://schema.org/InStock',
-        url: 'https://liferline.com/#products',
+        url: `https://liferline.com/products/${p.slug}`,
         seller: { '@type': 'Organization', name: 'Hatch Patch Cables' },
       },
     },

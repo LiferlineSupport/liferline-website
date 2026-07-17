@@ -105,6 +105,7 @@ export default function ProductCard({ product }: Props) {
                 <button
                   key={v.value}
                   onClick={() => setSelectedVariant(v.value)}
+                  aria-pressed={selectedVariant === v.value}
                   className={`px-3 py-1.5 text-xs tracking-wide border transition-colors duration-150 ${
                     selectedVariant === v.value
                       ? 'border-accent text-accent bg-accent/10'
