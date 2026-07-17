@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { Suspense } from 'react'
 import PurchaseEvent from './PurchaseEvent'
 
 export const metadata: Metadata = {
@@ -10,7 +11,9 @@ export const metadata: Metadata = {
 export default function Success() {
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-32 text-center">
-      <PurchaseEvent />
+      <Suspense>
+        <PurchaseEvent />
+      </Suspense>
 
       <div className="w-16 h-16 bg-accent/10 border border-accent/30 rounded-full flex items-center justify-center mx-auto mb-8">
         <svg className="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">

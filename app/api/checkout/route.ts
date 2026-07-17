@@ -11,7 +11,9 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const { productId, variant } = await req.json()
+    const { productId, variant, quantity: rawQty } = await req.json()
+
+    const quantity = Math.min(Math.max(Math.floor(Number(rawQty) || 1), 1), 10)
 
     const product = products.find((p) => p.id === productId)
     if (!product) {
@@ -36,7 +38,7 @@ export async function POST(req: NextRequest) {
       line_items: [
         {
           price: priceId,
-          quantity: 1,
+          quantity,
         },
       ],
       shipping_options: [
@@ -57,6 +59,7 @@ export async function POST(req: NextRequest) {
         productName: product.name,
         variant: variant ?? '',
         variantLabel: variantLabel ?? '',
+        quantity: String(quantity),
       },
       success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/cancel`,
