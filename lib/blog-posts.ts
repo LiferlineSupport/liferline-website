@@ -323,6 +323,100 @@ export const blogPosts: BlogPost[] = [
     ],
     cta: 'Every Forever Cable is handmade to order. Need help figuring out the right lengths for your setup? Get in touch.',
   },
+  {
+    slug: 'how-guitar-cables-affect-tone',
+    title: 'How Guitar Cables Affect Your Tone: A Guitarist\'s Guide to Specs That Actually Matter',
+    metaTitle: 'How Guitar Cables Affect Your Tone: A Guitarist\'s Guide to Specs That Actually Matter',
+    metaDescription: 'Guitar cables do affect your tone. Capacitance, shielding, and conductor quality all shape your signal. Here is what actually matters and what is just marketing.',
+    keywords: ['do guitar cables affect tone', 'guitar cable specs', 'guitar cable capacitance', 'best guitar cable', 'guitar cable shielding'],
+    publishedAt: '2026-07-17',
+    excerpt: 'Guitar cables do affect your tone. Capacitance, shielding, and conductor quality all shape your signal. Here is what actually matters and what is just marketing.',
+    category: 'Gear',
+    tags: ['guitar cables', 'tone', 'capacitance', 'shielding', 'cable specs'],
+    sections: [
+      {
+        paragraphs: [
+          'Most guitarists obsess over pickups, amps, and effects pedals. The cable connecting all of it together gets grabbed off a peg board for $9.99. That is a mistake, but not for the reasons you might think.',
+          'Guitar cables do affect your tone. The effect is real, measurable, and tied to specific electrical properties inside the cable itself. What is less obvious is which specs actually matter and which ones are just marketing copy. This guide breaks it down so you can make a real, informed decision.',
+        ],
+      },
+      {
+        heading: 'The Signal Chain Problem',
+        paragraphs: [
+          'Your guitar pickup generates a high-impedance signal. High impedance means the signal is electrically "sensitive," which is exactly what gives you expressive dynamics and touch response. That same sensitivity makes the signal vulnerable to interference and degradation on its journey from the guitar jack to your amplifier or pedalboard input.',
+          'The cable is not a passive wire. It is an electrical component with its own properties that shape the signal passing through it. Capacitance, resistance, shielding geometry, and conductor purity all affect what comes out the other end.',
+          'Understanding these properties is the difference between guessing at the source of a problem and knowing how to fix it.',
+        ],
+      },
+      {
+        heading: 'Spec 1: Capacitance and High-Frequency Roll-Off',
+        paragraphs: [
+          'Guitar cable capacitance is the most audible spec and the most frequently misunderstood one.',
+          'When a cable carries a high-impedance signal, the cable\'s capacitance interacts with your guitar\'s output impedance to form a low-pass filter. The higher the capacitance, the lower the cutoff frequency, and the more high-end gets rolled off before reaching your amp. You can measure this effect: longer cables and higher-capacitance cables produce a noticeable reduction in treble response and upper harmonic detail.',
+          'This is why a 30-foot cheap cable sounds noticeably duller than a 10-foot quality cable. It is not placebo. It is basic electrical physics.',
+          'Capacitance is measured in picofarads per foot (pF/ft). A low-capacitance cable runs around 20 to 27 pF/ft. Higher-capacitance cables can reach 50 pF/ft or above. Over a 15-foot cable, that difference adds up to a meaningful shift in the frequency response your amp actually sees.',
+          'If you use a buffer (standalone or built into certain pedals), cable capacitance matters less because the buffer converts your signal to low-impedance before it hits the main cable run. But if you run guitar straight to amp, or into a vintage-style pedalboard with no buffer at the front, capacitance is the single most important guitar cable spec you can pay attention to.',
+        ],
+      },
+      {
+        heading: 'Spec 2: Shielding Types and Noise',
+        paragraphs: [
+          'Two shielding geometries dominate the guitar cable market: spiral (also called serve) shielding and braided shielding. They handle noise differently, and neither is unconditionally better than the other.',
+          'Spiral shielding wraps the conductor in a tightly wound helix of shield wire. It is flexible, quiet in a static position, and consistent to manufacture. The downside is that flexing the cable changes the spiral geometry slightly, which can create handling noise when you move around. This is called the triboelectric effect, and it shows up as a low crackle or thump when the cable rubs against itself or your clothing.',
+          'Braided shielding weaves shield wires in an interlocking grid. The geometry is more stable under movement, which reduces handling noise significantly. High-quality instrument cables often use braided shields for exactly this reason. The tradeoff is that braided cables are slightly less flexible and more expensive to produce.',
+          'For live playing with a lot of movement, braided shielding is worth the upgrade. For a studio or a mostly static rig, both types perform well.',
+          'What both shielding types protect against is radio frequency interference (RFI) and electromagnetic interference (EMI): the hum and buzz from lighting rigs, dimmer switches, HVAC systems, and anything else creating electrical noise nearby. A well-shielded cable keeps that noise out of your signal. A poorly shielded one lets it in.',
+        ],
+      },
+      {
+        heading: 'Spec 3: Conductor Quality and Longevity',
+        paragraphs: [
+          'Not all copper is the same. Standard copper wire contains trace impurities and crystal boundaries between grains. Oxygen-free copper (OFC) reduces those impurities to create a higher-purity conductor with lower resistance and better signal integrity over time.',
+          'The audible difference in an A/B test is subtle. The longevity difference is not. Standard copper oxidizes faster, especially at the ends where the conductor meets the connectors. Over time, oxidation increases resistance and causes intermittent connections, which show up as crackle, signal dropout, and eventually complete failure.',
+          'OFC cable holds up better over years of use because the conductor stays cleaner and the contact points stay reliable.',
+          'The connector is the other half of this equation. The solder joint between cable and connector is a common failure point in cheap cables. High-quality connectors, like gold-plated Neutrik 1/4" jacks, offer corrosion resistance at the contact surface and robust mechanical construction that handles repeated plugging and unplugging without loosening or cracking.',
+          'Gold plating on connectors is not primarily about conductivity. Gold is slightly less conductive than copper. It is about corrosion resistance. Gold does not oxidize under normal conditions, so the contact surface stays clean and consistent across years of use. That is the real advantage.',
+        ],
+      },
+      {
+        heading: 'What Does NOT Affect Tone',
+        paragraphs: [
+          'Clarity matters here, because cable marketing is full of claims that do not hold up.',
+          'Cable "directionality" is not a real phenomenon for standard guitar cables. The cable does not have a preferred signal direction that produces better results, regardless of what any marketing copy says.',
+          'Cable "break-in periods," in which the cable allegedly sounds better after hours of signal passing through it, are not supported by any credible measurement. A quality cable sounds the same on day one as it does after a year of use.',
+          'Extremely heavy gauge wire in the conductor does not meaningfully improve tone for instrument cables. The impedance levels involved do not require it, and a heavier conductor may actually increase the cable\'s overall capacitance, working against you.',
+          'Color, braid texture, and marketing tier have no bearing on electrical performance.',
+        ],
+      },
+      {
+        heading: 'How to Think About Cables for Your Specific Rig',
+        paragraphs: [
+          'The right cable depends on a few concrete factors.',
+          'If you run guitar straight to amp or into an unbuffered pedal chain, prioritize low capacitance. A low-pF cable preserves your pickup\'s natural frequency response and gives your amp the complete signal your hands worked to produce.',
+          'If you move around a lot on stage, prioritize braided shielding. The handling noise from spiral-shielded cables becomes obvious fast on a big stage.',
+          'If longevity and reliability matter (and they should, especially for gigging), prioritize OFC conductor and quality connectors. A cable that fails mid-set or mid-session costs far more than the price difference between a cheap cable and a good one.',
+          'For length: use the shortest cable that works for your situation. Every additional foot adds capacitance. Coiled cables add even more because the coiled geometry increases effective capacitance significantly.',
+        ],
+      },
+      {
+        heading: 'Patch Cables Specifically',
+        paragraphs: [
+          'Patch cables connect pedals on a pedalboard and are easy to overlook because they are short and hidden under your feet. But a pedalboard with ten cheap patch cables has ten potential failure points and ten opportunities for noise to enter the signal chain.',
+          'Patch cables live in a demanding environment: tight bends, heavy vibration from nearby speakers, and the physical stress of a board getting packed and unpacked constantly. Low-profile right-angle connectors and durable jackets matter here as much as conductor quality. A flimsy patch cable with a loose connector joint can be harder to diagnose mid-set than a broken instrument cable.',
+          'Keep them short: 3 to 6 inches whenever the board layout allows. Tight runs eliminate excess cable that can act as an antenna for RFI and reduce the total capacitance load on the signal chain.',
+        ],
+      },
+      {
+        heading: 'Built to Last',
+        paragraphs: [
+          'Forever Cables are built with Canare GS-6 cable, one of the most respected cable bodies in professional audio. The conductor is OFC. The connectors are gold-plated Neutrik 1/4" jacks, hand-soldered and strain-relieved at every junction.',
+          'Every Forever Cable comes with a lifetime guarantee. If it ever fails for any reason, Hatch Patch Cables replaces it, no questions asked.',
+          'These are not cables you swap out every year. They are cables you buy once, plug in, and stop thinking about.',
+        ],
+      },
+    ],
+    cta: 'Forever Cables are built with Canare GS-6, OFC conductors, and gold-plated Neutrik connectors. Every one carries a lifetime guarantee.',
+  },
 ]
 
 export function getBlogPost(slug: string): BlogPost | undefined {
