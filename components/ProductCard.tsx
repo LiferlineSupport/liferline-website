@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Product, formatPrice, getVariantPrice } from '@/lib/products'
 
 interface Props {
@@ -65,21 +66,14 @@ export default function ProductCard({ product }: Props) {
         </div>
       )}
 
-      {/* Product image placeholder */}
-      <div className="aspect-square bg-card-hover flex items-center justify-center border-b border-border">
-        <svg
-          className="w-24 h-24 text-border"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={0.75}
-            d="M13 10V3L4 14h7v7l9-11h-7z"
-          />
-        </svg>
+      <div className="aspect-square bg-card-hover border-b border-border overflow-hidden relative">
+        <Image
+          src={product.image}
+          alt={product.name}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          className="object-cover"
+        />
       </div>
 
       <div className="p-6 flex flex-col flex-1">

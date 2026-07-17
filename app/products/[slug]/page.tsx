@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { products, getProductBySlug, formatPrice, getVariantPrice } from '@/lib/products'
 import BuyButton from '@/components/BuyButton'
@@ -37,6 +38,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url: `https://liferline.com/products/${product.slug}`,
       type: 'website',
+      images: [
+        {
+          url: `https://liferline.com${product.image}`,
+          width: 1024,
+          height: 1024,
+          alt: product.name,
+        },
+      ],
     },
     other: {
       'product:price:amount': (lowPrice / 100).toFixed(2),
@@ -155,6 +164,7 @@ function ProductJsonLd({ product }: { product: NonNullable<ReturnType<typeof get
     '@type': 'Product',
     name: product.name,
     description: product.longDescription,
+    image: `https://liferline.com${product.image}`,
     brand: { '@type': 'Brand', name: 'Forever Cables' },
     manufacturer: { '@type': 'Organization', name: 'Hatch Patch Cables' },
     offers,
@@ -206,21 +216,15 @@ export default async function ProductPage({ params }: Props) {
       {/* Product detail */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Image placeholder */}
-          <div className="aspect-square bg-card border border-border flex items-center justify-center">
-            <svg
-              className="w-32 h-32 text-border"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={0.75}
-                d="M13 10V3L4 14h7v7l9-11h-7z"
-              />
-            </svg>
+          <div className="aspect-square bg-card border border-border overflow-hidden relative">
+            <Image
+              src={product.image}
+              alt={product.name}
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+              priority
+            />
           </div>
 
           {/* Product info */}

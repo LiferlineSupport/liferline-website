@@ -17,6 +17,7 @@ export interface Product {
   currency: string
   stripePriceId: string
   variants: ProductVariant[]
+  image: string
   badge?: string
   featured?: boolean
 }
@@ -46,6 +47,7 @@ export const products: Product[] = [
       { label: '12"', value: '12in' },
       { label: '18"', value: '18in' },
     ],
+    image: '/products/the-workhorse.png',
     featured: true,
   },
   {
@@ -71,6 +73,7 @@ export const products: Product[] = [
       { label: '6"', value: '6in' },
       { label: '12"', value: '12in' },
     ],
+    image: '/products/the-right-angle.png',
   },
   {
     id: 'pedalboard-pack',
@@ -93,6 +96,7 @@ export const products: Product[] = [
     currency: 'usd',
     stripePriceId: process.env.STRIPE_PRICE_PACK ?? '',
     variants: [],
+    image: '/products/the-pedalboard-pack.png',
     badge: 'Best Value',
     featured: true,
   },
@@ -120,6 +124,7 @@ export const products: Product[] = [
       { label: '15ft', value: '15ft', price: 4400, stripePriceId: process.env.STRIPE_PRICE_STAGE_15 ?? '' },
       { label: '20ft', value: '20ft', price: 4900, stripePriceId: process.env.STRIPE_PRICE_STAGE_20 ?? '' },
     ],
+    image: '/products/the-stage-cable.png',
   },
 ]
 
