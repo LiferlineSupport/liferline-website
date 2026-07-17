@@ -22,7 +22,7 @@ export default function Header() {
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8">
             <Link
-              href="/#products"
+              href="/products"
               className="text-sm tracking-wide text-muted hover:text-cream transition-colors"
             >
               Cables
@@ -39,7 +39,7 @@ export default function Header() {
             >
               Support
             </Link>
-            <Link href="/#products" className="btn-primary">
+            <Link href="/products" className="btn-primary">
               Shop Now
             </Link>
           </nav>
@@ -67,7 +67,7 @@ export default function Header() {
         {menuOpen && (
           <nav className="md:hidden border-t border-border py-4 flex flex-col gap-4">
             <Link
-              href="/#products"
+              href="/products"
               className="text-sm tracking-wide text-muted hover:text-cream transition-colors"
               onClick={() => setMenuOpen(false)}
             >
@@ -87,7 +87,7 @@ export default function Header() {
             >
               Support
             </Link>
-            <Link href="/#products" className="btn-primary inline-block text-center" onClick={() => setMenuOpen(false)}>
+            <Link href="/products" className="btn-primary inline-block text-center" onClick={() => setMenuOpen(false)}>
               Shop Now
             </Link>
           </nav>
