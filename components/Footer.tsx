@@ -60,6 +60,11 @@ export default function Footer() {
                   Lifetime Guarantee
                 </Link>
               </li>
+              <li>
+                <Link href="/privacy" className="text-sm text-muted hover:text-cream transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
