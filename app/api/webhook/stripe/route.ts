@@ -26,6 +26,7 @@ export async function POST(req: NextRequest) {
     const session = event.data.object as Stripe.Checkout.Session
 
     const productId = session.metadata?.productId
+    const variant = session.metadata?.variant ?? undefined
     const orderId = session.id
     const customerName = session.customer_details?.name ?? ''
     const customerEmail = session.customer_details?.email ?? ''
@@ -35,7 +36,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ received: true })
     }
 
-    const result = decrementInventory(orderId, productId, 1, customerName, customerEmail)
+    const result = decrementInventory(orderId, productId, 1, customerName, customerEmail, variant)
 
     if (!result.success) {
       console.error(`[webhook] Inventory decrement failed for order ${orderId}: ${result.error}`)

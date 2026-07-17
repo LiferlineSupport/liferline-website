@@ -34,9 +34,14 @@ function ensureDataDir() {
 
 const DEFAULT_INVENTORY: InventoryItem[] = [
   { sku: 'WH-6', cableType: 'patch', lengthIn: '6', connectorConfig: 'straight-straight', qtyOnHand: 0, reorderThreshold: 5, unitCostUsd: 4.5, lastUpdated: '' },
+  { sku: 'WH-12', cableType: 'patch', lengthIn: '12', connectorConfig: 'straight-straight', qtyOnHand: 0, reorderThreshold: 5, unitCostUsd: 5.5, lastUpdated: '' },
+  { sku: 'WH-18', cableType: 'patch', lengthIn: '18', connectorConfig: 'straight-straight', qtyOnHand: 0, reorderThreshold: 5, unitCostUsd: 6.5, lastUpdated: '' },
   { sku: 'RA-6', cableType: 'patch', lengthIn: '6', connectorConfig: 'straight-right-angle', qtyOnHand: 0, reorderThreshold: 5, unitCostUsd: 5.0, lastUpdated: '' },
+  { sku: 'RA-12', cableType: 'patch', lengthIn: '12', connectorConfig: 'straight-right-angle', qtyOnHand: 0, reorderThreshold: 5, unitCostUsd: 6.0, lastUpdated: '' },
   { sku: 'PBP-MIX', cableType: 'pack', lengthIn: 'mixed', connectorConfig: 'mixed', qtyOnHand: 0, reorderThreshold: 3, unitCostUsd: 22.0, lastUpdated: '' },
   { sku: 'SC-10', cableType: 'instrument', lengthIn: '120', connectorConfig: 'straight-straight', qtyOnHand: 0, reorderThreshold: 5, unitCostUsd: 8.0, lastUpdated: '' },
+  { sku: 'SC-15', cableType: 'instrument', lengthIn: '180', connectorConfig: 'straight-straight', qtyOnHand: 0, reorderThreshold: 5, unitCostUsd: 9.5, lastUpdated: '' },
+  { sku: 'SC-20', cableType: 'instrument', lengthIn: '240', connectorConfig: 'straight-straight', qtyOnHand: 0, reorderThreshold: 5, unitCostUsd: 11.0, lastUpdated: '' },
 ]
 
 function readInventory(): InventoryItem[] {
@@ -62,11 +67,24 @@ function appendShipment(record: ShipmentRecord) {
   fs.writeFileSync(SHIPMENT_LOG_FILE, JSON.stringify(records, null, 2))
 }
 
-export const PRODUCT_SKU_MAP: Record<string, string> = {
+const VARIANT_SKU_MAP: Record<string, Record<string, string>> = {
+  'workhorse-6': { '6in': 'WH-6', '12in': 'WH-12', '18in': 'WH-18' },
+  'workhorse-ra': { '6in': 'RA-6', '12in': 'RA-12' },
+  'stage-cable': { '10ft': 'SC-10', '15ft': 'SC-15', '20ft': 'SC-20' },
+}
+
+const BASE_SKU_MAP: Record<string, string> = {
   'workhorse-6': 'WH-6',
   'workhorse-ra': 'RA-6',
   'pedalboard-pack': 'PBP-MIX',
   'stage-cable': 'SC-10',
+}
+
+export function resolveSku(productId: string, variant?: string): string | undefined {
+  if (variant && VARIANT_SKU_MAP[productId]?.[variant]) {
+    return VARIANT_SKU_MAP[productId][variant]
+  }
+  return BASE_SKU_MAP[productId]
 }
 
 export interface DecrementResult {
@@ -83,9 +101,10 @@ export function decrementInventory(
   productId: string,
   qty: number,
   customerName: string,
-  customerEmail: string
+  customerEmail: string,
+  variant?: string
 ): DecrementResult {
-  const sku = PRODUCT_SKU_MAP[productId]
+  const sku = resolveSku(productId, variant)
   if (!sku) {
     return {
       success: false,

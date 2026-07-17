@@ -55,7 +55,8 @@ export async function POST(req: NextRequest) {
       metadata: {
         productId: product.id,
         productName: product.name,
-        variant: variantLabel ?? '',
+        variant: variant ?? '',
+        variantLabel: variantLabel ?? '',
       },
       success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/cancel`,
