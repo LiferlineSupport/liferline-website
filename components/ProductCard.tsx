@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { Product, formatPrice } from '@/lib/products'
 
 interface Props {
@@ -83,7 +84,11 @@ export default function ProductCard({ product }: Props) {
 
       <div className="p-6 flex flex-col flex-1">
         <div className="mb-4">
-          <h3 className="font-serif text-xl text-cream mb-1">{product.name}</h3>
+          <h3 className="font-serif text-xl text-cream mb-1">
+            <Link href={`/products/${product.slug}`} className="hover:text-accent transition-colors">
+              {product.name}
+            </Link>
+          </h3>
           <p className="text-xs tracking-[0.12em] uppercase text-accent mb-3">
             {product.tagline}
           </p>

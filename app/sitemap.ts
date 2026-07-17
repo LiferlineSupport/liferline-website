@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { products } from '@/lib/products'
 
 const BASE_URL = 'https://liferline.com'
 
@@ -21,5 +22,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  return staticPages
+  const productPages: MetadataRoute.Sitemap = products.map((p) => ({
+    url: `${BASE_URL}/products/${p.slug}`,
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }))
+
+  return [...staticPages, ...productPages]
 }

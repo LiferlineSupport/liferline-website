@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { products } from '@/lib/products'
 
 export default function Footer() {
   return (
@@ -23,21 +24,13 @@ export default function Footer() {
               Shop
             </h3>
             <ul className="space-y-3">
-              <li>
-                <Link href="/#products" className="text-sm text-muted hover:text-cream transition-colors">
-                  Patch Cables
-                </Link>
-              </li>
-              <li>
-                <Link href="/#products" className="text-sm text-muted hover:text-cream transition-colors">
-                  Instrument Cables
-                </Link>
-              </li>
-              <li>
-                <Link href="/#products" className="text-sm text-muted hover:text-cream transition-colors">
-                  Value Packs
-                </Link>
-              </li>
+              {products.map((p) => (
+                <li key={p.id}>
+                  <Link href={`/products/${p.slug}`} className="text-sm text-muted hover:text-cream transition-colors">
+                    {p.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

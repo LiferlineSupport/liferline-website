@@ -131,7 +131,15 @@ export default function Home() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <div key={product.id} className="relative">
+              <Link
+                href={`/products/${product.slug}`}
+                className="absolute top-4 left-4 z-10 text-xs text-muted hover:text-accent tracking-wide transition-colors"
+              >
+                View details
+              </Link>
+              <ProductCard product={product} />
+            </div>
           ))}
         </div>
 
