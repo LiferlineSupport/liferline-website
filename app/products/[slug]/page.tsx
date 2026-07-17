@@ -35,6 +35,39 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
+function BreadcrumbJsonLd({ product }: { product: NonNullable<ReturnType<typeof getProductBySlug>> }) {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://liferline.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Cables',
+        item: 'https://liferline.com/#products',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: product.name,
+        item: `https://liferline.com/products/${product.slug}`,
+      },
+    ],
+  }
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  )
+}
+
 function ProductJsonLd({ product }: { product: NonNullable<ReturnType<typeof getProductBySlug>> }) {
   const data = {
     '@context': 'https://schema.org',
@@ -86,6 +119,7 @@ export default async function ProductPage({ params }: Props) {
   return (
     <>
       <ProductJsonLd product={product} />
+      <BreadcrumbJsonLd product={product} />
 
       {/* Breadcrumb */}
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 pt-8">
