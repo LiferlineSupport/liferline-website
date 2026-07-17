@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getStripe, isStripeConfigured } from '@/lib/stripe'
-import { products } from '@/lib/products'
+import { products, getVariantPriceId } from '@/lib/products'
 
 export async function POST(req: NextRequest) {
   if (!isStripeConfigured()) {
@@ -18,7 +18,8 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Product not found.' }, { status: 404 })
     }
 
-    if (!product.stripePriceId) {
+    const priceId = getVariantPriceId(product, variant)
+    if (!priceId) {
       return NextResponse.json(
         { error: 'This product is not yet available for purchase online. Contact us to order.' },
         { status: 503 }
@@ -34,8 +35,21 @@ export async function POST(req: NextRequest) {
       mode: 'payment',
       line_items: [
         {
-          price: product.stripePriceId,
+          price: priceId,
           quantity: 1,
+        },
+      ],
+      shipping_options: [
+        {
+          shipping_rate_data: {
+            type: 'fixed_amount',
+            fixed_amount: { amount: 0, currency: 'usd' },
+            display_name: 'Free shipping',
+            delivery_estimate: {
+              minimum: { unit: 'business_day', value: 3 },
+              maximum: { unit: 'business_day', value: 7 },
+            },
+          },
         },
       ],
       metadata: {

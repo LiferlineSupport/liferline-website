@@ -1,3 +1,10 @@
+export interface ProductVariant {
+  label: string
+  value: string
+  price?: number
+  stripePriceId?: string
+}
+
 export interface Product {
   id: string
   slug: string
@@ -9,10 +16,7 @@ export interface Product {
   price: number
   currency: string
   stripePriceId: string
-  variants: {
-    label: string
-    value: string
-  }[]
+  variants: ProductVariant[]
   badge?: string
   featured?: boolean
 }
@@ -110,11 +114,11 @@ export const products: Product[] = [
     ],
     price: 3800,
     currency: 'usd',
-    stripePriceId: process.env.STRIPE_PRICE_STAGE ?? '',
+    stripePriceId: process.env.STRIPE_PRICE_STAGE_10 ?? process.env.STRIPE_PRICE_STAGE ?? '',
     variants: [
-      { label: '10ft', value: '10ft' },
-      { label: '15ft', value: '15ft' },
-      { label: '20ft', value: '20ft' },
+      { label: '10ft', value: '10ft', price: 3800, stripePriceId: process.env.STRIPE_PRICE_STAGE_10 ?? process.env.STRIPE_PRICE_STAGE ?? '' },
+      { label: '15ft', value: '15ft', price: 4400, stripePriceId: process.env.STRIPE_PRICE_STAGE_15 ?? '' },
+      { label: '20ft', value: '20ft', price: 4900, stripePriceId: process.env.STRIPE_PRICE_STAGE_20 ?? '' },
     ],
   },
 ]
@@ -128,4 +132,20 @@ export function formatPrice(cents: number): string {
 
 export function getProductBySlug(slug: string): Product | undefined {
   return products.find((p) => p.slug === slug)
+}
+
+export function getVariantPriceId(product: Product, variantValue: string | undefined): string {
+  if (variantValue) {
+    const variant = product.variants.find((v) => v.value === variantValue)
+    if (variant?.stripePriceId) return variant.stripePriceId
+  }
+  return product.stripePriceId
+}
+
+export function getVariantPrice(product: Product, variantValue: string | undefined): number {
+  if (variantValue) {
+    const variant = product.variants.find((v) => v.value === variantValue)
+    if (variant?.price != null) return variant.price
+  }
+  return product.price
 }
