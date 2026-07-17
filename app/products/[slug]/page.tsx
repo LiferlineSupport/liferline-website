@@ -116,6 +116,16 @@ function ProductJsonLd({ product }: { product: NonNullable<ReturnType<typeof get
     },
   }
 
+  const returnPolicy = {
+    '@type': 'MerchantReturnPolicy',
+    applicableCountry: 'US',
+    returnPolicyCategory: 'https://schema.org/MerchantReturnUnlimitedWindow',
+    merchantReturnDays: 0,
+    returnMethod: 'https://schema.org/ReturnByMail',
+    returnFees: 'https://schema.org/FreeReturn',
+    description: 'Lifetime guarantee: if your cable ever fails, we replace it free with no return required.',
+  }
+
   const offers = hasRange
     ? {
         '@type': 'AggregateOffer',
@@ -127,6 +137,7 @@ function ProductJsonLd({ product }: { product: NonNullable<ReturnType<typeof get
         url: `https://liferline.com/products/${product.slug}`,
         seller: { '@type': 'Organization', name: 'Hatch Patch Cables' },
         shippingDetails,
+        hasMerchantReturnPolicy: returnPolicy,
       }
     : {
         '@type': 'Offer',
@@ -136,6 +147,7 @@ function ProductJsonLd({ product }: { product: NonNullable<ReturnType<typeof get
         url: `https://liferline.com/products/${product.slug}`,
         seller: { '@type': 'Organization', name: 'Hatch Patch Cables' },
         shippingDetails,
+        hasMerchantReturnPolicy: returnPolicy,
       }
 
   const data = {
