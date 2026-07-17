@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { products } from '@/lib/products'
+import EmailSignup from '@/components/EmailSignup'
 
 export default function Footer() {
   return (
@@ -94,7 +95,15 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        {/* Email signup */}
+        <div className="border-t border-border mt-12 pt-8 pb-8">
+          <p className="text-xs tracking-[0.15em] uppercase text-muted mb-4 font-semibold text-center md:text-left">
+            Join the list
+          </p>
+          <EmailSignup />
+        </div>
+
+        <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted">
             © {new Date().getFullYear()} Hatch Patch Cables. All rights reserved.
           </p>

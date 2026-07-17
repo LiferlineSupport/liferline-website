@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { products } from '@/lib/products'
 import ProductCard from '@/components/ProductCard'
+import EmailSignup from '@/components/EmailSignup'
 
 function WebSiteJsonLd() {
   const data = {
@@ -240,6 +241,22 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Email signup */}
+      <section className="border-t border-border">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 text-center">
+          <p className="text-xs tracking-[0.2em] uppercase text-accent mb-4 font-semibold">
+            Stay in the Loop
+          </p>
+          <h2 className="font-serif text-3xl text-cream mb-3">
+            New cables, limited drops, and promos.
+          </h2>
+          <p className="text-muted mb-8 max-w-md mx-auto text-sm">
+            Join the list. No spam, just cables.
+          </p>
+          <EmailSignup />
         </div>
       </section>
 
