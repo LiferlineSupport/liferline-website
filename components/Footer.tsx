@@ -24,6 +24,11 @@ export default function Footer() {
               Shop
             </h3>
             <ul className="space-y-3">
+              <li>
+                <Link href="/products" className="text-sm text-muted hover:text-cream transition-colors">
+                  All Cables
+                </Link>
+              </li>
               {products.map((p) => (
                 <li key={p.id}>
                   <Link href={`/products/${p.slug}`} className="text-sm text-muted hover:text-cream transition-colors">

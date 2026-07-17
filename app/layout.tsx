@@ -65,6 +65,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="bg-bg text-cream font-sans min-h-screen flex flex-col">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-accent focus:text-bg focus:px-4 focus:py-2 focus:text-sm focus:font-semibold"
+        >
+          Skip to content
+        </a>
         <Script
           defer
           data-domain="liferline.com"
@@ -72,7 +78,7 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="main" className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>
