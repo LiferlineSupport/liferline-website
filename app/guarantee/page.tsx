@@ -17,9 +17,54 @@ export const metadata: Metadata = {
   },
 }
 
+const guaranteeFaq = [
+  {
+    q: 'Do I need my receipt?',
+    a: 'No. We can usually look up your order by email, but even if we cannot, we will still honor the guarantee. Every Forever Cable has our name on it.',
+  },
+  {
+    q: 'Is there a time limit?',
+    a: 'No. Lifetime means lifetime. Whether you bought the cable last month or five years ago, the guarantee applies.',
+  },
+  {
+    q: 'Do I have to send the broken cable back?',
+    a: 'Not before we send the replacement. If you want to send it back afterward so we can learn from it, that is appreciated but not required.',
+  },
+  {
+    q: 'Does this cover cables bought as gifts?',
+    a: 'Yes. The guarantee follows the cable, not the buyer.',
+  },
+  {
+    q: 'What if my cable was damaged by accident?',
+    a: 'Still covered. We do not distinguish between manufacturing defects and accidental damage. If the cable does not work, we replace it.',
+  },
+]
+
+function GuaranteeFaqJsonLd() {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: guaranteeFaq.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a,
+      },
+    })),
+  }
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  )
+}
+
 export default function Guarantee() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-20">
+      <GuaranteeFaqJsonLd />
       <div className="mb-16">
         <p className="text-xs tracking-[0.3em] uppercase text-accent mb-4 font-semibold">
           Our Promise
@@ -133,28 +178,7 @@ export default function Guarantee() {
         <section className="border-t border-border pt-16">
           <h2 className="font-serif text-3xl text-cream mb-6">Guarantee FAQ</h2>
           <div className="space-y-6">
-            {[
-              {
-                q: 'Do I need my receipt?',
-                a: 'No. We can usually look up your order by email, but even if we cannot, we will still honor the guarantee. Every Forever Cable has our name on it.',
-              },
-              {
-                q: 'Is there a time limit?',
-                a: 'No. Lifetime means lifetime. Whether you bought the cable last month or five years ago, the guarantee applies.',
-              },
-              {
-                q: 'Do I have to send the broken cable back?',
-                a: 'Not before we send the replacement. If you want to send it back afterward so we can learn from it, that is appreciated but not required.',
-              },
-              {
-                q: 'Does this cover cables bought as gifts?',
-                a: 'Yes. The guarantee follows the cable, not the buyer.',
-              },
-              {
-                q: 'What if my cable was damaged by accident?',
-                a: 'Still covered. We do not distinguish between manufacturing defects and accidental damage. If the cable does not work, we replace it.',
-              },
-            ].map((item) => (
+            {guaranteeFaq.map((item) => (
               <div key={item.q} className="border-b border-border pb-6">
                 <h3 className="text-cream text-sm font-semibold mb-2">{item.q}</h3>
                 <p className="text-muted text-sm leading-relaxed">{item.a}</p>
