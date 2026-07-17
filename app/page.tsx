@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { products } from '@/lib/products'
+import { blogPosts } from '@/lib/blog-posts'
 import ProductCard from '@/components/ProductCard'
 import EmailSignup from '@/components/EmailSignup'
 
@@ -240,6 +241,48 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Blog preview */}
+      <section className="border-t border-border">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
+          <div className="mb-12">
+            <p className="text-xs tracking-[0.2em] uppercase text-accent mb-4 font-semibold">
+              From the Workbench
+            </p>
+            <h2 className="font-serif text-4xl text-cream mb-4">
+              Guides and gear knowledge
+            </h2>
+            <p className="text-muted max-w-lg text-sm">
+              Honest advice about guitar cables, pedalboard setup, and signal
+              chain quality. Written by the people who build them by hand.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {blogPosts.slice(0, 3).map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="border border-border hover:border-accent p-6 transition-colors group"
+              >
+                <span className="text-xs tracking-[0.15em] uppercase text-accent font-semibold">
+                  {post.category}
+                </span>
+                <h3 className="font-serif text-lg text-cream group-hover:text-accent transition-colors mt-3 mb-2 leading-snug">
+                  {post.title}
+                </h3>
+                <p className="text-muted text-xs leading-relaxed line-clamp-3">
+                  {post.excerpt}
+                </p>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/blog" className="btn-ghost inline-block">
+              Read All Articles
+            </Link>
           </div>
         </div>
       </section>
