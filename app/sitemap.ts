@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { products } from '@/lib/products'
+import { blogPosts } from '@/lib/blog-posts'
 
 const BASE_URL = 'https://liferline.com'
 const LAST_UPDATED = '2026-07-17'
@@ -75,5 +76,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
-  return [...staticPages, ...productPages]
+  const blogPages: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified: LAST_UPDATED,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    ...blogPosts.map((post) => ({
+      url: `${BASE_URL}/blog/${post.slug}`,
+      lastModified: post.publishedAt,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
+  ]
+
+  return [...staticPages, ...productPages, ...blogPages]
 }

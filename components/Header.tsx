@@ -34,6 +34,12 @@ export default function Header() {
               Our Story
             </Link>
             <Link
+              href="/blog"
+              className="text-sm tracking-wide text-muted hover:text-cream transition-colors"
+            >
+              Blog
+            </Link>
+            <Link
               href="/faq"
               className="text-sm tracking-wide text-muted hover:text-cream transition-colors"
             >
@@ -85,6 +91,13 @@ export default function Header() {
               onClick={() => setMenuOpen(false)}
             >
               Our Story
+            </Link>
+            <Link
+              href="/blog"
+              className="text-sm tracking-wide text-muted hover:text-cream transition-colors"
+              onClick={() => setMenuOpen(false)}
+            >
+              Blog
             </Link>
             <Link
               href="/faq"
