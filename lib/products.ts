@@ -43,9 +43,9 @@ export const products: Product[] = [
     currency: 'usd',
     stripePriceId: process.env.STRIPE_PRICE_WORKHORSE_6 ?? '',
     variants: [
-      { label: '6"', value: '6in' },
-      { label: '12"', value: '12in' },
-      { label: '18"', value: '18in' },
+      { label: '6"', value: '6in', stripePriceId: process.env.STRIPE_PRICE_WORKHORSE_6 ?? '' },
+      { label: '12"', value: '12in', stripePriceId: process.env.STRIPE_PRICE_WORKHORSE_12 ?? '' },
+      { label: '18"', value: '18in', stripePriceId: process.env.STRIPE_PRICE_WORKHORSE_18 ?? '' },
     ],
     image: '/products/the-workhorse.png',
     featured: true,
@@ -70,8 +70,8 @@ export const products: Product[] = [
     currency: 'usd',
     stripePriceId: process.env.STRIPE_PRICE_RIGHT_ANGLE ?? '',
     variants: [
-      { label: '6"', value: '6in' },
-      { label: '12"', value: '12in' },
+      { label: '6"', value: '6in', stripePriceId: process.env.STRIPE_PRICE_RIGHT_ANGLE_6 ?? process.env.STRIPE_PRICE_RIGHT_ANGLE ?? '' },
+      { label: '12"', value: '12in', stripePriceId: process.env.STRIPE_PRICE_RIGHT_ANGLE_12 ?? '' },
     ],
     image: '/products/the-right-angle.png',
   },

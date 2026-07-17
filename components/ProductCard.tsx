@@ -20,14 +20,41 @@ export default function ProductCard({ product }: Props) {
     setLoading(true)
     setError(null)
 
+    const unitPrice = getVariantPrice(product, selectedVariant)
+    const priceStr = (unitPrice / 100).toFixed(2)
+
     if (typeof window !== 'undefined' && (window as any).plausible) {
       ;(window as any).plausible('add_to_cart', {
         props: {
           product_name: product.name,
           product_id: product.id,
-          price: (getVariantPrice(product, selectedVariant) / 100).toFixed(2),
+          price: priceStr,
           variant: selectedVariant,
         },
+      })
+    }
+
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      ;(window as any).gtag('event', 'add_to_cart', {
+        currency: 'USD',
+        value: parseFloat(priceStr),
+        items: [{
+          item_id: product.id,
+          item_name: product.name,
+          item_variant: selectedVariant || undefined,
+          price: unitPrice / 100,
+          quantity: 1,
+        }],
+      })
+    }
+
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      ;(window as any).fbq('track', 'AddToCart', {
+        content_ids: [product.id],
+        content_name: product.name,
+        content_type: 'product',
+        value: parseFloat(priceStr),
+        currency: 'USD',
       })
     }
 
