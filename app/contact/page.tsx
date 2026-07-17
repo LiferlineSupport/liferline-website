@@ -10,9 +10,54 @@ export const metadata: Metadata = {
   },
 }
 
+const faqItems = [
+  {
+    q: 'What does the lifetime guarantee actually cover?',
+    a: "Everything. If the cable fails for any reason (bad solder joint, broken connector, damaged jacket), we replace it. We don't have a list of exclusions because we don't believe in them.",
+  },
+  {
+    q: "Do I need to send the old cable back?",
+    a: "No. We'll ship the replacement first. If you want to send the broken one back after, great; we can learn from it. But it's not required.",
+  },
+  {
+    q: 'How long does shipping take?',
+    a: "We ship USPS Priority Mail, so typically 2-3 business days within the USA. We only ship to the US right now.",
+  },
+  {
+    q: 'Can you build something custom?',
+    a: "Often yes. Email us with what you need (custom length, connector combo, bulk order) and we'll tell you what's possible.",
+  },
+  {
+    q: 'Why are Forever Cables more expensive than store cables?',
+    a: "Because we use better materials, assemble them by hand, and guarantee them forever. The math works out in your favor within a year or two.",
+  },
+]
+
+function FaqJsonLd() {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a,
+      },
+    })),
+  }
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  )
+}
+
 export default function Contact() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-20">
+      <FaqJsonLd />
       <div className="mb-16">
         <p className="text-xs tracking-[0.3em] uppercase text-accent mb-4 font-semibold">
           Support & Contact
@@ -74,28 +119,7 @@ export default function Contact() {
         <div>
           <h2 className="font-serif text-2xl text-cream mb-6">Common questions</h2>
           <div className="space-y-6">
-            {[
-              {
-                q: 'What does the lifetime guarantee actually cover?',
-                a: "Everything. If the cable fails for any reason (bad solder joint, broken connector, damaged jacket), we replace it. We don't have a list of exclusions because we don't believe in them.",
-              },
-              {
-                q: "Do I need to send the old cable back?",
-                a: "No. We'll ship the replacement first. If you want to send the broken one back after, great; we can learn from it. But it's not required.",
-              },
-              {
-                q: 'How long does shipping take?',
-                a: "We ship USPS Priority Mail, so typically 2-3 business days within the USA. We only ship to the US right now.",
-              },
-              {
-                q: 'Can you build something custom?',
-                a: "Often yes. Email us with what you need (custom length, connector combo, bulk order) and we'll tell you what's possible.",
-              },
-              {
-                q: 'Why are Forever Cables more expensive than store cables?',
-                a: "Because we use better materials, assemble them by hand, and guarantee them forever. The math works out in your favor within a year or two.",
-              },
-            ].map((item) => (
+            {faqItems.map((item) => (
               <div key={item.q} className="border-b border-border pb-6">
                 <h3 className="text-cream text-sm font-semibold mb-2">{item.q}</h3>
                 <p className="text-muted text-sm leading-relaxed">{item.a}</p>
