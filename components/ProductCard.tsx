@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Product, formatPrice } from '@/lib/products'
+import { Product, formatPrice, getVariantPrice } from '@/lib/products'
 
 interface Props {
   product: Product
@@ -24,7 +24,7 @@ export default function ProductCard({ product }: Props) {
         props: {
           product_name: product.name,
           product_id: product.id,
-          price: (product.price / 100).toFixed(2),
+          price: (getVariantPrice(product, selectedVariant) / 100).toFixed(2),
           variant: selectedVariant,
         },
       })
@@ -122,9 +122,9 @@ export default function ProductCard({ product }: Props) {
         <div className="mt-auto">
           <div className="flex items-center justify-between mb-4">
             <span className="font-serif text-2xl text-cream">
-              {formatPrice(product.price)}
+              {formatPrice(getVariantPrice(product, selectedVariant))}
             </span>
-            <span className="text-xs text-muted tracking-wide">Guaranteed for life</span>
+            <span className="text-xs text-muted tracking-wide">Free shipping</span>
           </div>
 
           {error && (

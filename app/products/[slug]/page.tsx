@@ -85,9 +85,29 @@ function ProductJsonLd({ product }: { product: NonNullable<ReturnType<typeof get
       seller: { '@type': 'Organization', name: 'Hatch Patch Cables' },
       shippingDetails: {
         '@type': 'OfferShippingDetails',
+        shippingRate: {
+          '@type': 'MonetaryAmount',
+          value: '0',
+          currency: 'USD',
+        },
         shippingDestination: {
           '@type': 'DefinedRegion',
           addressCountry: 'US',
+        },
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          handlingTime: {
+            '@type': 'QuantitativeValue',
+            minValue: 1,
+            maxValue: 2,
+            unitCode: 'd',
+          },
+          transitTime: {
+            '@type': 'QuantitativeValue',
+            minValue: 2,
+            maxValue: 5,
+            unitCode: 'd',
+          },
         },
       },
     },
@@ -229,6 +249,15 @@ export default async function ProductPage({ params }: Props) {
                 <p className="text-cream font-semibold">Hand-Built</p>
                 <p className="text-sm text-muted">
                   One at a time, tested before it ships.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <span className="text-3xl">📦</span>
+              <div>
+                <p className="text-cream font-semibold">Free Shipping</p>
+                <p className="text-sm text-muted">
+                  Every order ships free within the USA.
                 </p>
               </div>
             </div>

@@ -103,11 +103,12 @@ export default function Home() {
       {/* Trust bar */}
       <section className="border-b border-border bg-card">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
             {[
               { icon: '🔨', label: 'Hand-Soldered', sub: 'One at a time, by hand' },
               { icon: '🇺🇸', label: 'American-Made', sub: 'Built in the USA' },
               { icon: '♾️', label: 'Lifetime Guarantee', sub: 'We stand behind every cable' },
+              { icon: '📦', label: 'Free Shipping', sub: 'On every order, every time' },
             ].map((item) => (
               <div key={item.label} className="flex flex-col items-center gap-1">
                 <span className="text-2xl mb-1">{item.icon}</span>
