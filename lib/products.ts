@@ -36,7 +36,7 @@ export const products: Product[] = [
     name: 'The Right Angle',
     tagline: '6" Straight-to-Right-Angle',
     description:
-      'Perfect for tight pedalboard layouts. One straight, one angled — fits flush to any pedal housing and saves you precious board space.',
+      'Perfect for tight pedalboard layouts. One straight, one angled. Fits flush to any pedal housing and saves you precious board space.',
     price: 2000,
     currency: 'usd',
     stripePriceId: process.env.STRIPE_PRICE_RIGHT_ANGLE ?? '',
@@ -50,7 +50,7 @@ export const products: Product[] = [
     name: 'The Pedalboard Pack',
     tagline: '6-Pack • Mixed Lengths',
     description:
-      'Everything you need to wire your board in one shot. Includes two 6", two 12", and two 18" Workhorses — all hand-built, all guaranteed for life.',
+      'Everything you need to wire your board in one shot. Includes two 6", two 12", and two 18" Workhorses, all hand-built, all guaranteed for life.',
     price: 9500,
     currency: 'usd',
     stripePriceId: process.env.STRIPE_PRICE_PACK ?? '',
