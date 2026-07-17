@@ -57,7 +57,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/contact" className="text-sm text-muted hover:text-cream transition-colors">
-                  Support & Returns
+                  Contact Support
+                </Link>
+              </li>
+              <li>
+                <Link href="/returns" className="text-sm text-muted hover:text-cream transition-colors">
+                  Returns and Exchanges
                 </Link>
               </li>
               <li>

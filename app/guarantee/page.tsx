@@ -237,6 +237,9 @@ export default function Guarantee() {
         <Link href="/products" className="btn-primary text-center">
           Shop Cables
         </Link>
+        <Link href="/returns" className="btn-ghost text-center">
+          Returns and Exchanges
+        </Link>
         <Link href="/contact" className="btn-ghost text-center">
           Contact Support
         </Link>
