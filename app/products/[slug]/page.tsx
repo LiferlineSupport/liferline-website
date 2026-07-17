@@ -323,17 +323,27 @@ export default async function ProductPage({ params }: Props) {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {otherProducts.map((p) => (
               <Link key={p.id} href={`/products/${p.slug}`} className="block group">
-                <div className="bg-card border border-border group-hover:border-accent/30 transition-colors duration-300 p-6">
-                  <h3 className="font-serif text-xl text-cream mb-1">{p.name}</h3>
-                  <p className="text-xs tracking-[0.12em] uppercase text-accent mb-3">{p.tagline}</p>
-                  <p className="text-sm text-muted leading-relaxed mb-4">{p.description}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="font-serif text-xl text-cream">
-                      {p.variants.some((v) => v.price != null && v.price !== p.price)
-                        ? `From ${formatPrice(p.price)}`
-                        : formatPrice(p.price)}
-                    </span>
-                    <span className="text-xs text-accent tracking-wide">View details</span>
+                <div className="bg-card border border-border group-hover:border-accent/30 transition-colors duration-300">
+                  <div className="aspect-[2/1] overflow-hidden relative border-b border-border">
+                    <Image
+                      src={p.image}
+                      alt={p.name}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-serif text-xl text-cream mb-1">{p.name}</h3>
+                    <p className="text-xs tracking-[0.12em] uppercase text-accent mb-3">{p.tagline}</p>
+                    <div className="flex items-center justify-between">
+                      <span className="font-serif text-xl text-cream">
+                        {p.variants.some((v) => v.price != null && v.price !== p.price)
+                          ? `From ${formatPrice(p.price)}`
+                          : formatPrice(p.price)}
+                      </span>
+                      <span className="text-xs text-accent tracking-wide">View details</span>
+                    </div>
                   </div>
                 </div>
               </Link>
