@@ -113,13 +113,17 @@ export default function Terms() {
           <h2 className="font-serif text-2xl text-cream mb-4">Shipping</h2>
           <p className="mb-4">
             We currently ship to addresses within the United States only. All orders include
-            free shipping via USPS Priority Mail. Estimated delivery is 3 to 7 business days
-            from the date of shipment.
+            free shipping via USPS. Estimated delivery is 3 to 7 business days
+            from the date of shipment, plus 1 to 3 business days for production.
           </p>
           <p>
             Once your order ships, you will receive a tracking number by email. We are not
             responsible for delays caused by the carrier after handoff, but we will work with
-            you to resolve any delivery issues.
+            you to resolve any delivery issues. Full details are available on our{' '}
+            <Link href="/shipping" className="text-accent hover:underline">
+              Shipping Policy
+            </Link>{' '}
+            page.
           </p>
         </section>
 
@@ -151,16 +155,23 @@ export default function Terms() {
           <h2 className="font-serif text-2xl text-cream mb-4">Returns and refunds</h2>
           <p className="mb-4">
             If you are not satisfied with your purchase for any reason, contact us within 30
-            days of delivery for a full refund. Return shipping is on us. Email{' '}
+            days of delivery for a full refund. You are responsible for return shipping on standard returns. Email{' '}
             <a href="mailto:support@liferline.com" className="text-accent hover:underline">
               support@liferline.com
             </a>{' '}
             to start a return.
           </p>
-          <p>
+          <p className="mb-4">
             After 30 days, the lifetime guarantee still applies. If the cable fails at any
             point, we replace it. If you simply change your mind after 30 days, we are happy
             to work something out on a case-by-case basis.
+          </p>
+          <p>
+            Full details are available on our{' '}
+            <Link href="/returns" className="text-accent hover:underline">
+              Returns and Exchanges
+            </Link>{' '}
+            page.
           </p>
         </section>
 
