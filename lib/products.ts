@@ -29,7 +29,7 @@ export const products: Product[] = [
     name: 'The Workhorse',
     tagline: '6" Straight-to-Straight',
     description:
-      'Our most popular guitar pedal patch cable. Hand-soldered with Mogami W2319 cable and Neutrik straight plugs for a clean, tight pedalboard connection every time.',
+      'Our most popular guitar pedal patch cable. Hand-soldered with Canare GS-6 cable and Neutrik straight plugs for a clean, tight pedalboard connection every time.',
     longDescription:
       'The Workhorse is the guitar patch cable that started it all. Built with Mogami W2319 low-capacitance cable and Neutrik straight plugs, it delivers transparent tone transfer with zero coloration. Every joint is hand-soldered and stress-tested before it ships. Whether you are wiring a five-pedal grab-and-go board or a 20-pedal studio rig, The Workhorse keeps your signal clean and your setup reliable for years.',
     specs: [
