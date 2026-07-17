@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { blogPosts, getBlogPost } from '@/lib/blog-posts'
+import EmailSignup from '@/components/EmailSignup'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -115,6 +116,15 @@ export default async function BlogPostPage({ params }: Props) {
   const prevPost = currentIndex > 0 ? blogPosts[currentIndex - 1] : null
   const nextPost = currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null
 
+  const relatedPosts = blogPosts
+    .filter((p) => p.slug !== slug)
+    .map((p) => ({
+      ...p,
+      score: p.tags.filter((t) => post.tags.includes(t)).length,
+    }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3)
+
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-20">
       <BlogPostJsonLd post={post} />
@@ -182,6 +192,14 @@ export default async function BlogPostPage({ params }: Props) {
           </Link>
         </div>
 
+        <div className="mt-16 border border-border p-8 text-center">
+          <p className="text-cream font-semibold mb-2">Stay in the loop</p>
+          <p className="text-muted text-sm mb-6">
+            New gear guides, limited promos, and launch updates. No spam.
+          </p>
+          <EmailSignup />
+        </div>
+
         <footer className="text-xs text-muted mt-12 pt-8 border-t border-border">
           <p>
             <em>
@@ -192,6 +210,26 @@ export default async function BlogPostPage({ params }: Props) {
           </p>
         </footer>
       </article>
+
+      {relatedPosts.length > 0 && (
+        <section className="mt-12 pt-8 border-t border-border">
+          <h2 className="font-serif text-xl text-cream mb-6">Related Articles</h2>
+          <div className="space-y-4">
+            {relatedPosts.map((rp) => (
+              <Link
+                key={rp.slug}
+                href={`/blog/${rp.slug}`}
+                className="block border border-border hover:border-accent p-5 transition-colors group"
+              >
+                <p className="text-sm text-cream group-hover:text-accent transition-colors leading-snug">
+                  {rp.title}
+                </p>
+                <p className="text-xs text-muted mt-1">{rp.excerpt}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {(prevPost || nextPost) && (
         <nav className="mt-12 pt-8 border-t border-border grid grid-cols-1 sm:grid-cols-2 gap-6">
