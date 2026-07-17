@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { products, getProductBySlug, formatPrice, getVariantPrice } from '@/lib/products'
+import { blogPosts } from '@/lib/blog-posts'
 import BuyButton from '@/components/BuyButton'
 
 interface Props {
@@ -354,6 +355,29 @@ export default async function ProductPage({ params }: Props) {
           </div>
         </section>
       )}
+
+      {/* Related guides */}
+      <section className="border-t border-border">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+          <h2 className="section-heading mb-8">Gear Guides</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {blogPosts.slice(0, 3).map((bp) => (
+              <Link
+                key={bp.slug}
+                href={`/blog/${bp.slug}`}
+                className="border border-border hover:border-accent p-5 transition-colors group"
+              >
+                <span className="text-xs tracking-[0.15em] uppercase text-accent font-semibold">
+                  {bp.category}
+                </span>
+                <h3 className="text-sm text-cream group-hover:text-accent transition-colors mt-2 leading-snug">
+                  {bp.title}
+                </h3>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   )
 }
