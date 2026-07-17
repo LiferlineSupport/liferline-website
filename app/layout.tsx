@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     },
   }),
   description:
-    'Boutique guitar patch cables and instrument cables hand-soldered in the USA with Mogami wire and Neutrik connectors. Every cable backed by a lifetime guarantee. Buy once, keep forever.',
+    'Boutique guitar patch cables and instrument cables hand-soldered in the USA with Canare and Mogami wire and Neutrik connectors. Every cable backed by a lifetime guarantee. Buy once, keep forever.',
   keywords: [
     'guitar instrument cable',
     'guitar patch cables',
@@ -43,6 +43,7 @@ export const metadata: Metadata = {
     'custom patch cables',
     'american made guitar cables',
     'lifetime guarantee guitar cable',
+    'Canare GS-6 patch cable',
     'Mogami patch cable',
     'Neutrik guitar cable',
     'bass guitar instrument cable',

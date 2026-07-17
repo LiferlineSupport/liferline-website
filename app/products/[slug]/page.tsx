@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = isInstrumentCable
     ? `${product.name} | Best Instrument Cable for Guitar & Bass | Forever Cables`
     : `${product.name} | Forever Cables by Hatch Patch Cables`
-  const description = `${product.description} Hand-soldered in the USA with Mogami wire and Neutrik connectors. ${formatPrice(product.price)}. Guaranteed for life.`
+  const description = `${product.description} Hand-soldered in the USA with premium wire and Neutrik connectors. ${formatPrice(product.price)}. Guaranteed for life.`
 
   const prices = product.variants
     .map((v) => v.price)

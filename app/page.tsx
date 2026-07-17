@@ -9,7 +9,7 @@ function WebSiteJsonLd() {
     name: 'Forever Cables by Hatch Patch Cables',
     url: 'https://liferline.com',
     description:
-      'Boutique guitar patch cables and instrument cables hand-soldered in the USA with Mogami wire and Neutrik connectors. Guaranteed for life.',
+      'Boutique guitar patch cables and instrument cables hand-soldered in the USA with Canare and Mogami wire and Neutrik connectors. Guaranteed for life.',
     publisher: {
       '@type': 'Organization',
       name: 'Hatch Patch Cables',
@@ -157,8 +157,8 @@ export default function Home() {
         <div className="mb-12">
           <h2 className="section-heading">Forever Cables</h2>
           <p className="section-subheading">
-            Premium guitar patch cables and instrument cables built to spec with Mogami wire and
-            Neutrik connectors. Every one guaranteed for life.
+            Premium guitar patch cables and instrument cables built to spec with Canare and Mogami wire
+            and Neutrik connectors. Every one guaranteed for life.
           </p>
         </div>
 

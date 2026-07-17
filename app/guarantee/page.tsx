@@ -206,7 +206,7 @@ export default function Guarantee() {
               for the best.
             </p>
             <p>
-              We build every cable by hand, one at a time. We use Mogami cable and Neutrik connectors
+              We build every cable by hand, one at a time. We use Canare and Mogami cable with Neutrik connectors
               because they are the best components available, used in professional recording studios
               and by touring musicians worldwide. We hand-solder every connection and test every cable
               before it leaves our bench.
