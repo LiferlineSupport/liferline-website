@@ -29,25 +29,46 @@ function OrganizationJsonLd() {
 }
 
 function ProductListJsonLd() {
-  const items = products.map((p, i) => ({
-    '@type': 'ListItem',
-    position: i + 1,
-    item: {
-      '@type': 'Product',
-      name: p.name,
-      description: p.description,
-      brand: { '@type': 'Brand', name: 'Forever Cables' },
-      manufacturer: { '@type': 'Organization', name: 'Hatch Patch Cables' },
-      offers: {
-        '@type': 'Offer',
-        price: (p.price / 100).toFixed(2),
-        priceCurrency: 'USD',
-        availability: 'https://schema.org/InStock',
-        url: `https://liferline.com/products/${p.slug}`,
-        seller: { '@type': 'Organization', name: 'Hatch Patch Cables' },
+  const items = products.map((p, i) => {
+    const variantPrices = p.variants
+      .map((v) => v.price)
+      .filter((pr): pr is number => pr != null)
+    const hasRange = variantPrices.length > 1 &&
+      Math.min(...variantPrices) !== Math.max(...variantPrices)
+
+    const offers = hasRange
+      ? {
+          '@type': 'AggregateOffer',
+          lowPrice: (Math.min(...variantPrices) / 100).toFixed(2),
+          highPrice: (Math.max(...variantPrices) / 100).toFixed(2),
+          priceCurrency: 'USD',
+          offerCount: variantPrices.length,
+          availability: 'https://schema.org/InStock',
+          url: `https://liferline.com/products/${p.slug}`,
+          seller: { '@type': 'Organization', name: 'Hatch Patch Cables' },
+        }
+      : {
+          '@type': 'Offer',
+          price: (p.price / 100).toFixed(2),
+          priceCurrency: 'USD',
+          availability: 'https://schema.org/InStock',
+          url: `https://liferline.com/products/${p.slug}`,
+          seller: { '@type': 'Organization', name: 'Hatch Patch Cables' },
+        }
+
+    return {
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'Product',
+        name: p.name,
+        description: p.description,
+        brand: { '@type': 'Brand', name: 'Forever Cables' },
+        manufacturer: { '@type': 'Organization', name: 'Hatch Patch Cables' },
+        offers,
       },
-    },
-  }))
+    }
+  })
   const data = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',

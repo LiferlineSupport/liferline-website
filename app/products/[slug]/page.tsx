@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { products, getProductBySlug, formatPrice } from '@/lib/products'
+import { products, getProductBySlug, formatPrice, getVariantPrice } from '@/lib/products'
 import BuyButton from '@/components/BuyButton'
 
 interface Props {
@@ -20,6 +20,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = `${product.name} | Forever Cables by Hatch Patch Cables`
   const description = `${product.description} Hand-soldered in the USA with Mogami wire and Neutrik connectors. ${formatPrice(product.price)}. Guaranteed for life.`
 
+  const prices = product.variants
+    .map((v) => v.price)
+    .filter((p): p is number => p != null)
+  const lowPrice = prices.length > 0 ? Math.min(...prices) : product.price
+  const highPrice = prices.length > 0 ? Math.max(...prices) : product.price
+
   return {
     title,
     description,
@@ -31,6 +37,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url: `https://liferline.com/products/${product.slug}`,
       type: 'website',
+    },
+    other: {
+      'product:price:amount': (lowPrice / 100).toFixed(2),
+      'product:price:currency': 'USD',
+      ...(highPrice > lowPrice
+        ? { 'product:price:amount:high': (highPrice / 100).toFixed(2) }
+        : {}),
     },
   }
 }
@@ -69,6 +82,62 @@ function BreadcrumbJsonLd({ product }: { product: NonNullable<ReturnType<typeof 
 }
 
 function ProductJsonLd({ product }: { product: NonNullable<ReturnType<typeof getProductBySlug>> }) {
+  const variantPrices = product.variants
+    .map((v) => v.price)
+    .filter((p): p is number => p != null)
+  const hasRange = variantPrices.length > 1 &&
+    Math.min(...variantPrices) !== Math.max(...variantPrices)
+
+  const shippingDetails = {
+    '@type': 'OfferShippingDetails',
+    shippingRate: {
+      '@type': 'MonetaryAmount',
+      value: '0',
+      currency: 'USD',
+    },
+    shippingDestination: {
+      '@type': 'DefinedRegion',
+      addressCountry: 'US',
+    },
+    deliveryTime: {
+      '@type': 'ShippingDeliveryTime',
+      handlingTime: {
+        '@type': 'QuantitativeValue',
+        minValue: 1,
+        maxValue: 2,
+        unitCode: 'd',
+      },
+      transitTime: {
+        '@type': 'QuantitativeValue',
+        minValue: 2,
+        maxValue: 5,
+        unitCode: 'd',
+      },
+    },
+  }
+
+  const offers = hasRange
+    ? {
+        '@type': 'AggregateOffer',
+        lowPrice: (Math.min(...variantPrices) / 100).toFixed(2),
+        highPrice: (Math.max(...variantPrices) / 100).toFixed(2),
+        priceCurrency: 'USD',
+        offerCount: variantPrices.length,
+        availability: 'https://schema.org/InStock',
+        url: `https://liferline.com/products/${product.slug}`,
+        seller: { '@type': 'Organization', name: 'Hatch Patch Cables' },
+        shippingDetails,
+      }
+    : {
+        '@type': 'Offer',
+        price: (product.price / 100).toFixed(2),
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock',
+        url: `https://liferline.com/products/${product.slug}`,
+        seller: { '@type': 'Organization', name: 'Hatch Patch Cables' },
+        shippingDetails,
+      }
+
   const data = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -76,41 +145,7 @@ function ProductJsonLd({ product }: { product: NonNullable<ReturnType<typeof get
     description: product.longDescription,
     brand: { '@type': 'Brand', name: 'Forever Cables' },
     manufacturer: { '@type': 'Organization', name: 'Hatch Patch Cables' },
-    offers: {
-      '@type': 'Offer',
-      price: (product.price / 100).toFixed(2),
-      priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
-      url: `https://liferline.com/products/${product.slug}`,
-      seller: { '@type': 'Organization', name: 'Hatch Patch Cables' },
-      shippingDetails: {
-        '@type': 'OfferShippingDetails',
-        shippingRate: {
-          '@type': 'MonetaryAmount',
-          value: '0',
-          currency: 'USD',
-        },
-        shippingDestination: {
-          '@type': 'DefinedRegion',
-          addressCountry: 'US',
-        },
-        deliveryTime: {
-          '@type': 'ShippingDeliveryTime',
-          handlingTime: {
-            '@type': 'QuantitativeValue',
-            minValue: 1,
-            maxValue: 2,
-            unitCode: 'd',
-          },
-          transitTime: {
-            '@type': 'QuantitativeValue',
-            minValue: 2,
-            maxValue: 5,
-            unitCode: 'd',
-          },
-        },
-      },
-    },
+    offers,
     hasWarranty: {
       '@type': 'WarrantyPromise',
       warrantyScope: 'https://schema.org/FullLifetimeWarranty',
@@ -277,7 +312,11 @@ export default async function ProductPage({ params }: Props) {
                   <p className="text-xs tracking-[0.12em] uppercase text-accent mb-3">{p.tagline}</p>
                   <p className="text-sm text-muted leading-relaxed mb-4">{p.description}</p>
                   <div className="flex items-center justify-between">
-                    <span className="font-serif text-xl text-cream">{formatPrice(p.price)}</span>
+                    <span className="font-serif text-xl text-cream">
+                      {p.variants.some((v) => v.price != null && v.price !== p.price)
+                        ? `From ${formatPrice(p.price)}`
+                        : formatPrice(p.price)}
+                    </span>
                     <span className="text-xs text-accent tracking-wide">View details</span>
                   </div>
                 </div>
