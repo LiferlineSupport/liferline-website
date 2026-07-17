@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const isInstrumentCable = product.slug === 'the-stage-cable'
   const title = isInstrumentCable
-    ? `${product.name} | Best Guitar Instrument Cable | Forever Cables`
+    ? `${product.name} | Best Instrument Cable for Guitar & Bass | Forever Cables`
     : `${product.name} | Forever Cables by Hatch Patch Cables`
   const description = `${product.description} Hand-soldered in the USA with Mogami wire and Neutrik connectors. ${formatPrice(product.price)}. Guaranteed for life.`
 

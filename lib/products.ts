@@ -106,7 +106,7 @@ export const products: Product[] = [
     name: 'The Stage Cable',
     tagline: '10ft Instrument Cable',
     description:
-      'A premium guitar instrument cable, hand-soldered with Mogami W2524 and Neutrik NP2X plugs. Dead quiet, tour-grade durable, guaranteed for life. The best instrument cable for guitar and bass.',
+      'A premium guitar and bass instrument cable, hand-soldered with Mogami W2524 and Neutrik NP2X plugs. Dead quiet, tour-grade durable, guaranteed for life. The best instrument cable for guitar and bass players who are done with cheap cables.',
     longDescription:
       'The Stage Cable is the guitar instrument cable built for players who are done with cheap cables that crackle and die. Whether you run from your guitar to your amp or your pedalboard to your amp, Mogami W2524 is a heavier-gauge, ultra-low-noise instrument cable trusted by touring professionals worldwide. Paired with Neutrik NP2X plugs and hand-soldered connections, it delivers dead-quiet performance night after night. Works perfectly as a bass guitar instrument cable too. Available in 10, 15, and 20-foot lengths to fit any stage or studio setup.',
     specs: [
