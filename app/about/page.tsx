@@ -28,9 +28,9 @@ export default function About() {
       <div className="space-y-12 text-muted leading-relaxed">
         <div className="border-l-2 border-accent pl-8">
           <p className="text-lg">
-            Every guitarist has been there. You're mid-set, mid-song, mid-solo — and your
+            Every guitarist has been there. You're mid-set, mid-song, mid-solo, and your
             cable gives out. A crackle, a pop, silence. You kick the cable. Nothing. You
-            swap it. Problem solved — until next time.
+            swap it. Problem solved, until next time.
           </p>
         </div>
 
@@ -42,7 +42,7 @@ export default function About() {
         </p>
 
         <p>
-          So we started soldering our own. We sourced the wire we actually trusted —
+          So we started soldering our own. We sourced the wire we actually trusted:
           Mogami, the same cable used in the best recording studios in the world. We used
           Neutrik connectors, the ones that roadies and touring techs rely on every night.
           And we soldered every joint by hand, the way it should be done.
@@ -53,18 +53,18 @@ export default function About() {
         </h2>
 
         <p>
-          The first batch of cables we made were called "Forever Cables" — built for
+          The first batch of cables we made were called "Forever Cables," built for
           players who are done replacing cables. We gave them to friends, handed them out at
           local jams, and waited to see what happened.
         </p>
 
         <p>
           Nothing happened. The cables just worked. For months, then years. People started
-          coming back — not to return them, but to buy more.
+          coming back, not to return them, but to buy more.
         </p>
 
         <p>
-          That's when we knew we had something worth selling. Not just cables — a standard.
+          That's when we knew we had something worth selling. Not just cables; a standard.
         </p>
 
         <h2 className="font-serif text-3xl text-cream pt-4">
@@ -81,7 +81,7 @@ export default function About() {
         <p>
           We could do that because we knew exactly how good the cables were. When you hand-
           solder every joint yourself, when you test every connection before it ships, when
-          you use components you'd stake your reputation on — the guarantee isn't a risk.
+          you use components you'd stake your reputation on, the guarantee isn't a risk.
           It's just math.
         </p>
 

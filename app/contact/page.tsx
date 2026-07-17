@@ -22,7 +22,7 @@ export default function Contact() {
         </h1>
         <p className="text-muted text-lg leading-relaxed max-w-2xl">
           High-touch support is part of the product. Whether you need a replacement cable,
-          have a question about an order, or want to build something custom — we're here.
+          have a question about an order, or want to build something custom, we're here.
         </p>
       </div>
 
@@ -77,11 +77,11 @@ export default function Contact() {
             {[
               {
                 q: 'What does the lifetime guarantee actually cover?',
-                a: "Everything. If the cable fails for any reason — bad solder joint, broken connector, damaged jacket — we replace it. We don't have a list of exclusions because we don't believe in them.",
+                a: "Everything. If the cable fails for any reason (bad solder joint, broken connector, damaged jacket), we replace it. We don't have a list of exclusions because we don't believe in them.",
               },
               {
                 q: "Do I need to send the old cable back?",
-                a: "No. We'll ship the replacement first. If you want to send the broken one back after, great — we can learn from it. But it's not required.",
+                a: "No. We'll ship the replacement first. If you want to send the broken one back after, great; we can learn from it. But it's not required.",
               },
               {
                 q: 'How long does shipping take?',
@@ -89,7 +89,7 @@ export default function Contact() {
               },
               {
                 q: 'Can you build something custom?',
-                a: "Often yes. Email us with what you need — custom length, connector combo, bulk order — and we'll tell you what's possible.",
+                a: "Often yes. Email us with what you need (custom length, connector combo, bulk order) and we'll tell you what's possible.",
               },
               {
                 q: 'Why are Forever Cables more expensive than store cables?',
