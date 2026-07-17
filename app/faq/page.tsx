@@ -78,7 +78,7 @@ const faqItems = [
   },
   {
     q: 'How long does shipping take?',
-    a: 'We ship via USPS First Class or Priority Mail within the United States. Most domestic orders arrive within 3 to 7 business days of the ship date. Tracking information is provided for every order.',
+    a: 'All US orders ship free via USPS. Because each cable is handmade to order, allow 1 to 3 business days for production, then 3 to 5 business days for delivery. Tracking is provided for every order. See our shipping policy page for full details.',
   },
   {
     q: 'Do you ship internationally?',
@@ -86,7 +86,7 @@ const faqItems = [
   },
   {
     q: 'What is your return policy?',
-    a: 'If you receive a cable that is defective or was damaged in shipping, we will replace it immediately, no questions asked. Because our cables are handmade to order, we do not accept returns on cables that arrive in working condition. That said, if a Forever Cable ever fails in use, that is covered by the Lifetime Guarantee regardless of when you bought it.',
+    a: 'You can return any unused Forever Cable within 30 days of delivery for a full refund. If your cable is defective or was damaged in shipping, it is covered by our lifetime guarantee and we will replace it immediately. See our returns and exchanges page for full details.',
   },
   {
     q: 'Can I get my cable repaired instead of replaced?',
