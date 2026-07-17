@@ -4,13 +4,24 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Our Story',
   description:
-    'How Hatch Patch Cables started: hand-built boutique guitar cables made in the USA with Mogami wire and Neutrik connectors. Why we guarantee every Forever Cable for life.',
+    'How Hatch Patch Cables started: hand-built boutique guitar cables made in the USA with Canare GS-6, Mogami wire, and Neutrik connectors. Why we guarantee every Forever Cable for life.',
+  keywords: [
+    'about forever cables',
+    'hatch patch cables',
+    'handmade guitar cables usa',
+    'boutique guitar cables',
+    'hand soldered guitar cables',
+    'mogami guitar cable',
+    'canare gs-6 guitar cable',
+    'neutrik guitar cable connector',
+  ],
   alternates: {
     canonical: 'https://liferline.com/about',
   },
   openGraph: {
     title: 'Our Story | Forever Cables by Hatch Patch Cables',
-    description: 'We got tired of bad cables. So we started building our own. Hand-soldered in the USA with Mogami wire and Neutrik connectors.',
+    description:
+      'We got tired of bad cables. So we started building our own. Hand-soldered in the USA with Canare GS-6, Mogami wire, and Neutrik connectors.',
     url: 'https://liferline.com/about',
     type: 'website',
   },
@@ -51,7 +62,9 @@ export default function About() {
       <nav className="mb-12">
         <ol className="flex items-center gap-2 text-xs text-muted">
           <li>
-            <Link href="/" className="hover:text-cream transition-colors">Home</Link>
+            <Link href="/" className="hover:text-cream transition-colors">
+              Home
+            </Link>
           </li>
           <li>/</li>
           <li className="text-cream">Our Story</li>
@@ -73,43 +86,89 @@ export default function About() {
       <div className="space-y-12 text-muted leading-relaxed">
         <div className="border-l-2 border-accent pl-8">
           <p className="text-lg">
-            Every guitarist has been there. You're mid-set, mid-song, mid-solo, and your
-            cable gives out. A crackle, a pop, silence. You kick the cable. Nothing. You
-            swap it. Problem solved, until next time.
+            Every guitarist has a story. A cable that crackled mid-set and
+            ruined the take. A connector that worked fine at soundcheck and died
+            before the first song ended. A patch cable that lasted three months
+            before going intermittent in the most annoying, impossible-to-
+            diagnose way possible.
           </p>
         </div>
 
         <p>
-          We started Hatch Patch Cables because we were sick of that story. Sick of cheap cables with
-          thin insulation, cold solder joints, and connectors that wobble loose after a
-          few months. Sick of guitar shops that sell "professional" cables for $15 and
-          wonder why they keep coming back.
+          We started Hatch Patch Cables because we were sick of that story. Sick
+          of cheap cables with thin insulation, cold solder joints, and
+          connectors that wobble loose after a few months. Sick of guitar shops
+          that sell &quot;professional&quot; cables for $15 and wonder why they
+          keep coming back.
         </p>
 
         <p>
-          So we started soldering our own. We sourced the wire we actually trusted:
-          Mogami, the same cable used in the best recording studios in the world. We used
-          Neutrik connectors, the ones that roadies and touring techs rely on every night.
-          And we soldered every joint by hand, the way it should be done.
+          Forever Cables are handmade guitar patch cables built to last the
+          lifetime of your rig. Not the lifetime of a budget cable. Yours.
         </p>
 
-        <h2 className="font-serif text-3xl text-cream pt-4">
-          Forever Cables
-        </h2>
+        <h2 className="font-serif text-3xl text-cream pt-4">Who We Are</h2>
 
         <p>
-          The first batch of cables we made were called "Forever Cables," built for
-          players who are done replacing cables. We gave them to friends, handed them out at
-          local jams, and waited to see what happened.
+          Forever Cables are made by Hatch Patch Cables: a small, hands-on
+          operation dedicated to one thing, making the most reliable guitar
+          cables money can buy and backing them without reservation.
         </p>
 
         <p>
-          Nothing happened. The cables just worked. For months, then years. People started
-          coming back, not to return them, but to buy more.
+          We are not a big box brand. We do not outsource assembly to a factory
+          floor. Every cable that ships from us is made by hand, tested by ear,
+          and signed off by a real person who cares about the quality of your
+          signal chain.
         </p>
 
         <p>
-          That's when we knew we had something worth selling. Not just cables; a standard.
+          We believe a cable should be the last thing you think about when you
+          plug in. That belief is built into every joint we solder.
+        </p>
+
+        <h2 className="font-serif text-3xl text-cream pt-4">The Craft</h2>
+
+        <p>
+          Every Forever Cable starts with components we trust completely.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+          <div className="bg-card border border-border p-6">
+            <h3 className="text-cream font-semibold mb-3">Wire</h3>
+            <p className="text-sm">
+              We use <strong className="text-cream">Canare GS-6</strong> and{' '}
+              <strong className="text-cream">Mogami W2524</strong>, two of the
+              most respected wire formulations in professional audio. Canare
+              GS-6 is the go-to for studio engineers and touring guitarists who
+              need low capacitance and zero compromise. Mogami W2524 brings
+              exceptional shielding and signal clarity to longer stage runs.
+            </p>
+          </div>
+          <div className="bg-card border border-border p-6">
+            <h3 className="text-cream font-semibold mb-3">Connectors</h3>
+            <p className="text-sm">
+              All connectors are{' '}
+              <strong className="text-cream">Neutrik</strong>, the industry
+              standard for locking reliability. The black and gold finish is not
+              cosmetic; it reflects the quality of the contact surfaces inside.
+            </p>
+          </div>
+          <div className="bg-card border border-border p-6">
+            <h3 className="text-cream font-semibold mb-3">Solder</h3>
+            <p className="text-sm">
+              We use{' '}
+              <strong className="text-cream">Cardas 4% silver solder</strong>{' '}
+              for every joint. Silver solder produces a cleaner, more conductive
+              bond than standard tin-lead. It costs more and takes more skill to
+              work with correctly. We use it anyway.
+            </p>
+          </div>
+        </div>
+
+        <p>
+          Each cable is built, tested, and inspected by hand before it ships. If
+          it does not pass, it does not leave.
         </p>
 
         <h2 className="font-serif text-3xl text-cream pt-4">
@@ -117,38 +176,47 @@ export default function About() {
         </h2>
 
         <p>
-          When we started selling Forever Cables, we made a simple promise: if the cable
-          fails for any reason, at any time, we'll replace it. No receipts, no return
-          shipping labels, no diagnostic forms. Just an email saying what happened, and a
-          new cable in the mail.
+          The guarantee is simple: if your Forever Cable ever fails, we will fix
+          it or replace it. No receipt required. No expiration date. No
+          exceptions.
         </p>
 
         <p>
-          We could do that because we knew exactly how good the cables were. When you hand-
-          solder every joint yourself, when you test every connection before it ships, when
-          you use components you'd stake your reputation on, the guarantee isn't a risk.
-          It's just math.
+          We offer this guarantee because we mean it literally. We build these
+          cables to outlast your current amp, your current pedalboard, and your
+          current band. The guarantee is our commitment that if something does go
+          wrong, we will make it right without question.
+        </p>
+
+        <p>
+          Most cable companies do not offer this because they know their cables
+          will fail. We offer it because we are confident ours will not.
+        </p>
+
+        <h2 className="font-serif text-3xl text-cream pt-4">Our Mission</h2>
+
+        <p>
+          High-quality, handmade guitar cables should not be out of reach.
+          Boutique does not have to mean unobtainable. We make Forever Cables to
+          bring professional-grade signal quality to every guitarist who is
+          serious about their tone, with the kind of customer support you would
+          expect from someone who actually picks up the phone.
+        </p>
+
+        <p>
+          When you buy a Forever Cable, you are buying from people who care about
+          your rig as much as you do.
         </p>
 
         <div className="bg-card border border-border p-8 my-8">
           <p className="font-serif text-2xl text-cream mb-4 leading-snug">
-            "Hand-Built. American-Made. Guaranteed for Life."
+            &quot;Hand-Built. American-Made. Guaranteed for Life.&quot;
           </p>
           <p className="text-sm text-muted">
-            That's not a tagline we brainstormed in a meeting. It's literally a description
-            of what we do.
+            That is not a tagline we brainstormed in a meeting. It is literally a
+            description of what we do.
           </p>
         </div>
-
-        <p>
-          Today every Forever Cable is still built by hand, one at a time, in the United
-          States. We haven't outsourced a single solder joint. We haven't cut corners on
-          components. And we haven't changed the guarantee.
-        </p>
-
-        <p>
-          We probably never will.
-        </p>
       </div>
 
       <div className="mt-16 border-t border-border pt-12 flex flex-col sm:flex-row gap-6">
