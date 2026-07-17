@@ -174,11 +174,14 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="border-t border-border pt-12 text-center">
-        <p className="text-muted mb-6">
-          Not a support question? Just want to say hi or share your rig?
-        </p>
-        <a href="mailto:support@liferline.com" className="btn-primary inline-block">
+      <div className="border-t border-border pt-12 flex flex-col sm:flex-row items-center justify-center gap-6">
+        <Link href="/returns" className="btn-primary text-center">
+          Returns and Exchanges
+        </Link>
+        <Link href="/guarantee" className="btn-ghost text-center">
+          Lifetime Guarantee
+        </Link>
+        <a href="mailto:support@liferline.com" className="btn-ghost text-center">
           Email Us
         </a>
       </div>
