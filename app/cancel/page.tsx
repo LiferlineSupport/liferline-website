@@ -15,7 +15,7 @@ export default function Cancel() {
         whenever you're ready.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <Link href="/#products" className="btn-primary">
+        <Link href="/products" className="btn-primary">
           Back to Shop
         </Link>
         <Link href="/contact" className="btn-ghost">

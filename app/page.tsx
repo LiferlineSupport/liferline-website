@@ -63,6 +63,7 @@ function ProductListJsonLd() {
         '@type': 'Product',
         name: p.name,
         description: p.description,
+        image: `https://liferline.com${p.image}`,
         brand: { '@type': 'Brand', name: 'Forever Cables' },
         manufacturer: { '@type': 'Organization', name: 'Hatch Patch Cables' },
         offers,

@@ -61,10 +61,49 @@ function GuaranteeFaqJsonLd() {
   )
 }
 
+function BreadcrumbJsonLd() {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://liferline.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Lifetime Guarantee',
+        item: 'https://liferline.com/guarantee',
+      },
+    ],
+  }
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  )
+}
+
 export default function Guarantee() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-20">
       <GuaranteeFaqJsonLd />
+      <BreadcrumbJsonLd />
+
+      <nav className="mb-12">
+        <ol className="flex items-center gap-2 text-xs text-muted">
+          <li>
+            <Link href="/" className="hover:text-cream transition-colors">Home</Link>
+          </li>
+          <li>/</li>
+          <li className="text-cream">Lifetime Guarantee</li>
+        </ol>
+      </nav>
+
       <div className="mb-16">
         <p className="text-xs tracking-[0.3em] uppercase text-accent mb-4 font-semibold">
           Our Promise
@@ -189,7 +228,7 @@ export default function Guarantee() {
       </div>
 
       <div className="mt-16 border-t border-border pt-12 flex flex-col sm:flex-row gap-6">
-        <Link href="/#products" className="btn-primary text-center">
+        <Link href="/products" className="btn-primary text-center">
           Shop Cables
         </Link>
         <Link href="/contact" className="btn-ghost text-center">

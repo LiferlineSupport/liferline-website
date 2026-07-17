@@ -71,8 +71,8 @@ function BreadcrumbJsonLd({ product }: { product: NonNullable<ReturnType<typeof 
       {
         '@type': 'ListItem',
         position: 2,
-        name: 'Cables',
-        item: 'https://liferline.com/#products',
+        name: 'All Cables',
+        item: 'https://liferline.com/products',
       },
       {
         '@type': 'ListItem',
@@ -206,7 +206,7 @@ export default async function ProductPage({ params }: Props) {
           </li>
           <li>/</li>
           <li>
-            <Link href="/#products" className="hover:text-cream transition-colors">Cables</Link>
+            <Link href="/products" className="hover:text-cream transition-colors">All Cables</Link>
           </li>
           <li>/</li>
           <li className="text-cream">{product.name}</li>
