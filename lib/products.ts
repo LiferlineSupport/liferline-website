@@ -20,7 +20,7 @@ export const products: Product[] = [
     name: 'The Workhorse',
     tagline: '6" Straight-to-Straight',
     description:
-      'Our most popular pedalboard staple. Hand-soldered with Mogami W2319 cable and Neutrik right-angle plugs for a clean, tight connection every time.',
+      'Our most popular pedalboard staple. Hand-soldered with Mogami W2319 cable and Neutrik straight plugs for a clean, tight connection every time.',
     price: 1800,
     currency: 'usd',
     stripePriceId: process.env.STRIPE_PRICE_WORKHORSE_6 ?? '',
