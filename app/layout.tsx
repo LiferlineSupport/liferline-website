@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'Forever Cables by Hatch Patch Cables',
     description: 'Boutique guitar patch cables, hand-soldered in the USA. Guaranteed for life.',
   },
