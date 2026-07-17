@@ -4,6 +4,7 @@ import PurchaseEvent from './PurchaseEvent'
 
 export const metadata: Metadata = {
   title: 'Order Confirmed',
+  robots: { index: false, follow: false },
 }
 
 export default function Success() {

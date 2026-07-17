@@ -1,5 +1,4 @@
 import { MetadataRoute } from 'next'
-import { products } from '@/lib/products'
 
 const BASE_URL = 'https://liferline.com'
 

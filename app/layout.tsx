@@ -64,15 +64,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <head>
+      <body className="bg-bg text-cream font-sans min-h-screen flex flex-col">
         <Script
           defer
           data-domain="liferline.com"
           src="https://plausible.io/js/script.js"
           strategy="afterInteractive"
         />
-      </head>
-      <body className="bg-bg text-cream font-sans min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

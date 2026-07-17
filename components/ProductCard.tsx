@@ -118,7 +118,7 @@ export default function ProductCard({ product }: Props) {
             <span className="font-serif text-2xl text-cream">
               {formatPrice(product.price)}
             </span>
-            <span className="text-xs text-muted tracking-wide">Free shipping $50+</span>
+            <span className="text-xs text-muted tracking-wide">Guaranteed for life</span>
           </div>
 
           {error && (
