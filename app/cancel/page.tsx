@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Order Cancelled — Liferline Cable Company',
+  title: 'Order Cancelled — Hatch Patch Cables',
 }
 
 export default function Cancel() {

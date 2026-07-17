@@ -6,7 +6,7 @@ function OrganizationJsonLd() {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Liferline Cable Company',
+    name: 'Hatch Patch Cables',
     url: 'https://liferline.com',
     description:
       'Boutique guitar patch cables hand-soldered in the USA. Every cable backed by a lifetime guarantee.',
@@ -37,14 +37,14 @@ function ProductListJsonLd() {
       name: p.name,
       description: p.description,
       brand: { '@type': 'Brand', name: 'Forever Cables' },
-      manufacturer: { '@type': 'Organization', name: 'Liferline Cable Company' },
+      manufacturer: { '@type': 'Organization', name: 'Hatch Patch Cables' },
       offers: {
         '@type': 'Offer',
         price: (p.price / 100).toFixed(2),
         priceCurrency: 'USD',
         availability: 'https://schema.org/InStock',
         url: 'https://liferline.com/#products',
-        seller: { '@type': 'Organization', name: 'Liferline Cable Company' },
+        seller: { '@type': 'Organization', name: 'Hatch Patch Cables' },
       },
     },
   }))
@@ -74,7 +74,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-24 md:py-36">
           <div className="max-w-2xl">
             <p className="text-xs tracking-[0.3em] uppercase text-accent mb-6 font-semibold">
-              Forever Cables by Liferline
+              Forever Cables by Hatch Patch Cables
             </p>
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-cream leading-[1.05] mb-8">
               Built to last.{' '}
@@ -146,7 +146,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-xs tracking-[0.2em] uppercase text-accent mb-4 font-semibold">
-                The Liferline Promise
+                Our Promise
               </p>
               <h2 className="font-serif text-4xl text-cream mb-6 leading-tight">
                 If it ever fails,<br />we fix it. Full stop.
@@ -158,7 +158,7 @@ export default function Home() {
               </p>
               <p className="text-muted leading-relaxed mb-8">
                 Email us, describe what happened, and we'll ship you a replacement before
-                you even send the old one back. That's the Liferline standard.
+                you even send the old one back. That's the Forever Cables standard.
               </p>
               <Link href="/about" className="btn-ghost inline-block">
                 Read Our Story

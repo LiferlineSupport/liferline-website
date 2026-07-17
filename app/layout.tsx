@@ -18,8 +18,8 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL('https://liferline.com'),
   title: {
-    default: 'Forever Cables by Liferline | Hand-Built Boutique Guitar Patch Cables',
-    template: '%s | Liferline Cable Company',
+    default: 'Forever Cables by Hatch Patch Cables | Hand-Built Boutique Guitar Patch Cables',
+    template: '%s | Hatch Patch Cables',
   },
   description:
     'Boutique guitar patch cables hand-soldered in the USA with Mogami wire and Neutrik connectors. Every cable backed by a lifetime guarantee. Buy once, keep forever.',
@@ -36,16 +36,16 @@ export const metadata: Metadata = {
     'Neutrik guitar cable',
   ],
   openGraph: {
-    title: 'Forever Cables by Liferline',
+    title: 'Forever Cables by Hatch Patch Cables',
     description: 'Hand-Built. American-Made. Guaranteed for Life.',
     url: 'https://liferline.com',
-    siteName: 'Liferline Cable Company',
+    siteName: 'Hatch Patch Cables',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary',
-    title: 'Forever Cables by Liferline',
+    title: 'Forever Cables by Hatch Patch Cables',
     description: 'Boutique guitar patch cables, hand-soldered in the USA. Guaranteed for life.',
   },
   alternates: {

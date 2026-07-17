@@ -12,10 +12,10 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex flex-col leading-none group">
             <span className="font-serif text-xl text-cream group-hover:text-accent transition-colors">
-              Liferline
+              Forever Cables
             </span>
             <span className="text-[10px] tracking-[0.2em] uppercase text-muted">
-              Cable Company
+              by Hatch Patch Cables
             </span>
           </Link>
 

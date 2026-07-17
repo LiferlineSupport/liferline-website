@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Our Story',
   description:
-    'How Liferline Cable Company started: hand-built boutique guitar cables made in the USA with Mogami wire and Neutrik connectors. Why we guarantee every Forever Cable for life.',
+    'How Hatch Patch Cables started: hand-built boutique guitar cables made in the USA with Mogami wire and Neutrik connectors. Why we guarantee every Forever Cable for life.',
   alternates: {
     canonical: 'https://liferline.com/about',
   },
@@ -35,7 +35,7 @@ export default function About() {
         </div>
 
         <p>
-          Liferline started because we were sick of that story. Sick of cheap cables with
+          We started Hatch Patch Cables because we were sick of that story. Sick of cheap cables with
           thin insulation, cold solder joints, and connectors that wobble loose after a
           few months. Sick of guitar shops that sell "professional" cables for $15 and
           wonder why they keep coming back.
@@ -72,7 +72,7 @@ export default function About() {
         </h2>
 
         <p>
-          When we started selling Liferline cables, we made a simple promise: if the cable
+          When we started selling Forever Cables, we made a simple promise: if the cable
           fails for any reason, at any time, we'll replace it. No receipts, no return
           shipping labels, no diagnostic forms. Just an email saying what happened, and a
           new cable in the mail.
@@ -96,7 +96,7 @@ export default function About() {
         </div>
 
         <p>
-          Today every Liferline cable is still built by hand, one at a time, in the United
+          Today every Forever Cable is still built by hand, one at a time, in the United
           States. We haven't outsourced a single solder joint. We haven't cut corners on
           components. And we haven't changed the guarantee.
         </p>

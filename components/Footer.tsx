@@ -8,8 +8,8 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-4">
-              <span className="font-serif text-xl text-cream block">Liferline</span>
-              <span className="text-[10px] tracking-[0.2em] uppercase text-muted">Cable Company</span>
+              <span className="font-serif text-xl text-cream block">Forever Cables</span>
+              <span className="text-[10px] tracking-[0.2em] uppercase text-muted">by Hatch Patch Cables</span>
             </div>
             <p className="text-muted text-sm leading-relaxed max-w-xs">
               Hand-built boutique guitar cables made in the USA. Every cable is backed by
@@ -68,7 +68,7 @@ export default function Footer() {
 
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted">
-            © {new Date().getFullYear()} Liferline Cable Company. All rights reserved.
+            © {new Date().getFullYear()} Hatch Patch Cables. All rights reserved.
           </p>
           <p className="text-xs text-muted">
             Hand-Built. American-Made. Guaranteed for Life.™

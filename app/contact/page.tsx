@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Support & Contact',
   description:
-    'Get help with your Forever Cables by Liferline. File a lifetime guarantee claim, ask about custom cables, or just say hello.',
+    'Get help with your Forever Cables by Hatch Patch Cables. File a lifetime guarantee claim, ask about custom cables, or just say hello.',
   alternates: {
     canonical: 'https://liferline.com/contact',
   },
@@ -92,7 +92,7 @@ export default function Contact() {
                 a: "Often yes. Email us with what you need — custom length, connector combo, bulk order — and we'll tell you what's possible.",
               },
               {
-                q: 'Why are Liferline cables more expensive than store cables?',
+                q: 'Why are Forever Cables more expensive than store cables?',
                 a: "Because we use better materials, assemble them by hand, and guarantee them forever. The math works out in your favor within a year or two.",
               },
             ].map((item) => (

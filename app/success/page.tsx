@@ -19,7 +19,7 @@ export default function Success() {
 
       <h1 className="font-serif text-4xl text-cream mb-4">Order confirmed.</h1>
       <p className="text-muted text-lg mb-10 leading-relaxed">
-        Your Liferline cable is on its way. Check your email for a receipt and tracking
+        Your Forever Cable is on its way. Check your email for a receipt and tracking
         number. And remember, if anything ever goes wrong, we've got you.
       </p>
 
