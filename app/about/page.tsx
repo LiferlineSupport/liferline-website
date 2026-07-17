@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://liferline.com/about',
   },
+  openGraph: {
+    title: 'Our Story | Forever Cables by Hatch Patch Cables',
+    description: 'We got tired of bad cables. So we started building our own. Hand-soldered in the USA with Mogami wire and Neutrik connectors.',
+    url: 'https://liferline.com/about',
+    type: 'website',
+  },
 }
 
 function BreadcrumbJsonLd() {

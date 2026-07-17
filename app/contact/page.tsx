@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://liferline.com/contact',
   },
+  openGraph: {
+    title: 'Support & Contact | Forever Cables',
+    description: 'File a lifetime guarantee claim, ask about custom cables, or get help with your order. We actually answer emails.',
+    url: 'https://liferline.com/contact',
+    type: 'website',
+  },
 }
 
 const faqItems = [

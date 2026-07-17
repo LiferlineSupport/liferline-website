@@ -2,22 +2,32 @@ import Link from 'next/link'
 import { products } from '@/lib/products'
 import ProductCard from '@/components/ProductCard'
 
-function OrganizationJsonLd() {
+function WebSiteJsonLd() {
   const data = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Hatch Patch Cables',
+    '@type': 'WebSite',
+    name: 'Forever Cables by Hatch Patch Cables',
     url: 'https://liferline.com',
     description:
-      'Boutique guitar patch cables hand-soldered in the USA. Every cable backed by a lifetime guarantee.',
-    brand: {
-      '@type': 'Brand',
-      name: 'Forever Cables',
-    },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      email: 'support@liferline.com',
-      contactType: 'customer service',
+      'Boutique guitar patch cables and instrument cables hand-soldered in the USA with Mogami wire and Neutrik connectors. Guaranteed for life.',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Hatch Patch Cables',
+      url: 'https://liferline.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://liferline.com/icon.svg',
+      },
+      brand: {
+        '@type': 'Brand',
+        name: 'Forever Cables',
+      },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        email: 'support@liferline.com',
+        contactType: 'customer service',
+        availableLanguage: 'English',
+      },
     },
   }
   return (
@@ -88,7 +98,7 @@ function ProductListJsonLd() {
 export default function Home() {
   return (
     <>
-      <OrganizationJsonLd />
+      <WebSiteJsonLd />
       <ProductListJsonLd />
 
       {/* Hero */}

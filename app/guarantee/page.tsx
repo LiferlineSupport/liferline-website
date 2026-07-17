@@ -15,6 +15,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://liferline.com/guarantee',
   },
+  openGraph: {
+    title: 'Lifetime Guarantee | Forever Cables',
+    description: 'If your cable ever fails, for any reason, we replace it. No receipts. No shipping labels. No expiration. That is the Forever Cables standard.',
+    url: 'https://liferline.com/guarantee',
+    type: 'website',
+  },
 }
 
 const guaranteeFaq = [
