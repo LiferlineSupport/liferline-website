@@ -6,16 +6,20 @@ import ProductCard from '@/components/ProductCard'
 export const metadata: Metadata = {
   title: 'All Cables | Forever Cables by Hatch Patch Cables',
   description:
-    'Browse the complete Forever Cables lineup: boutique guitar patch cables and instrument cables hand-soldered in the USA with Mogami wire and Neutrik connectors. Every cable guaranteed for life.',
+    'Browse the complete Forever Cables lineup: boutique guitar patch cables, guitar pedal patch cables, and instrument cables hand-soldered in the USA with Mogami wire and Neutrik connectors. Every cable guaranteed for life.',
   keywords: [
-    'buy guitar patch cables',
-    'boutique patch cables',
+    'guitar instrument cable',
+    'guitar patch cables',
+    'guitar pedal patch cables',
     'best pedalboard cables',
+    'best instrument cable for guitar',
+    'boutique patch cables',
     'handmade guitar cables',
     'Mogami patch cables',
     'Neutrik guitar cables',
     'lifetime guarantee cables',
     'american made guitar cables',
+    'bass guitar instrument cable',
   ],
   alternates: {
     canonical: 'https://liferline.com/products',

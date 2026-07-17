@@ -147,7 +147,7 @@ export default function Home() {
         <div className="mb-12">
           <h2 className="section-heading">Forever Cables</h2>
           <p className="section-subheading">
-            Premium patch cables and instrument cables built to spec with Mogami wire and
+            Premium guitar patch cables and instrument cables built to spec with Mogami wire and
             Neutrik connectors. Every one guaranteed for life.
           </p>
         </div>
