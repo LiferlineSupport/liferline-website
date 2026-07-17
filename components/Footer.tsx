@@ -51,7 +51,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-sm text-muted hover:text-cream transition-colors">
+                <Link href="/guarantee" className="text-sm text-muted hover:text-cream transition-colors">
                   Lifetime Guarantee
                 </Link>
               </li>

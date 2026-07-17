@@ -168,8 +168,8 @@ export default function Home() {
                 Email us, describe what happened, and we'll ship you a replacement before
                 you even send the old one back. That's the Forever Cables standard.
               </p>
-              <Link href="/about" className="btn-ghost inline-block">
-                Read Our Story
+              <Link href="/guarantee" className="btn-ghost inline-block">
+                Read the Guarantee
               </Link>
             </div>
             <div className="border border-border p-8 bg-bg">
@@ -199,10 +199,10 @@ export default function Home() {
               </div>
               <div className="border-t border-border mt-8 pt-6">
                 <Link
-                  href="/contact"
+                  href="/guarantee"
                   className="text-accent text-sm hover:underline tracking-wide"
                 >
-                  File a guarantee claim →
+                  Read the full guarantee →
                 </Link>
               </div>
             </div>
