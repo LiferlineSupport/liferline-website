@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Suspense } from 'react'
 import PurchaseEvent from './PurchaseEvent'
+import OrderSummary from './OrderSummary'
 
 export const metadata: Metadata = {
   title: 'Order Confirmed',
@@ -22,10 +23,14 @@ export default function Success() {
       </div>
 
       <h1 className="font-serif text-4xl text-cream mb-4">Order confirmed.</h1>
-      <p className="text-muted text-lg mb-10 leading-relaxed">
+      <p className="text-muted text-lg mb-8 leading-relaxed">
         Your Forever Cable is on its way. Check your email for a receipt and tracking
         number. And remember, if anything ever goes wrong, we've got you.
       </p>
+
+      <Suspense>
+        <OrderSummary />
+      </Suspense>
 
       <div className="bg-card border border-border p-6 mb-10 text-left">
         <p className="text-xs tracking-[0.15em] uppercase text-muted mb-3 font-semibold">
