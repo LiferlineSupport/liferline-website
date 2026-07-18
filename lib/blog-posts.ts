@@ -1474,9 +1474,9 @@ export const blogPosts: BlogPost[] = [
     cta: 'Forever Cables uses Canare GS-6 in our Workhorse and Right Angle patch cables and Mogami W2524 in our Stage Cable. Every cable is hand-soldered with Neutrik connectors and guaranteed for life. Pick the cable built for your setup.',
   },
   {
-    slug: 'how-to-organize-your-pedalboard-cables',
+    slug: 'pedalboard-cable-management-tips',
     title: 'How to Organize Your Pedalboard Cables (And Keep Them That Way)',
-    metaTitle: 'How to Organize Your Pedalboard Cables: Cable Organization Guide (2026)',
+    metaTitle: 'Pedalboard Cable Management Tips: Organize Your Cables for Good (2026)',
     metaDescription: 'Learn pedalboard cable organization that actually lasts. Covers routing rules, cable management methods, color-coding, and common mistakes that create noise and tension.',
     keywords: [
       'pedalboard cable organization',
