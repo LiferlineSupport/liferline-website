@@ -184,3 +184,62 @@ export function checkStock(): { lowStock: InventoryItem[]; outOfStock: Inventory
     outOfStock: items.filter((i) => i.qtyOnHand <= 0),
   }
 }
+
+export function getInventory(): InventoryItem[] {
+  return readInventory()
+}
+
+export function getShipmentLog(): ShipmentRecord[] {
+  ensureDataDir()
+  if (!fs.existsSync(SHIPMENT_LOG_FILE)) return []
+  try {
+    return JSON.parse(fs.readFileSync(SHIPMENT_LOG_FILE, 'utf-8'))
+  } catch {
+    return []
+  }
+}
+
+export interface StockAdjustResult {
+  success: boolean
+  sku: string
+  previousQty: number
+  newQty: number
+  error?: string
+}
+
+export function adjustStock(sku: string, qty: number, note: string): StockAdjustResult {
+  ensureDataDir()
+  if (!fs.existsSync(INVENTORY_FILE)) {
+    writeInventory(DEFAULT_INVENTORY)
+  }
+
+  const release = lockfile.lockSync(INVENTORY_FILE, LOCK_OPTS)
+  try {
+    const items = readInventory()
+    const item = items.find((i) => i.sku === sku)
+
+    if (!item) {
+      return { success: false, sku, previousQty: 0, newQty: 0, error: `SKU "${sku}" not found` }
+    }
+
+    const previousQty = item.qtyOnHand
+    item.qtyOnHand += qty
+    item.lastUpdated = new Date().toISOString()
+
+    writeInventory(items)
+
+    appendShipment({
+      date: new Date().toISOString(),
+      orderId: `ADJUST-${Date.now()}`,
+      sku,
+      qtyShipped: -qty,
+      customerName: 'ADMIN',
+      customerEmail: '',
+      notes: note || `Stock adjustment: ${qty > 0 ? '+' : ''}${qty}`,
+    })
+
+    return { success: true, sku, previousQty, newQty: item.qtyOnHand }
+  } finally {
+    release()
+  }
+}

@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/api/', '/success', '/cancel'],
+      disallow: ['/api/', '/admin', '/success', '/cancel'],
     },
     sitemap: 'https://liferline.com/sitemap.xml',
   }

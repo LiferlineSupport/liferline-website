@@ -76,3 +76,24 @@ export function submitClaim(claim: Omit<WarrantyClaim, 'id' | 'date' | 'status'>
   fs.writeFileSync(CLAIMS_FILE, JSON.stringify(claims, null, 2))
   return newClaim
 }
+
+export function getAllClaims(): WarrantyClaim[] {
+  ensureDataDir()
+  if (!fs.existsSync(CLAIMS_FILE)) return []
+  try {
+    return JSON.parse(fs.readFileSync(CLAIMS_FILE, 'utf-8'))
+  } catch {
+    return []
+  }
+}
+
+export function updateClaimStatus(claimId: string, status: WarrantyClaim['status']): WarrantyClaim | null {
+  ensureDataDir()
+  if (!fs.existsSync(CLAIMS_FILE)) return null
+  const claims: WarrantyClaim[] = JSON.parse(fs.readFileSync(CLAIMS_FILE, 'utf-8'))
+  const claim = claims.find((c) => c.id === claimId)
+  if (!claim) return null
+  claim.status = status
+  fs.writeFileSync(CLAIMS_FILE, JSON.stringify(claims, null, 2))
+  return claim
+}
