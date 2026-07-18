@@ -77,7 +77,7 @@ export default function NewsletterBanner() {
         {status === 'success' ? (
           <div className="text-center py-2 pr-6">
             <p className="text-accent font-semibold text-sm sm:text-base">
-              You're in! Check your inbox for your discount code.
+              You're in! We'll send your 10% discount code within 24 hours.
             </p>
           </div>
         ) : (
