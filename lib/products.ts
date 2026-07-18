@@ -39,7 +39,7 @@ export const products: Product[] = [
       'Available in 6", 12", and 18"',
       'Lifetime guarantee',
     ],
-    price: 1800,
+    price: 2200,
     currency: 'usd',
     stripePriceId: process.env.STRIPE_PRICE_WORKHORSE_6 ?? '',
     variants: [
@@ -66,7 +66,7 @@ export const products: Product[] = [
       'Available in 6" and 12"',
       'Lifetime guarantee',
     ],
-    price: 2000,
+    price: 2500,
     currency: 'usd',
     stripePriceId: process.env.STRIPE_PRICE_RIGHT_ANGLE ?? '',
     variants: [
