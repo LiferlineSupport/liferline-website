@@ -1140,6 +1140,121 @@ export const blogPosts: BlogPost[] = [
     ],
     cta: 'The Forever Cables Pedalboard Pack includes six hand-soldered patch cables (two 6-inch, two 12-inch, and two 18-inch) built with Canare GS-6 wire and Neutrik connectors. Every cable is backed by our lifetime guarantee. One pack, every length you need, built to outlast your board.',
   },
+  {
+    slug: 'canare-vs-mogami-guitar-cable',
+    title: 'Canare vs. Mogami: Which Guitar Cable Wire Is Better for Your Rig?',
+    metaTitle: 'Canare vs. Mogami Guitar Cable Wire: Head-to-Head Comparison (2026)',
+    metaDescription: 'Canare GS-6 or Mogami W2524? This comparison covers capacitance, shielding, durability, and which guitar cable wire is the better choice for patch cables and instrument cables.',
+    keywords: [
+      'canare vs mogami',
+      'mogami vs canare',
+      'canare guitar cable',
+      'canare gs-6',
+      'canare gs-6 review',
+      'mogami w2524 vs canare gs-6',
+      'best guitar cable wire',
+      'canare gs6 guitar',
+      'mogami or canare',
+    ],
+    publishedAt: '2026-07-18',
+    excerpt: 'Canare and Mogami are the two most trusted names in professional guitar cable wire. Here is how they compare on the specs that actually affect your tone and reliability.',
+    category: 'Gear',
+    tags: ['canare', 'mogami', 'guitar cable', 'cable comparison', 'canare gs-6', 'mogami w2524', 'cable specs'],
+    sections: [
+      {
+        paragraphs: [
+          'If you have researched guitar cable wire at all, you have seen these two names everywhere: Canare and Mogami. Both are Japanese manufacturers with decades of professional audio engineering behind them. Both are used in world-class recording studios, touring rigs, and broadcast facilities. And both are genuinely excellent choices for guitar cables.',
+          'So which one is better? The short answer: it depends on what you are building. The longer answer requires looking at the actual specs, handling characteristics, and real-world performance differences between the two. This guide breaks down the comparison so you can make an informed decision based on your setup, not brand loyalty.',
+        ],
+      },
+      {
+        heading: 'Canare: The Company Behind the Wire',
+        paragraphs: [
+          'Canare Electric Co. was founded in 1970 in Aichi, Japan. The company specializes in professional audio, video, and broadcast cable. Canare wire is used in broadcast studios at NHK, the BBC, and major television networks worldwide. Their products are known for durability, consistency, and a build quality that holds up under demanding professional use.',
+          'For guitarists, the relevant product is the Canare GS-6. This is Canare\'s instrument cable, designed for electric guitar and bass. It uses an oxygen-free copper center conductor, a dense braided copper shield, and a flexible PVC outer jacket. The GS-6 has been a staple of professional pedalboard builders and cable assemblers for over two decades.',
+        ],
+      },
+      {
+        heading: 'Mogami: The Company Behind the Wire',
+        paragraphs: [
+          'Mogami is a brand of Nihon Densen Corporation, also founded in Japan. Mogami cable has been a fixture in professional recording studios since the 1970s. Their products are found in studios ranging from Abbey Road to Capitol Records, and the name has become almost synonymous with high-end audio cable in the pro audio world.',
+          'For guitarists, the two relevant products are the Mogami W2524 (instrument cable for longer runs) and the W2319 (thinner cable designed for short patch runs on pedalboards). The W2524 is the more commonly discussed of the two and is the primary competitor to the Canare GS-6.',
+        ],
+      },
+      {
+        heading: 'Capacitance: The Spec That Affects Your Tone',
+        paragraphs: [
+          'Cable capacitance is the single most important spec for guitar players. Every cable acts as a low-pass filter: the higher the capacitance, the more high-frequency content gets rolled off before the signal reaches your amp. This is the spec that determines whether your cable sounds transparent or slightly dull.',
+          'Mogami W2524 has a capacitance of approximately 24 pF (picofarads) per foot. Canare GS-6 comes in at approximately 34 pF per foot. That is a meaningful difference on paper, but what does it mean in practice?',
+          'On a 15-foot instrument cable, the total capacitance difference is about 150 pF (360 pF for Mogami vs. 510 pF for Canare). This is enough to produce a subtle but measurable high-frequency difference, especially with single-coil pickups that are more sensitive to capacitive loading. On a 6-inch patch cable, the total capacitance difference is about 7 pF. That is completely inaudible to any human ear in any listening environment.',
+          'The takeaway: for instrument cables (10 feet and longer), Mogami W2524 has a real capacitance advantage. For patch cables (under 2 feet), the difference is negligible, and other factors like durability and flexibility matter more.',
+        ],
+      },
+      {
+        heading: 'Shielding and Noise Rejection',
+        paragraphs: [
+          'Both cables use braided copper shielding, which is the gold standard for electromagnetic interference (EMI) and radio frequency interference (RFI) rejection. Braided shields provide better coverage than spiral-wrapped shields and are more durable under repeated flexing.',
+          'The Mogami W2524 adds a conductive PVC layer between the conductor and the shield. This layer drains triboelectric noise, which is the handling noise you hear when you move or step on a cable. If you have ever heard a "thump" through your amp when you kicked a cable on stage, that is triboelectric noise. The W2524\'s conductive PVC layer is specifically designed to eliminate this.',
+          'The Canare GS-6 does not have this conductive PVC layer. In practice, the GS-6 is still a very quiet cable, and handling noise is rarely an issue with short patch cables that sit still on a pedalboard. But for a 15 or 20-foot instrument cable that gets dragged across a stage floor, the Mogami\'s handling noise rejection is a genuine advantage.',
+        ],
+      },
+      {
+        heading: 'Durability and Physical Handling',
+        paragraphs: [
+          'This is where the Canare GS-6 earns its loyal following. The GS-6 has a slightly stiffer outer jacket than the Mogami W2524, which gives it two practical advantages on a pedalboard.',
+          'First, it holds its shape. When you route a GS-6 patch cable between two pedals, it stays where you put it. It does not gradually shift or droop over time. This makes for cleaner board layouts and less maintenance.',
+          'Second, the stiffer jacket resists kinking. A kink in a guitar cable damages the shielding at that point, creating a spot that is vulnerable to noise pickup. The GS-6\'s jacket is flexible enough to route easily but stiff enough to resist the sharp bends that cause kinks.',
+          'The Mogami W2524 has a more flexible jacket, which makes it easier to coil and more comfortable to handle on longer cable runs. For a 15-foot instrument cable that you coil and uncoil at every gig, the flexibility is an advantage. For a 6-inch patch cable that sits in one position for months, the Canare\'s stiffness is the better trait.',
+          'Both cables are built to last for years of professional use. Neither one is fragile. The difference is in handling character, not lifespan.',
+        ],
+      },
+      {
+        heading: 'Outer Diameter and Pedalboard Fit',
+        paragraphs: [
+          'The Canare GS-6 has an outer diameter of approximately 6mm. The Mogami W2524 is slightly larger at approximately 6.4mm. The Mogami W2319 (designed specifically for patch use) is thinner at approximately 4.8mm.',
+          'On a pedalboard with tight spacing, cable diameter matters. Thinner cables are easier to route through tight gaps between pedals and underneath board surfaces. If you are building a dense board with fifteen or more pedals, the thinner Mogami W2319 gives you more routing flexibility.',
+          'For standard boards with eight to twelve pedals and reasonable spacing, both the GS-6 and W2524 fit without issues. The diameter difference only becomes a factor in extreme layouts.',
+        ],
+      },
+      {
+        heading: 'Head-to-Head: Canare GS-6 vs. Mogami W2524',
+        paragraphs: [
+          'Capacitance: Mogami W2524 wins (24 pF/ft vs. 34 pF/ft). Lower capacitance preserves more high-frequency content, especially on longer runs.',
+          'Handling noise rejection: Mogami W2524 wins. The conductive PVC layer eliminates triboelectric noise that can be audible on long instrument cables.',
+          'Durability and shape retention: Canare GS-6 wins. The stiffer jacket holds its shape on pedalboards and resists kinking better.',
+          'Flexibility for coiling: Mogami W2524 wins. More comfortable to coil and handle on longer cable runs.',
+          'Price: Roughly comparable. Both are sold as bulk wire at similar per-foot pricing. The cost of the finished cable depends more on the connectors and the assembly labor than the wire itself.',
+          'Availability: Both are widely available from professional audio suppliers. Neither is hard to source.',
+        ],
+      },
+      {
+        heading: 'Which Should You Choose?',
+        paragraphs: [
+          'For patch cables (6 to 18 inches): either wire is excellent, and the audible difference at this length is essentially zero. Choose based on handling preference. If you want cables that stay put and hold their shape on the board, Canare GS-6 is the better pick. If you want thinner cables for tight routing, Mogami W2319 has the edge.',
+          'For instrument cables (10 to 20 feet): Mogami W2524 has a measurable advantage in capacitance and handling noise rejection. Over a 15 or 20-foot run, those specs compound and produce a real (if subtle) difference in signal clarity and noise floor.',
+          'For bass guitar: the capacitance difference matters less for bass because bass frequencies are not affected by capacitive roll-off in the same way treble frequencies are. Either wire works well. Choose based on the physical characteristics you prefer.',
+          'For studio use: Mogami W2524 is the industry standard for studio instrument cables, largely because of its handling noise rejection. Studios are controlled environments with long cable runs and high expectations for silence between takes. The conductive PVC layer earns its keep here.',
+        ],
+      },
+      {
+        heading: 'Why We Use Both',
+        paragraphs: [
+          'At Forever Cables, we chose each wire for the job it does best. Our Workhorse and Right Angle patch cables use Canare GS-6 because patch cables live on pedalboards, where durability and shape retention matter more than marginal capacitance differences over a 6-inch run. The GS-6 stays where you route it, resists kinking, and holds up to the physical demands of a working pedalboard.',
+          'Our Stage Cable uses Mogami W2524 because instrument cables run 10 to 20 feet from guitar to board or board to amp. At those lengths, the lower capacitance preserves more of your high-end detail, and the conductive PVC layer keeps handling noise silent when the cable moves on stage.',
+          'Both cables get the same Neutrik connectors, hand-soldered joints, and lifetime guarantee. The wire is the starting material; the build quality is what makes it a Forever Cable.',
+        ],
+      },
+      {
+        heading: 'The Wire Is Only Half the Cable',
+        paragraphs: [
+          'Whether you choose Canare or Mogami, the finished cable is only as reliable as its weakest point. The connectors, the solder joints, and the strain relief all matter at least as much as the wire itself.',
+          'A Mogami W2524 cable with a cold solder joint will fail faster than a generic cable with a perfect solder joint. A Canare GS-6 cable with cheap connectors will develop intermittent contact issues long before the wire itself gives out.',
+          'When evaluating any guitar cable, look at the complete build: named connectors (Neutrik, Switchcraft, or Amphenol), hand-soldered assembly, proper strain relief, and a warranty that covers the whole cable. The wire brand is important, but it is the build quality that determines whether the cable lasts two years or twenty.',
+        ],
+      },
+    ],
+    cta: 'Forever Cables uses Canare GS-6 in our Workhorse and Right Angle patch cables and Mogami W2524 in our Stage Cable. Every cable is hand-soldered with Neutrik connectors and guaranteed for life. Pick the cable built for your setup.',
+  },
 ]
 
 export function getBlogPost(slug: string): BlogPost | undefined {
