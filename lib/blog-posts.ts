@@ -17,6 +17,111 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'best-cable-for-acoustic-guitar',
+    title: 'Best Cable for Acoustic Guitar: What Acoustic Players Need to Know',
+    metaTitle: 'Best Cable for Acoustic Guitar: Piezo Pickups, Preamps, and What Actually Matters (2026)',
+    metaDescription: 'Acoustic guitar cables need low capacitance and clean shielding to preserve piezo pickup clarity. Learn what makes a great acoustic cable and what to avoid.',
+    keywords: [
+      'acoustic guitar cable',
+      'best cable for acoustic guitar',
+      'acoustic guitar instrument cable',
+      'acoustic electric guitar cable',
+      'piezo pickup cable',
+      'cable for acoustic guitar amp',
+      'acoustic guitar cable length',
+      'best instrument cable acoustic',
+      'acoustic guitar live cable',
+      'acoustic guitar cable noise',
+    ],
+    publishedAt: '2026-07-18',
+    excerpt: 'Acoustic guitars with pickups have different cable needs than electrics. The pickup type, the presence of an onboard preamp, and where your signal goes all change what matters in the cable between your guitar and your amp or PA.',
+    category: 'Gear',
+    tags: ['acoustic guitar', 'instrument cable', 'piezo pickup', 'acoustic electric', 'guitar cable', 'guitar gear', 'Canare', 'live sound'],
+    sections: [
+      {
+        paragraphs: [
+          'If you play an acoustic-electric guitar, you need a cable. That much is obvious. What is less obvious is whether the cable that works fine for your electric guitar is equally good for your acoustic, or whether the differences in pickup technology and signal path mean you should think about it differently.',
+          'The short answer is that cable quality matters more for acoustic guitar in most scenarios, not less. The reasons come down to pickup impedance, the frequencies you need to preserve, and the fact that acoustic players are often running straight into a PA or acoustic amp with no pedals to mask cable problems.',
+          'This guide covers what makes acoustic guitar signals different from electric guitar signals, what that means for cable selection, and what to look for when buying a cable for your acoustic rig.',
+        ],
+      },
+      {
+        heading: 'Acoustic Pickups Are Not Guitar Pickups',
+        paragraphs: [
+          'Electric guitar pickups are magnetic. They sense the vibration of steel strings through a magnetic field and produce an electrical signal. The output impedance of a passive magnetic pickup is typically between 5k and 15k ohms, depending on the design.',
+          'Most acoustic guitar pickups are piezoelectric. A piezo element sits under the saddle and converts mechanical pressure from the strings into an electrical signal. The raw output impedance of a piezo pickup is extremely high, often between 1 megohm and 10 megohms. That is 100 to 1,000 times higher than a magnetic pickup.',
+          'Why does impedance matter for cable choice? Because high-impedance signals are far more sensitive to cable capacitance. The cable acts as a low-pass filter, and the cutoff frequency of that filter depends on the source impedance and the cable capacitance. Higher source impedance means the filter cuts in at a lower frequency, rolling off more of the treble range.',
+          'With a raw piezo signal, even a modest amount of cable capacitance can audibly dull the tone. The shimmer and string detail that make an acoustic guitar sound like an acoustic guitar are the first things to go. What you hear through the amp starts to sound muffled, nasal, or dead compared to what the guitar sounds like unplugged.',
+        ],
+      },
+      {
+        heading: 'Onboard Preamps Change Everything',
+        paragraphs: [
+          'Most modern acoustic-electric guitars have an onboard preamp. This preamp serves two purposes: it amplifies the weak piezo signal to a usable level, and it buffers the signal by lowering the output impedance. A buffered output from an onboard preamp typically sits between 100 and 1,000 ohms, which is lower than even an active electric guitar pickup.',
+          'With a buffered signal, cable capacitance becomes nearly irrelevant. The low output impedance means the cable capacitance has a negligible effect on frequency response, even at lengths of 20 feet or more. Your tone at the amp end of the cable is virtually identical to what the preamp outputs.',
+          'This does not mean cable quality stops mattering. Shielding still matters because the cable is carrying a small signal through an electrically noisy environment. Connector quality still matters because a crackly connection is a crackly connection regardless of impedance. And mechanical durability still matters because the cable gets coiled, stepped on, and yanked the same way regardless of what guitar is plugged into it.',
+          'But it does mean that the capacitance specification of the cable, which is the primary differentiator between cheap and premium cables for passive electric guitar, is less critical for acoustic guitars with onboard electronics.',
+        ],
+      },
+      {
+        heading: 'When You Do Not Have a Preamp',
+        paragraphs: [
+          'Some acoustic guitars have a piezo pickup with no onboard electronics. These are common in classical guitars, some entry-level acoustic-electrics, and aftermarket undersaddle pickups that are installed without a preamp. In these cases, the raw piezo signal goes straight into the cable.',
+          'This is the scenario where cable quality matters the most out of any guitar application. The extreme impedance of the raw piezo signal means the cable capacitance has a dramatic effect on tone. A high-capacitance cable (anything over 40 picofarads per foot) will produce a noticeably muffled, thin sound. A low-capacitance cable will preserve the full frequency range of the pickup.',
+          'If you are running a raw piezo pickup without a preamp, keep the cable as short as possible and choose a cable with the lowest capacitance per foot you can find. Canare GS-6, for example, has approximately 34 pF/ft, which is low enough to maintain clarity over a 15-foot run even with a high-impedance source.',
+          'Better yet, add an external preamp or DI box at the end of a short cable. Products like the LR Baggs Para DI or the Fishman Aura sit between your guitar and the PA system, buffer the signal, and let you run a longer cable to the mixing board without tone loss. The cable from your guitar to the preamp should still be high quality and short, but the cable from the preamp to the PA can be any decent XLR or instrument cable.',
+        ],
+      },
+      {
+        heading: 'TRS vs TS: Which Connector Do You Need?',
+        paragraphs: [
+          'Standard guitar cables use a TS (tip-sleeve) 1/4-inch connector. The tip carries the signal, the sleeve carries the ground, and that is it. This is what electric guitars use, and it is what most acoustic-electric guitars use as well.',
+          'Some acoustic-electric systems use a TRS (tip-ring-sleeve) output. The extra ring contact carries a second channel, which is typically a separate mix output. For example, some Fishman and LR Baggs systems output the pickup signal on the tip and a microphone signal on the ring, allowing the sound engineer to blend them separately at the mixing board.',
+          'If your guitar has a stereo or dual-source output, you need a TRS cable to take advantage of it. Plugging a TS cable into a TRS output will work, but you will only get one of the two signals. The other channel is lost because the TS plug shorts the ring to the sleeve.',
+          'Check your guitar\'s documentation or the pickup manufacturer\'s specs to know which type you need. If your guitar has a single-source pickup system (which covers the vast majority of acoustic-electrics), a standard TS instrument cable is correct.',
+        ],
+      },
+      {
+        heading: 'Cable Length for Acoustic Gigs',
+        paragraphs: [
+          'Acoustic guitarists tend to use longer cables than pedalboard-centric electric players. If you are playing a solo acoustic set, your guitar connects directly to a DI box or acoustic amp, and you might need 15 to 20 feet of reach to move around the stage or sit comfortably away from your amp.',
+          'For buffered signals (guitars with onboard preamps), cable length is not a tone concern up to 25 feet. The low output impedance of the preamp keeps the signal clean regardless of length. Choose whatever length gives you comfortable movement without excess cable on the floor.',
+          'For unbuffered signals, keep it under 10 feet if possible. Every additional foot of cable adds capacitance and rolls off more treble. If you need more reach, place a DI box or preamp pedal at the 10-foot mark and run a balanced XLR cable the rest of the way to the PA.',
+          'Avoid the temptation to buy a 25-foot cable "just in case." Extra cable coiled on the floor adds unnecessary capacitance (the electricity travels the full cable length, not just the distance to your amp), creates trip hazards, and is more likely to get damaged. Buy the length you actually need.',
+        ],
+      },
+      {
+        heading: 'Noise and Shielding for Acoustic Sets',
+        paragraphs: [
+          'Acoustic performances often happen in venues with poor electrical infrastructure. Coffee shops, churches, outdoor festivals, and small clubs frequently have ungrounded outlets, dimmer switches on the lighting, and PA systems sharing circuits with refrigerators and neon signs. All of these create electromagnetic interference that your cable picks up as buzz or hum.',
+          'Good shielding is essential. A cable with a braided or spiral copper shield rejects this interference before it reaches the signal conductor. A cable with a cheap foil shield will let enough noise through to be audible during quiet passages, which are far more common in acoustic sets than in electric guitar performances.',
+          'The dynamic range of acoustic guitar makes noise more noticeable. An electric guitarist playing through overdrive has a compressed dynamic range where quiet moments are not that quiet. An acoustic guitarist playing fingerstyle has extreme dynamic range where the space between notes is near silence. Any cable noise that lives in those silent moments is immediately audible to the audience.',
+          'This is another reason to use a high-quality cable for acoustic guitar. The shielding needs to be good enough that the cable is dead silent even when you are not playing, because those silent moments are part of the performance.',
+        ],
+      },
+      {
+        heading: 'What About Wireless Systems?',
+        paragraphs: [
+          'Wireless guitar systems have improved dramatically and are now a viable option for acoustic performers. Modern digital wireless systems like the Line 6 Relay, Boss WL series, and Shure GLXD introduce minimal latency and maintain full frequency response.',
+          'A wireless system eliminates cable capacitance entirely. The transmitter buffers the signal at the guitar and sends it digitally to the receiver. For acoustic players with unbuffered piezo pickups, a wireless system can actually sound better than a long cable because there is no capacitance-induced treble loss.',
+          'The tradeoff is cost, battery management, and one more piece of gear to set up and troubleshoot. For acoustic performers who play the same venue regularly and can run a cable without issues, a high-quality wired cable is simpler and more reliable. For performers who move around, play multiple venues, or share stages where cable runs are impractical, wireless is worth the investment.',
+          'If you do use wireless, you still need a short cable from your guitar to the transmitter if the transmitter is belt-mounted rather than plug-in. That short cable should still be high quality with good shielding, because it is carrying the raw signal from your pickup.',
+        ],
+      },
+      {
+        heading: 'Choosing the Right Cable for Your Acoustic Setup',
+        paragraphs: [
+          'If your acoustic guitar has an onboard preamp (the majority of acoustic-electrics sold in the last 15 years), your cable requirements are simple: good shielding, solid connectors, and a length that matches your actual stage needs. Capacitance is a non-issue because the preamp buffers the signal.',
+          'If your acoustic guitar has a raw piezo pickup with no preamp, cable choice is critical. Use the lowest-capacitance cable you can find, keep it short, and consider adding a DI box or preamp at the end of the cable run.',
+          'If you play in electrically noisy venues (which describes most small acoustic venues), prioritize shielding. A spiral or braided shield will keep your signal clean in environments where a foil shield would let noise through.',
+          'And regardless of your setup, buy a cable with quality connectors. Neutrik plugs grip the jack firmly, resist corrosion, and do not develop the crackle that cheap connectors develop after a few months of regular use. A crackly connector during a quiet ballad is a memorable mistake you only want to make once.',
+          'Forever Cables are built with Canare GS-6 wire (34 pF/ft capacitance, spiral copper shield) and hand-soldered Neutrik connectors. They handle both buffered and unbuffered acoustic signals with equal clarity, and every one comes with a lifetime guarantee. If your cable ever fails, we replace it. No questions, no receipt, no expiration.',
+        ],
+      },
+    ],
+    cta: 'Forever Cables use Canare GS-6 wire with low capacitance and a spiral copper shield, paired with hand-soldered Neutrik connectors. Whether you play acoustic, electric, or both, build your signal chain on cables guaranteed for life.',
+  },
+  {
     slug: 'guitar-cable-shielding-explained',
     title: 'Guitar Cable Shielding: What It Is, Why It Matters, and What to Look For',
     metaTitle: 'Guitar Cable Shielding Explained: Braided vs Spiral vs Foil (2026 Guide)',
