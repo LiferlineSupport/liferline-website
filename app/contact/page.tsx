@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import ContactForm from '@/components/ContactForm'
 
 export const metadata: Metadata = {
   title: 'Support & Contact',
@@ -117,19 +118,21 @@ export default function Contact() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-        {/* Contact info */}
+        {/* Contact form */}
         <div className="space-y-8">
           <div>
-            <h2 className="font-serif text-2xl text-cream mb-4">Get in touch</h2>
+            <h2 className="font-serif text-2xl text-cream mb-4">Send us a message</h2>
             <p className="text-muted leading-relaxed mb-6">
-              Email is the best way to reach us. We typically respond within one business day.
+              Fill out the form below and we'll get back to you within one business day.
+              You can also reach us directly at{' '}
+              <a
+                href="mailto:support@liferline.com"
+                className="text-accent hover:underline"
+              >
+                support@liferline.com
+              </a>.
             </p>
-            <a
-              href="mailto:support@liferline.com"
-              className="text-accent hover:text-accent-hover text-lg font-medium transition-colors"
-            >
-              support@liferline.com
-            </a>
+            <ContactForm />
           </div>
 
           <div className="border-t border-border pt-8">
@@ -137,7 +140,7 @@ export default function Contact() {
               Filing a guarantee claim?
             </h3>
             <p className="text-muted text-sm leading-relaxed mb-4">
-              Email us with:
+              Select "Lifetime guarantee claim" as the subject and include:
             </p>
             <ul className="space-y-2 text-sm text-muted">
               <li className="flex gap-2">
