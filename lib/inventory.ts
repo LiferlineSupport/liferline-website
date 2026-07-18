@@ -1,9 +1,11 @@
 import fs from 'fs'
 import path from 'path'
+import lockfile from 'proper-lockfile'
 
 const DATA_DIR = path.join(process.cwd(), 'data')
 const INVENTORY_FILE = path.join(DATA_DIR, 'finished_goods.json')
 const SHIPMENT_LOG_FILE = path.join(DATA_DIR, 'shipment_log.json')
+const LOCK_OPTS = { retries: { retries: 5, minTimeout: 50, maxTimeout: 500 } }
 
 export interface InventoryItem {
   sku: string
@@ -50,7 +52,12 @@ function readInventory(): InventoryItem[] {
     writeInventory(DEFAULT_INVENTORY)
     return DEFAULT_INVENTORY
   }
-  return JSON.parse(fs.readFileSync(INVENTORY_FILE, 'utf-8'))
+  try {
+    return JSON.parse(fs.readFileSync(INVENTORY_FILE, 'utf-8'))
+  } catch {
+    writeInventory(DEFAULT_INVENTORY)
+    return DEFAULT_INVENTORY
+  }
 }
 
 function writeInventory(items: InventoryItem[]) {
@@ -115,48 +122,58 @@ export function decrementInventory(
     }
   }
 
-  const items = readInventory()
-  const item = items.find((i) => i.sku === sku)
+  ensureDataDir()
+  if (!fs.existsSync(INVENTORY_FILE)) {
+    writeInventory(DEFAULT_INVENTORY)
+  }
 
-  if (!item) {
-    return {
-      success: false,
-      sku,
-      previousQty: 0,
-      newQty: 0,
-      error: `SKU "${sku}" not found in inventory`,
+  const release = lockfile.lockSync(INVENTORY_FILE, LOCK_OPTS)
+  try {
+    const items = readInventory()
+    const item = items.find((i) => i.sku === sku)
+
+    if (!item) {
+      return {
+        success: false,
+        sku,
+        previousQty: 0,
+        newQty: 0,
+        error: `SKU "${sku}" not found in inventory`,
+      }
     }
-  }
 
-  const previousQty = item.qtyOnHand
-  item.qtyOnHand -= qty
-  item.lastUpdated = new Date().toISOString()
+    const previousQty = item.qtyOnHand
+    item.qtyOnHand -= qty
+    item.lastUpdated = new Date().toISOString()
 
-  let warning: string | undefined
-  if (item.qtyOnHand < 0) {
-    warning = `Stock went negative: ${item.qtyOnHand} units of ${sku}. Oversold by ${Math.abs(item.qtyOnHand)}.`
-  } else if (item.qtyOnHand <= item.reorderThreshold) {
-    warning = `Low stock alert: ${item.qtyOnHand} units of ${sku} remaining (threshold: ${item.reorderThreshold}).`
-  }
+    let warning: string | undefined
+    if (item.qtyOnHand < 0) {
+      warning = `Stock went negative: ${item.qtyOnHand} units of ${sku}. Oversold by ${Math.abs(item.qtyOnHand)}.`
+    } else if (item.qtyOnHand <= item.reorderThreshold) {
+      warning = `Low stock alert: ${item.qtyOnHand} units of ${sku} remaining (threshold: ${item.reorderThreshold}).`
+    }
 
-  writeInventory(items)
+    writeInventory(items)
 
-  appendShipment({
-    date: new Date().toISOString(),
-    orderId,
-    sku,
-    qtyShipped: qty,
-    customerName,
-    customerEmail,
-    notes: warning ?? '',
-  })
+    appendShipment({
+      date: new Date().toISOString(),
+      orderId,
+      sku,
+      qtyShipped: qty,
+      customerName,
+      customerEmail,
+      notes: warning ?? '',
+    })
 
-  return {
-    success: true,
-    sku,
-    previousQty,
-    newQty: item.qtyOnHand,
-    warning,
+    return {
+      success: true,
+      sku,
+      previousQty,
+      newQty: item.qtyOnHand,
+      warning,
+    }
+  } finally {
+    release()
   }
 }
 
