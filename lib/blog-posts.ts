@@ -761,6 +761,81 @@ export const blogPosts: BlogPost[] = [
     ],
     cta: 'The Forever Cables Stage Cable is built with Mogami W2524 wire and Neutrik connectors, hand-soldered and guaranteed for life. If you want a Mogami guitar cable you never have to replace, this is it.',
   },
+  {
+    slug: 'guitar-amp-cable-guide',
+    title: 'Guitar Amp Cables: What You Need, What to Avoid, and Why It Matters',
+    metaTitle: 'Guitar Amp Cable Guide: How to Choose the Right Cable for Your Amp',
+    metaDescription: 'Not sure what cable connects your guitar to your amp? This guide covers instrument cables vs speaker cables, what specs matter, and how to pick a guitar amp cable that lasts.',
+    keywords: ['guitar amp cable', 'guitar to amp cable', 'electric guitar amp cable', 'cable for guitar amp', 'amp cable guitar', 'guitar amplifier cable', 'instrument cable vs speaker cable'],
+    publishedAt: '2026-07-18',
+    excerpt: 'The cable between your guitar and your amp carries your entire signal. Here is what type you need, what specs actually matter, and the one mistake that can damage your gear.',
+    category: 'Gear',
+    tags: ['guitar cable', 'instrument cable', 'amp', 'signal chain', 'cable specs', 'guitar gear'],
+    sections: [
+      {
+        paragraphs: [
+          'The cable that runs from your guitar to your amp is the single most important cable in your signal chain. Everything you play passes through it. Every note, every dynamic, every harmonic. If that cable is noisy, your amp hears noise. If it rolls off high end, your amp never gets that clarity in the first place.',
+          'Despite this, most players grab whatever cable came in the box or whatever was cheapest at the shop. That works until it does not. This guide covers what type of cable you actually need, what specs to pay attention to, and the common mistakes that cost players tone and money.',
+        ],
+      },
+      {
+        heading: 'Instrument Cable vs. Speaker Cable: the Mistake That Can Damage Your Gear',
+        paragraphs: [
+          'This is the single most important thing to know about guitar amp cables: the cable from your guitar to your amp is an instrument cable. It is not the same as a speaker cable.',
+          'Instrument cables and speaker cables use the same 1/4-inch TS connector, which makes them look identical. They are not. An instrument cable is shielded to reject electromagnetic interference and carry a low-level signal from your pickups. A speaker cable is unshielded and uses heavier gauge wire to carry a high-power signal from your amp head to your speaker cabinet.',
+          'Using a speaker cable as an instrument cable will work, but it will pick up radio interference, fluorescent light hum, and every other source of electromagnetic noise in the room. Your signal will be noisy and unreliable.',
+          'Using an instrument cable as a speaker cable is worse. The thin wire and shielding are not rated for the power output of an amplifier. At high volumes, an instrument cable used as a speaker cable will overheat, degrade, and can damage your amp\'s output transformer. This is a real equipment risk, not a theoretical one.',
+          'If you are connecting guitar to amp (or guitar to pedalboard to amp), you need an instrument cable. If you are connecting an amp head to a separate speaker cabinet, you need a speaker cable. The connectors look the same; the cables are completely different inside.',
+        ],
+      },
+      {
+        heading: 'What to Look for in a Guitar Amp Cable',
+        paragraphs: [
+          'Once you know you need an instrument cable, the next question is what separates a good one from a bad one. Four things matter.',
+          'Shielding. The cable\'s shielding is a metal barrier wrapped around the center conductor that blocks electromagnetic interference from reaching your signal. Braided shielding is the gold standard: it provides near-complete coverage, excellent flexibility, and long-term durability. Spiral-wrapped shielding is cheaper and easier to manufacture but leaves gaps in coverage and can loosen over time. Budget cables sometimes use conductive plastic shielding, which provides minimal protection.',
+          'Capacitance. Every cable acts as a capacitor. The longer the cable and the higher its capacitance per foot, the more high-frequency content it rolls off before your signal reaches the amp. For a guitar-to-amp cable of 10 to 20 feet, low-capacitance wire (under 30 pF per foot) preserves your top end noticeably better than high-capacitance budget cable.',
+          'Connectors. Neutrik and Switchcraft are the two names trusted by professional audio engineers. They use gold-plated contacts that resist oxidation, machined metal bodies with tight tolerances, and proper strain relief that protects the solder joint. Generic connectors often use stamped rather than machined parts and have looser fits that develop contact issues over time.',
+          'Build quality. The wire and connectors are raw materials. The quality of the solder joints and assembly determines how long the cable actually lasts. A hand-soldered cable allows the builder to inspect and test every connection individually. Factory cables rely on automated soldering that may or may not produce consistent results.',
+        ],
+      },
+      {
+        heading: 'How Long Should a Guitar Amp Cable Be?',
+        paragraphs: [
+          'Shorter is always better for signal quality, but you need enough length to actually play comfortably. Here is a practical guide.',
+          'If you play at home or in a studio with your amp within a few feet of you, 10 feet is the standard choice. It gives you enough slack to move around without excess cable coiled on the floor picking up interference.',
+          'If you gig in small venues or rehearsal spaces, 15 feet covers most situations. You can move freely on a small stage and reach your amp without pulling the cable taut.',
+          'If you play larger stages or need to move around during performance, 20 feet gives you serious range. Beyond 20 feet, signal degradation from capacitance becomes a practical concern with most cables, and a wireless system starts making more sense.',
+          'One thing to avoid: buying a 25 or 30-foot cable "just in case" and coiling the excess. Coiled cable acts as an inductor, which can create resonant peaks and additional noise. Buy the length you actually need.',
+        ],
+      },
+      {
+        heading: 'Straight Plugs vs. Right Angle Plugs',
+        paragraphs: [
+          'Guitar amp cables come with straight plugs, right-angle plugs, or one of each. The choice depends on your guitar and your amp.',
+          'Most amps have a front-panel input jack, and a straight plug works fine. Some players prefer a right-angle plug on the amp end so the cable exits parallel to the amp face rather than sticking straight out.',
+          'On the guitar end, it depends on your instrument. Stratocasters and Telecasters have a recessed jack where a straight plug is the natural fit. Les Pauls and SGs have a side-mounted jack where a right-angle plug sits flush against the body and is less likely to get snagged or put stress on the jack.',
+          'If you run through a pedalboard, the guitar end connects to your first pedal, not your amp. In that case, you need two cables: a shorter instrument cable from your guitar to the board, and a longer one from the board\'s output to your amp. Both are instrument cables.',
+        ],
+      },
+      {
+        heading: 'What About Coiled Guitar Cables?',
+        paragraphs: [
+          'Coiled guitar cables were standard in the 1960s and 1970s, and they are still popular for their vintage look and spring-loaded retraction. But there are tradeoffs.',
+          'A coiled cable is physically longer than its extended reach. A cable that stretches to 15 feet might contain 25 or 30 feet of actual wire. That extra length adds capacitance, which means more high-frequency roll-off than a straight cable of the same reach. Some players like this effect; it softens the top end in a way that sounds warm and vintage. Others find it muddy.',
+          'Coiled cables also put more mechanical stress on solder joints because the coil tension constantly pulls on the connectors. If you like the coiled look, make sure the cable has robust strain relief at both ends.',
+        ],
+      },
+      {
+        heading: 'Our Recommendation',
+        paragraphs: [
+          'For the cable that connects your guitar to your amp, do not compromise. This is the cable that carries 100 percent of your signal and takes 100 percent of the physical abuse. It is stepped on, yanked, coiled, plugged and unplugged hundreds of times, and dragged across stages and floors.',
+          'Look for low-capacitance instrument cable wire from a trusted manufacturer (Mogami, Canare, or similar), Neutrik connectors, hand-soldered joints, and a guarantee that covers the finished cable, not just the raw wire.',
+          'The Forever Cables Stage Cable is built with Mogami W2524 wire, Neutrik NP2X-B connectors, and hand-soldered connections. It is available in 10, 15, and 20-foot lengths, and it is backed by our lifetime guarantee. If it ever fails, we replace it.',
+        ],
+      },
+    ],
+    cta: 'The Stage Cable by Forever Cables is built with Mogami W2524 and Neutrik connectors, hand-soldered and guaranteed for life. Available in 10ft, 15ft, and 20ft.',
+  },
 ]
 
 export function getBlogPost(slug: string): BlogPost | undefined {
