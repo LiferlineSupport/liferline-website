@@ -1,4 +1,4 @@
-# Hatch Patch Cables — Website
+# Hatch Patch Cables: Website
 
 Next.js + Stripe e-commerce site for Forever Cables by Hatch Patch Cables.
 
@@ -31,7 +31,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Deploying
 
-Push to `main` — Hostinger auto-deploys.
+Push to `main`. Hostinger auto-deploys.
 
 Set these environment variables in Hostinger:
 - `STRIPE_SECRET_KEY`
