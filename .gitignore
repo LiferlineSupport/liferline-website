@@ -33,8 +33,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# runtime inventory data
+# runtime data (inventory, subscribers, contact submissions)
 /data/
-
-# email subscriber list
-.subscribers.json

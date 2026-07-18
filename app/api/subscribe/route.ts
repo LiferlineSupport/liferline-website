@@ -1,10 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { existsSync, readFileSync, writeFileSync } from 'fs'
+import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'fs'
 import { join } from 'path'
 
-const SUBSCRIBERS_FILE = join(process.cwd(), '.subscribers.json')
+const DATA_DIR = join(process.cwd(), 'data')
+const SUBSCRIBERS_FILE = join(DATA_DIR, 'subscribers.json')
+
+function ensureDataDir() {
+  if (!existsSync(DATA_DIR)) {
+    mkdirSync(DATA_DIR, { recursive: true })
+  }
+}
 
 function getSubscribers(): string[] {
+  ensureDataDir()
   if (!existsSync(SUBSCRIBERS_FILE)) return []
   try {
     return JSON.parse(readFileSync(SUBSCRIBERS_FILE, 'utf-8'))
@@ -17,6 +25,7 @@ function addSubscriber(email: string): boolean {
   const subscribers = getSubscribers()
   if (subscribers.includes(email)) return false
   subscribers.push(email)
+  ensureDataDir()
   writeFileSync(SUBSCRIBERS_FILE, JSON.stringify(subscribers, null, 2))
   return true
 }
