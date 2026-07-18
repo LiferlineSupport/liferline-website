@@ -3,7 +3,7 @@ import { products } from '@/lib/products'
 import { blogPosts } from '@/lib/blog-posts'
 
 const BASE_URL = 'https://liferline.com'
-const LAST_UPDATED = '2026-07-17'
+const LAST_UPDATED = '2026-07-18'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [

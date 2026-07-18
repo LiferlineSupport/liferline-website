@@ -181,7 +181,7 @@ export default function ProductsPage() {
               { icon: '🔨', label: 'Hand-Soldered', sub: 'One at a time, by hand' },
               { icon: '🇺🇸', label: 'American-Made', sub: 'Built in the USA' },
               { icon: '♾️', label: 'Lifetime Guarantee', sub: 'We stand behind every cable' },
-              { icon: '📦', label: 'Free Shipping', sub: 'On every order, every time' },
+              { icon: '📦', label: 'Free US Shipping', sub: 'On every order, every time' },
             ].map((item) => (
               <div key={item.label} className="flex flex-col items-center gap-1">
                 <span className="text-2xl mb-1">{item.icon}</span>
