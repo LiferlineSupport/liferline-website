@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     description: 'File a lifetime guarantee claim, ask about custom cables, or get help with your order. We actually answer emails.',
     url: 'https://liferline.com/contact',
     type: 'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Hatch Patch Cables' }],
   },
 }
 

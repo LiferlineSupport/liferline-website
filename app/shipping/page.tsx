@@ -21,6 +21,7 @@ export const metadata: Metadata = {
       'Free shipping on all US orders. Handmade to order, shipped within 3 to 5 business days.',
     url: 'https://liferline.com/shipping',
     type: 'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Hatch Patch Cables' }],
   },
 }
 

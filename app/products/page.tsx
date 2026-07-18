@@ -34,6 +34,7 @@ export const metadata: Metadata = {
       'Hand-soldered guitar patch cables and instrument cables. Canare and Mogami wire, Neutrik connectors, lifetime guarantee.',
     url: 'https://liferline.com/products',
     type: 'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Hatch Patch Cables' }],
   },
 }
 

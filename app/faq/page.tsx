@@ -19,11 +19,12 @@ export const metadata: Metadata = {
     canonical: 'https://liferline.com/faq',
   },
   openGraph: {
-    title: 'FAQ | Forever Cables by Hatch Patch Cables',
+    title: 'FAQ | Forever Cables',
     description:
       'Answers to common questions about Forever Cables: guarantee, materials, compatibility, shipping, and custom orders.',
     url: 'https://liferline.com/faq',
     type: 'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Hatch Patch Cables' }],
   },
 }
 

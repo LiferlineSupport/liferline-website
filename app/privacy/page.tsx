@@ -9,10 +9,11 @@ export const metadata: Metadata = {
     canonical: 'https://liferline.com/privacy',
   },
   openGraph: {
-    title: 'Privacy Policy | Hatch Patch Cables',
+    title: 'Privacy Policy | Forever Cables',
     description: 'How we handle your data when you shop Forever Cables.',
     url: 'https://liferline.com/privacy',
     type: 'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Hatch Patch Cables' }],
   },
 }
 

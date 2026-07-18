@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     description: 'Look up your warranty status or file a claim. Every Forever Cable is guaranteed for life.',
     url: 'https://liferline.com/warranty',
     type: 'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Hatch Patch Cables' }],
   },
 }
 

@@ -21,6 +21,7 @@ export const metadata: Metadata = {
       '30-day returns on unused cables. Free exchanges for wrong-length orders. Defective cables covered by our lifetime guarantee.',
     url: 'https://liferline.com/returns',
     type: 'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Hatch Patch Cables' }],
   },
 }
 

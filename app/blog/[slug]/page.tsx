@@ -30,13 +30,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://liferline.com/blog/${post.slug}`,
       type: 'article',
       publishedTime: post.publishedAt,
-      authors: ['Hatch Patch Cables'],
-      siteName: 'Hatch Patch Cables',
+      authors: ['Forever Cables'],
+      siteName: 'Forever Cables',
+      images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Hatch Patch Cables' }],
     },
     twitter: {
       card: 'summary_large_image',
       title: post.metaTitle,
       description: post.metaDescription,
+      images: ['/twitter-image'],
     },
   }
 }

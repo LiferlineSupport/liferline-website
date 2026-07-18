@@ -9,10 +9,11 @@ export const metadata: Metadata = {
     canonical: 'https://liferline.com/terms',
   },
   openGraph: {
-    title: 'Terms of Service | Hatch Patch Cables',
+    title: 'Terms of Service | Forever Cables',
     description: 'Terms and conditions for shopping Forever Cables.',
     url: 'https://liferline.com/terms',
     type: 'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Hatch Patch Cables' }],
   },
 }
 

@@ -17,11 +17,12 @@ export const metadata: Metadata = {
     canonical: 'https://liferline.com/blog',
   },
   openGraph: {
-    title: 'Blog | Forever Cables by Hatch Patch Cables',
+    title: 'Blog | Forever Cables',
     description:
       'Guides and expert advice about guitar patch cables, pedalboard setup, and cable quality.',
     url: 'https://liferline.com/blog',
     type: 'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Hatch Patch Cables' }],
   },
 }
 
