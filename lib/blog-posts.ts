@@ -17,6 +17,110 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'coiled-guitar-cable-vs-straight',
+    title: 'Coiled Guitar Cable vs Straight: Which One Should You Use?',
+    metaTitle: 'Coiled Guitar Cable vs Straight: Pros, Cons, and When Each Makes Sense (2026)',
+    metaDescription: 'Coiled guitar cables look classic and stay off the floor, but they add capacitance and cost more. Learn the real differences between coiled and straight cables before you buy.',
+    keywords: [
+      'coiled guitar cable',
+      'coiled guitar cable vs straight',
+      'best coiled guitar cable',
+      'coiled cable guitar',
+      'guitar cable coiled',
+      'coiled guitar cable benefits',
+      'coiled instrument cable',
+      'straight vs coiled guitar cable',
+      'curly guitar cable',
+      'coiled cable vs straight guitar',
+    ],
+    publishedAt: '2026-07-18',
+    excerpt: 'Coiled guitar cables have been around since the 1960s, and they still look great on stage. But looks and function are different things. Here is what actually changes when you swap a straight cable for a coiled one.',
+    category: 'Gear',
+    tags: ['coiled cable', 'guitar cable', 'instrument cable', 'straight cable', 'cable capacitance', 'guitar gear', 'Vox', 'Fender'],
+    sections: [
+      {
+        paragraphs: [
+          'If you have ever watched footage of Jimi Hendrix, Jimmy Page, or any guitarist from the late 1960s through the early 1980s, you have seen a coiled guitar cable. That spiral telephone-cord shape was the standard for decades before straight cables took over the market.',
+          'Coiled cables never disappeared entirely. They are still manufactured by Vox, Fender, Ernie Ball, Lava Cable, and several boutique makers. Some players swear by them. Others tried one, noticed a difference in their tone, and went back to straight cables within a week.',
+          'The question is not whether coiled cables are good or bad. The question is whether the tradeoffs they introduce are worth it for the way you play. That depends on your rig, your stage setup, and how much you care about the electrical properties of the wire between your guitar and your amp.',
+        ],
+      },
+      {
+        heading: 'How a Coiled Guitar Cable Is Made',
+        paragraphs: [
+          'A coiled guitar cable starts as a straight cable. The manufacturer wraps it around a mandrel (a cylindrical form) and heats it so the jacket retains the spiral shape. The result is a cable that compresses down to a short resting length but stretches out when you pull it.',
+          'The internal construction is the same as any instrument cable: a center conductor, a dielectric insulator, a shield layer, and an outer jacket. The coiling process does not change the wire inside. What it does change is the total length of wire in the cable and the mechanical behavior of the jacket.',
+          'A coiled cable that stretches to 20 feet contains more than 20 feet of actual wire. The coils overlap, and when the cable is compressed, the wire spirals back on itself. That extra wire length matters for reasons we will get into below.',
+        ],
+      },
+      {
+        heading: 'The Capacitance Problem',
+        paragraphs: [
+          'Every instrument cable has capacitance, measured in picofarads per foot. Capacitance is an unavoidable property of the cable construction: the center conductor and the shield form a capacitor with the dielectric insulator between them. The longer the cable, the higher the total capacitance.',
+          'Here is where coiled cables get complicated. A coiled cable that stretches to 20 feet typically contains 25 to 30 feet of actual wire because of the way the coils overlap. You are paying for 20 feet of reach but getting the capacitance of a much longer cable.',
+          'Higher capacitance rolls off treble. The cable acts as a low-pass filter, and the cutoff frequency drops as capacitance increases. With a passive guitar (no onboard buffer or preamp), a high-capacitance cable noticeably darkens the tone. The top end loses sparkle, pick attack gets rounded off, and the overall sound feels warmer but also less defined.',
+          'Whether that is a problem depends on what you want. Some players actively prefer the darker tone. The classic Hendrix and Page recordings were made through coiled cables, and part of that iconic sound comes from the treble rolloff. If you are chasing that vintage warmth, a coiled cable delivers it naturally without any EQ pedal.',
+          'But if you have spent time dialing in your tone with a straight cable, switching to a coiled cable will change what you hear. The difference is not subtle on most rigs. You will notice it immediately, especially on clean and lightly overdriven settings where the top end is most exposed.',
+        ],
+      },
+      {
+        heading: 'What Coiled Cables Do Well',
+        paragraphs: [
+          'Cable management is the strongest practical argument for coiled cables. A coiled cable stays off the floor when you are standing still. It does not tangle around your mic stand, it does not get stepped on by your bandmates, and it does not loop under your feet when you move back toward your amp. For players who are tired of tripping over straight cables, this alone can justify the switch.',
+          'Stage appearance matters too, and coiled cables look distinctive. There is a visual association with vintage rock that a straight cable simply does not carry. If your stage presence and aesthetic matter to your act, a coiled cable is a deliberate visual choice.',
+          'Coiled cables also have a natural spring-back behavior. When you walk forward, the cable stretches to give you slack. When you step back, it retracts and keeps itself tidy. There is no excess cable pooling on the floor behind you. For small stages where floor space is limited, this self-managing behavior is genuinely useful.',
+          'Durability in some contexts is also a consideration. A straight cable lying on a stage floor gets stepped on, rolled over by road cases, and kinked at the connector. A coiled cable that retracts off the floor avoids much of that mechanical abuse. The coils distribute stress along the entire length rather than concentrating it at a few contact points.',
+        ],
+      },
+      {
+        heading: 'What Coiled Cables Do Poorly',
+        paragraphs: [
+          'Weight and pull are the most common complaints. A coiled cable is heavier than an equivalent straight cable because it contains more wire in the same reach distance. When you walk away from your amp, the cable pulls against your guitar jack. On a Stratocaster or Telecaster with a front-mounted jack, that pull can rotate the plug in the jack and cause intermittent contact issues. On a Les Paul with a side-mounted jack, the constant tension can gradually work the connector loose over months of use.',
+          'The retraction force also means the cable is never truly relaxed when stretched. If you stand 15 feet from your amp with a 20-foot coiled cable, there is constant spring tension on the cable. That tension transfers to your guitar and to the amp jack. Some players find this distracting; others do not notice it.',
+          'Coiled cables are also harder to repair. If a straight cable develops a fault at one connector, you cut the bad end, strip the wire, and resolder a new plug. With a coiled cable, cutting the end changes the coil tension and can cause the last few coils to unwind. Repair is possible but requires more skill and often does not look clean.',
+          'Cost is another factor. Coiled cables are more expensive than equivalent straight cables from the same manufacturer. The coiling process adds a manufacturing step, and the extra wire length adds material cost. A coiled cable from a reputable brand typically costs 30 to 50 percent more than the same brand\'s straight cable of equal reach.',
+          'Finally, coiled cables are not suitable for pedalboard use. The coil adds bulk, cannot be routed flat under a board, and the retraction force pulls on pedal jacks. Pedalboards need short, straight patch cables with low-profile connectors. There is no scenario where a coiled cable works better than a straight patch cable between pedals.',
+        ],
+      },
+      {
+        heading: 'Active Pickups and Buffered Signals',
+        paragraphs: [
+          'The capacitance issue largely disappears if your signal is buffered before it reaches the cable. Active pickups (EMG, Fishman Fluence) have a built-in preamp that lowers the output impedance. A low-impedance signal is far less affected by cable capacitance than a high-impedance passive pickup signal.',
+          'Similarly, if the first pedal in your chain is a buffer or a buffered-bypass pedal (most Boss and Ibanez pedals are buffered), the cable between that pedal and your amp is less affected by capacitance. The cable between your guitar and that first pedal still matters if your guitar is passive, but everything downstream of the buffer is largely immune.',
+          'This means coiled cables work best in two scenarios: with active-pickup guitars where capacitance does not matter, or in situations where you intentionally want the treble rolloff. If you play a passive Strat or Tele into a long coiled cable with no buffer in the chain, you will hear the difference clearly.',
+        ],
+      },
+      {
+        heading: 'Popular Coiled Guitar Cables Compared',
+        paragraphs: [
+          'Vox makes the most iconic coiled cable on the market. The Vox VCC Vintage Coiled Cable comes in several colors, stretches to about 29 feet, and uses a conductor designed to approximate the capacitance characteristics of the cables used in the 1960s. It is explicitly designed to darken the tone slightly, which is the point. If you want the vintage sound, this is the cable to try first.',
+          'Fender offers coiled cables in their Professional Series and Deluxe Series lines. These use a more modern construction with lower capacitance per foot than the Vox. The tone is closer to a straight cable, which makes them a good middle-ground option for players who want the coiled form factor without the dramatic tonal shift.',
+          'Ernie Ball coiled cables are a budget-friendly entry point. The construction is solid and the connectors are reliable, but the capacitance tends to be higher than the Fender offerings. For the price, they are a reasonable way to try a coiled cable without committing to a premium model.',
+          'Lava Cable offers coiled versions of their premium instrument cables. These are at the high end of the price range but use high-quality conductors and shielding. For players who want low capacitance in a coiled form, Lava is worth considering.',
+        ],
+      },
+      {
+        heading: 'When to Choose a Straight Cable Instead',
+        paragraphs: [
+          'For most modern guitar rigs, a straight cable is the better default choice. The capacitance is predictable (it equals the cable length, nothing more), the cable lies flat for routing along a stage, and the weight and pull are minimal.',
+          'Straight cables are also easier to manage in quantity. If you carry a backup cable in your gig bag, a coiled cable takes up significantly more space than a straight cable of the same reach. A straight cable coils flat for storage; a coiled cable retains its spring shape and resists packing down.',
+          'For pedalboard connections, straight cables are the only practical option. The short lengths between pedals (6 to 18 inches) do not benefit from coiling, and the bulk of a coiled cable would make routing impossible on most boards.',
+          'Studio use also favors straight cables. In a controlled environment where you are sitting or standing in one spot, the cable management advantage of a coiled cable does not apply. Studios also prioritize signal transparency, and adding unnecessary capacitance to a signal chain is the opposite of that goal.',
+          'If you play live, move around on stage, and want the cleanest signal possible from your passive guitar, a straight cable with quality shielding and low capacitance is the clear choice. You lose the vintage aesthetics, but you gain signal clarity and predictable tone.',
+        ],
+      },
+      {
+        heading: 'The Best Cable Is the One You Trust',
+        paragraphs: [
+          'Whether you go coiled or straight, the most important thing is cable quality. A cheap straight cable and a cheap coiled cable will both introduce noise, fail at the connector, and degrade your signal. The cable format matters less than the materials and construction inside it.',
+          'For your pedalboard and for the critical connection between your guitar and your first pedal or amp, the cable needs to be reliable, low-noise, and built to last. That means quality conductors, dense shielding, and connectors that will not fail during a set.',
+          'Forever Cables are built with Canare GS-6 wire and Neutrik connectors, hand-soldered and tested before they ship. They are straight cables, designed for the shortest, cleanest signal path from your guitar to your amp and between every pedal on your board. Every one comes with a lifetime guarantee. If it ever fails, we replace it. That is the kind of cable you build a rig around.',
+        ],
+      },
+    ],
+    cta: 'Forever Cables use Canare GS-6 wire and Neutrik connectors, hand-soldered and guaranteed for life. Whether you are wiring a pedalboard or running from your guitar to your amp, build your signal chain on cables that last.',
+  },
+  {
     slug: 'best-instrument-cable-for-bass-guitar',
     title: 'Best Instrument Cable for Bass Guitar: What Bass Players Actually Need',
     metaTitle: 'Best Instrument Cable for Bass Guitar: What Bass Players Actually Need (2026)',
