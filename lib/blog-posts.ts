@@ -17,6 +17,171 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'how-to-organize-pedalboard-cables',
+    title: 'How to Organize Pedalboard Cables (and Keep Them Organized)',
+    metaTitle: 'How to Organize Pedalboard Cables: Routing, Length Planning, and Maintenance (2026)',
+    metaDescription: 'Learn how to organize pedalboard cables with proven routing strategies, length planning tips, and practical techniques for small, medium, and large boards that actually stay tidy.',
+    keywords: [
+      'pedalboard cable organization',
+      'how to organize pedalboard cables',
+      'pedalboard cable routing',
+      'pedalboard cable management',
+      'organize guitar pedal cables',
+      'pedalboard cable length planning',
+      'pedalboard cable tips',
+      'guitar pedalboard wiring',
+      'pedalboard cable layout',
+      'tidy pedalboard cables',
+    ],
+    publishedAt: '2026-07-18',
+    excerpt: 'Learn how to organize pedalboard cables with proven routing strategies, length planning tips, and practical techniques for small, medium, and large boards that actually stay tidy.',
+    category: 'Gear',
+    tags: ['pedalboard organization', 'cable management', 'guitar pedals', 'pedalboard setup'],
+    sections: [
+      {
+        paragraphs: [
+          'If you\'ve spent any time building a pedalboard, you know the struggle. You start with good intentions, carefully placing each pedal in the perfect spot. Then you start connecting everything, and within minutes you\'re staring at a tangled mess of cables that looks like it could power a small recording studio.',
+          'The thing is, cable organization isn\'t just about aesthetics. A well-organized pedalboard is easier to troubleshoot, more reliable during gigs, and actually sounds better because you\'re not wrestling with a rat\'s nest every time you need to swap a pedal or track down a ground loop.',
+          'Let me walk you through the strategies that actually work for organizing pedalboard cables, from initial planning to the finishing touches that keep everything locked in place.',
+        ],
+      },
+      {
+        heading: 'Why Cable Organization Actually Matters',
+        paragraphs: [
+          'Before we dive into techniques, let\'s talk about why this matters beyond just looking clean.',
+          'Signal integrity: When patch cables are kinked, crushed, or tangled together, you\'re introducing potential points of failure. Every sharp bend is a stress point. Every cable crossing another is a potential source of interference.',
+          'Troubleshooting speed: At 2 AM during a recording session, or five minutes before soundcheck, you don\'t want to spend 20 minutes untangling cables to figure out which connection is causing that buzz. A clean layout means you can trace signal flow at a glance.',
+          'Reliability: Organized cables experience less physical stress. They\'re not getting yanked when you adjust a pedal. They\'re not getting crushed under Velcro. They last longer, and more importantly, they fail less often when you need them most.',
+          'Flexibility: When you want to try a new pedal order or swap something out, good cable organization makes that a 30-second job instead of a complete rebuild.',
+        ],
+      },
+      {
+        heading: 'Start With Cable Length Planning',
+        paragraphs: [
+          'Here\'s where most people go wrong: they organize after connecting everything. That\'s backwards.',
+          'The single most important factor in clean cable routing is using the right cable lengths from the start. A 12-inch cable connecting two pedals that are 3 inches apart will never look clean, no matter how much Velcro you use.',
+          'Measure before you buy: Place your pedals on the board in their final positions. Measure the actual distance between jacks. Add an inch or two for routing flexibility, but not more. If the distance is 4 inches, get a 6-inch cable, not a 12-inch.',
+          'Common lengths for common scenarios: Pedals side by side, standard spacing, need 4 to 6 inches. Pedals with one space between them, 8 to 10 inches. Diagonal connections across the board, 12 to 18 inches. Power daisy chains should be measured for each run individually.',
+          'The assorted pack problem: Those "pedalboard cable kits" with 10 cables of random lengths seem convenient, but they rarely match what you actually need. You\'ll use three cables and have seven extras creating clutter. Buy the specific lengths your board requires.',
+        ],
+      },
+      {
+        heading: 'Three Cable Routing Strategies That Work',
+        paragraphs: [
+          'Once you have the right lengths, you need a routing strategy. These three approaches each have their place depending on your board size and pedal density.',
+        ],
+      },
+      {
+        heading: 'Flat Routing',
+        paragraphs: [
+          'This is the minimalist approach. Cables run directly between pedals with minimal slack, staying as close to the board surface as possible.',
+          'Best for: Small boards (4-6 pedals) with straightforward signal chains and minimal cable crossings.',
+          'How to do it: Use the shortest cable that reaches without tension. Route each cable along the most direct path. Secure cables to the board surface with thin zip ties or adhesive cable clips at midpoints.',
+          'Downside: Less forgiving if you need to move pedals. Works best when your layout is locked in.',
+        ],
+      },
+      {
+        heading: 'Bundled Routing',
+        paragraphs: [
+          'This approach groups cables together into small bundles that run along the edges or through the center of the board.',
+          'Best for: Medium boards (8-12 pedals) where you have multiple cables running in similar directions.',
+          'How to do it: Identify natural "highways" on your board where multiple cables need to travel in roughly the same direction. Bundle these cables together using velcro cable ties (not zip ties, which are permanent and can damage cables over time). Run bundles along board edges or between rows of pedals.',
+          'Pro tip: Leave bundles slightly loose. If they\'re too tight, you\'ll stress the cables and make future changes impossible.',
+        ],
+      },
+      {
+        heading: 'Velcro Channel Routing',
+        paragraphs: [
+          'This uses the space under pedals to hide cables, creating an extremely clean top surface.',
+          'Best for: Any board where aesthetics matter and you\'re using pedals with enough clearance underneath.',
+          'How to do it: When you mount pedals with Velcro, leave small gaps between the Velcro strips to create channels. Route patch cables through these channels under the pedals. Only the last few inches of cable are visible at each connection point.',
+          'Caution: This only works if you use quality cables that can handle the compression. Cheap cables with thin shielding will fail quickly when crushed under pedal weight. Mogami and Canare cables are built for this kind of stress.',
+        ],
+      },
+      {
+        heading: 'Managing Cable Density on Tight Boards',
+        paragraphs: [
+          'Large boards (15+ pedals) present a different challenge entirely. You\'re dealing with spatial Tetris where every square inch matters.',
+          'Layer your connections: Think in terms of cable layers, not individual cables. Power cables at the bottom, patch cables in the middle, longer utility connections (expression pedals, tap tempo) on top. This prevents the spaghetti effect where everything tangles together.',
+          'Use right-angle plugs strategically: A mix of straight and right-angle plugs gives you routing options. Right-angle plugs are essential for tight side-by-side connections, but straight plugs sometimes route cleaner for diagonal runs.',
+          'Create dedicated zones: Divide your board into zones (drive section, modulation section, etc.) and complete all the cable routing for one zone before moving to the next. This compartmentalizes the complexity.',
+          'Color coding for complex boards: If you\'re running more than 12 pedals, consider using different colored cables for different signal path sections. It sounds gimmicky, but when you\'re troubleshooting in low light, instantly knowing that green cables are your modulation loop makes a real difference.',
+        ],
+      },
+      {
+        heading: 'Labeling: The Unsexy Secret Weapon',
+        paragraphs: [
+          'Nobody wants to talk about labeling cables because it feels like overkill. Then you spend 15 minutes at rehearsal trying to remember which of your four identical black cables goes from the tuner to the compressor.',
+          'Simple labeling that works: Use a label maker or write with a paint pen on heat shrink tubing at both ends of each cable. Label by connection point, not by cable number. "COMP→OD1" tells you more than "Cable 7." For power cables, label by pedal name, like "Strymon Timeline 9V."',
+          'When to skip labeling: If you have fewer than 6 pedals and you\'re using obviously different cable lengths, labels are probably overkill. For anything larger, they\'re worth the 10 minutes of setup time.',
+        ],
+      },
+      {
+        heading: 'Practical Tips by Board Size',
+        paragraphs: [
+          'Different board sizes need different approaches. Here\'s what works for each category.',
+        ],
+      },
+      {
+        heading: 'Small Boards (4-6 Pedals)',
+        paragraphs: [
+          'Keep it simple. Flat routing with minimal accessories usually looks cleanest. Use the shortest cables possible and secure them with a few adhesive cable clips if needed. Don\'t over-engineer it.',
+          'Watch out for: The temptation to use whatever cables you have lying around. Even on a small board, proper cable lengths make a huge visual difference.',
+        ],
+      },
+      {
+        heading: 'Medium Boards (8-12 Pedals)',
+        paragraphs: [
+          'This is where bundled routing starts to pay off. Group your patch cables into 2-3 small bundles using velcro ties. Create one bundle for the main signal chain, another for any parallel loops or utility connections.',
+          'Watch out for: Over-bundling. If every cable is locked into a tight bundle, swapping one pedal becomes a 20-minute project. Keep bundles loose and logical.',
+        ],
+      },
+      {
+        heading: 'Large Boards (15+ Pedals)',
+        paragraphs: [
+          'You need a system. Plan your layout on paper first. Identify your cable routing strategy before you mount a single pedal. Consider a tiered board where cables can run underneath the upper tier.',
+          'Watch out for: Trying to make it perfect. At this scale, some cable crossings are inevitable. Focus on making the board functional and maintainable rather than Instagram-perfect.',
+        ],
+      },
+      {
+        heading: 'The Role of Cable Quality in Organization Longevity',
+        paragraphs: [
+          'Here\'s something that doesn\'t get talked about enough: cable quality directly affects how well your organization holds up over time.',
+          'Cheap patch cables have thin jackets that develop kinks, loose connectors that wiggle free, and shields that break down under compression. You can spend hours organizing them perfectly, and three months later everything is loose and messy again.',
+          'Quality cables built with Mogami or Canare wire maintain their shape, handle compression under pedals, and keep their connections tight. The difference in long-term organization maintenance is significant. If you\'re wondering whether to invest in better cables or better cable management accessories, choose better cables every time.',
+          'For more details on the differences between these cable standards, check out our comparison of <a href="/blog/mogami-vs-canare-patch-cables">Mogami vs Canare patch cables</a>.',
+        ],
+      },
+      {
+        heading: 'Maintenance: Keeping It Organized',
+        paragraphs: [
+          'Even the best-organized board drifts over time. Cables work loose, pedals shift, connections loosen. Here\'s how to maintain your setup.',
+          'Monthly check: Once a month, do a quick visual inspection. Tighten any loose velcro ties, push any shifted pedals back into position, and check that all cable connections are seated fully.',
+          'After every pedal swap: When you remove or add a pedal, take the extra two minutes to re-route affected cables properly. Don\'t just make it work; make it right.',
+          'Annual rebuild: Once a year, pull everything off the board and start fresh. This is your chance to fix any accumulated issues, adjust for new pedals you\'ve added, and generally reset to a clean state.',
+        ],
+      },
+      {
+        heading: 'Bringing It All Together',
+        paragraphs: [
+          'Organizing pedalboard cables isn\'t about following rigid rules. It\'s about understanding the principles (right cable lengths, appropriate routing strategy, occasional maintenance) and adapting them to your specific board and workflow.',
+          'Start with proper length planning, choose a routing approach that matches your board size, and don\'t skip the small details like labeling and quality cables. The result is a board that looks professional, works reliably, and actually stays organized through months of use.',
+          'For more comprehensive strategies on routing and signal path planning, our guide to <a href="/blog/pedalboard-cable-management-wiring-guide">pedalboard cable management and wiring</a> covers the full picture from power distribution to signal flow optimization.',
+        ],
+      },
+      {
+        heading: 'The Lifetime Approach',
+        paragraphs: [
+          'Every cable on your board is a potential failure point. When you\'re building something you want to rely on, month after month, year after year, it makes sense to eliminate as many of those failure points as possible.',
+          'That\'s why we built Forever Cables. They\'re not just organized because they\'re the right length or because they\'re built with Mogami wire. They\'re organized because you never have to think about them again. Our <a href="/guarantee">lifetime guarantee</a> means that if a cable ever fails, for any reason, we replace it. No questions, no receipt needed, no time limit.',
+          'When you\'re planning your cable organization, you can build it once and trust it to stay that way. Check out our <a href="/products">full range of pedalboard cables</a> built for the players who take their sound seriously.',
+          'Clean cables. Clear signal. Forever.',
+        ],
+      },
+    ],
+    cta: 'Forever Cables are built to stay organized. The right lengths, quality wire, hand-soldered connectors, and a lifetime guarantee that means you never worry about a cable again. Build your board once and trust it to stay that way.',
+  },
+  {
     slug: 'best-cable-for-acoustic-guitar',
     title: 'Best Cable for Acoustic Guitar: What Acoustic Players Need to Know',
     metaTitle: 'Best Cable for Acoustic Guitar: Piezo Pickups, Preamps, and What Actually Matters (2026)',
