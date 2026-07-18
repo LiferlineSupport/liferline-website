@@ -140,7 +140,12 @@ export default function Contact() {
               Filing a guarantee claim?
             </h3>
             <p className="text-muted text-sm leading-relaxed mb-4">
-              Select "Lifetime guarantee claim" as the subject and include:
+              The fastest way is to use our{' '}
+              <Link href="/warranty" className="text-accent hover:underline">
+                warranty claim form
+              </Link>
+              . You can also look up your covered cables there. Or, select
+              &ldquo;Lifetime guarantee claim&rdquo; as the subject above and include:
             </p>
             <ul className="space-y-2 text-sm text-muted">
               <li className="flex gap-2">
@@ -178,15 +183,15 @@ export default function Contact() {
       </div>
 
       <div className="border-t border-border pt-12 flex flex-col sm:flex-row items-center justify-center gap-6">
-        <Link href="/returns" className="btn-primary text-center">
+        <Link href="/warranty" className="btn-primary text-center">
+          Warranty Lookup and Claims
+        </Link>
+        <Link href="/returns" className="btn-ghost text-center">
           Returns and Exchanges
         </Link>
         <Link href="/guarantee" className="btn-ghost text-center">
           Lifetime Guarantee
         </Link>
-        <a href="mailto:support@liferline.com" className="btn-ghost text-center">
-          Email Us
-        </a>
       </div>
     </div>
   )
