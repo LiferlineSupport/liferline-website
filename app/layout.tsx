@@ -18,8 +18,8 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL('https://liferline.com'),
   title: {
-    default: 'Forever Cables by Hatch Patch Cables | Hand-Built Boutique Guitar Patch Cables',
-    template: '%s | Hatch Patch Cables',
+    default: 'Forever Cables | Hand-Built Boutique Guitar Patch Cables | Liferline',
+    template: '%s | Liferline',
   },
   ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION && {
     verification: {
@@ -52,7 +52,8 @@ export const metadata: Metadata = {
     title: 'Forever Cables by Hatch Patch Cables',
     description: 'Hand-Built. American-Made. Guaranteed for Life.',
     url: 'https://liferline.com',
-    siteName: 'Hatch Patch Cables',
+    siteName: 'Forever Cables',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Hatch Patch Cables' }],
     type: 'website',
     locale: 'en_US',
   },
@@ -60,6 +61,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Forever Cables by Hatch Patch Cables',
     description: 'Boutique guitar patch cables, hand-soldered in the USA. Guaranteed for life.',
+    images: ['/twitter-image'],
   },
   alternates: {
     canonical: 'https://liferline.com',

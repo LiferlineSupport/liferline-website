@@ -4,7 +4,7 @@ import { products, formatPrice } from '@/lib/products'
 import ProductCard from '@/components/ProductCard'
 
 export const metadata: Metadata = {
-  title: 'All Cables | Forever Cables by Hatch Patch Cables',
+  title: 'Guitar Patch Cables | Forever Cables',
   description:
     'Browse the complete Forever Cables lineup: boutique guitar patch cables, guitar pedal patch cables, and instrument cables hand-soldered in the USA with Canare and Mogami wire and Neutrik connectors. Every cable guaranteed for life.',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'bass guitar instrument cable',
   ],
   alternates: {
-    canonical: 'https://liferline.com/products',
+    canonical: 'https://liferline.com/products/',
   },
   openGraph: {
     title: 'All Cables | Forever Cables',

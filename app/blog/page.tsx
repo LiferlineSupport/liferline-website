@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { blogPosts } from '@/lib/blog-posts'
 
 export const metadata: Metadata = {
-  title: 'Blog',
+  title: 'Blog | Forever Cables',
   description:
     'Guides and articles about guitar patch cables, pedalboard setup, cable quality, and what makes Forever Cables different. Expert advice from the people who build them by hand.',
   keywords: [

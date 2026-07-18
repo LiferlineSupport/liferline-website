@@ -6,7 +6,7 @@ import ProductCard from '@/components/ProductCard'
 import EmailSignup from '@/components/EmailSignup'
 
 export const metadata: Metadata = {
-  title: 'Forever Cables by Hatch Patch Cables | Hand-Built Boutique Guitar Patch Cables',
+  title: { absolute: 'Forever Cables | Hand-Built Boutique Guitar Patch Cables | Liferline' },
   description:
     'Boutique guitar patch cables and instrument cables hand-soldered in the USA with Canare and Mogami wire and Neutrik connectors. Every cable backed by a lifetime guarantee. Buy once, keep forever.',
   alternates: {
