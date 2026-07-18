@@ -513,8 +513,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'best-patch-cables-for-guitar-pedals',
-    title: 'Best Patch Cables for Guitar Pedals: What to Look For in 2025',
-    metaTitle: 'Best Patch Cables for Guitar Pedals: What to Look For in 2025',
+    title: 'Best Patch Cables for Guitar Pedals: What to Look For in 2026',
+    metaTitle: 'Best Patch Cables for Guitar Pedals: What to Look For in 2026',
     metaDescription: 'Looking for the best patch cables for guitar pedals? This guide breaks down what actually matters: build quality, shielding, capacitance, and which cables are worth the investment.',
     keywords: ['best patch cable for guitar pedals', 'best guitar patch cables', 'guitar patch cables', 'patch cables for pedalboard'],
     publishedAt: '2026-07-17',
@@ -595,7 +595,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'best-instrument-cable-for-guitar',
     title: 'Best Instrument Cable for Guitar: What Actually Matters',
-    metaTitle: 'Best Instrument Cable for Guitar & Bass in 2025 | Buying Guide',
+    metaTitle: 'Best Instrument Cable for Guitar & Bass in 2026 | Buying Guide',
     metaDescription: 'Choosing the best instrument cable for guitar or bass? This guide covers what separates great cables from mediocre ones: shielding, capacitance, handling noise, and build quality.',
     keywords: ['best instrument cable for guitar', 'best guitar cable', 'guitar instrument cable', 'best instrument cable for bass', 'Mogami instrument cable', 'instrument cable vs patch cable', 'guitar cable buying guide'],
     publishedAt: '2026-07-18',
