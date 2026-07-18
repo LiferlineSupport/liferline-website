@@ -192,6 +192,25 @@ function ProductJsonLd({ product }: { product: NonNullable<ReturnType<typeof get
   )
 }
 
+const PRODUCT_BLOG_TAGS: Record<string, string[]> = {
+  'the-workhorse': ['patch cables', 'pedalboard', 'pedalboard setup', 'guitar pedals', 'soldered cables', 'canare', 'canare gs-6', 'cable comparison'],
+  'the-right-angle': ['patch cables', 'pedalboard', 'pedalboard setup', 'guitar pedals', 'cable routing', 'cable management', 'organization', 'canare'],
+  'the-pedalboard-pack': ['pedalboard', 'pedalboard setup', 'pedalboard plans', 'cable management', 'organization', 'patch cables', 'guitar pedals', 'cable routing'],
+  'the-stage-cable': ['instrument cable', 'instrument cables', 'guitar cable', 'guitar cables', 'amp', 'guitar tone', 'tone', 'mogami', 'Mogami', 'mogami w2524', 'bass cable', 'studio gear', 'signal chain'],
+}
+
+function getRelatedBlogPosts(productSlug: string) {
+  const relevantTags = PRODUCT_BLOG_TAGS[productSlug] ?? []
+  return blogPosts
+    .map((bp) => ({
+      ...bp,
+      score: bp.tags.filter((t) => relevantTags.includes(t)).length,
+    }))
+    .filter((bp) => bp.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3)
+}
+
 export default async function ProductPage({ params }: Props) {
   const { slug } = await params
   const product = getProductBySlug(slug)
@@ -199,6 +218,7 @@ export default async function ProductPage({ params }: Props) {
 
   const otherProducts = products.filter((p) => p.id !== product.id).slice(0, 3)
   const savings = getBundleSavings(product)
+  const relatedGuides = getRelatedBlogPosts(slug)
 
   return (
     <>
@@ -372,27 +392,29 @@ export default async function ProductPage({ params }: Props) {
       )}
 
       {/* Related guides */}
-      <section className="border-t border-border">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
-          <h2 className="section-heading mb-8">Gear Guides</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {blogPosts.slice(0, 3).map((bp) => (
-              <Link
-                key={bp.slug}
-                href={`/blog/${bp.slug}`}
-                className="border border-border hover:border-accent p-5 transition-colors group"
-              >
-                <span className="text-xs tracking-[0.15em] uppercase text-accent font-semibold">
-                  {bp.category}
-                </span>
-                <h3 className="text-sm text-cream group-hover:text-accent transition-colors mt-2 leading-snug">
-                  {bp.title}
-                </h3>
-              </Link>
-            ))}
+      {relatedGuides.length > 0 && (
+        <section className="border-t border-border">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+            <h2 className="section-heading mb-8">Gear Guides</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {relatedGuides.map((bp) => (
+                <Link
+                  key={bp.slug}
+                  href={`/blog/${bp.slug}`}
+                  className="border border-border hover:border-accent p-5 transition-colors group"
+                >
+                  <span className="text-xs tracking-[0.15em] uppercase text-accent font-semibold">
+                    {bp.category}
+                  </span>
+                  <h3 className="text-sm text-cream group-hover:text-accent transition-colors mt-2 leading-snug">
+                    {bp.title}
+                  </h3>
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
     </>
   )
 }

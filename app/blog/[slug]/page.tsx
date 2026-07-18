@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { blogPosts, getBlogPost } from '@/lib/blog-posts'
+import { products, formatPrice } from '@/lib/products'
+import Image from 'next/image'
 import EmailSignup from '@/components/EmailSignup'
 
 interface Props {
@@ -74,6 +76,54 @@ function BlogPostJsonLd({ post }: { post: NonNullable<ReturnType<typeof getBlogP
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
   )
+}
+
+const PRODUCT_TAG_MAP: Record<string, string[]> = {
+  'patch cables': ['the-workhorse', 'the-right-angle', 'the-pedalboard-pack'],
+  'pedalboard': ['the-workhorse', 'the-right-angle', 'the-pedalboard-pack'],
+  'pedalboard setup': ['the-pedalboard-pack', 'the-workhorse', 'the-right-angle'],
+  'pedalboard plans': ['the-pedalboard-pack', 'the-workhorse'],
+  'cable management': ['the-pedalboard-pack'],
+  'organization': ['the-pedalboard-pack'],
+  'cable routing': ['the-pedalboard-pack', 'the-right-angle'],
+  'guitar pedals': ['the-workhorse', 'the-right-angle'],
+  'guitar cable': ['the-stage-cable', 'the-workhorse'],
+  'guitar cables': ['the-stage-cable', 'the-workhorse'],
+  'instrument cable': ['the-stage-cable'],
+  'instrument cables': ['the-stage-cable'],
+  'amp': ['the-stage-cable'],
+  'guitar tone': ['the-stage-cable', 'the-workhorse'],
+  'tone': ['the-stage-cable', 'the-workhorse'],
+  'soldered cables': ['the-workhorse', 'the-right-angle', 'the-stage-cable'],
+  'buying guide': ['the-workhorse', 'the-stage-cable', 'the-pedalboard-pack'],
+  'cable comparison': ['the-workhorse', 'the-stage-cable'],
+  'canare': ['the-workhorse', 'the-right-angle'],
+  'canare gs-6': ['the-workhorse', 'the-right-angle'],
+  'mogami': ['the-stage-cable'],
+  'Mogami': ['the-stage-cable'],
+  'mogami w2524': ['the-stage-cable'],
+  'lifetime warranty': ['the-workhorse', 'the-stage-cable'],
+  'guarantee': ['the-workhorse', 'the-stage-cable'],
+  'cable specs': ['the-workhorse', 'the-stage-cable'],
+  'signal chain': ['the-workhorse', 'the-right-angle', 'the-stage-cable'],
+  'effects order': ['the-workhorse', 'the-right-angle'],
+  'bass cable': ['the-stage-cable'],
+  'studio gear': ['the-stage-cable'],
+}
+
+function getRecommendedProducts(tags: string[]) {
+  const slugScores = new Map<string, number>()
+  for (const tag of tags) {
+    const mapped = PRODUCT_TAG_MAP[tag]
+    if (!mapped) continue
+    for (const slug of mapped) {
+      slugScores.set(slug, (slugScores.get(slug) ?? 0) + 1)
+    }
+  }
+  const sorted = Array.from(slugScores.entries()).sort((a, b) => b[1] - a[1])
+  const topSlugs = sorted.slice(0, 2).map(([slug]) => slug)
+  if (topSlugs.length === 0) topSlugs.push('the-workhorse', 'the-stage-cable')
+  return products.filter((p) => topSlugs.includes(p.slug))
 }
 
 function BreadcrumbJsonLd({ post }: { post: NonNullable<ReturnType<typeof getBlogPost>> }) {
@@ -186,12 +236,44 @@ export default async function BlogPostPage({ params }: Props) {
           ))}
         </div>
 
-        <div className="bg-card border border-border p-8 mt-16">
-          <p className="text-cream font-semibold mb-2">Browse Forever Cables</p>
-          <p className="text-muted text-sm mb-6">{post.cta}</p>
-          <Link href="/products" className="btn-primary inline-block">
-            Shop the Full Line
-          </Link>
+        <div className="mt-16 border-t border-border pt-12">
+          <p className="font-serif text-2xl text-cream mb-2">Built for This</p>
+          <p className="text-muted text-sm mb-8">{post.cta}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {getRecommendedProducts(post.tags).map((product) => (
+              <Link
+                key={product.slug}
+                href={`/products/${product.slug}`}
+                className="bg-card border border-border hover:border-accent/40 transition-colors group flex gap-4 p-4"
+              >
+                <div className="w-20 h-20 flex-shrink-0 bg-card-hover relative overflow-hidden">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    sizes="80px"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex flex-col justify-center min-w-0">
+                  <p className="text-cream font-semibold text-sm group-hover:text-accent transition-colors">
+                    {product.name}
+                  </p>
+                  <p className="text-xs text-accent tracking-wide uppercase mt-0.5">
+                    {product.tagline}
+                  </p>
+                  <p className="text-xs text-muted mt-1">
+                    From {formatPrice(product.price)}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-4 text-center">
+            <Link href="/products" className="text-xs text-muted hover:text-accent transition-colors tracking-wide uppercase">
+              View all Forever Cables
+            </Link>
+          </div>
         </div>
 
         <div className="mt-16 border border-border p-8 text-center">
