@@ -169,8 +169,8 @@ export default function Guarantee() {
             {[
               {
                 step: '1',
-                title: 'Email us',
-                body: 'Send a message to support@liferline.com. Tell us your name, what happened to the cable, and your shipping address.',
+                title: 'File a claim online or email us',
+                body: 'Use our warranty claim form at liferline.com/warranty or send a message to support@liferline.com. Tell us your name, what happened to the cable, and your shipping address.',
               },
               {
                 step: '2',
@@ -236,6 +236,9 @@ export default function Guarantee() {
       <div className="mt-16 border-t border-border pt-12 flex flex-col sm:flex-row gap-6">
         <Link href="/products" className="btn-primary text-center">
           Shop Cables
+        </Link>
+        <Link href="/warranty" className="btn-ghost text-center">
+          Warranty Lookup and Claims
         </Link>
         <Link href="/returns" className="btn-ghost text-center">
           Returns and Exchanges

@@ -37,11 +37,15 @@ export default function Success() {
           Your lifetime guarantee
         </p>
         <p className="text-sm text-muted leading-relaxed">
-          Your cable is covered for life. If it ever fails, for any reason, email us at{' '}
+          Your cable is covered for life. If it ever fails, for any reason, visit{' '}
+          <a href="/warranty" className="text-accent hover:underline">
+            our warranty page
+          </a>{' '}
+          to file a claim or email us at{' '}
           <a href="mailto:support@liferline.com" className="text-accent hover:underline">
             support@liferline.com
-          </a>{' '}
-          and we'll get a replacement shipped.
+          </a>
+          . We will get a replacement shipped.
         </p>
       </div>
 

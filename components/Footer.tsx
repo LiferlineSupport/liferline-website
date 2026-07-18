@@ -82,6 +82,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/warranty" className="text-sm text-muted hover:text-cream transition-colors">
+                  Warranty Lookup
+                </Link>
+              </li>
+              <li>
                 <Link href="/terms" className="text-sm text-muted hover:text-cream transition-colors">
                   Terms of Service
                 </Link>
