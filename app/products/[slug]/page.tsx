@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
-import { products, getProductBySlug, formatPrice, getVariantPrice } from '@/lib/products'
+import { products, getProductBySlug, formatPrice, getVariantPrice, getBundleSavings } from '@/lib/products'
 import { blogPosts } from '@/lib/blog-posts'
 import BuyButton from '@/components/BuyButton'
 
@@ -196,6 +196,7 @@ export default async function ProductPage({ params }: Props) {
   if (!product) notFound()
 
   const otherProducts = products.filter((p) => p.id !== product.id).slice(0, 3)
+  const savings = getBundleSavings(product)
 
   return (
     <>
@@ -268,6 +269,18 @@ export default async function ProductPage({ params }: Props) {
               </ul>
             </div>
 
+            {savings && (
+              <div className="border border-accent/30 bg-accent/5 p-4 mb-8">
+                <p className="text-accent text-sm font-semibold mb-1">
+                  Save {formatPrice(savings.saved)} vs. buying separately
+                </p>
+                <p className="text-muted text-xs">
+                  Six individual Workhorse cables would run {formatPrice(savings.totalIfSeparate)}.
+                  The pack brings each cable to {formatPrice(savings.perUnit)}.
+                </p>
+              </div>
+            )}
+
             {/* Buy section */}
             <div className="mt-auto">
               <BuyButton product={product} />
@@ -310,7 +323,7 @@ export default async function ProductPage({ params }: Props) {
             <div className="flex items-center gap-4">
               <span className="text-3xl">📦</span>
               <div>
-                <p className="text-cream font-semibold">Free Shipping</p>
+                <p className="text-cream font-semibold">Free US Shipping</p>
                 <p className="text-sm text-muted">
                   Every order ships free within the USA.
                 </p>

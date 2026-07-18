@@ -1,8 +1,18 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { products } from '@/lib/products'
 import { blogPosts } from '@/lib/blog-posts'
 import ProductCard from '@/components/ProductCard'
 import EmailSignup from '@/components/EmailSignup'
+
+export const metadata: Metadata = {
+  title: 'Forever Cables by Hatch Patch Cables | Hand-Built Boutique Guitar Patch Cables',
+  description:
+    'Boutique guitar patch cables and instrument cables hand-soldered in the USA with Canare and Mogami wire and Neutrik connectors. Every cable backed by a lifetime guarantee. Buy once, keep forever.',
+  alternates: {
+    canonical: 'https://liferline.com',
+  },
+}
 
 function WebSiteJsonLd() {
   const data = {

@@ -154,3 +154,14 @@ export function getVariantPrice(product: Product, variantValue: string | undefin
   }
   return product.price
 }
+
+export function getBundleSavings(product: Product): { perUnit: number; totalIfSeparate: number; saved: number } | null {
+  if (product.slug !== 'the-pedalboard-pack') return null
+  const workhorse = products.find((p) => p.slug === 'the-workhorse')
+  if (!workhorse) return null
+  const qty = 6
+  const totalIfSeparate = workhorse.price * qty
+  const saved = totalIfSeparate - product.price
+  if (saved <= 0) return null
+  return { perUnit: Math.round(product.price / qty), totalIfSeparate, saved }
+}

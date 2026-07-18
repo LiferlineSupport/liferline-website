@@ -145,7 +145,7 @@ export default function ProductCard({ product }: Props) {
             <span className="font-serif text-2xl text-cream">
               {formatPrice(getVariantPrice(product, selectedVariant))}
             </span>
-            <span className="text-xs text-muted tracking-wide">Free shipping</span>
+            <span className="text-xs text-muted tracking-wide">Free US shipping</span>
           </div>
 
           {error && (

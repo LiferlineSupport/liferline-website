@@ -145,7 +145,7 @@ export default function BuyButton({ product }: Props) {
         <span className="font-serif text-3xl text-cream">
           {formatPrice(totalPrice)}
         </span>
-        <span className="text-xs text-muted tracking-wide">Free shipping</span>
+        <span className="text-xs text-muted tracking-wide">Free US shipping</span>
       </div>
 
       {error && (
