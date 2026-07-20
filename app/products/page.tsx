@@ -34,7 +34,7 @@ export const metadata: Metadata = {
       'Hand-soldered guitar patch cables and instrument cables. Canare and Mogami wire, Neutrik connectors, lifetime guarantee.',
     url: 'https://liferline.com/products',
     type: 'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Hatch Patch Cables' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Liferline' }],
   },
 }
 
@@ -57,7 +57,7 @@ function ProductListJsonLd() {
           availability: 'https://schema.org/InStock',
           itemCondition: 'https://schema.org/NewCondition',
           url: `https://liferline.com/products/${p.slug}`,
-          seller: { '@type': 'Organization', name: 'Hatch Patch Cables' },
+          seller: { '@type': 'Organization', name: 'Liferline' },
         }
       : {
           '@type': 'Offer',
@@ -66,7 +66,7 @@ function ProductListJsonLd() {
           availability: 'https://schema.org/InStock',
           itemCondition: 'https://schema.org/NewCondition',
           url: `https://liferline.com/products/${p.slug}`,
-          seller: { '@type': 'Organization', name: 'Hatch Patch Cables' },
+          seller: { '@type': 'Organization', name: 'Liferline' },
         }
 
     return {
@@ -78,7 +78,7 @@ function ProductListJsonLd() {
         description: p.description,
         image: `https://liferline.com${p.image}`,
         brand: { '@type': 'Brand', name: 'Forever Cables' },
-        manufacturer: { '@type': 'Organization', name: 'Hatch Patch Cables' },
+        manufacturer: { '@type': 'Organization', name: 'Liferline' },
         offers,
       },
     }

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Guides and expert advice about guitar patch cables, pedalboard setup, and cable quality.',
     url: 'https://liferline.com/blog',
     type: 'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Hatch Patch Cables' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Liferline' }],
   },
 }
 
@@ -67,7 +67,7 @@ function BlogListJsonLd() {
       datePublished: post.publishedAt,
       author: {
         '@type': 'Organization',
-        name: 'Hatch Patch Cables',
+        name: 'Liferline',
       },
     })),
   }
