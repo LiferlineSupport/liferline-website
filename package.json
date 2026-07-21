@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:browsers": "playwright test e2e/cross-browser-validation.spec.ts --project=chromium --project=firefox --project='Mobile Chrome'",
+    "test:browsers:headed": "playwright test e2e/cross-browser-validation.spec.ts --headed --project=chromium --project=firefox --project='Mobile Chrome'",
+    "test:production": "TEST_PRODUCTION_BUILD=1 playwright test e2e/cross-browser-validation.spec.ts --project=chromium --project=firefox --project='Mobile Chrome'",
+    "precommit:test": "npm run build && npm run test:browsers",
+    "predeploy": "npm run precommit:test"
   },
   "dependencies": {
     "@stripe/stripe-js": "^4.0.0",
@@ -17,6 +22,7 @@
     "stripe": "^16.0.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.61.1",
     "@types/node": "^20",
     "@types/proper-lockfile": "^4.1.4",
     "@types/react": "^18",

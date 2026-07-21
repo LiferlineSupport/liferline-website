@@ -29,7 +29,35 @@ Open [http://localhost:3000](http://localhost:3000).
 4. Add your Stripe Secret Key (`sk_live_...` or `sk_test_...` for testing)
 5. Add these same env vars to your Hostinger environment configuration
 
+## Testing
+
+### Install Playwright Browsers (First Time Only)
+
+```bash
+npx playwright install --with-deps
+```
+
+### Run Cross-Browser Tests
+
+```bash
+npm run test:browsers
+```
+
+This tests the site across Chrome, Firefox, Safari, and mobile browsers.
+
+### Pre-Deployment Testing
+
+**REQUIRED**: Before deploying to production, run:
+
+```bash
+npm run predeploy
+```
+
+This builds the site and runs all browser tests. See `PRE-DEPLOYMENT-CHECKLIST.md` for complete requirements.
+
 ## Deploying
+
+**⚠️ CRITICAL**: Complete the `PRE-DEPLOYMENT-CHECKLIST.md` before deploying!
 
 Push to `main`. Hostinger auto-deploys.
 
@@ -39,6 +67,8 @@ Set these environment variables in Hostinger:
 - `STRIPE_PRICE_RIGHT_ANGLE`
 - `STRIPE_PRICE_PACK`
 - `STRIPE_PRICE_STAGE`
+
+See `DEPLOYMENT.md` for detailed deployment configuration and troubleshooting.
 
 ## Lifetime guarantee claims
 
