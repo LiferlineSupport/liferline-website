@@ -18,13 +18,13 @@ function WebSiteJsonLd() {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Forever Cables by Hatch Patch Cables',
+    name: 'Forever Cables by Liferline',
     url: 'https://liferline.com',
     description:
       'Boutique guitar patch cables and instrument cables hand-soldered in the USA with Canare and Mogami wire and Neutrik connectors. Guaranteed for life.',
     publisher: {
       '@type': 'Organization',
-      name: 'Hatch Patch Cables',
+      name: 'Liferline',
       url: 'https://liferline.com',
       logo: {
         '@type': 'ImageObject',
@@ -68,7 +68,7 @@ function ProductListJsonLd() {
           availability: 'https://schema.org/InStock',
           itemCondition: 'https://schema.org/NewCondition',
           url: `https://liferline.com/products/${p.slug}`,
-          seller: { '@type': 'Organization', name: 'Hatch Patch Cables' },
+          seller: { '@type': 'Organization', name: 'Liferline' },
         }
       : {
           '@type': 'Offer',
@@ -77,7 +77,7 @@ function ProductListJsonLd() {
           availability: 'https://schema.org/InStock',
           itemCondition: 'https://schema.org/NewCondition',
           url: `https://liferline.com/products/${p.slug}`,
-          seller: { '@type': 'Organization', name: 'Hatch Patch Cables' },
+          seller: { '@type': 'Organization', name: 'Liferline' },
         }
 
     return {
@@ -89,7 +89,7 @@ function ProductListJsonLd() {
         description: p.description,
         image: `https://liferline.com${p.image}`,
         brand: { '@type': 'Brand', name: 'Forever Cables' },
-        manufacturer: { '@type': 'Organization', name: 'Hatch Patch Cables' },
+        manufacturer: { '@type': 'Organization', name: 'Liferline' },
         offers,
       },
     }
@@ -120,7 +120,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-24 md:py-36">
           <div className="max-w-2xl">
             <p className="text-xs tracking-[0.3em] uppercase text-accent mb-6 font-semibold">
-              Forever Cables by Hatch Patch Cables
+              Forever Cables by Liferline
             </p>
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-cream leading-[1.05] mb-8">
               Built to last.{' '}

@@ -15,7 +15,7 @@ export default function Header() {
               Forever Cables
             </span>
             <span className="text-[10px] tracking-[0.2em] uppercase text-muted">
-              by Hatch Patch Cables
+              by Liferline
             </span>
           </Link>
 

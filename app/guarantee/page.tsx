@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'If your cable ever fails, for any reason, we replace it. No receipts. No shipping labels. No expiration. That is the Forever Cables standard.',
     url: 'https://liferline.com/guarantee',
     type: 'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Hatch Patch Cables' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Liferline' }],
   },
 }
 

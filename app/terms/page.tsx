@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description:
-    'Terms and conditions for purchasing Forever Cables from Hatch Patch Cables. Covers orders, shipping, returns, lifetime guarantee, and site usage.',
+    'Terms and conditions for purchasing Forever Cables from Liferline. Covers orders, shipping, returns, lifetime guarantee, and site usage.',
   alternates: {
     canonical: 'https://liferline.com/terms',
   },
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: 'Terms and conditions for shopping Forever Cables.',
     url: 'https://liferline.com/terms',
     type: 'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Hatch Patch Cables' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Liferline' }],
   },
 }
 
@@ -76,7 +76,7 @@ export default function Terms() {
           <h2 className="font-serif text-2xl text-cream mb-4">Overview</h2>
           <p>
             These terms govern your use of the liferline.com website and your purchase of
-            Forever Cables products from Hatch Patch Cables. By placing an order or using
+            Forever Cables products from Liferline. By placing an order or using
             this site, you agree to these terms. If you do not agree, please do not use the
             site or place orders.
           </p>
@@ -180,7 +180,7 @@ export default function Terms() {
           <h2 className="font-serif text-2xl text-cream mb-4">Intellectual property</h2>
           <p>
             All content on this site, including text, images, logos, and design, is owned by
-            Hatch Patch Cables or used with permission. You may not copy, reproduce, or
+            Liferline or used with permission. You may not copy, reproduce, or
             distribute any content from this site without written permission, except for
             personal, non-commercial use (such as sharing a product link).
           </p>
@@ -189,7 +189,7 @@ export default function Terms() {
         <section>
           <h2 className="font-serif text-2xl text-cream mb-4">Limitation of liability</h2>
           <p>
-            To the maximum extent permitted by law, Hatch Patch Cables is not liable for any
+            To the maximum extent permitted by law, Liferline is not liable for any
             indirect, incidental, or consequential damages arising from the use of our
             products or website. Our total liability for any claim related to a product is
             limited to the purchase price you paid for that product. This does not affect

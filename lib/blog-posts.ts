@@ -2551,7 +2551,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: 'The Forever Cables Approach',
         paragraphs: [
-          'At Hatch Patch Cables, every Forever Cable is hand-soldered by us, one at a time, using gold-plated connectors and oxygen-free copper conductors. We use Canare GS-6 cable stock for its exceptionally low capacitance, which preserves high-end clarity even on longer cable runs.',
+          'At Liferline, every Forever Cable is hand-soldered by us, one at a time, using gold-plated connectors and oxygen-free copper conductors. We use Canare GS-6 cable stock for its exceptionally low capacitance, which preserves high-end clarity even on longer cable runs.',
           'Because we stand behind the quality of every solder joint, every cable ships with a lifetime guarantee. If a Forever Cable ever fails due to a connection issue, we replace it for free. No questions, no expiration, no fine print.',
           'We do not offer solderless options, and we are not planning to. The whole point of Forever Cables is to give you a cable you build your board around once, then forget about for the rest of your playing life.',
         ],
@@ -2803,7 +2803,7 @@ export const blogPosts: BlogPost[] = [
         heading: 'Built to Last',
         paragraphs: [
           'Forever Cables are built with Canare GS-6 cable, one of the most respected cable bodies in professional audio. The conductor is OFC. The connectors are gold-plated Neutrik 1/4" jacks, hand-soldered and strain-relieved at every junction.',
-          'Every Forever Cable comes with a lifetime guarantee. If it ever fails for any reason, Hatch Patch Cables replaces it, no questions asked.',
+          'Every Forever Cable comes with a lifetime guarantee. If it ever fails for any reason, Liferline replaces it, no questions asked.',
           'These are not cables you swap out every year. They are cables you buy once, plug in, and stop thinking about.',
         ],
       },
@@ -2902,7 +2902,7 @@ export const blogPosts: BlogPost[] = [
         ],
       },
     ],
-    cta: 'Forever Cables are hand-soldered boutique guitar patch cables made by Hatch Patch Cables. Every cable ships with a lifetime guarantee.',
+    cta: 'Forever Cables are hand-soldered boutique guitar patch cables made by Liferline. Every cable ships with a lifetime guarantee.',
   },
   {
     slug: 'best-patch-cables-for-guitar-pedals',
@@ -2983,7 +2983,7 @@ export const blogPosts: BlogPost[] = [
         ],
       },
     ],
-    cta: 'Forever Cables are hand-soldered boutique guitar patch cables made by Hatch Patch Cables. Every cable ships with a lifetime guarantee.',
+    cta: 'Forever Cables are hand-soldered boutique guitar patch cables made by Liferline. Every cable ships with a lifetime guarantee.',
   },
   {
     slug: 'best-instrument-cable-for-guitar',
