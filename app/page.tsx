@@ -4,6 +4,7 @@ import { products } from '@/lib/products'
 import { blogPosts } from '@/lib/blog-posts'
 import ProductCard from '@/components/ProductCard'
 import EmailSignup from '@/components/EmailSignup'
+import ProductComparison from '@/components/ProductComparison'
 
 export const metadata: Metadata = {
   title: { absolute: 'Forever Cables | Hand-Built Boutique Guitar Patch Cables | Liferline' },
@@ -165,6 +166,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Product Comparison */}
+      <ProductComparison />
 
       {/* Products */}
       <section id="products" className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
