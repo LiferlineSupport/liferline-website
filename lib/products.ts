@@ -57,7 +57,7 @@ export const products: Product[] = [
     id: 'workhorse-ra',
     slug: 'the-right-angle',
     name: 'The Right Angle',
-    tagline: '6" Straight-to-Right-Angle',
+    tagline: 'Straight-to-Right-Angle',
     description:
       'The guitar pedal patch cable for tight layouts. One straight, one angled. Ferrite-filtered, wax-secured, and individually certified. Fits flush to any pedal housing.',
     longDescription:
@@ -69,7 +69,7 @@ export const products: Product[] = [
       'Flat-wax aerospace-grade cable securing',
       'Ferrite bead on hot wire (EMI rejection)',
       'Individually certified: continuity, shield, capacitance, impedance',
-      'Available in 6" and 12"',
+      'Available in 6", 12", and 18"',
       'Forever Guarantee',
     ],
     price: 6995,
@@ -78,36 +78,9 @@ export const products: Product[] = [
     variants: [
       { label: '6"', value: '6in', price: 6995, stripePriceId: process.env.STRIPE_PRICE_RIGHT_ANGLE_6 ?? process.env.STRIPE_PRICE_RIGHT_ANGLE ?? '' },
       { label: '12"', value: '12in', price: 7195, stripePriceId: process.env.STRIPE_PRICE_RIGHT_ANGLE_12 ?? '' },
+      { label: '18"', value: '18in', price: 7495, stripePriceId: process.env.STRIPE_PRICE_RIGHT_ANGLE_18 ?? '' },
     ],
     image: '/products/the-right-angle.png',
-  },
-  {
-    id: 'pedalboard-pack',
-    slug: 'the-pedalboard-pack',
-    name: 'The Pedalboard Pack',
-    tagline: '6-Pack, Mixed Lengths',
-    description:
-      'Six guitar pedal patch cables to wire your entire pedalboard. Two 6", two 12", two 18" Workhorses. Every cable ferrite-filtered, wax-secured, and individually certified. All guaranteed forever.',
-    longDescription:
-      'Wire your entire pedalboard in one order. The Pedalboard Pack includes six Workhorse cables in a mix of lengths: two 6-inch, two 12-inch, and two 18-inch. Every cable is built with Mogami W2319 wire, Neutrik gold connectors, flat-wax aerospace securing, a ferrite bead on the hot wire, and individual certification testing. Every one carries the Forever Cables Forever Guarantee. You save over $100 compared to buying six cables individually.',
-    specs: [
-      '2x 6" Workhorse cables',
-      '2x 12" Workhorse cables',
-      '2x 18" Workhorse cables',
-      'Mogami W2319 cable throughout',
-      'Neutrik NP2X-B gold straight plugs',
-      'Flat-wax aerospace-grade cable securing',
-      'Ferrite bead on hot wire (EMI rejection)',
-      'Each cable individually certified',
-      'Forever Guarantee on every cable',
-    ],
-    price: 32995,
-    currency: 'usd',
-    stripePriceId: process.env.STRIPE_PRICE_PACK ?? '',
-    variants: [],
-    image: '/products/the-pedalboard-pack.png',
-    badge: 'Best Value',
-    featured: true,
   },
   {
     id: 'pedalboard-pack-pro',
@@ -231,11 +204,7 @@ export function getBundleSavings(product: Product): { perUnit: number; totalIfSe
   let totalIfSeparate: number
   let cableCount: number
 
-  if (product.slug === 'the-pedalboard-pack') {
-    // 2x 6", 2x 12", 2x 18"
-    totalIfSeparate = p6 * 2 + p12 * 2 + p18 * 2
-    cableCount = 6
-  } else if (product.slug === 'the-pedalboard-pack-pro') {
+  if (product.slug === 'the-pedalboard-pack-pro') {
     // 3x 6", 2x 12", 2x 18"
     totalIfSeparate = p6 * 3 + p12 * 2 + p18 * 2
     cableCount = 7
