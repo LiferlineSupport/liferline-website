@@ -1,3 +1,10 @@
+export interface BlogPostSource {
+  title: string
+  publication: string
+  url?: string
+  note?: string
+}
+
 export interface BlogPost {
   slug: string
   title: string
@@ -13,6 +20,8 @@ export interface BlogPost {
   cta: string
   category: string
   tags: string[]
+  byline?: string
+  sources?: BlogPostSource[]
 }
 
 export const blogPosts: BlogPost[] = [
