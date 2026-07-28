@@ -5,6 +5,7 @@ import { blogPosts } from '@/lib/blog-posts'
 import ProductCard from '@/components/ProductCard'
 import EmailSignup from '@/components/EmailSignup'
 import ProductComparison from '@/components/ProductComparison'
+import Testimonials from '@/components/Testimonials'
 
 export const metadata: Metadata = {
   title: { absolute: 'Forever Cables | Hand-Built Boutique Guitar Patch Cables | Liferline' },
@@ -320,6 +321,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials */}
+      <Testimonials />
 
       {/* Blog preview */}
       <section className="border-t border-border">
