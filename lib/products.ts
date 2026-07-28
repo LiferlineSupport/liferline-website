@@ -83,14 +83,14 @@ export const products: Product[] = [
     image: '/products/the-right-angle.png',
   },
   {
-    id: 'pedalboard-pack-pro',
-    slug: 'the-pedalboard-pack-pro',
-    name: 'The Pedalboard Pack Pro',
+    id: 'custom-pack',
+    slug: 'the-custom-pack',
+    name: 'The Custom Pack',
     tagline: '7-Pack, Mixed Lengths',
     description:
       'Seven guitar pedal patch cables for larger pedalboard rigs. Three 6", two 12", two 18" Workhorses. Every cable ferrite-filtered, wax-secured, and individually certified. All guaranteed forever.',
     longDescription:
-      'The Pedalboard Pack Pro covers larger rigs with seven Workhorse cables: three 6-inch, two 12-inch, and two 18-inch. Built with Mogami W2319 wire, Neutrik gold connectors, flat-wax aerospace securing, a ferrite bead on the hot wire, and individual certification testing on every cable. Every one carries the Forever Cables Forever Guarantee. You save over $120 compared to buying seven cables individually.',
+      'The Custom Pack covers larger rigs with seven Workhorse cables: three 6-inch, two 12-inch, and two 18-inch. Built with Mogami W2319 wire, Neutrik gold connectors, flat-wax aerospace securing, a ferrite bead on the hot wire, and individual certification testing on every cable. Every one carries the Forever Cables Forever Guarantee. You save over $100 compared to buying seven cables individually.',
     specs: [
       '3x 6" Workhorse cables',
       '2x 12" Workhorse cables',
@@ -102,7 +102,7 @@ export const products: Product[] = [
       'Each cable individually certified',
       'Forever Guarantee on every cable',
     ],
-    price: 38295,
+    price: 39995,
     currency: 'usd',
     stripePriceId: process.env.STRIPE_PRICE_PACK_PRO ?? '',
     variants: [],
@@ -110,14 +110,14 @@ export const products: Product[] = [
     badge: 'Pro Rig',
   },
   {
-    id: 'pedalboard-pack-xl',
-    slug: 'the-pedalboard-pack-xl',
-    name: 'The Pedalboard Pack XL',
+    id: 'custom-pro-pack',
+    slug: 'the-custom-pro-pack',
+    name: 'The Custom Pro Pack',
     tagline: '13-Pack, Mixed Lengths',
     description:
       'Thirteen guitar pedal patch cables for serious pedalboard builders. Five 6", four 12", four 18" Workhorses. Every cable ferrite-filtered, wax-secured, and individually certified. All guaranteed forever.',
     longDescription:
-      'The Pedalboard Pack XL is built for serious pedalboard builders with thirteen Workhorse cables: five 6-inch, four 12-inch, and four 18-inch. Built with Mogami W2319 wire, Neutrik gold connectors, flat-wax aerospace securing, a ferrite bead on the hot wire, and individual certification testing on every cable. Every one carries the Forever Cables Forever Guarantee. You save over $225 compared to buying thirteen cables individually.',
+      'The Custom Pro Pack is built for serious pedalboard builders with thirteen Workhorse cables: five 6-inch, four 12-inch, and four 18-inch. Built with Mogami W2319 wire, Neutrik gold connectors, flat-wax aerospace securing, a ferrite bead on the hot wire, and individual certification testing on every cable. Every one carries the Forever Cables Forever Guarantee. You save over $230 compared to buying thirteen cables individually.',
     specs: [
       '5x 6" Workhorse cables',
       '4x 12" Workhorse cables',
@@ -129,7 +129,7 @@ export const products: Product[] = [
       'Each cable individually certified',
       'Forever Guarantee on every cable',
     ],
-    price: 71195,
+    price: 69995,
     currency: 'usd',
     stripePriceId: process.env.STRIPE_PRICE_PACK_XL ?? '',
     variants: [],
@@ -204,11 +204,11 @@ export function getBundleSavings(product: Product): { perUnit: number; totalIfSe
   let totalIfSeparate: number
   let cableCount: number
 
-  if (product.slug === 'the-pedalboard-pack-pro') {
+  if (product.slug === 'the-custom-pack') {
     // 3x 6", 2x 12", 2x 18"
     totalIfSeparate = p6 * 3 + p12 * 2 + p18 * 2
     cableCount = 7
-  } else if (product.slug === 'the-pedalboard-pack-xl') {
+  } else if (product.slug === 'the-custom-pro-pack') {
     // 5x 6", 4x 12", 4x 18"
     totalIfSeparate = p6 * 5 + p12 * 4 + p18 * 4
     cableCount = 13
