@@ -261,6 +261,66 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Social proof / early customers */}
+      <section className="border-t border-border">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
+          <div className="text-center mb-12">
+            <p className="text-xs tracking-[0.2em] uppercase text-accent mb-4 font-semibold">
+              Why Players Switch
+            </p>
+            <h2 className="font-serif text-4xl text-cream mb-4">
+              A cable you'll never have to replace.
+            </h2>
+            <p className="text-muted max-w-lg mx-auto text-sm">
+              Most patch cables fail within two years. These won't. Here's what that actually means.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            {[
+              {
+                quote: 'I spent years replacing cheap cables. The connectors corrode, the solder cracks, the jacket frays. I built Forever Cables because I got tired of it too.',
+                credit: 'Vinnie, Founder',
+                role: 'Builder, Liferline',
+              },
+              {
+                quote: 'Every joint is hand-soldered and stress-tested before it ships. The cable either passes QC or it doesn\'t go out. There is no middle ground.',
+                credit: 'Liferline QC Standard',
+                role: 'Applied to every cable',
+              },
+              {
+                quote: 'We back these cables forever because we build them to last forever. If one fails, that\'s on us and we\'ll fix it. Simple as that.',
+                credit: 'Forever Guarantee',
+                role: 'No expiration. No conditions.',
+              },
+            ].map((item) => (
+              <div key={item.credit} className="border border-border bg-card p-8 flex flex-col">
+                <span className="text-accent text-3xl font-serif leading-none mb-4">"</span>
+                <p className="text-muted text-sm leading-relaxed flex-1 mb-6">{item.quote}</p>
+                <div>
+                  <p className="text-cream text-sm font-semibold">{item.credit}</p>
+                  <p className="text-muted text-xs tracking-wide">{item.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="border border-accent/20 bg-accent/5 p-8 text-center">
+            <p className="text-cream font-semibold mb-2">Among our first customers?</p>
+            <p className="text-muted text-sm mb-6 max-w-md mx-auto">
+              We'd love your honest take. Email us at{' '}
+              <a href="mailto:support@liferline.com" className="text-accent hover:underline">
+                support@liferline.com
+              </a>{' '}
+              with your experience. No prompts, no scripts, just real feedback.
+            </p>
+            <Link href="/products" className="btn-primary inline-block">
+              Order Your First Forever Cable
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Blog preview */}
       <section className="border-t border-border">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
