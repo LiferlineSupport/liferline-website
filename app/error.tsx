@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useEffect } from 'react'
+import { logError } from './error-logger'
 
 export default function Error({
   error,
@@ -11,8 +12,8 @@ export default function Error({
   reset: () => void
 }) {
   useEffect(() => {
-    // Log the error to console and any error reporting service
-    console.error('Error boundary caught:', error)
+    // Log the error with full context
+    logError(error, { componentStack: error.stack })
   }, [error])
 
   return (

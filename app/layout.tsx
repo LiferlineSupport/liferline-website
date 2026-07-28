@@ -83,10 +83,36 @@ export default function RootLayout({
       <body className="bg-bg text-cream font-sans min-h-screen flex flex-col">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-accent focus:text-bg focus:px-4 focus:py-2 focus:text-sm focus:font-semibold"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-accent focus:text-bg focus:px-4 focus:py-2 focus:text-sm font-semibold"
         >
           Skip to content
         </a>
+        <Script
+          id="error-handler"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.addEventListener('error', function(e) {
+                console.error('Global error caught:', {
+                  message: e.message,
+                  filename: e.filename,
+                  lineno: e.lineno,
+                  colno: e.colno,
+                  error: e.error ? e.error.stack : 'no stack',
+                  userAgent: navigator.userAgent,
+                  url: window.location.href
+                });
+              });
+              window.addEventListener('unhandledrejection', function(e) {
+                console.error('Unhandled promise rejection:', {
+                  reason: e.reason,
+                  userAgent: navigator.userAgent,
+                  url: window.location.href
+                });
+              });
+            `,
+          }}
+        />
         <Script
           defer
           data-domain="liferline.com"
