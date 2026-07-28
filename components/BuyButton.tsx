@@ -159,6 +159,10 @@ export default function BuyButton({ product }: Props) {
       >
         {loading ? 'Redirecting...' : quantity > 1 ? `Buy ${quantity} Now` : 'Buy Now'}
       </button>
+
+      <p className="text-xs text-muted text-center mt-3">
+        Ships in 1-2 business days · Arrives in 3-5 days via USPS Priority
+      </p>
     </div>
   )
 }

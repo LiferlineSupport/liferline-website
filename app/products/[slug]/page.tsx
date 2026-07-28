@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const isInstrumentCable = product.slug === 'the-stage-cable'
   const title = isInstrumentCable
     ? `${product.name} | Best Instrument Cable for Guitar & Bass | Forever Cables`
-    : `${product.name} | Forever Cables by Hatch Patch Cables`
+    : `${product.name} | Forever Cables by Liferline`
   const description = `${product.description} Hand-soldered in the USA with premium wire and Neutrik connectors. ${formatPrice(product.price)}. Guaranteed for life.`
 
   const prices = product.variants
@@ -149,7 +149,7 @@ function ProductJsonLd({ product }: { product: NonNullable<ReturnType<typeof get
         availability: 'https://schema.org/InStock',
         itemCondition: 'https://schema.org/NewCondition',
         url: `https://liferline.com/products/${product.slug}`,
-        seller: { '@type': 'Organization', name: 'Hatch Patch Cables' },
+        seller: { '@type': 'Organization', name: 'Liferline' },
         shippingDetails,
         hasMerchantReturnPolicy: returnPolicy,
       }
@@ -160,7 +160,7 @@ function ProductJsonLd({ product }: { product: NonNullable<ReturnType<typeof get
         availability: 'https://schema.org/InStock',
         itemCondition: 'https://schema.org/NewCondition',
         url: `https://liferline.com/products/${product.slug}`,
-        seller: { '@type': 'Organization', name: 'Hatch Patch Cables' },
+        seller: { '@type': 'Organization', name: 'Liferline' },
         shippingDetails,
         hasMerchantReturnPolicy: returnPolicy,
       }
@@ -172,7 +172,7 @@ function ProductJsonLd({ product }: { product: NonNullable<ReturnType<typeof get
     description: product.longDescription,
     image: `https://liferline.com${product.image}`,
     brand: { '@type': 'Brand', name: 'Forever Cables' },
-    manufacturer: { '@type': 'Organization', name: 'Hatch Patch Cables' },
+    manufacturer: { '@type': 'Organization', name: 'Liferline' },
     offers,
     hasWarranty: {
       '@type': 'WarrantyPromise',
@@ -318,7 +318,7 @@ export default async function ProductPage({ params }: Props) {
             <div className="flex items-center gap-4">
               <span className="text-3xl">♾️</span>
               <div>
-                <p className="text-cream font-semibold">Lifetime Guarantee</p>
+                <p className="text-cream font-semibold">Forever Guarantee</p>
                 <p className="text-sm text-muted">
                   If this cable ever fails, for any reason, we replace it. No questions asked.
                 </p>
@@ -347,7 +347,7 @@ export default async function ProductPage({ params }: Props) {
               <div>
                 <p className="text-cream font-semibold">Free US Shipping</p>
                 <p className="text-sm text-muted">
-                  Every order ships free within the USA.
+                  Ships in 1-2 business days. Arrives in 3-5 days via USPS Priority.
                 </p>
               </div>
             </div>

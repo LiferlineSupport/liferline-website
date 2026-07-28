@@ -1,11 +1,28 @@
 'use client'
 
+import { useEffect } from 'react'
+
 export default function GlobalError({
+  error,
   reset,
 }: {
   error: Error & { digest?: string }
   reset: () => void
 }) {
+  useEffect(() => {
+    // Chunk load errors happen when Hostinger deploys a new build and old
+    // JS chunks are gone. Auto-reload gets the fresh bundle.
+    const msg = error?.message ?? ''
+    if (
+      msg.includes('ChunkLoadError') ||
+      msg.includes('Loading chunk') ||
+      msg.includes('Failed to fetch dynamically imported module') ||
+      msg.includes('Importing a module script failed')
+    ) {
+      window.location.reload()
+    }
+  }, [error])
+
   return (
     <html lang="en">
       <body style={{ backgroundColor: '#111', color: '#e8e0d4', fontFamily: 'sans-serif' }}>
