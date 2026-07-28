@@ -154,7 +154,7 @@ export default function Home() {
             {[
               { icon: '🔨', label: 'Hand-Soldered', sub: 'One at a time, by hand' },
               { icon: '🇺🇸', label: 'American-Made', sub: 'Built in the USA' },
-              { icon: '♾️', label: 'Lifetime Guarantee', sub: 'We stand behind every cable' },
+              { icon: '♾️', label: 'Forever Guarantee', sub: 'We stand behind every cable' },
               { icon: '📦', label: 'Free US Shipping', sub: 'Ships in 1-2 days · Arrives in 3-5' },
             ].map((item) => (
               <div key={item.label} className="flex flex-col items-center gap-1">
