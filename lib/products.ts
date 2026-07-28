@@ -42,11 +42,11 @@ export const products: Product[] = [
       'Available in 6", 12", and 18"',
       'Forever Guarantee',
     ],
-    price: 10999,
+    price: 10499,
     currency: 'usd',
     stripePriceId: process.env.STRIPE_PRICE_WORKHORSE_6 ?? '',
     variants: [
-      { label: '6"', value: '6in', price: 10999, stripePriceId: process.env.STRIPE_PRICE_WORKHORSE_6 ?? '' },
+      { label: '6"', value: '6in', price: 10499, stripePriceId: process.env.STRIPE_PRICE_WORKHORSE_6 ?? '' },
       { label: '12"', value: '12in', price: 10999, stripePriceId: process.env.STRIPE_PRICE_WORKHORSE_12 ?? '' },
       { label: '18"', value: '18in', price: 11499, stripePriceId: process.env.STRIPE_PRICE_WORKHORSE_18 ?? '' },
     ],
@@ -72,12 +72,12 @@ export const products: Product[] = [
       'Available in 6" and 12"',
       'Forever Guarantee',
     ],
-    price: 13499,
+    price: 11999,
     currency: 'usd',
     stripePriceId: process.env.STRIPE_PRICE_RIGHT_ANGLE ?? '',
     variants: [
-      { label: '6"', value: '6in', price: 13499, stripePriceId: process.env.STRIPE_PRICE_RIGHT_ANGLE_6 ?? process.env.STRIPE_PRICE_RIGHT_ANGLE ?? '' },
-      { label: '12"', value: '12in', price: 13999, stripePriceId: process.env.STRIPE_PRICE_RIGHT_ANGLE_12 ?? '' },
+      { label: '6"', value: '6in', price: 11999, stripePriceId: process.env.STRIPE_PRICE_RIGHT_ANGLE_6 ?? process.env.STRIPE_PRICE_RIGHT_ANGLE ?? '' },
+      { label: '12"', value: '12in', price: 12499, stripePriceId: process.env.STRIPE_PRICE_RIGHT_ANGLE_12 ?? '' },
     ],
     image: '/products/the-right-angle.png',
   },
@@ -89,7 +89,7 @@ export const products: Product[] = [
     description:
       'Six guitar pedal patch cables to wire your entire pedalboard. Two 6", two 12", two 18" Workhorses. Every cable ferrite-filtered, wax-secured, and individually certified. All guaranteed forever.',
     longDescription:
-      'Wire your entire pedalboard in one order. The Pedalboard Pack includes six Workhorse cables in a mix of lengths: two 6-inch, two 12-inch, and two 18-inch. Every cable is built with Mogami W2319 wire, Neutrik gold connectors, flat-wax aerospace securing, a ferrite bead on the hot wire, and individual certification testing. Every one carries the Forever Cables Forever Guarantee. You save $169.95 compared to buying six cables individually.',
+      'Wire your entire pedalboard in one order. The Pedalboard Pack includes six Workhorse cables in a mix of lengths: two 6-inch, two 12-inch, and two 18-inch. Every cable is built with Mogami W2319 wire, Neutrik gold connectors, flat-wax aerospace securing, a ferrite bead on the hot wire, and individual certification testing. Every one carries the Forever Cables Forever Guarantee. You save $59.95 compared to buying six cables individually.',
     specs: [
       '2x 6" Workhorse cables',
       '2x 12" Workhorse cables',
@@ -101,7 +101,7 @@ export const products: Product[] = [
       'Each cable individually certified',
       'Forever Guarantee on every cable',
     ],
-    price: 49999,
+    price: 59999,
     currency: 'usd',
     stripePriceId: process.env.STRIPE_PRICE_PACK ?? '',
     variants: [],
@@ -128,13 +128,13 @@ export const products: Product[] = [
       'Available in 10ft, 15ft, and 20ft',
       'Forever Guarantee',
     ],
-    price: 17499,
+    price: 15499,
     currency: 'usd',
     stripePriceId: process.env.STRIPE_PRICE_STAGE_10 ?? process.env.STRIPE_PRICE_STAGE ?? '',
     variants: [
-      { label: '10ft', value: '10ft', price: 17499, stripePriceId: process.env.STRIPE_PRICE_STAGE_10 ?? process.env.STRIPE_PRICE_STAGE ?? '' },
-      { label: '15ft', value: '15ft', price: 19999, stripePriceId: process.env.STRIPE_PRICE_STAGE_15 ?? '' },
-      { label: '20ft', value: '20ft', price: 23499, stripePriceId: process.env.STRIPE_PRICE_STAGE_20 ?? '' },
+      { label: '10ft', value: '10ft', price: 15499, stripePriceId: process.env.STRIPE_PRICE_STAGE_10 ?? process.env.STRIPE_PRICE_STAGE ?? '' },
+      { label: '15ft', value: '15ft', price: 17499, stripePriceId: process.env.STRIPE_PRICE_STAGE_15 ?? '' },
+      { label: '20ft', value: '20ft', price: 19999, stripePriceId: process.env.STRIPE_PRICE_STAGE_20 ?? '' },
     ],
     image: '/products/the-stage-cable.png',
   },
@@ -171,9 +171,12 @@ export function getBundleSavings(product: Product): { perUnit: number; totalIfSe
   if (product.slug !== 'the-pedalboard-pack') return null
   const workhorse = products.find((p) => p.slug === 'the-workhorse')
   if (!workhorse) return null
-  const qty = 6
-  const totalIfSeparate = workhorse.price * qty
+  // Pack contains 2x 6", 2x 12", 2x 18" -- calculate true mixed savings
+  const p6 = workhorse.variants.find((v) => v.value === '6in')?.price ?? workhorse.price
+  const p12 = workhorse.variants.find((v) => v.value === '12in')?.price ?? workhorse.price
+  const p18 = workhorse.variants.find((v) => v.value === '18in')?.price ?? workhorse.price
+  const totalIfSeparate = p6 * 2 + p12 * 2 + p18 * 2
   const saved = totalIfSeparate - product.price
   if (saved <= 0) return null
-  return { perUnit: Math.round(product.price / qty), totalIfSeparate, saved }
+  return { perUnit: Math.round(product.price / 6), totalIfSeparate, saved }
 }
