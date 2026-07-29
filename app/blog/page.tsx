@@ -130,10 +130,9 @@ export default function Blog() {
                 })}
               </span>
             </div>
-            <h2 className="font-serif text-2xl text-cream group-hover:text-accent transition-colors mb-3 leading-snug">
+            <h2 className="font-serif text-2xl text-cream group-hover:text-accent transition-colors leading-snug">
               {post.title}
             </h2>
-            <p className="text-muted text-sm leading-relaxed">{post.excerpt}</p>
             <span className="inline-block mt-4 text-xs tracking-wide uppercase text-accent font-semibold">
               Read More
             </span>
