@@ -434,7 +434,7 @@ export default function AdminDashboard() {
             Admin Dashboard
           </p>
           <h1 className="font-serif text-3xl text-cream">
-            Hatch Patch Cables
+            LiferLine
           </h1>
         </div>
         <button onClick={handleLogout} className="text-xs text-muted hover:text-cream transition-colors">

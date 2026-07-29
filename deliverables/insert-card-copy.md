@@ -9,7 +9,7 @@ Two variants: compact business card (3.5" x 2") and full postcard (4" x 6").
 ### Front
 
 **FOREVER CABLES**
-by Hatch Patch Cables
+by LiferLine
 
 Hand-Built. American-Made.
 Guaranteed for Life.™
@@ -33,7 +33,7 @@ This cable is guaranteed for life. If it ever fails, for any reason, we replace 
 ### Front
 
 **FOREVER CABLES**
-by Hatch Patch Cables
+by LiferLine
 
 Hand-Built. American-Made. Guaranteed for Life.™
 
@@ -62,7 +62,7 @@ Your Forever Cable is built to last, but a little care goes a long way. Coil loo
 
 ---
 
-**Hatch Patch Cables** | liferline.com | support@liferline.com
+**LiferLine** | liferline.com | support@liferline.com
 
 ---
 

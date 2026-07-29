@@ -29,7 +29,7 @@ Questions? Reply to this email or reach us at support@liferline.com.
 
 Thanks for choosing Forever Cables.
 
-The Hatch Patch Cables team
+The LiferLine team
 liferline.com
 
 ---
@@ -53,7 +53,7 @@ A few things to know:
 
 See you on the other side.
 
-The Hatch Patch Cables team
+The LiferLine team
 
 ---
 
@@ -78,7 +78,7 @@ We build every cable by hand and test it before it ships, but we want to make su
 
 Thanks for being a Forever Cables customer.
 
-The Hatch Patch Cables team
+The LiferLine team
 
 ---
 
@@ -156,7 +156,7 @@ It makes a real difference for a small company like ours.
 No pressure at all. And if anything is not right with your cable, just reply to this email. We will take care of it.
 
 Thanks,
-The Hatch Patch Cables team
+The LiferLine team
 
 ---
 

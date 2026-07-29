@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.publishedAt,
       authors: ['Forever Cables'],
       siteName: 'Forever Cables',
-      images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Hatch Patch Cables' }],
+      images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by LiferLine' }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -56,12 +56,12 @@ function BlogPostJsonLd({ post }: { post: NonNullable<ReturnType<typeof getBlogP
     dateModified: post.publishedAt,
     author: {
       '@type': 'Organization',
-      name: 'Hatch Patch Cables',
+      name: 'LiferLine',
       url: 'https://liferline.com',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Hatch Patch Cables',
+      name: 'LiferLine',
       url: 'https://liferline.com',
     },
     mainEntityOfPage: {

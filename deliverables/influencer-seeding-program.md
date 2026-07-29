@@ -96,7 +96,7 @@ I would love to send you a [specific product] to try on your board. No strings a
 If you are interested, just reply with your shipping address and I will get it out this week.
 
 [Your name]
-Forever Cables by Hatch Patch Cables
+Forever Cables by LiferLine
 liferline.com
 
 ### Step 3: Follow-up (Day 14 to 17, if no reply)

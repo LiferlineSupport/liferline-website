@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'How Hatch Patch Cables collects, uses, and protects your personal information when you shop Forever Cables.',
+    'How LiferLine collects, uses, and protects your personal information when you shop Forever Cables.',
   alternates: {
     canonical: 'https://liferline.com/privacy',
   },
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: 'How we handle your data when you shop Forever Cables.',
     url: 'https://liferline.com/privacy',
     type: 'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Hatch Patch Cables' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by LiferLine' }],
   },
 }
 
@@ -75,9 +75,8 @@ export default function Privacy() {
         <section>
           <h2 className="font-serif text-2xl text-cream mb-4">Who we are</h2>
           <p>
-            Hatch Patch Cables operates the Forever Cables product line and the website at
-            liferline.com. When this policy says "we," "us," or "our," it means Hatch Patch
-            Cables.
+            LiferLine operates the Forever Cables product line and the website at
+            liferline.com. When this policy says "we," "us," or "our," it means LiferLine.
           </p>
         </section>
 

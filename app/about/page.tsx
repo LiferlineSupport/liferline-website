@@ -4,10 +4,10 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Our Story',
   description:
-    'How Hatch Patch Cables started: hand-built boutique guitar cables made in the USA with Canare GS-6, Mogami wire, and Neutrik connectors. Why we guarantee every Forever Cable for life.',
+    'How LiferLine started: hand-built boutique guitar cables made in the USA with Canare GS-6, Mogami wire, and Neutrik connectors. Why we guarantee every Forever Cable for life.',
   keywords: [
     'about forever cables',
-    'hatch patch cables',
+    'liferline cable company',
     'handmade guitar cables usa',
     'boutique guitar cables',
     'hand soldered guitar cables',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       'We got tired of bad cables. So we started building our own. Hand-soldered in the USA with Canare GS-6, Mogami wire, and Neutrik connectors.',
     url: 'https://liferline.com/about',
     type: 'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Hatch Patch Cables' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by LiferLine' }],
   },
 }
 
@@ -96,7 +96,7 @@ export default function About() {
         </div>
 
         <p>
-          We started Hatch Patch Cables because we were sick of that story. Sick
+          We started LiferLine because we were sick of that story. Sick
           of cheap cables with thin insulation, cold solder joints, and
           connectors that wobble loose after a few months. Sick of guitar shops
           that sell &quot;professional&quot; cables for $15 and wonder why they
@@ -111,7 +111,7 @@ export default function About() {
         <h2 className="font-serif text-3xl text-cream pt-4">Who We Are</h2>
 
         <p>
-          Forever Cables are made by Hatch Patch Cables: a small, hands-on
+          Forever Cables are made by LiferLine: a small, hands-on
           operation dedicated to one thing, making the most reliable guitar
           cables money can buy and backing them without reservation.
         </p>

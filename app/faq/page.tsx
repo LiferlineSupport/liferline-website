@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       'Answers to common questions about Forever Cables: guarantee, materials, compatibility, shipping, and custom orders.',
     url: 'https://liferline.com/faq',
     type: 'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Hatch Patch Cables' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by LiferLine' }],
   },
 }
 

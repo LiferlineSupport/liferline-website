@@ -103,7 +103,7 @@ function buildXml(items: FeedItem[]): string {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
   <channel>
-    <title>Forever Cables by Hatch Patch Cables</title>
+    <title>Forever Cables by LiferLine</title>
     <link>${BASE_URL}</link>
     <description>Hand-built boutique guitar patch cables and instrument cables. Guaranteed for life.</description>
 ${itemsXml}

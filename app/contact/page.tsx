@@ -5,7 +5,7 @@ import ContactForm from '@/components/ContactForm'
 export const metadata: Metadata = {
   title: 'Support & Contact',
   description:
-    'Get help with your Forever Cables by Hatch Patch Cables. File a lifetime guarantee claim, ask about custom cables, or just say hello.',
+    'Get help with your Forever Cables by LiferLine. File a lifetime guarantee claim, ask about custom cables, or just say hello.',
   alternates: {
     canonical: 'https://liferline.com/contact',
   },
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description: 'File a lifetime guarantee claim, ask about custom cables, or get help with your order. We actually answer emails.',
     url: 'https://liferline.com/contact',
     type: 'website',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Hatch Patch Cables' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by LiferLine' }],
   },
 }
 
