@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Lifetime Guarantee | Forever Cables',
   description:
-    'Every Forever Cable is backed by a no-questions-asked lifetime warranty. If your guitar cable ever fails, for any reason, we replace it free. No receipts. No shipping labels. No expiration.',
+    'Every Forever Cable is backed by a no-questions-asked lifetime warranty. If your guitar cable ever fails, for any reason, we replace it free. No receipts. No expiration. Prepaid return label provided.',
   keywords: [
     'lifetime warranty guitar cable',
     'lifetime guarantee guitar cable',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Lifetime Guarantee | Forever Cables',
-    description: 'If your cable ever fails, for any reason, we replace it. No receipts. No shipping labels. No expiration. That is the Forever Cables standard.',
+    description: 'If your cable ever fails, for any reason, we replace it. No receipts. No expiration. Prepaid return label provided. That is the Forever Cables standard.',
     url: 'https://liferline.com/guarantee',
     type: 'website',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Liferline' }],
@@ -35,7 +35,7 @@ const guaranteeFaq = [
   },
   {
     q: 'Do I have to send the broken cable back?',
-    a: 'Not before we send the replacement. If you want to send it back afterward so we can learn from it, that is appreciated but not required.',
+    a: 'Yes. We provide a prepaid return label so it costs you nothing to ship it back. Once we receive your cable, your replacement ships the same day.',
   },
   {
     q: 'Does this cover cables bought as gifts?',
@@ -175,13 +175,13 @@ export default function Guarantee() {
               },
               {
                 step: '2',
-                title: 'We ship a replacement',
-                body: 'We do not make you wait. A new cable ships to you before we even ask for the old one back.',
+                title: 'We send a prepaid return label',
+                body: 'We email you a prepaid return label within one business day. It costs you nothing to ship the cable back to us.',
               },
               {
                 step: '3',
-                title: 'That is it',
-                body: 'No return shipping labels. No diagnostic forms. No waiting on hold. No approval process.',
+                title: 'Replacement ships',
+                body: 'Once we receive your cable, your replacement ships the same day. No diagnostic forms. No approval process.',
               },
             ].map((item) => (
               <div key={item.step} className="flex gap-6">

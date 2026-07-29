@@ -43,7 +43,7 @@ Thank you for your order. Every Forever Cable is hand-soldered, tested, and back
 
 **YOUR LIFETIME GUARANTEE**
 
-If this cable ever fails, for any reason, we replace it. No receipt required. No shipping label needed. No expiration date. Just email us and a new cable ships before you have to send the old one back.
+If this cable ever fails, for any reason, we replace it. No receipt required. No expiration date. Just email us, ship the old one back with our prepaid return label, and your new cable ships the same day.
 
 **File a claim:** support@liferline.com
 

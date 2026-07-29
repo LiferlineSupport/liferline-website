@@ -128,7 +128,7 @@ Your guarantee is already active. No registration needed. But if you want to be 
 
 **Submit button:** Register My Cable
 
-**Confirmation message:** You are all set. Your cable is registered. If you ever need a replacement, email support@liferline.com and reference your registration. We will ship a new one before you send the old one back.
+**Confirmation message:** You are all set. Your cable is registered. If you ever need a replacement, email support@liferline.com and reference your registration. We will send a prepaid return label; ship the old one back and your new cable goes out the same day.
 
 ---
 
@@ -207,7 +207,7 @@ Once order volume makes handwritten notes impractical (roughly 50+ orders/week),
 
 Thank you for choosing Forever Cables. This cable was hand-soldered, tested, and inspected before it shipped. It is guaranteed for life.
 
-If it ever fails, email support@liferline.com. We will send a replacement before you ship the old one back.
+If it ever fails, email support@liferline.com. We will send a prepaid return label; ship the old one back and your replacement goes out the same day.
 
 [Handwritten: first name + signature]
 

@@ -141,7 +141,7 @@ export default function Terms() {
               support@liferline.com
             </a>{' '}
             with your name, a description of the issue, and your shipping address. We will
-            ship a replacement before asking you to return the original cable.
+            send a prepaid return label; once we receive your cable, your replacement ships the same day.
           </p>
           <p>
             Full details of the guarantee are available on our{' '}

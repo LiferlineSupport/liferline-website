@@ -213,8 +213,9 @@ export default function Home() {
                 doesn't, that's on us.
               </p>
               <p className="text-muted leading-relaxed mb-8">
-                Email us, describe what happened, and we'll ship you a replacement before
-                you even send the old one back. That's the Forever Cables standard.
+                Email us and describe what happened. We send a prepaid return label,
+                and once we receive your cable, your replacement ships the same day.
+                That is the Forever Cables standard.
               </p>
               <Link href="/guarantee" className="btn-ghost inline-block">
                 Read the Guarantee

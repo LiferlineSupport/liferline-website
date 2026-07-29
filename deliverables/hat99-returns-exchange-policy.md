@@ -38,7 +38,7 @@ To request an exchange, email support@liferline.com with your order number and t
 
 #### Defective Cables
 
-If your cable is defective or stops working, do not use this return policy. Your cable is covered by our lifetime guarantee, which is faster and better for you. We ship the replacement before you send anything back. Visit our guarantee page or email support@liferline.com.
+If your cable is defective or stops working, do not use this return policy. Your cable is covered by our lifetime guarantee. We provide a prepaid return label; once we receive your cable, we ship the replacement the same day. Visit our guarantee page or email support@liferline.com.
 
 #### Wrong Item Received
 
@@ -62,7 +62,7 @@ Email support@liferline.com. We reply within one business day.
 "30-day returns accepted on unused cables in original packaging. Buyer pays return shipping. Defective cables are covered by our lifetime guarantee at no cost. Exchanges available for wrong-length orders."
 
 ### Amazon Handmade Return Policy Field
-"30-day return window. Item must be unused and in original packaging. Buyer pays return shipping for standard returns. Defective items covered by lifetime guarantee (free replacement shipped before you send anything back). Contact us for exchanges."
+"30-day return window. Item must be unused and in original packaging. Buyer pays return shipping for standard returns. Defective items covered by lifetime guarantee (prepaid return label provided; replacement ships once we receive your cable). Contact us for exchanges."
 
 ### Reverb Return Policy Field
 "Returns accepted within 30 days. Cable must be unused, in original packaging. Buyer pays return shipping. Defective cables are covered by our free lifetime guarantee. Contact us at support@liferline.com."

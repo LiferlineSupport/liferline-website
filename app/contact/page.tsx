@@ -25,7 +25,7 @@ const faqItems = [
   },
   {
     q: "Do I need to send the old cable back?",
-    a: "No. We'll ship the replacement first. If you want to send the broken one back after, great; we can learn from it. But it's not required.",
+    a: "Yes. We provide a prepaid return label so it costs you nothing to ship it back. Once we receive your cable, the replacement ships right away.",
   },
   {
     q: 'How long does shipping take?',
@@ -163,8 +163,8 @@ export default function Contact() {
               </li>
             </ul>
             <p className="text-muted text-sm leading-relaxed mt-4">
-              That's it. We don't need you to ship the old cable back first.
-              A replacement will be on the way before you've had to dig for a box.
+              That's it. We'll send a prepaid return label. Once we receive your
+              cable, the replacement ships the same day.
             </p>
           </div>
         </div>

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 const returnsFaq = [
   {
     q: 'What if my cable is defective?',
-    a: 'Defective cables are covered by our lifetime guarantee, not this return policy. We ship a replacement before you send anything back. Visit our guarantee page or email support@liferline.com.',
+    a: 'Defective cables are covered by our lifetime guarantee, not this return policy. We provide a prepaid return label and ship your replacement once we receive the cable. Visit our guarantee page or email support@liferline.com.',
   },
   {
     q: 'Can I exchange for a different length?',
@@ -219,8 +219,8 @@ export default function Returns() {
               , which is faster and better for you.
             </p>
             <p className="text-muted leading-relaxed">
-              We ship the replacement before you send anything back. No return
-              shipping. No waiting. No cost.
+              We provide a prepaid return label so shipping costs you nothing.
+              Once we receive your cable, your replacement ships the same day.
             </p>
           </div>
         </section>

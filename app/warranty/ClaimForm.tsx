@@ -69,8 +69,9 @@ export default function ClaimForm() {
           Your claim ID is <span className="text-cream font-mono">{claimId}</span>.
         </p>
         <p className="text-muted text-sm leading-relaxed max-w-md mx-auto">
-          We will review your claim and get a replacement cable headed your way.
-          You will hear from us at <span className="text-cream">{form.customerEmail}</span> within one business day.
+          We will review your claim and send a prepaid return label to your email within one business day.
+          Once we receive your cable, your replacement ships the same day.
+          You will hear from us at <span className="text-cream">{form.customerEmail}</span> shortly.
         </p>
       </div>
     )
