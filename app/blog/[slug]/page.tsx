@@ -217,6 +217,9 @@ export default async function BlogPostPage({ params }: Props) {
           <h1 className="font-serif text-4xl sm:text-5xl text-cream leading-tight">
             {post.title}
           </h1>
+          {post.byline && (
+            <p className="text-muted text-xs mt-4 italic">{post.byline}</p>
+          )}
         </header>
 
         <div className="space-y-8 text-muted leading-relaxed">
@@ -284,12 +287,38 @@ export default async function BlogPostPage({ params }: Props) {
           <EmailSignup />
         </div>
 
+        {post.sources && post.sources.length > 0 && (
+          <div className="mt-12 pt-8 border-t border-border">
+            <h2 className="font-serif text-lg text-cream mb-4">References</h2>
+            <ol className="space-y-2">
+              {post.sources.map((source, i) => (
+                <li key={i} className="text-xs text-muted leading-relaxed">
+                  <span className="text-cream font-medium">{source.publication}</span>
+                  {' — '}
+                  {source.url ? (
+                    <a
+                      href={source.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-accent transition-colors underline underline-offset-2"
+                    >
+                      {source.title}
+                    </a>
+                  ) : (
+                    <span>{source.title}</span>
+                  )}
+                  {source.note && <span className="text-muted/70"> — {source.note}</span>}
+                </li>
+              ))}
+            </ol>
+          </div>
+        )}
+
         <footer className="text-xs text-muted mt-12 pt-8 border-t border-border">
           <p>
             <em>
-              Hatch Patch Cables makes hand-soldered, lifetime-guaranteed patch
-              cables under the Forever Cables product line. Every cable is built
-              to order.
+              Liferline makes hand-soldered, lifetime-guaranteed patch cables
+              under the Forever Cables product line. Every cable is built to order.
             </em>
           </p>
         </footer>
