@@ -5,6 +5,11 @@ export interface ProductVariant {
   stripePriceId?: string
 }
 
+export interface ConnectorOption {
+  label: string
+  value: string
+}
+
 export interface Product {
   id: string
   slug: string
@@ -17,6 +22,7 @@ export interface Product {
   currency: string
   stripePriceId: string
   variants: ProductVariant[]
+  connectorOptions?: ConnectorOption[]
   image: string
   badge?: string
   featured?: boolean
@@ -57,14 +63,15 @@ export const products: Product[] = [
     id: 'workhorse-ra',
     slug: 'the-right-angle',
     name: 'The Right Angle',
-    tagline: 'Straight-to-Right-Angle',
+    tagline: 'Straight, Right Angle, or Both',
     description:
-      'The guitar pedal patch cable for tight layouts. One straight, one angled. Ferrite-filtered, wax-secured, and individually certified. Fits flush to any pedal housing.',
+      'The guitar pedal patch cable for tight layouts. Choose straight-to-straight, straight-to-right-angle, or right-angle-to-right-angle. Same Mogami, same Neutrik gold, same forever guarantee.',
     longDescription:
-      'Same Mogami W2319 cable and Neutrik gold build quality as The Workhorse, with a right-angle connector on one end for flush-mounted pedal jacks and tight pedalboard spacing. Like every Forever Cable, it gets a ferrite bead on the hot wire before soldering, flat-wax aerospace-grade securing at the cable entry, and individual certification testing. The angled plug sits flush against pedal housings and saves precious millimeters on crowded boards.',
+      'Same Mogami W2319 cable and Neutrik gold build quality as The Workhorse. Pick the connector configuration that fits your board: both straight, one straight and one angled, or both angled. Like every Forever Cable, it gets a ferrite bead on the hot wire before soldering, flat-wax aerospace-grade securing at the cable entry, and individual certification testing. The angled plug sits flush against pedal housings and saves precious millimeters on crowded boards.',
     specs: [
       'Mogami W2319 cable',
-      'Neutrik NP2RX-B gold right-angle + NP2X-B gold straight plugs',
+      'Neutrik NP2X-B gold straight and/or NP2RX-B gold right-angle plugs',
+      'Three connector configurations: straight/straight, straight/right angle, right angle/right angle',
       'Hand-soldered connections',
       'Flat-wax aerospace-grade cable securing',
       'Ferrite bead on hot wire (EMI rejection)',
@@ -79,6 +86,11 @@ export const products: Product[] = [
       { label: '6"', value: '6in', price: 6995, stripePriceId: process.env.STRIPE_PRICE_RIGHT_ANGLE_6 ?? process.env.STRIPE_PRICE_RIGHT_ANGLE ?? '' },
       { label: '12"', value: '12in', price: 7195, stripePriceId: process.env.STRIPE_PRICE_RIGHT_ANGLE_12 ?? '' },
       { label: '18"', value: '18in', price: 7495, stripePriceId: process.env.STRIPE_PRICE_RIGHT_ANGLE_18 ?? '' },
+    ],
+    connectorOptions: [
+      { label: 'Straight to Right Angle', value: 'straight-ra' },
+      { label: 'Right Angle to Right Angle', value: 'ra-ra' },
+      { label: 'Straight to Straight', value: 'straight-straight' },
     ],
     image: '/products/the-right-angle.png',
   },

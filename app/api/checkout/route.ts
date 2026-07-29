@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const { productId, variant, quantity: rawQty } = await req.json()
+    const { productId, variant, connectorType, connectorLabel, quantity: rawQty } = await req.json()
 
     const quantity = Math.min(Math.max(Math.floor(Number(rawQty) || 1), 1), 10)
 
@@ -59,6 +59,8 @@ export async function POST(req: NextRequest) {
         productName: product.name,
         variant: variant ?? '',
         variantLabel: variantLabel ?? '',
+        connectorType: connectorType ?? '',
+        connectorLabel: connectorLabel ?? '',
         quantity: String(quantity),
       },
       allow_promotion_codes: true,

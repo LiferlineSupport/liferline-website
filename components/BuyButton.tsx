@@ -11,6 +11,9 @@ export default function BuyButton({ product }: Props) {
   const [selectedVariant, setSelectedVariant] = useState(
     product.variants[0]?.value ?? ''
   )
+  const [selectedConnector, setSelectedConnector] = useState(
+    product.connectorOptions?.[0]?.value ?? ''
+  )
   const [quantity, setQuantity] = useState(1)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -24,6 +27,10 @@ export default function BuyButton({ product }: Props) {
 
     const priceStr = (totalPrice / 100).toFixed(2)
 
+    const connectorLabel = product.connectorOptions?.find(
+      (c) => c.value === selectedConnector
+    )?.label
+
     if (typeof window !== 'undefined' && (window as any).plausible) {
       ;(window as any).plausible('add_to_cart', {
         props: {
@@ -31,6 +38,7 @@ export default function BuyButton({ product }: Props) {
           product_id: product.id,
           price: priceStr,
           variant: selectedVariant,
+          connector_type: selectedConnector || undefined,
           quantity: String(quantity),
         },
       })
@@ -43,7 +51,9 @@ export default function BuyButton({ product }: Props) {
         items: [{
           item_id: product.id,
           item_name: product.name,
-          item_variant: selectedVariant || undefined,
+          item_variant: selectedConnector
+            ? `${selectedVariant} / ${selectedConnector}`
+            : selectedVariant || undefined,
           price: unitPrice / 100,
           quantity,
         }],
@@ -67,6 +77,8 @@ export default function BuyButton({ product }: Props) {
         body: JSON.stringify({
           productId: product.id,
           variant: selectedVariant,
+          connectorType: selectedConnector || undefined,
+          connectorLabel: connectorLabel || undefined,
           quantity,
         }),
       })
@@ -90,6 +102,30 @@ export default function BuyButton({ product }: Props) {
 
   return (
     <div>
+      {product.connectorOptions && product.connectorOptions.length > 0 && (
+        <div className="mb-5">
+          <p className="text-xs tracking-[0.1em] uppercase text-muted mb-2">
+            Connectors
+          </p>
+          <div className="flex gap-2 flex-wrap">
+            {product.connectorOptions.map((c) => (
+              <button
+                key={c.value}
+                onClick={() => setSelectedConnector(c.value)}
+                aria-pressed={selectedConnector === c.value}
+                className={`px-3 py-1.5 text-xs tracking-wide border transition-colors duration-150 ${
+                  selectedConnector === c.value
+                    ? 'border-accent text-accent bg-accent/10'
+                    : 'border-border text-muted hover:border-muted'
+                }`}
+              >
+                {c.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
       {product.variants.length > 0 && (
         <div className="mb-5">
           <p className="text-xs tracking-[0.1em] uppercase text-muted mb-2">
