@@ -31,7 +31,7 @@ export const products: Product[] = [
     description:
       'Our most popular guitar pedal patch cable. Hand-soldered with Mogami W2319 cable and Neutrik gold straight plugs. Ferrite-filtered, wax-secured, and individually certified before it ships.',
     longDescription:
-      'The Workhorse is the guitar patch cable that started it all. Built with Mogami W2319 low-capacitance cable and Neutrik gold straight plugs, it delivers transparent tone transfer with zero coloration. Every joint is hand-soldered and reinforced with flat-wax aerospace-grade cable securing. A ferrite bead is inserted on the hot wire before soldering for EMI rejection. Then each cable is individually tested to certify continuity, shield integrity, capacitance, and impedance before it ships. Whether you are wiring a five-pedal grab-and-go board or a 20-pedal studio rig, The Workhorse keeps your signal clean and your setup reliable for life.',
+      'Hand-soldered in the USA, with Mogami W2319 cable and Neutrik gold straight plugs, ferrite interference filtering core, aerospace inspired strain relief, and individually tested and characterized by LiferLine Labs before it even gets packaged.',
     specs: [
       'Mogami W2319 cable',
       'Neutrik NP2X-B gold straight plugs',
