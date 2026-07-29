@@ -29,7 +29,7 @@ export const products: Product[] = [
     name: 'The Workhorse',
     tagline: '6" Straight-to-Straight',
     description:
-      'Our most popular guitar pedal patch cable. Hand-soldered with Mogami W2319 cable and Neutrik gold straight plugs. Ferrite-filtered, wax-secured, and individually certified before it ships.',
+      'Hand-soldered in the USA, with Mogami W2319 cable and Neutrik gold straight plugs. Ferrite-interference filtered core, aerospace inspired strain relief, and individually tested and characterized by LiferLine Labs before it even gets packaged.',
     longDescription:
       'Hand-soldered in the USA, with Mogami W2319 cable and Neutrik gold straight plugs, ferrite interference filtering core, aerospace inspired strain relief, and individually tested and characterized by LiferLine Labs before it even gets packaged.',
     specs: [
