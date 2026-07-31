@@ -150,8 +150,8 @@ export default function About() {
             <h3 className="text-cream font-semibold mb-3">Connectors</h3>
             <p className="text-sm">
               All connectors are{' '}
-              <strong className="text-cream">Neutrik</strong>, the industry
-              standard for locking reliability. The black and gold finish is not
+              <strong className="text-cream">Neutrik gold plugs</strong>, the
+              industry standard for locking reliability. The gold finish is not
               cosmetic; it reflects the quality of the contact surfaces inside.
             </p>
           </div>
@@ -162,14 +162,45 @@ export default function About() {
               <strong className="text-cream">Cardas 4% silver solder</strong>{' '}
               for every joint. Silver solder produces a cleaner, more conductive
               bond than standard tin-lead. It costs more and takes more skill to
-              work with correctly. We use it anyway.
+              work with correctly. We use it anyway, and every joint is
+              hand-soldered in the USA.
+            </p>
+          </div>
+          <div className="bg-card border border-border p-6">
+            <h3 className="text-cream font-semibold mb-3">Interference Filtering</h3>
+            <p className="text-sm">
+              Every cable gets a{' '}
+              <strong className="text-cream">ferrite-interference filtering core</strong>{' '}
+              built onto the hot wire before we solder it in. It rejects the RF
+              and EMI noise that turns a quiet rig into a buzzing one, the kind
+              of interference you usually only notice once it is gone.
+            </p>
+          </div>
+          <div className="bg-card border border-border p-6">
+            <h3 className="text-cream font-semibold mb-3">Strain Relief</h3>
+            <p className="text-sm">
+              Where the cable meets the plug is where most cheap cables die
+              first. We secure that joint with{' '}
+              <strong className="text-cream">aerospace-inspired strain relief</strong>,
+              the same kind of approach used to keep wiring harnesses from
+              fatiguing under constant flexing and vibration.
+            </p>
+          </div>
+          <div className="bg-card border border-border p-6">
+            <h3 className="text-cream font-semibold mb-3">Testing</h3>
+            <p className="text-sm">
+              Before a cable ever sees a box, it goes through{' '}
+              <strong className="text-cream">LiferLine Labs</strong>. Every
+              single cable is individually tested and characterized for
+              continuity, shielding, capacitance, and impedance. Not a sample
+              batch. Every one.
             </p>
           </div>
         </div>
 
         <p>
           Each cable is built, tested, and inspected by hand before it ships. If
-          it does not pass, it does not leave.
+          it does not pass LiferLine Labs, it does not leave.
         </p>
 
         <h2 className="font-serif text-3xl text-cream pt-4">

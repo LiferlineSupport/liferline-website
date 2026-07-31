@@ -207,10 +207,16 @@ export default function Guarantee() {
               for the best.
             </p>
             <p>
-              We build every cable by hand, one at a time. We use Canare and Mogami cable with Neutrik connectors
-              because they are the best components available, used in professional recording studios
-              and by touring musicians worldwide. We hand-solder every connection and test every cable
-              before it leaves our bench.
+              We build every cable by hand, one at a time. We use Canare and Mogami cable with Neutrik gold
+              connectors because they are the best components available, used in professional recording studios
+              and by touring musicians worldwide. Every hot wire gets a ferrite-interference filtering core, every
+              cable-to-plug joint gets aerospace-inspired strain relief, and every connection is hand-soldered in
+              the USA and tested before it leaves our bench.
+            </p>
+            <p>
+              That last step is not a spot check. Every cable is individually tested and characterized by
+              LiferLine Labs, our own bench testing process, before it even gets packaged. We check continuity,
+              shielding, capacitance, and impedance on every single unit, not a sample from the batch.
             </p>
             <p>
               When you control every step of the build process, you know exactly how long a cable will
