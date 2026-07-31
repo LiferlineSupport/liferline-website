@@ -6,7 +6,7 @@ import ProductCard from '@/components/ProductCard'
 export const metadata: Metadata = {
   title: 'Guitar Patch Cables | Forever Cables',
   description:
-    'Browse the complete Forever Cables lineup: boutique guitar patch cables, guitar pedal patch cables, and instrument cables hand-soldered in the USA with Canare and Mogami wire and Neutrik connectors. Every cable guaranteed for life.',
+    'Browse the complete Forever Cables lineup: boutique guitar patch cables, guitar pedal patch cables, and instrument cables hand-soldered in the USA with Mogami wire and Neutrik connectors. Every cable guaranteed for life.',
   keywords: [
     'guitar instrument cable',
     'guitar patch cables',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'best patch cable for guitar pedals',
     'boutique patch cables',
     'handmade guitar cables',
-    'Canare GS-6 patch cables',
+    'Mogami patch cables',
     'Mogami patch cables',
     'Neutrik guitar cables',
     'lifetime guarantee cables',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'All Cables | Forever Cables',
     description:
-      'Hand-soldered guitar patch cables and instrument cables. Canare and Mogami wire, Neutrik connectors, lifetime guarantee.',
+      'Hand-soldered guitar patch cables and instrument cables. Mogami wire, Neutrik connectors, lifetime guarantee.',
     url: 'https://liferline.com/products',
     type: 'website',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Liferline' }],
@@ -154,7 +154,7 @@ export default function ProductsPage() {
         </h1>
         <p className="text-muted text-lg leading-relaxed max-w-2xl">
           Every cable in the Forever Cables lineup is hand-soldered in the USA
-          with Canare and Mogami wire and Neutrik connectors. Pick your length, pick your
+          with Mogami wire and Neutrik connectors. Pick your length, pick your
           connector, and never buy another cable again.
         </p>
       </section>

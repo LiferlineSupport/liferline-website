@@ -193,8 +193,8 @@ function ProductJsonLd({ product }: { product: NonNullable<ReturnType<typeof get
 }
 
 const PRODUCT_BLOG_TAGS: Record<string, string[]> = {
-  'the-workhorse': ['patch cables', 'pedalboard', 'pedalboard setup', 'guitar pedals', 'soldered cables', 'canare', 'canare gs-6', 'cable comparison'],
-  'the-right-angle': ['patch cables', 'pedalboard', 'pedalboard setup', 'guitar pedals', 'cable routing', 'cable management', 'organization', 'canare'],
+  'the-workhorse': ['patch cables', 'pedalboard', 'pedalboard setup', 'guitar pedals', 'soldered cables', 'mogami', 'mogami w2319', 'cable comparison'],
+  'the-right-angle': ['patch cables', 'pedalboard', 'pedalboard setup', 'guitar pedals', 'cable routing', 'cable management', 'organization', 'mogami'],
   'the-pedalboard-pack': ['pedalboard', 'pedalboard setup', 'pedalboard plans', 'cable management', 'organization', 'patch cables', 'guitar pedals', 'cable routing'],
   'the-stage-cable': ['instrument cable', 'instrument cables', 'guitar cable', 'guitar cables', 'amp', 'guitar tone', 'tone', 'mogami', 'Mogami', 'mogami w2524', 'bass cable', 'studio gear', 'signal chain'],
 }

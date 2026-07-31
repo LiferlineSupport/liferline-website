@@ -553,7 +553,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We build Forever Cables with Canare GS-6 wire, a low-capacitance design, and a spiral copper shield, paired with hand-soldered Neutrik connectors. Acoustic, electric, or both, build your signal chain on cables we guarantee for life.',
+    cta: 'We build Forever Cables with Mogami wire, a low-capacitance design, and high-density shielding, paired with hand-soldered Neutrik connectors. Acoustic, electric, or both, build your signal chain on cables we guarantee for life.',
     category: 'Gear',
     tags: [
       'acoustic guitar',
@@ -562,7 +562,6 @@ export const blogPosts: BlogPost[] = [
       'acoustic electric',
       'guitar cable',
       'guitar gear',
-      'Canare',
       'live sound',
     ],
     byline: 'Written by the LiferLine team with the help of AI research',
@@ -644,7 +643,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'Here at LiferLine Labs, we build Forever Cables with Canare GS-6 wire, a spiral copper shield, and hand-soldered Neutrik connectors, backed by a lifetime guarantee. Build your signal chain on cables that stay quiet for life.',
+    cta: 'Here at LiferLine Labs, we build Forever Cables with Mogami wire, a high-density shield, and hand-soldered Neutrik connectors, backed by a lifetime guarantee. Build your signal chain on cables that stay quiet for life.',
     category: 'Gear',
     tags: [
       'guitar cable',
@@ -654,7 +653,6 @@ export const blogPosts: BlogPost[] = [
       'spiral shield',
       'instrument cable',
       'noise rejection',
-      'Canare',
       'Mogami',
       'guitar gear',
     ],
@@ -737,7 +735,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We build Forever Cables with Canare GS-6 wire and Neutrik connectors, hand-soldered and guaranteed for life. Wiring a pedalboard or running from your guitar to your amp, build your signal chain on cables that last.',
+    cta: 'We build Forever Cables with Mogami wire and Neutrik connectors, hand-soldered and guaranteed for life. Wiring a pedalboard or running from your guitar to your amp, build your signal chain on cables that last.',
     category: 'Gear',
     tags: [
       'coiled cable',
@@ -823,7 +821,7 @@ export const blogPosts: BlogPost[] = [
     {
       heading: 'Making Your Decision',
       paragraphs: [
-        'For passive bass players, we\'d prioritize low-capacitance cable, keep runs under 20 feet where possible (per Premier Guitar\'s guidance on unbalanced cable transmission), and choose a cable with quality connectors and reliable strain relief. Mogami Gold Studio for studio recording, Gold Stage for live use, or a professionally assembled Canare GS-6 cable are all well-suited choices. Touring technicians and recording engineers widely regard the Canare GS-6 as one of the best-value professional cables available.',
+        'For passive bass players, we\'d prioritize low-capacitance cable, keep runs under 20 feet where possible (per Premier Guitar\'s guidance on unbalanced cable transmission), and choose a cable with quality connectors and reliable strain relief. Mogami Gold Studio for studio recording or Gold Stage for live use are both well-suited choices. Touring technicians and recording engineers widely regard Mogami cable as one of the best professional cables available.',
         'For active bass players, capacitance sensitivity matters less, so the focus shifts to shielding, physical durability, and warranty. For players who want a hand-soldered instrument cable built on proven professional cable stock, our Forever Cables offer the craftsmanship of boutique cable building with the performance of Japanese professional cable stock. Whichever route you choose, we hold to the same foundational principle: a professional cable from a reputable builder is one element of your rig you shouldn\'t compromise on.',
       ],
     },
@@ -837,7 +835,6 @@ export const blogPosts: BlogPost[] = [
       'guitar gear',
       'cable shielding',
       'Mogami',
-      'Canare',
     ],
     byline: 'Written by the LiferLine team with the help of AI research',
     sources: [
@@ -852,102 +849,6 @@ export const blogPosts: BlogPost[] = [
       publication: 'Premier Guitar',
       url: 'https://www.premierguitar.com/diy/recording-dojo/reduce-noise-in-recordings',
       note: 'Source for unbalanced cable clean transmission limit of approximately 20 feet (Bryan Clark, April 13, 2023).',
-    },
-  ],
-  },
-  {
-    slug: 'mogami-vs-canare-patch-cables',
-    title: 'Mogami vs Canare Patch Cables: Which Is Actually Worth It?',
-    metaTitle: 'Mogami vs Canare Patch Cables: Which Is Actually Worth It? (2026)',
-    metaDescription: 'Mogami vs Canare patch cable comparison: shielding, durability, tone, and value analyzed. Find out which boutique cable is worth your money.',
-    keywords: [
-      'mogami vs canare',
-      'mogami patch cables',
-      'canare patch cables',
-      'mogami vs canare patch cables',
-      'best patch cables',
-      'mogami W2314',
-      'canare L-2T2S',
-      'boutique patch cables',
-      'guitar patch cable comparison',
-    ],
-    publishedAt: '2026-07-28',
-    excerpt: 'We\'ve spent years comparing Mogami and Canare for players building out a board or a studio rack, and honestly, the two names come up more than any others. Both are Japanese manufacturers with deep professional reputations, and both show up constantly on professional pedalboards and studio patch bays. In this guide we compare the two brands on build quality, connector options, price, and use case, and we\'re honest about where the real differences lie and where they do not.',
-    sections: [
-    {
-      heading: 'Two Names We Hear Constantly',
-      paragraphs: [
-        'Here at LiferLine Labs, we hear two names come up again and again when players start researching patch cables for a pedalboard or studio rack: Mogami and Canare. Both are Japanese manufacturers with established reputations in professional audio, and both supply cable to recording studios, broadcast facilities, and touring rigs. As far as reliable defaults go, when a generic cable simply will not do, engineers and musicians reach for one of these two names more often than any other.',
-        'We take the comparison seriously, and we think players should too. Patch cables run short, often six inches to two feet, but they still carry your signal between every piece of gear in the chain. A patch cable that introduces noise or fails at a connector creates a problem that\'s hard to diagnose live and costly in studio time. When you choose between Mogami and Canare, you\'re choosing between two genuinely professional options, not gambling on an unknown.',
-      ],
-    },
-    {
-      heading: 'How Mogami Builds a Patch Cable',
-      paragraphs: [
-        'Mogami designs every cable it makes, patch cables included, around a core transparency philosophy. According to the Mogami Cable FAQ, the company engineers its cable to be \'100% transparent, to not change the sound in any way.\' For a short patch cable run, that philosophy mostly comes down to consistent shielding, reliable connectors, and low capacitance relative to length.',
-        'Mogami\'s Gold series patch cables use the same quad-conductor design that also appears in the company\'s studio instrument cables. That quad construction, which the Mogami FAQ credits with canceling \'up to 15 dB, about 97%, more noise than even the best twisted pair,\' is arguably overkill on a six-inch pedalboard patch. Even so, we think the construction standard and connector quality behind it carries over into every cable in the Gold line, and that consistency counts for something.',
-      ],
-    },
-    {
-      heading: 'Canare\'s Professional Reputation',
-      paragraphs: [
-        'Canare Electric has built a well-established reputation over more than 40 years in the professional AV industry, serving broadcast, stadium, and film production markets, according to information on canare.com. Broadcasters, stadium crews, and film productions run Canare cable in environments where reliability isn\'t negotiable and a cable failure simply isn\'t an option.',
-        'Recording engineers and touring musicians widely regard Canare\'s GS-6 instrument cable as one of the best-value professional cables on the market. The GS-6 uses a spiral shield construction that players commonly report gives it low handling noise and excellent flexibility, characteristics that matter for both live pedalboard use and studio patching. We should be honest here: we\'re citing the GS-6\'s reputation as the audio community understands it, not specific published specifications we\'ve independently tested ourselves.',
-      ],
-    },
-    {
-      heading: 'Build Quality and Connectors',
-      paragraphs: [
-        'Both Mogami and Canare manufacture their cable to professional tolerances, and both are substantially more consistent than budget or commodity cable. Where the two tend to differ in practice is connector selection and the DIY-versus-assembled calculus. Technicians and boutique cable makers widely use Canare cable stock, assembling it to custom lengths and pairing it with connectors of their own choice, often Neutrik or Switchcraft.',
-        'Mogami ships its assembled cables with its own branded connectors, which Mogami manufactures to match the cable specs. If you want to buy an assembled cable off the shelf, Mogami\'s factory terminations are a known quantity. If you\'re working with a cable builder (or doing your own soldering), Canare bulk cable stock paired with quality connectors is a common professional formula, and it\'s close to how we build our own Forever Cables.',
-      ],
-    },
-    {
-      heading: 'Price Point and Value',
-      paragraphs: [
-        'Canare cable stock typically costs less per foot than Mogami Gold, which makes it attractive to players building out large pedalboards where cable cost multiplies fast across many short runs. A pedalboard with eight patch cables is a different budget equation than a single instrument cable, and the price gap between Canare and Mogami Gold can add up in a hurry.',
-        'Mogami Gold\'s assembled patch cables carry a higher retail price, but they come with Mogami\'s no-excuses warranty, a lifetime replacement policy that, according to the Mogami Cable FAQ, covers damage regardless of cause. Players who go through patch cables regularly, or who need that reliability assurance on a touring rig, get real value out of that warranty beyond the cable itself. We build our own Forever Cables around a similar promise: a lifetime guarantee, because we\'d rather stand behind a cable indefinitely than sell you a replacement every couple of years.',
-      ],
-    },
-    {
-      heading: 'Where Each Cable Appears in Practice',
-      paragraphs: [
-        'Professional recording studios use Mogami patch cables often, and the quad-conductor design\'s noise rejection adds measurable value in rooms with high RF and electrical interference. The Gold Studio patch suits rack-based studio setups particularly well, where cables stay relatively static and noise floor matters on every recording.',
-        'Touring pedalboards, broadcast facilities, and custom cable builds by working technicians rely on Canare-based patch cables constantly. The GS-6\'s reputation for durability and consistent performance under repeated connection cycles makes it a practical choice anywhere players plug and unplug cables all day.',
-      ],
-    },
-    {
-      heading: 'The Honest Verdict',
-      paragraphs: [
-        'Both Mogami and Canare make genuinely excellent patch cables, and we\'ll say that plainly. Most musicians will not hear a signal quality difference between a well-built Canare patch and a Mogami Gold patch in a live or recording context. Regarding real differentiators, we\'d point to price (Canare typically costs less per cable), connector flexibility (Canare bulk stock allows custom terminations), and warranty coverage (Mogami\'s no-excuses policy runs broader).',
-        'If you\'re building a large pedalboard on a budget, well-assembled Canare cables are a professional choice, and you never need to apologize for reaching for them. If you want factory-assembled cables with a lifetime warranty and Mogami\'s studio pedigree behind them, Gold is worth the premium. Either way, you\'re choosing between two industry standards, not between a good cable and a bad one. That\'s the same standard we hold ourselves to when we hand-solder every Forever Cable that leaves our bench.',
-      ],
-    },
-  ],
-    cta: 'We build Forever Cables to deliver the same performance as Mogami and Canare, and we back every one with a lifetime guarantee. One purchase, no repeats. Shop our full lineup here at LiferLine Labs and build your pedalboard once.',
-    category: 'Gear',
-    tags: [
-      'guitar cables',
-      'patch cables',
-      'mogami',
-      'canare',
-      'pedalboard',
-      'cable comparison',
-      'guitar gear',
-    ],
-    byline: 'Written by the LiferLine team with the help of AI research',
-    sources: [
-    {
-      title: 'Mogami Cable FAQ',
-      publication: 'Mogami Cable',
-      url: 'https://www.mogamicable.com/additional/faq.php',
-      note: 'Source for Mogami transparency philosophy quote, quad cable noise cancellation figure, and no-excuses warranty details.',
-    },
-    {
-      title: 'Canare Corporation of America',
-      publication: 'Canare',
-      url: 'https://www.canare.com',
-      note: 'Source for Canare\'s professional standing: over 40 years in business, serving broadcast, stadium, and film production markets.',
     },
   ],
   },
@@ -1012,7 +913,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We hand-solder every Forever Cable with Neutrik connectors on Canare GS-6 or Mogami W2524 wire, and we back every one with a lifetime guarantee. If a cable ever develops hum, noise, or any other problem, we replace it. No questions, no time limit.',
+    cta: 'We hand-solder every Forever Cable with Neutrik connectors on Mogami wire, and we back every one with a lifetime guarantee. If a cable ever develops hum, noise, or any other problem, we replace it. No questions, no time limit.',
     category: 'Gear',
     tags: [
       'guitar cables',
@@ -1113,7 +1014,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We hand-solder Forever Cables with Neutrik connectors and Canare GS-6 wire, and we offer both straight and right-angle configurations. We build them to last a lifetime and guarantee them for life. Wire your board with cables that will never let you down.',
+    cta: 'We hand-solder Forever Cables with Neutrik connectors and Mogami wire, and we offer both straight and right-angle configurations. We build them to last a lifetime and guarantee them for life. Wire your board with cables that will never let you down.',
     category: 'Gear',
     tags: [
       'pedalboard',
@@ -1212,7 +1113,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We offer both straight and right-angle Forever Cables patch cables, built with Neutrik connectors and Canare GS-6 wire, hand-soldered and guaranteed for life. Choose the connector that fits your board.',
+    cta: 'We offer both straight and right-angle Forever Cables patch cables, built with Neutrik connectors and Mogami wire, hand-soldered and guaranteed for life. Choose the connector that fits your board.',
     category: 'Gear',
     tags: [
       'patch cables',
@@ -1333,93 +1234,6 @@ export const blogPosts: BlogPost[] = [
   ],
   },
   {
-    slug: 'george-ls-vs-lava-cable',
-    title: 'George L\'s vs. Lava Cable: Which Solderless Patch Cable System Is Worth It?',
-    metaTitle: 'George L\'s vs. Lava Cable: Which Solderless System Is Worth It? (2026)',
-    metaDescription: 'George L\'s vs. Lava Cable solderless systems compared. Build quality, ease of assembly, durability, and long-term value analyzed to help you choose the right DIY cable system.',
-    keywords: [
-      'george l\'s vs lava cable',
-      'george l cable',
-      'lava cable',
-      'solderless patch cables',
-      'solderless guitar cables',
-      'diy patch cables',
-      'best solderless cable system',
-      'george l guitar cable',
-    ],
-    publishedAt: '2026-07-28',
-    excerpt: 'George L\'s and Lava Cable are two of the most recognized names in do-it-yourself patch cable systems for guitar pedalboards, and we field questions comparing the two more than almost any other topic. This comparison covers what each system is known for, how they differ in practice, and what we think you should weigh when choosing between them, while being clear about what we verified directly versus what reflects the brands\' general reputation in the guitar community.',
-    sections: [
-    {
-      heading: 'The Market These Brands Serve',
-      paragraphs: [
-        'Both George L\'s and Lava Cable compete in the same corner of the market: solderless patch cable systems for guitar pedalboards. Here at LiferLine Labs we hand solder every cable that leaves our shop, so we don\'t sell a competing solderless kit, but we get asked to compare these two brands often enough that we think it\'s worth laying out plainly. The appeal of both systems is straightforward: you buy a spool of cable and a bag of connectors, then build cables to exact, custom lengths without touching a soldering iron. For players tired of zip tied coils of excess cable snaking between pedals, that kind of custom length flexibility is a real quality of life improvement.',
-        'The alternative is buying factory made patch cables in fixed lengths that almost never match your exact pedal spacing, or paying someone to solder cables to order. DIY solderless systems split that difference. You can build a cable as short as a few inches, and if you measure wrong, you can take it apart and rebuild it. As far as the iterative process of building and reconfiguring a pedalboard goes, that flexibility earns its keep.',
-      ],
-    },
-    {
-      heading: 'George L\'s: Background and Reputation',
-      paragraphs: [
-        'George L\'s has been a fixture in the guitar community since at least the 1980s, and it remains one of the most widely recognized solderless cable brands on the market. The system uses a screw on connector: you strip the cable end, insert it into the connector, and tighten a set screw to clamp the conductor in place. No heat, no solder, nothing beyond a small screwdriver.',
-        'We owe you a research note here. While preparing this article we tried to reach both the George L\'s Wikipedia page and the official georgels.com website. The Wikipedia page does not exist, and the official site returned an access error when we tried it. As a result, we could not verify George L\'s specific technical specifications, capacitance per foot, conductor gauge, shield coverage percentage, from official sources. What follows reflects George L\'s general reputation as the guitar press and online communities widely describe it, not quoted manufacturer specs.',
-      ],
-    },
-    {
-      heading: 'Lava Cable: Background and Reputation',
-      paragraphs: [
-        'Lava Cable holds a similarly strong reputation in the DIY pedalboard community. The company has offered both a solderless system (often known under the Tightrope name) and an Easy Solder system that splits the difference between full DIY soldering and tool free assembly. Like George L\'s, Lava Cable earns its following through custom length flexibility and easy field repair; a player can cut off a damaged connector and install a new one on the spot.',
-        'The same transparency note applies here. While preparing this article, we found the Lava Cable website inaccessible due to an SSL certificate error. We could not verify specific cable specifications, current product names, or pricing from official sources. Unfortunately, that means the descriptions here reflect Lava Cable\'s general reputation in the guitar and pedalboard community rather than a spec sheet we could point you to directly.',
-      ],
-    },
-    {
-      heading: 'Assembly Experience and Ease of Use',
-      paragraphs: [
-        'Guitar players generally describe both systems as approachable for first time builders. The basic process is the same across most solderless cable systems: measure the distance between two pedals, cut the cable to length, strip a small amount of outer jacket and shielding, then insert the prepared end into the connector and secure it mechanically. The real skill lies in stripping the cable cleanly without nicking the inner conductor, a mistake that causes noise or outright failure.',
-        'Players in the guitar community consistently describe George L\'s connectors as particularly compact, which helps in tight pedalboard layouts where connectors sit close to pedal input and output jacks. They describe Lava Cable\'s connectors as having a slightly different profile. Both brands offer right angle connector options, which matter when pedal jacks sit on the side or when board space runs tight. For a first time builder, either system takes a short learning curve but stays manageable within a single assembly session.',
-      ],
-    },
-    {
-      heading: 'Reliability Over Time',
-      paragraphs: [
-        'The long term reliability question for any solderless system comes down to whether the mechanical connection holds under repeated vibration and physical stress. As we describe in our companion article on soldered versus solderless cables, solderless connections depend on sustained clamping pressure from the set screw or an equivalent mechanical device. Over time, vibration from transport and live performance can loosen that connection. We think periodic checking and retightening is a reasonable part of maintaining solderless cables, not a flaw unique to either brand.',
-        'Both George L\'s and Lava Cable let you rebuild a failed connection easily: unscrew the connector, trim back the cable end slightly to expose fresh conductor, and reinstall it. That is a genuine advantage over a failed factory made cable, which usually needs professional re-termination or outright replacement. As a result, the total lifetime cost of a solderless kit, including spare connectors, often runs lower than repeatedly replacing pre-made cables.',
-      ],
-    },
-    {
-      heading: 'Which System to Choose',
-      paragraphs: [
-        'Honestly, both systems serve the same need, and both have earned enough trust that the choice often comes down to what your local shop stocks, which connectors fit your board\'s physical layout, and which one you prefer after handling both. George L\'s has the longer track record and sits on more shelves at major retailers. Lava Cable has built an active following among builders who prefer its connector geometry or assembly process.',
-        'If your goal is a cable that never needs attention again, we should say plainly: solderless systems from any brand come with a maintenance commitment that factory or hand-soldered cables do not carry. Players who want to stop thinking about their patch cables entirely, and who are not constantly reconfiguring their boards, tend to do better with hand-soldered cables, which is, unsurprisingly, the corner of the market we live in. Players actively building and rebuilding their pedalboard layout will find real, practical value in either solderless system.',
-      ],
-    },
-  ],
-    cta: 'Here at LiferLine Labs, we build Forever Cables to eliminate the assembly, the maintenance, and the rebuilding. We hand-solder every cable with Neutrik connectors on Canare GS-6 or Mogami W2524 wire, and every one ships with a lifetime guarantee.',
-    category: 'Gear',
-    tags: [
-      'solderless cables',
-      'patch cables',
-      'guitar gear',
-      'pedalboard',
-      'cable comparison',
-      'diy cables',
-    ],
-    byline: 'Written by the LiferLine team with the help of AI research',
-    sources: [
-    {
-      title: 'Patch cable',
-      publication: 'Wikipedia',
-      url: 'https://en.wikipedia.org/wiki/Patch_cable',
-      note: 'Used for background on what a patch cable is, the use of stranded copper in patch cable construction, and the range of patch cable applications in audio and music settings.',
-    },
-    {
-      title: 'Soldering',
-      publication: 'Wikipedia',
-      url: 'https://en.wikipedia.org/wiki/Soldering',
-      note: 'Used for context on mechanical vs. soldered connections, and for describing the failure modes relevant to solderless systems (vibration loosening set screws vs. cold solder joints).',
-    },
-  ],
-  },
-  {
     slug: 'trs-vs-ts-guitar-cable',
     title: 'TRS vs TS Guitar Cables: What Is the Difference and Which Do You Need?',
     metaTitle: 'TRS vs TS Guitar Cable: The Difference and Which You Need (2026)',
@@ -1481,7 +1295,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We build Forever Cables with TS connectors and Neutrik gold-plated contacts, hand-soldered on Canare GS-6 or Mogami W2524 wire. Every cable carries our lifetime guarantee.',
+    cta: 'We build Forever Cables with TS connectors and Neutrik gold-plated contacts, hand-soldered on Mogami wire. Every cable carries our lifetime guarantee.',
     category: 'Gear',
     tags: [
       'guitar cable',
@@ -1574,7 +1388,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We build Forever Cables in multiple lengths to fit your exact pedalboard layout. We hand-solder every one with Canare GS-6 wire and Neutrik connectors, and back it with our lifetime guarantee.',
+    cta: 'We build Forever Cables in multiple lengths to fit your exact pedalboard layout. We hand-solder every one with Mogami wire and Neutrik connectors, and back it with our lifetime guarantee.',
     category: 'Gear',
     tags: [
       'pedalboard',
@@ -1627,7 +1441,7 @@ export const blogPosts: BlogPost[] = [
     {
       heading: 'What Is a Signal Chain?',
       paragraphs: [
-        'A signal chain is a series of signal conditioning components through which audio passes sequentially, with the output of one stage becoming the input of the next. (Source: Wikipedia) For a guitarist, the signal chain starts at your guitar\'s pickup, travels through your patch cables and pedals, and ends at your amplifier\'s speaker. Every element in that chain, including the cables themselves, shapes the signal that reaches the amp, which is exactly why we hand solder ours with Canare and Mogami wire rather than treating a patch cable as an afterthought.',
+        'A signal chain is a series of signal conditioning components through which audio passes sequentially, with the output of one stage becoming the input of the next. (Source: Wikipedia) For a guitarist, the signal chain starts at your guitar\'s pickup, travels through your patch cables and pedals, and ends at your amplifier\'s speaker. Every element in that chain, including the cables themselves, shapes the signal that reaches the amp, which is exactly why we hand solder ours with Mogami wire rather than treating a patch cable as an afterthought.',
         'Understanding your signal chain is foundational to understanding your tone. When something sounds wrong, the signal chain is where you look first. When you want to achieve a specific effect, the signal chain determines what\'s possible. An effects chain forms when you connect two or more stompboxes in series, and inactive pedals pass the signal through in bypass mode without altering it. (Source: Wikipedia)',
       ],
     },
@@ -1674,7 +1488,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We build Forever Cables patch cables with Canare GS-6 wire and Neutrik connectors, hand-soldered and guaranteed for life. Keep your signal chain clean from pedal to pedal.',
+    cta: 'We build Forever Cables patch cables with Mogami wire and Neutrik connectors, hand-soldered and guaranteed for life. Keep your signal chain clean from pedal to pedal.',
     category: 'Gear',
     tags: [
       'signal chain',
@@ -1753,11 +1567,11 @@ export const blogPosts: BlogPost[] = [
       heading: 'What to Do About It',
       paragraphs: [
         'As far as the takeaway goes, we think cables are worth budgeting for, especially if your pedalboard represents a significant investment in pedals and plays a significant role in your live sound. Replacing a board full of cheap patch cables with better-built alternatives, quality factory-made cables, a custom solderless DIY kit, or hand-soldered cables, ranks among the more cost-effective upgrades available in a signal chain.',
-        'Our approach here at LiferLine Labs is to build patch cables for permanence: hand-soldered joints, quality Neutrik connectors, Canare GS-6 and Mogami W2524 wire, and a lifetime guarantee behind every one. We believe the right answer to the patch cable question is to answer it once. A cable built correctly and guaranteed for life is a cable you stop thinking about, which is exactly the relationship you want with the components that are supposed to stay invisible in your signal chain.',
+        'Our approach here at LiferLine Labs is to build patch cables for permanence: hand-soldered joints, quality Neutrik connectors, Mogami wire, and a lifetime guarantee behind every one. We believe the right answer to the patch cable question is to answer it once. A cable built correctly and guaranteed for life is a cable you stop thinking about, which is exactly the relationship you want with the components that are supposed to stay invisible in your signal chain.',
       ],
     },
   ],
-    cta: 'We handmake every patch cable from Canare and Mogami wire, use gold-plated connectors, and back each one with a lifetime guarantee. That\'s how we do it here at LiferLine Labs.',
+    cta: 'We handmake every patch cable from Mogami wire, use gold-plated connectors, and back each one with a lifetime guarantee. That\'s how we do it here at LiferLine Labs.',
     category: 'Gear',
     tags: [
       'pedalboard',
@@ -2076,7 +1890,7 @@ export const blogPosts: BlogPost[] = [
       heading: 'Conductor Quality: OFC vs Standard Copper',
       paragraphs: [
         'As far as conductor material, oxygen-free copper (OFC) is copper refined to remove dissolved oxygen, which results in higher purity. Standard copper conductors carry trace amounts of oxygen, which can contribute to micro-porosity and slightly higher resistivity. For the short cable runs common in guitar use, the difference in conductivity is small, and we\'d be surprised if anyone could hear it under careful blind testing.',
-        'Where OFC makes a more meaningful difference, in our opinion, is in longevity. Oxygen-free copper resists internal corrosion better over years of use, so the conductor\'s electrical properties stay more stable over time. That\'s part of why we build with Canare GS-6 and Mogami W2524, both OFC cores; for a cable we\'re backing with a lifetime guarantee, conductor quality is a specification we\'re not willing to cut corners on, even though the day-one tonal difference is modest.',
+        'Where OFC makes a more meaningful difference, in our opinion, is in longevity. Oxygen-free copper resists internal corrosion better over years of use, so the conductor\'s electrical properties stay more stable over time. That\'s part of why we build with Mogami W2524, an OFC core; for a cable we\'re backing with a lifetime guarantee, conductor quality is a specification we\'re not willing to cut corners on, even though the day-one tonal difference is modest.',
       ],
     },
     {
@@ -2094,7 +1908,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We build Forever Cables with Canare GS-6, OFC conductors, and gold-plated Neutrik connectors. Every one carries a lifetime guarantee.',
+    cta: 'We build Forever Cables with Mogami wire, OFC conductors, and gold-plated Neutrik connectors. Every one carries a lifetime guarantee.',
     category: 'Gear',
     tags: [
       'guitar cables',
@@ -2356,7 +2170,7 @@ export const blogPosts: BlogPost[] = [
     {
       heading: 'Brands Worth Knowing',
       paragraphs: [
-        'Mogami is a Japanese manufacturer whose Gold series has become a professional standard in recording studios worldwide. Mogami engineers their cables to be \'100% transparent, to not change the sound in any way,\' according to the Mogami Cable FAQ, and backs Gold, Platinum, and Silver series cables with a lifetime no-excuses warranty. Canare is another Japanese manufacturer with over 40 years in professional AV, according to canare.com; engineers and touring technicians widely regard its GS-6 instrument cable as one of the best-value professional cables available.',
+        'Mogami is a Japanese manufacturer whose Gold series has become a professional standard in recording studios worldwide. Mogami engineers their cables to be \'100% transparent, to not change the sound in any way,\' according to the Mogami Cable FAQ, and backs Gold, Platinum, and Silver series cables with a lifetime no-excuses warranty. That transparency and warranty philosophy is exactly why we build every Forever Cable on Mogami wire and nothing else.',
         'For players who want a premium hand-soldered option built on professional cable stock, we build our own Forever Cables Stage Cable on Mogami W2524 cable stock and hand-solder every unit ourselves. This kind of boutique assembly, in our experience, pairs the proven performance of professional Japanese cable stock with the quality control that only individual craftsmanship gives you; a meaningful step above factory-assembled commodity cables.',
       ],
     },
@@ -2364,7 +2178,7 @@ export const blogPosts: BlogPost[] = [
       heading: 'Practical Buying Advice',
       paragraphs: [
         'Buy the shortest cable that comfortably covers your needs. Use a quality cable from a brand with a real warranty; Mogami\'s no-excuses policy is the benchmark we measure against. Pay attention to connector design: a cable with a high-quality body and good strain relief will outlast a cable with a cheap connector regardless of how good the cable stock underneath it is. And don\'t obsess over marginal spec differences between professional cables. The jump from a cheap cable to a professional one is audible; the jump between two well-made professional cables rarely is.',
-        'If you\'re recording, we\'d consider Mogami Gold Studio for its quad-conductor noise rejection. If you\'re gigging, Gold Stage or a well-assembled Canare cable suits the physical demands of live use. And if you want a hand-soldered cable with premium cable stock and genuine build quality, that\'s exactly why we build Forever Cables: for players who won\'t accept a compromised signal chain.',
+        'If you\'re recording, we\'d consider Mogami Gold Studio for its quad-conductor noise rejection. If you\'re gigging, Mogami Gold Stage is built for the physical demands of live use. And if you want a hand-soldered cable with premium cable stock and genuine build quality, that\'s exactly why we build Forever Cables on Mogami wire: for players who won\'t accept a compromised signal chain.',
       ],
     },
   ],
@@ -2398,12 +2212,6 @@ export const blogPosts: BlogPost[] = [
       url: 'https://en.wikipedia.org/wiki/Phone_connector_(audio)',
       note: 'Source for TS connector description: two contacts (tip + sleeve), 6.35mm standard for guitar cables.',
     },
-    {
-      title: 'Canare Corporation of America',
-      publication: 'Canare',
-      url: 'https://www.canare.com',
-      note: 'Source for Canare\'s professional standing: over 40 years in business, serving broadcast, stadium, and film production markets.',
-    },
   ],
   },
   {
@@ -2418,7 +2226,7 @@ export const blogPosts: BlogPost[] = [
       'mogami instrument cable',
       'mogami patch cable',
       'best mogami cable for guitar',
-      'mogami vs canare',
+      'mogami wire guide',
     ],
     publishedAt: '2026-07-28',
     excerpt: 'Mogami is one of the most respected names in professional audio cabling, but its product lines can be confusing. Here at LiferLine Labs, we\'ve spent plenty of time with Mogami wire on our own workbench, and in this guide we break down the Silver, CorePlus, Gold, Platinum, and Neglex series, explain Mogami\'s transparency philosophy, and help you choose the right cable for home recording, live performance, or serious studio work.',
@@ -2751,7 +2559,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We build the Forever Cables Pedalboard Pack with six hand-soldered patch cables (two 6-inch, two 12-inch, and two 18-inch), using Canare GS-6 wire and Neutrik connectors, and we back every one with our lifetime guarantee. One pack, every length you need, built to outlast your board.',
+    cta: 'We build the Forever Cables Pedalboard Pack with six hand-soldered patch cables (two 6-inch, two 12-inch, and two 18-inch), using Mogami wire and Neutrik connectors, and we back every one with our lifetime guarantee. One pack, every length you need, built to outlast your board.',
     category: 'Gear',
     tags: [
       'pedalboard',
@@ -2773,102 +2581,6 @@ export const blogPosts: BlogPost[] = [
       publication: 'Wikipedia',
       url: 'https://en.wikipedia.org/wiki/Effects_unit',
       note: 'Categories of effects and their roles in the signal chain; stompbox form factor.',
-    },
-  ],
-  },
-  {
-    slug: 'canare-vs-mogami-guitar-cable',
-    title: 'Canare vs. Mogami: Which Guitar Cable Wire Is Better for Your Rig?',
-    metaTitle: 'Canare vs. Mogami Guitar Cable Wire: Head-to-Head Comparison (2026)',
-    metaDescription: 'Canare GS-6 or Mogami W2524? This comparison covers capacitance, shielding, durability, and which guitar cable wire is the better choice for patch cables and instrument cables.',
-    keywords: [
-      'canare vs mogami',
-      'mogami vs canare',
-      'canare guitar cable',
-      'canare gs-6',
-      'canare gs-6 review',
-      'mogami w2524 vs canare gs-6',
-      'best guitar cable wire',
-      'canare gs6 guitar',
-      'mogami or canare',
-    ],
-    publishedAt: '2026-07-28',
-    excerpt: 'Canare and Mogami are both benchmarks of professional cable quality, and we don\'t think the question of which one is actually better has a simple answer. This article leads with Canare, its professional track record, broadcast credentials, and widespread use among touring technicians, then gives Mogami its due, and closes with practical guidance based on your specific situation.',
-    sections: [
-    {
-      heading: 'Two Benchmarks, One Decision',
-      paragraphs: [
-        'Here at LiferLine Labs we work with cable stock from both Canare and Mogami, and in our experience, the two occupy the same tier in professional audio circles: Japanese manufacturers whose cables earn trust in environments where failure isn\'t an option. Broadcast facilities, stadium sound systems, film sets, and recording studios all use cables from both manufacturers. When someone asks us which of the two is \'actually better,\' our honest answer is that it depends on what you\'re measuring and what you\'re doing with it.',
-        'We lead with Canare here, because Canare\'s story often goes undertold compared to Mogami\'s, and because the GS-6 in particular deserves more credit than it typically gets in consumer-facing guitar content. We\'ll give Mogami its due as well. By the end, our goal is to give you a clear framework for making the right choice for your rig.',
-      ],
-    },
-    {
-      heading: 'Canare\'s Professional Track Record',
-      paragraphs: [
-        'Canare Electric is a well-established Japanese cable manufacturer that has supplied professional AV markets for over 40 years, according to canare.com. Their core markets aren\'t guitar retail; broadcast, stadium events, and film production make up their bread and butter. That origin matters to us. A company that builds cable to the reliability standard of a live broadcast or a major stadium event builds to a standard considerably higher than what most consumer cable manufacturers target.',
-        'The Canare GS-6 is the company\'s instrument cable, and recording engineers and touring technicians widely regard it as one of the best-value professional cables available. It uses a spiral shield construction that, by most reports, delivers low handling noise and good flexibility; both essential for an instrument cable that sees heavy regular use. Professional cable builders who assemble custom rigs for touring acts reach for Canare bulk cable stock again and again.',
-      ],
-    },
-    {
-      heading: 'Why Canare Wins on Value and Flexibility',
-      paragraphs: [
-        'One of Canare\'s practical advantages is that professional cable builders and DIY assemblers can get its cable stock and pair it with high-quality connectors of their own choosing; commonly Neutrik or Switchcraft. That means a technician can build a Canare-based cable to any length, with any connector orientation, soldered by someone who knows exactly what they\'re doing. For a touring musician with specific rig requirements, we see this flexibility come in handy constantly.',
-        'On a per-foot basis, Canare cable stock typically costs less than Mogami Gold. For a touring musician outfitting a full stage rig with multiple cable lengths, or a studio building out a patch bay, that cost difference across many cables adds up fast. The tradeoff is that Canare doesn\'t offer a warranty program comparable to Mogami\'s; individual cable builders and retailers set their own terms.',
-      ],
-    },
-    {
-      heading: 'Mogami\'s Response: Transparency and a Warranty No One Else Matches',
-      paragraphs: [
-        'Mogami\'s case for paying a premium starts with philosophy. According to the Mogami Cable FAQ, the company engineers every cable to be \'100% transparent, to not change the sound in any way.\' That transparency goal drives specific engineering choices: the quad-conductor design in Gold Studio, which the FAQ credits with canceling \'up to 15 dB, about 97%, more noise than even the best twisted pair,\' gives you a real technical advantage in RF-heavy recording environments.',
-        'Fortunately for musicians who use cables hard, the Mogami no-excuses warranty, a lifetime replacement policy covering damage regardless of cause, per the Mogami Cable FAQ, is something Canare doesn\'t match at the manufacturer level. We don\'t see that warranty as just a marketing claim. It\'s a genuine cost-of-ownership consideration. A cable that gets replaced free when it fails on tour is worth something beyond its initial purchase price.',
-      ],
-    },
-    {
-      heading: 'Cable Construction: What to Look For in Either Brand',
-      paragraphs: [
-        'Regardless of brand, professional instrument cables share a set of construction priorities. Conductor material, typically oxygen-free copper, sets the baseline conductivity. Shield type (spiral or braided) affects both RF rejection and handling noise. Connector quality determines contact reliability and mechanical durability at the stress point most likely to fail. Strain relief protects the solder joint from the mechanical forces of daily use.',
-        'Both Canare and Mogami meet professional standards on all of these. The difference sits in the specifics: Mogami Gold Studio uses quad conductors for maximum noise rejection; Canare GS-6 uses a spiral shield known for low handling noise. As far as we\'re concerned, these are different engineering choices that suit slightly different environments, not a quality gap.',
-      ],
-    },
-    {
-      heading: 'Use Case Scenarios',
-      paragraphs: [
-        'For studio recording in an environment with significant RF or electrical interference, Mogami Gold Studio\'s quad-conductor design gives it a measurable technical edge. For touring with a complex multi-cable rig where cost per cable matters, Canare GS-6 assembled by a skilled technician is what many touring crews reach for. For a musician who wants the best warranty coverage available, Mogami\'s no-excuses lifetime policy stands unmatched.',
-        'For a musician who wants the highest-performance cable Mogami makes, we\'d point you to the Platinum series, which their FAQ describes as \'the most transparent cable possible, regardless of cost.\' For a musician who simply wants a reliable, professional cable at a fair price and doesn\'t need a warranty program, a well-assembled Canare cable is exactly that.',
-      ],
-    },
-    {
-      heading: 'The Bottom Line',
-      paragraphs: [
-        'We don\'t consider Canare the runner-up to Mogami. It\'s a co-equal professional standard, favored in contexts where value, flexibility, and broadcast-grade reliability matter most. We don\'t consider Mogami a prestige upsell either. It\'s a manufacturer with a clear engineering philosophy, a best-in-class warranty, and specific technical advantages, particularly the quad-conductor noise cancellation of Gold Studio, that matter in certain environments.',
-        'Choose Mogami if the no-excuses warranty matters to you, you\'re recording in a noisy RF environment where quad conductors help, or you want the studio credibility and artist endorsements that come with the brand. Choose Canare if you\'re building a large rig where cost per cable matters, you want the flexibility of custom cable assembly with your connector of choice, or you simply want proven professional construction at a strong price-to-performance ratio.',
-      ],
-    },
-  ],
-    cta: 'We use Canare GS-6 in our Workhorse and Right Angle patch cables and Mogami W2524 in our Stage Cable. We hand-solder every cable with Neutrik connectors and guarantee it for life. Pick the cable built for your setup.',
-    category: 'Gear',
-    tags: [
-      'canare',
-      'mogami',
-      'guitar cable',
-      'cable comparison',
-      'canare gs-6',
-      'mogami w2524',
-      'cable specs',
-    ],
-    byline: 'Written by the LiferLine team with the help of AI research',
-    sources: [
-    {
-      title: 'Mogami Cable FAQ',
-      publication: 'Mogami Cable',
-      url: 'https://www.mogamicable.com/additional/faq.php',
-      note: 'Source for Mogami transparency philosophy quote, quad cable noise cancellation figure (15 dB / 97%), Platinum series description, and no-excuses warranty details.',
-    },
-    {
-      title: 'Canare Corporation of America',
-      publication: 'Canare',
-      url: 'https://www.canare.com',
-      note: 'Source for Canare\'s professional standing: over 40 years in business, serving broadcast, stadium, and film production markets.',
     },
   ],
   },
@@ -2924,7 +2636,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We build Forever Cables patch cables with Canare GS-6 wire and Neutrik connectors, hand-soldered and guaranteed for life. Build your pedalboard on cables that last.',
+    cta: 'We build Forever Cables patch cables with Mogami wire and Neutrik connectors, hand-soldered and guaranteed for life. Build your pedalboard on cables that last.',
     category: 'Gear',
     tags: [
       'pedalboard',
@@ -3024,7 +2736,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We build Forever Cables patch cables with premium Canare GS-6 wire and Neutrik connectors for minimal capacitance and maximum signal integrity. True bypass, buffered, or hybrid, start with cables that will never let you down.',
+    cta: 'We build Forever Cables patch cables with premium Mogami wire and Neutrik connectors for minimal capacitance and maximum signal integrity. True bypass, buffered, or hybrid, start with cables that will never let you down.',
     category: 'Guides',
     tags: [
       'guitar pedals',
@@ -3051,106 +2763,6 @@ export const blogPosts: BlogPost[] = [
   ],
   },
   {
-    slug: 'mogami-vs-canare-guitar-cables',
-    title: 'Mogami vs Canare Guitar Cables: Which Should You Choose?',
-    metaTitle: 'Mogami vs Canare Guitar Cables: Which Should You Choose?',
-    metaDescription: 'Mogami W2524 vs Canare GS-6: Compare specs, tone, durability, and price. Studio standard vs touring workhorse. Which guitar cable is right for you?',
-    keywords: [
-      'mogami vs canare guitar cables',
-      'mogami w2524',
-      'canare gs-6',
-      'guitar cable comparison',
-      'best guitar cables',
-      'mogami cable',
-      'canare cable',
-      'professional guitar cables',
-      'studio guitar cables',
-      'touring guitar cables',
-    ],
-    publishedAt: '2026-07-28',
-    excerpt: 'Here at LiferLine Labs, we get this question from gigging musicians all the time: Mogami Gold or Canare GS-6? Both are Japanese manufacturers with decades of professional credibility. In this guide we compare them for real-world guitar use, studio recording, touring, and everyday practice, and we give honest guidance on when the premium matters and when it doesn\'t.',
-    sections: [
-    {
-      heading: 'The Question Every Guitarist Asks',
-      paragraphs: [
-        'At some point, every guitarist who has done the research arrives at the same shortlist: Mogami Gold or Canare GS-6. Both are Japanese-made cables with strong professional reputations. Both show up in recording studios, on touring stages, and in the signal chains of working engineers. The question isn\'t whether either one is good, they both are, but which is right for your specific use case.',
-        'As far as the answer, it depends on what you\'re optimizing for: maximum noise rejection in a studio environment, maximum durability on a touring rig, or maximum value across a full cable setup. Those are different engineering and budget problems, and the two cables suit them differently.',
-      ],
-    },
-    {
-      heading: 'Mogami Gold: Studio Pedigree and a Clear Philosophy',
-      paragraphs: [
-        'Mogami designs every cable around a principle stated clearly in their FAQ: cables should be \'100% transparent, to not change the sound in any way.\' The Gold Studio guitar cable achieves this through a quad-conductor design. According to the Mogami Cable FAQ, quad cables can cancel \'up to 15 dB, about 97%, more noise than even the best twisted pair.\' In a recording environment, that translates to quieter tracks with less interference from lighting, HVAC, and nearby electronics.',
-        'The Gold Stage variant trades the quad design\'s noise advantage for construction built to survive touring: flexibility at low temperatures, physical durability under heavy use, and reliable shielding against stage RF. Mogami also offers a lifetime no-excuses warranty across the Gold line, covering damage regardless of cause, which is an unusual level of commitment for a cable manufacturer.',
-      ],
-    },
-    {
-      heading: 'Canare GS-6: Broadcast-Grade Reliability',
-      paragraphs: [
-        'Canare Electric is a well-established Japanese cable manufacturer with over 40 years in professional AV, according to canare.com. The company\'s cables serve broadcast facilities, stadium sound systems, and film production, industries where cable failure simply isn\'t an option. The GS-6 is Canare\'s instrument cable, and it has earned a strong reputation among recording engineers and touring musicians for consistent performance and durability.',
-        'The GS-6 uses a spiral shield construction that is widely reported to offer low handling noise and good flexibility, both important for instrument cables that get plugged, unplugged, coiled, and transported repeatedly. Specific published capacitance or resistance figures for the GS-6 vary by source, so we\'d rather describe its performance as the professional audio community understands it than cite a figure we haven\'t directly verified: the GS-6 is widely regarded as a professional-grade cable that competes directly with Mogami Gold on practical merit.',
-      ],
-    },
-    {
-      heading: 'What \'Professional Grade\' Actually Means',
-      paragraphs: [
-        'The phrase \'professional grade\' gets applied to a lot of cables. In practical terms, we think it means a few specific things: consistent conductor quality across production runs, shielding that reliably rejects interference, connectors that seat firmly and make clean electrical contact, and strain relief that keeps the cable-to-connector junction from failing under normal use. Both Mogami and Canare satisfy all of these criteria.',
-        'Budget cables typically fail in shielding consistency and connector quality. Inconsistent shielding means variable noise performance across cables of the same model. Low-quality connectors introduce resistance at the contact point and fail under mechanical stress. Neither Mogami nor Canare has these problems in their professional lines, which is why both brands show up in signal chains where reliability actually gets taken seriously.',
-      ],
-    },
-    {
-      heading: 'Studio Recording vs. Live Performance',
-      paragraphs: [
-        'As far as studio recording, Mogami Gold Studio carries a meaningful technical edge: its quad-conductor design provides superior noise rejection in an environment where the noise floor matters for every recorded track. Engineers tracking guitars in studios with complex electrical environments, lots of lighting, HVAC, nearby electronics, will appreciate what quad construction does for a quiet recording.',
-        'For live performance, the comparison narrows. Canare GS-6 cables assembled with quality connectors are a standard choice among touring technicians for their combination of durability and value. Mogami Gold Stage is also built for touring use and carries the Mogami warranty. A musician on a budget who needs five or six stage cables may find Canare the more practical choice. A musician who wants the peace of mind of a lifetime no-excuses warranty may prefer Mogami.',
-      ],
-    },
-    {
-      heading: 'Is Mogami Gold Worth the Premium?',
-      paragraphs: [
-        'Mogami Gold typically costs more than Canare GS-6 when you compare assembled cables at retail. The gap is meaningful if you\'re buying multiple cables for a full stage or studio rig. The real question is whether what Mogami adds, the quad-conductor noise advantage in Gold Studio, the no-excuses lifetime warranty, and the Mogami brand\'s studio pedigree, justifies that premium for your specific situation.',
-        'For studio work where noise floor matters, yes, the quad-conductor advantage is real. For live work where warranty coverage and reliability are the primary concerns, the Mogami warranty may be worth the premium. For players mostly doing bedroom practice or occasional gigs, a well-built Canare cable is a professional choice that leaves money for other gear.',
-      ],
-    },
-    {
-      heading: 'Making the Right Call',
-      paragraphs: [
-        'Both Mogami and Canare are legitimate professional choices. Neither will be the weakest link in your signal chain. In our view, the practical decision comes down to three factors: how much RF interference you encounter (favoring Mogami\'s quad design for noisy environments), how many cables you need (Canare\'s value proposition improves as quantity rises), and how much the warranty matters to your use case (Mogami\'s no-excuses policy is unmatched).',
-        'If you\'re outfitting a recording studio, Mogami Gold Studio is hard to argue against. If you\'re building out a touring rig across six cables, Canare GS-6 assembled with quality connectors is what many touring technicians reach for. And if you want the absolute best instrument cable Mogami makes, their Platinum series is described in their FAQ as designed to be \'the most transparent cable possible, regardless of cost.\'',
-      ],
-    },
-  ],
-    cta: 'Ready to stop worrying about cables? We hand-build every Forever Cable and back it with a lifetime guarantee. Choose Mogami or Canare, pick your length, and never buy another cable again.',
-    category: 'Buying Guides',
-    tags: [
-      'buying guide',
-      'cable comparison',
-      'mogami',
-      'canare',
-      'mogami w2524',
-      'canare gs-6',
-      'guitar cable',
-      'patch cables',
-      'studio gear',
-      'guitar tone',
-    ],
-    byline: 'Written by the LiferLine team with the help of AI research',
-    sources: [
-    {
-      title: 'Mogami Cable FAQ',
-      publication: 'Mogami Cable',
-      url: 'https://www.mogamicable.com/additional/faq.php',
-      note: 'Source for Mogami transparency philosophy quote, quad cable noise cancellation figure (15 dB / 97%), Gold Studio vs. Gold Stage distinction, Platinum series description, and no-excuses warranty details.',
-    },
-    {
-      title: 'Canare Corporation of America',
-      publication: 'Canare',
-      url: 'https://www.canare.com',
-      note: 'Source for Canare\'s professional standing: over 40 years in business, serving broadcast, stadium, and film production markets.',
-    },
-  ],
-  },
-  {
     slug: 'best-bass-guitar-cables',
     title: 'Best Bass Guitar Cables: Do You Need a Different Cable?',
     metaTitle: 'Best Bass Guitar Cables: Do You Need a Different Cable? (2026 Guide)',
@@ -3165,7 +2777,7 @@ export const blogPosts: BlogPost[] = [
       'bass instrument cable',
       'best cable for bass guitar',
       'bass guitar tone cables',
-      'canare bass cable',
+      'mogami bass cable',
     ],
     publishedAt: '2026-07-28',
     excerpt: 'We\'ve noticed bass players treat cable selection as an afterthought more often than guitarists do, and that surprises us, because cable quality actually matters more for bass than most musicians realize. Low-frequency content, longer cable runs, physical abuse from touring, and the impedance differences that active preamps introduce all interact with your cable in ways that affect tone and reliability. Here\'s what we think bass players specifically need to know.',
@@ -3195,7 +2807,7 @@ export const blogPosts: BlogPost[] = [
       heading: 'Physical Durability: What Touring Bass Cables Endure',
       paragraphs: [
         'Bass cables on a working stage take serious physical abuse. Players plug and unplug them multiple times per show, coil and uncoil them before and after every performance, step on them, run them under risers, and occasionally yank them from the output jack mid-song. An electrically excellent cable that\'s physically fragile will not survive a touring schedule.',
-        'As far as what determines durability, we look at three things: the outer jacket material (flexibility and abrasion resistance), the strain relief design at the connector (which protects the solder joint from mechanical stress), and the connector body construction itself. Professional cables from manufacturers like Mogami and Canare are built to survive exactly this kind of use, which is part of why they dominate touring rigs alongside boutique hand-soldered options from builders who use that same cable stock.',
+        'As far as what determines durability, we look at three things: the outer jacket material (flexibility and abrasion resistance), the strain relief design at the connector (which protects the solder joint from mechanical stress), and the connector body construction itself. Professional cable from a manufacturer like Mogami is built to survive exactly this kind of use, which is part of why it dominates touring rigs alongside boutique hand-soldered options from builders who use that same cable stock.',
       ],
     },
     {
@@ -3215,12 +2827,12 @@ export const blogPosts: BlogPost[] = [
     {
       heading: 'Practical Recommendations for Bass Players',
       paragraphs: [
-        'For passive bass players who care about preserving upper harmonic clarity, we\'d prioritize low-capacitance cable and keep runs under 20 feet. Mogami Gold Studio for studio work, Gold Stage for live use, or a professional Canare-based cable assembled by a skilled builder are all solid choices. For active bass players, capacitance matters less, but shielding, connector quality, and durability matter just as much.',
+        'For passive bass players who care about preserving upper harmonic clarity, we\'d prioritize low-capacitance cable and keep runs under 20 feet. Mogami Gold Studio for studio work or Gold Stage for live use are both solid choices. For active bass players, capacitance matters less, but shielding, connector quality, and durability matter just as much.',
         'Here at LiferLine Labs, we hand-solder our Forever Cables on professional Japanese cable stock specifically for players who need reliability night after night. Simply put, the most important step is moving away from commodity cables; the jump from a cheap cable to a professional one is audible, and you\'ll feel it in reliability immediately. The differences between professional cables are secondary to that foundational decision.',
       ],
     },
   ],
-    cta: 'Ready to hear your bass the way it is meant to sound? We hand-build Forever Cables bass instrument cables here at LiferLine Labs and back every one with a lifetime guarantee. Choose Canare for lowest capacitance or Mogami for studio standard. Pick your length. Never buy another bass cable again.',
+    cta: 'Ready to hear your bass the way it is meant to sound? We hand-build Forever Cables bass instrument cables here at LiferLine Labs and back every one with a lifetime guarantee. We build every one on Mogami wire for low capacitance and studio-standard performance. Pick your length. Never buy another bass cable again.',
     category: 'Buying Guides',
     tags: [
       'bass guitar',

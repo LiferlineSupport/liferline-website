@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'guitar cable questions',
     'guitar cable lifetime guarantee',
     'mogami cable faq',
-    'canare gs-6 faq',
+    'mogami w2319 faq',
     'guitar cable compatibility',
     'custom guitar cables',
     'guitar cable shipping',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 const faqItems = [
   {
     q: 'What makes Forever Cables different from cables I can buy at a music store?',
-    a: 'The difference is in how they are built. Mass-produced cables are assembled at volume with components selected to hit a price point. Forever Cables are handmade one at a time using professional-grade wire (Canare GS-6 or Mogami W2524), Neutrik connectors, and Cardas silver solder. Each cable is tested and inspected before it ships. And unlike anything you will find at a big box store, every Forever Cable comes with a lifetime guarantee: no time limit, no receipt required.',
+    a: 'The difference is in how they are built. Mass-produced cables are assembled at volume with components selected to hit a price point. Forever Cables are handmade one at a time using professional-grade Mogami wire (W2319 or W2524), Neutrik connectors, and Cardas silver solder. Each cable is tested and inspected before it ships. And unlike anything you will find at a big box store, every Forever Cable comes with a lifetime guarantee: no time limit, no receipt required.',
   },
   {
     q: 'What is the Lifetime Guarantee?',
@@ -43,7 +43,7 @@ const faqItems = [
   },
   {
     q: 'What wire do you use?',
-    a: 'We use two of the most trusted cables in professional audio. Canare GS-6 is a low-capacitance instrument cable wire used by studio engineers and touring musicians around the world; it delivers a clean, quiet signal with excellent shielding. Mogami W2524 is an ultra-flexible, high-shielding wire favored in broadcast and live sound environments. We use Canare GS-6 in our standard patch and instrument cable lengths, and Mogami W2524 in our longer stage cable runs.',
+    a: 'We build exclusively with Mogami wire, two formulations depending on the cable. Mogami W2319 is a low-capacitance instrument cable wire used by studio engineers and touring musicians around the world; it delivers a clean, quiet signal with excellent shielding. Mogami W2524 is an ultra-flexible, high-shielding wire favored in broadcast and live sound environments. We use Mogami W2319 in our standard patch and instrument cable lengths, and Mogami W2524 in our longer stage cable runs.',
   },
   {
     q: 'What connectors do you use?',

@@ -1,5 +1,29 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/blog/mogami-vs-canare-patch-cables',
+        destination: '/blog/mogami-guitar-cables-explained',
+        permanent: true,
+      },
+      {
+        source: '/blog/canare-vs-mogami-guitar-cable',
+        destination: '/blog/mogami-guitar-cables-explained',
+        permanent: true,
+      },
+      {
+        source: '/blog/mogami-vs-canare-guitar-cables',
+        destination: '/blog/mogami-guitar-cables-explained',
+        permanent: true,
+      },
+      {
+        source: '/blog/george-ls-vs-lava-cable',
+        destination: '/blog',
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
     return [
       {

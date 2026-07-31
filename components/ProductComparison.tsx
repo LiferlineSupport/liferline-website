@@ -230,7 +230,7 @@ export default function ProductComparison() {
         </div>
 
         <p className="text-center text-xs text-muted mt-8">
-          All cables include Mogami or Canare wire, Neutrik gold connectors, and the Forever Cables lifetime guarantee.
+          All cables include Mogami wire, Neutrik gold connectors, and the Forever Cables lifetime guarantee.
         </p>
       </div>
     </section>

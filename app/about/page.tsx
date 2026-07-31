@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Our Story',
   description:
-    'How LiferLine started: hand-built boutique guitar cables made in the USA with Canare GS-6, Mogami wire, and Neutrik connectors. Why we guarantee every Forever Cable for life.',
+    'How LiferLine started: hand-built boutique guitar cables made in the USA with Mogami wire and Neutrik connectors. Why we guarantee every Forever Cable for life.',
   keywords: [
     'about forever cables',
     'liferline cable company',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'boutique guitar cables',
     'hand soldered guitar cables',
     'mogami guitar cable',
-    'canare gs-6 guitar cable',
+    'mogami w2319 guitar cable',
     'neutrik guitar cable connector',
   ],
   alternates: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Our Story | Forever Cables',
     description:
-      'We got tired of bad cables. So we started building our own. Hand-soldered in the USA with Canare GS-6, Mogami wire, and Neutrik connectors.',
+      'We got tired of bad cables. So we started building our own. Hand-soldered in the USA with Mogami wire and Neutrik connectors.',
     url: 'https://liferline.com/about',
     type: 'website',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by LiferLine' }],
@@ -138,12 +138,13 @@ export default function About() {
           <div className="bg-card border border-border p-6">
             <h3 className="text-cream font-semibold mb-3">Wire</h3>
             <p className="text-sm">
-              We use <strong className="text-cream">Canare GS-6</strong> and{' '}
+              We use <strong className="text-cream">Mogami W2319</strong> and{' '}
               <strong className="text-cream">Mogami W2524</strong>, two of the
-              most respected wire formulations in professional audio. Canare
-              GS-6 is the go-to for studio engineers and touring guitarists who
-              need low capacitance and zero compromise. Mogami W2524 brings
-              exceptional shielding and signal clarity to longer stage runs.
+              most respected wire formulations in professional audio. Mogami
+              W2319 is the go-to for our patch and pedalboard cables, built for
+              studio engineers and touring guitarists who need low capacitance
+              and zero compromise. Mogami W2524 brings exceptional shielding
+              and signal clarity to longer stage runs.
             </p>
           </div>
           <div className="bg-card border border-border p-6">

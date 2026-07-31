@@ -9,7 +9,7 @@ import Testimonials from '@/components/Testimonials'
 export const metadata: Metadata = {
   title: { absolute: 'Forever Cables | Hand-Built Boutique Guitar Patch Cables | Liferline' },
   description:
-    'Boutique guitar patch cables and instrument cables hand-soldered in the USA with Canare and Mogami wire and Neutrik connectors. Every cable backed by a lifetime guarantee. Buy once, keep forever.',
+    'Boutique guitar patch cables and instrument cables hand-soldered in the USA with Mogami wire and Neutrik connectors. Every cable backed by a lifetime guarantee. Buy once, keep forever.',
   alternates: {
     canonical: 'https://liferline.com',
   },
@@ -22,7 +22,7 @@ function WebSiteJsonLd() {
     name: 'Forever Cables by Liferline',
     url: 'https://liferline.com',
     description:
-      'Boutique guitar patch cables and instrument cables hand-soldered in the USA with Canare and Mogami wire and Neutrik connectors. Guaranteed for life.',
+      'Boutique guitar patch cables and instrument cables hand-soldered in the USA with Mogami wire and Neutrik connectors. Guaranteed for life.',
     publisher: {
       '@type': 'Organization',
       name: 'Liferline',
@@ -172,7 +172,7 @@ export default function Home() {
         <div className="mb-12">
           <h2 className="section-heading">Forever Cables</h2>
           <p className="section-subheading">
-            Premium guitar patch cables and instrument cables built to spec with Canare and Mogami wire
+            Premium guitar patch cables and instrument cables built to spec with Mogami wire
             and Neutrik connectors. Every one guaranteed for life.
           </p>
         </div>
