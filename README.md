@@ -70,6 +70,6 @@ Set these environment variables in Hostinger:
 
 See `DEPLOYMENT.md` for detailed deployment configuration and troubleshooting.
 
-## Lifetime guarantee claims
+## Forever guarantee claims
 
 Email: support@liferline.com

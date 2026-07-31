@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     },
   }),
   description:
-    'Boutique guitar patch cables and instrument cables hand-soldered in the USA with Mogami wire and Neutrik connectors. Every cable backed by a lifetime guarantee. Buy once, keep forever.',
+    'Boutique guitar patch cables and instrument cables hand-soldered in the USA with Mogami wire and Neutrik connectors. Every cable backed by a Forever Guarantee. Buy once, keep forever.',
   keywords: [
     'guitar instrument cable',
     'guitar patch cables',
@@ -43,15 +43,14 @@ export const metadata: Metadata = {
     'handmade guitar cables',
     'custom patch cables',
     'american made guitar cables',
-    'lifetime guarantee guitar cable',
-    'Mogami patch cable',
+    'forever guarantee guitar cable',
     'Mogami patch cable',
     'Neutrik guitar cable',
     'bass guitar instrument cable',
   ],
   openGraph: {
     title: 'Forever Cables by Liferline',
-    description: 'Hand-Built. American-Made. Guaranteed for Life.',
+    description: 'Hand-Built. American-Made. Guaranteed Forever.',
     url: 'https://liferline.com',
     siteName: 'Forever Cables',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Liferline' }],

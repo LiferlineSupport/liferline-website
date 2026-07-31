@@ -5,13 +5,13 @@ import ContactForm from '@/components/ContactForm'
 export const metadata: Metadata = {
   title: 'Support & Contact',
   description:
-    'Get help with your Forever Cables by LiferLine. File a lifetime guarantee claim, ask about custom cables, or just say hello.',
+    'Get help with your Forever Cables by LiferLine. File a Forever Guarantee claim, ask about custom cables, or just say hello.',
   alternates: {
     canonical: 'https://liferline.com/contact',
   },
   openGraph: {
     title: 'Support & Contact | Forever Cables',
-    description: 'File a lifetime guarantee claim, ask about custom cables, or get help with your order. We actually answer emails.',
+    description: 'File a Forever Guarantee claim, ask about custom cables, or get help with your order. We actually answer emails.',
     url: 'https://liferline.com/contact',
     type: 'website',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by LiferLine' }],
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 const faqItems = [
   {
-    q: 'What does the lifetime guarantee actually cover?',
+    q: 'What does the Forever Guarantee actually cover?',
     a: "Everything. If the cable fails for any reason (bad solder joint, broken connector, damaged jacket), we replace it. We don't have a list of exclusions because we don't believe in them.",
   },
   {
@@ -146,7 +146,7 @@ export default function Contact() {
                 warranty claim form
               </Link>
               . You can also look up your covered cables there. Or, select
-              &ldquo;Lifetime guarantee claim&rdquo; as the subject above and include:
+              &ldquo;Forever guarantee claim&rdquo; as the subject above and include:
             </p>
             <ul className="space-y-2 text-sm text-muted">
               <li className="flex gap-2">
@@ -191,7 +191,7 @@ export default function Contact() {
           Returns and Exchanges
         </Link>
         <Link href="/guarantee" className="btn-ghost text-center">
-          Lifetime Guarantee
+          Forever Guarantee
         </Link>
       </div>
     </div>

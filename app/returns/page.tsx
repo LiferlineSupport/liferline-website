@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Returns and Exchanges | Forever Cables',
   description:
-    'Returns and exchanges for Forever Cables guitar patch cables. 30-day return window on unused cables. Free exchanges for wrong-length orders. Defective cables covered by our lifetime guarantee.',
+    'Returns and exchanges for Forever Cables guitar patch cables. 30-day return window on unused cables. Free exchanges for wrong-length orders. Defective cables covered by our Forever Guarantee.',
   keywords: [
     'forever cables returns',
     'guitar cable return policy',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Returns and Exchanges | Forever Cables',
     description:
-      '30-day returns on unused cables. Free exchanges for wrong-length orders. Defective cables covered by our lifetime guarantee.',
+      '30-day returns on unused cables. Free exchanges for wrong-length orders. Defective cables covered by our Forever Guarantee.',
     url: 'https://liferline.com/returns',
     type: 'website',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by LiferLine' }],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 const returnsFaq = [
   {
     q: 'What if my cable is defective?',
-    a: 'Defective cables are covered by our lifetime guarantee, not this return policy. We provide a prepaid return label and ship your replacement once we receive the cable. Visit our guarantee page or email support@liferline.com.',
+    a: 'Defective cables are covered by our Forever Guarantee, not this return policy. We provide a prepaid return label and ship your replacement once we receive the cable. Visit our guarantee page or email support@liferline.com.',
   },
   {
     q: 'Can I exchange for a different length?',
@@ -214,7 +214,7 @@ export default function Returns() {
                 href="/guarantee"
                 className="text-accent hover:underline font-semibold"
               >
-                lifetime guarantee
+                Forever Guarantee
               </Link>
               , which is faster and better for you.
             </p>
@@ -280,7 +280,7 @@ export default function Returns() {
 
       <div className="mt-16 border-t border-border pt-12 flex flex-col sm:flex-row gap-6">
         <Link href="/guarantee" className="btn-primary text-center">
-          Lifetime Guarantee
+          Forever Guarantee
         </Link>
         <Link href="/contact" className="btn-ghost text-center">
           Contact Support

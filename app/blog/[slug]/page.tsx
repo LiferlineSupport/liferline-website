@@ -101,7 +101,7 @@ const PRODUCT_TAG_MAP: Record<string, string[]> = {
   'mogami': ['the-stage-cable'],
   'Mogami': ['the-stage-cable'],
   'mogami w2524': ['the-stage-cable'],
-  'lifetime warranty': ['the-workhorse', 'the-stage-cable'],
+  'forever guarantee': ['the-workhorse', 'the-stage-cable'],
   'guarantee': ['the-workhorse', 'the-stage-cable'],
   'cable specs': ['the-workhorse', 'the-stage-cable'],
   'signal chain': ['the-workhorse', 'the-right-angle', 'the-stage-cable'],
@@ -316,7 +316,7 @@ export default async function BlogPostPage({ params }: Props) {
         <footer className="text-xs text-muted mt-12 pt-8 border-t border-border">
           <p>
             <em>
-              Liferline makes hand-soldered, lifetime-guaranteed patch cables
+              Liferline makes hand-soldered, forever-guaranteed patch cables
               under the Forever Cables product line. Every cable is built to order.
             </em>
           </p>

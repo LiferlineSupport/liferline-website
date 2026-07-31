@@ -95,7 +95,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'Here at LiferLine Labs, we hand-solder every Forever Cables patch cable with Neutrik connectors and back it with a lifetime guarantee. Build your first pedalboard on cables that last.',
+    cta: 'Here at LiferLine Labs, we hand-solder every Forever Cables patch cable with Neutrik connectors and back it with a Forever guarantee. Build your first pedalboard on cables that last.',
     category: 'Guides',
     tags: [
       'pedalboard setup',
@@ -191,14 +191,14 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We hand-build every Forever Cable with Neutrik connectors and back it with a lifetime guarantee. Starting at $22, it\'s the gift that keeps working for the next decade. Give a cable that lasts forever.',
+    cta: 'We hand-build every Forever Cable with Neutrik connectors and back it with a Forever guarantee. Starting at $22, it\'s the gift that keeps working for the next decade. Give a cable that lasts forever.',
     category: 'Gear',
     tags: [
       'gift guide',
       'buying guide',
       'guitar accessories',
       'guitar cable',
-      'lifetime warranty',
+      'forever guarantee',
       'budget gear',
     ],
     byline: 'Written by the LiferLine team with the help of AI research',
@@ -232,7 +232,7 @@ export const blogPosts: BlogPost[] = [
       'cheap vs expensive guitar cable',
       'guitar cable shielding',
       'guitar cable capacitance',
-      'lifetime warranty guitar cable',
+      'forever guarantee guitar cable',
     ],
     publishedAt: '2026-07-28',
     excerpt: 'The guitar cable market spans an enormous price range, from discount patch cables to premium handmade options. Our honest answer is that cable quality does matter, but not in the way audiophile discussions often suggest. Below a certain quality threshold, problems are real and audible. Above it, the benefits shift from tone to durability, reliability, and the confidence that your cable won\'t fail when it matters most.',
@@ -280,14 +280,14 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We build every Forever Cable with Neutrik connectors, dense braided shielding, and a low-capacitance design, and we back it with a lifetime guarantee. Simply put, it\'s the last cable you\'ll ever buy.',
+    cta: 'We build every Forever Cable with Neutrik connectors, dense braided shielding, and a low-capacitance design, and we back it with a Forever guarantee. Simply put, it\'s the last cable you\'ll ever buy.',
     category: 'Gear',
     tags: [
       'guitar cable',
       'guitar cables',
       'cable comparison',
       'buying guide',
-      'lifetime warranty',
+      'forever guarantee',
       'cable specs',
       'guitar tone',
       'tone',
@@ -365,7 +365,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We build Forever Cables in every standard patch cable length, using premium wire and hand-soldered connectors, and we back every one with our lifetime guarantee. Measure your board, pick your lengths, and never worry about cable failure again. Build your perfect pedalboard at liferline.com.',
+    cta: 'We build Forever Cables in every standard patch cable length, using premium wire and hand-soldered connectors, and we back every one with our Forever guarantee. Measure your board, pick your lengths, and never worry about cable failure again. Build your perfect pedalboard at liferline.com.',
     category: 'Gear',
     tags: [
       'pedalboard',
@@ -453,7 +453,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We build Forever Cables to stay organized: the right lengths, quality wire, hand-soldered connectors, and a lifetime guarantee that means you never worry about a cable again. Build your board once, and trust it to stay that way.',
+    cta: 'We build Forever Cables to stay organized: the right lengths, quality wire, hand-soldered connectors, and a Forever guarantee that means you never worry about a cable again. Build your board once, and trust it to stay that way.',
     category: 'Gear',
     tags: [
       'pedalboard organization',
@@ -639,11 +639,11 @@ export const blogPosts: BlogPost[] = [
       heading: 'What to Look For When Buying',
       paragraphs: [
         'When you evaluate a cable for shielding quality, look at the shield type and coverage percentage in the manufacturer\'s specifications. Braided shields with 90 percent or higher optical coverage give you the best noise rejection for general use. Spiral shields work fine for most applications and remain more common because of their flexibility and lower cost.',
-        'Just as important is the quality of the solder termination at each connector. A cable whose shield holds up well along its length but whose connector gets a sloppy solder job still leaves a gap exactly where interference is most likely to get in, at the junction between cable and instrument or amplifier. Fortunately, that is a solvable problem: a cable built with careful, properly executed connections at the plugs performs more consistently over years of use than one assembled under production line conditions where joint quality varies. It\'s a big part of why we solder every connection by hand and back it with a lifetime guarantee.',
+        'Just as important is the quality of the solder termination at each connector. A cable whose shield holds up well along its length but whose connector gets a sloppy solder job still leaves a gap exactly where interference is most likely to get in, at the junction between cable and instrument or amplifier. Fortunately, that is a solvable problem: a cable built with careful, properly executed connections at the plugs performs more consistently over years of use than one assembled under production line conditions where joint quality varies. It\'s a big part of why we solder every connection by hand and back it with a Forever guarantee.',
       ],
     },
   ],
-    cta: 'Here at LiferLine Labs, we build Forever Cables with Mogami wire, a high-density shield, and hand-soldered Neutrik connectors, backed by a lifetime guarantee. Build your signal chain on cables that stay quiet for life.',
+    cta: 'Here at LiferLine Labs, we build Forever Cables with Mogami wire, a high-density shield, and hand-soldered Neutrik connectors, backed by a Forever guarantee. Build your signal chain on cables that stay quiet forever.',
     category: 'Gear',
     tags: [
       'guitar cable',
@@ -735,7 +735,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We build Forever Cables with Mogami wire and Neutrik connectors, hand-soldered and guaranteed for life. Wiring a pedalboard or running from your guitar to your amp, build your signal chain on cables that last.',
+    cta: 'We build Forever Cables with Mogami wire and Neutrik connectors, hand-soldered and guaranteed forever. Wiring a pedalboard or running from your guitar to your amp, build your signal chain on cables that last.',
     category: 'Gear',
     tags: [
       'coiled cable',
@@ -826,7 +826,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We build the Stage Cable for bass: Mogami W2524 wire, Neutrik NP2X connectors, and a lifetime guarantee. If it fails, we replace it. No questions, no expiration.',
+    cta: 'We build the Stage Cable for bass: Mogami W2524 wire, Neutrik NP2X connectors, and a Forever guarantee. If it fails, we replace it. No questions, no expiration.',
     category: 'Gear',
     tags: [
       'bass guitar',
@@ -913,7 +913,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We hand-solder every Forever Cable with Neutrik connectors on Mogami wire, and we back every one with a lifetime guarantee. If a cable ever develops hum, noise, or any other problem, we replace it. No questions, no time limit.',
+    cta: 'We hand-solder every Forever Cable with Neutrik connectors on Mogami wire, and we back every one with a Forever guarantee. If a cable ever develops hum, noise, or any other problem, we replace it. No questions, no time limit.',
     category: 'Gear',
     tags: [
       'guitar cables',
@@ -1014,7 +1014,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We hand-solder Forever Cables with Neutrik connectors and Mogami wire, and we offer both straight and right-angle configurations. We build them to last a lifetime and guarantee them for life. Wire your board with cables that will never let you down.',
+    cta: 'We hand-solder Forever Cables with Neutrik connectors and Mogami wire, and we offer both straight and right-angle configurations. We build them to last forever and guarantee them forever. Wire your board with cables that will never let you down.',
     category: 'Gear',
     tags: [
       'pedalboard',
@@ -1113,7 +1113,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We offer both straight and right-angle Forever Cables patch cables, built with Neutrik connectors and Mogami wire, hand-soldered and guaranteed for life. Choose the connector that fits your board.',
+    cta: 'We offer both straight and right-angle Forever Cables patch cables, built with Neutrik connectors and Mogami wire, hand-soldered and guaranteed forever. Choose the connector that fits your board.',
     category: 'Gear',
     tags: [
       'patch cables',
@@ -1207,7 +1207,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We build the Stage Cable for the road: Mogami W2524 wire, Neutrik NP2X connectors, and a lifetime guarantee. If it fails, we replace it. No receipt, no questions.',
+    cta: 'We build the Stage Cable for the road: Mogami W2524 wire, Neutrik NP2X connectors, and a Forever guarantee. If it fails, we replace it. No receipt, no questions.',
     category: 'Gear',
     tags: [
       'guitar cables',
@@ -1295,7 +1295,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We build Forever Cables with TS connectors and Neutrik gold-plated contacts, hand-soldered on Mogami wire. Every cable carries our lifetime guarantee.',
+    cta: 'We build Forever Cables with TS connectors and Neutrik gold-plated contacts, hand-soldered on Mogami wire. Every cable carries our Forever guarantee.',
     category: 'Gear',
     tags: [
       'guitar cable',
@@ -1388,7 +1388,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We build Forever Cables in multiple lengths to fit your exact pedalboard layout. We hand-solder every one with Mogami wire and Neutrik connectors, and back it with our lifetime guarantee.',
+    cta: 'We build Forever Cables in multiple lengths to fit your exact pedalboard layout. We hand-solder every one with Mogami wire and Neutrik connectors, and back it with our Forever guarantee.',
     category: 'Gear',
     tags: [
       'pedalboard',
@@ -1567,11 +1567,11 @@ export const blogPosts: BlogPost[] = [
       heading: 'What to Do About It',
       paragraphs: [
         'As far as the takeaway goes, we think cables are worth budgeting for, especially if your pedalboard represents a significant investment in pedals and plays a significant role in your live sound. Replacing a board full of cheap patch cables with better-built alternatives, quality factory-made cables, a custom solderless DIY kit, or hand-soldered cables, ranks among the more cost-effective upgrades available in a signal chain.',
-        'Our approach here at LiferLine Labs is to build patch cables for permanence: hand-soldered joints, quality Neutrik connectors, Mogami wire, and a lifetime guarantee behind every one. We believe the right answer to the patch cable question is to answer it once. A cable built correctly and guaranteed for life is a cable you stop thinking about, which is exactly the relationship you want with the components that are supposed to stay invisible in your signal chain.',
+        'Our approach here at LiferLine Labs is to build patch cables for permanence: hand-soldered joints, quality Neutrik connectors, Mogami wire, and a Forever guarantee behind every one. We believe the right answer to the patch cable question is to answer it once. A cable built correctly and guaranteed forever is a cable you stop thinking about, which is exactly the relationship you want with the components that are supposed to stay invisible in your signal chain.',
       ],
     },
   ],
-    cta: 'We handmake every patch cable from Mogami wire, use gold-plated connectors, and back each one with a lifetime guarantee. That\'s how we do it here at LiferLine Labs.',
+    cta: 'We handmake every patch cable from Mogami wire, use gold-plated connectors, and back each one with a Forever guarantee. That\'s how we do it here at LiferLine Labs.',
     category: 'Gear',
     tags: [
       'pedalboard',
@@ -1654,8 +1654,8 @@ export const blogPosts: BlogPost[] = [
     {
       heading: 'Liferline\'s Approach: Build It Once',
       paragraphs: [
-        'We make hand-soldered Forever Cables and back them with a lifetime guarantee. Our approach rests on a simple premise: build a cable once and it lasts indefinitely. That means we commit to the higher up-front investment of skilled hand-soldering in exchange for a connection that never needs retightening, recrimping, or future attention.',
-        'The lifetime guarantee is the natural companion to that construction philosophy. A cable terminated with a properly soldered joint, housed in a quality connector with genuine strain relief, should not fail under normal use. If it does, we replace it. For players who want to stop thinking about their cables entirely, that combination, skilled solder work backed by a permanent warranty, is the practical answer we\'d point them toward.',
+        'We make hand-soldered Forever Cables and back them with a Forever guarantee. Our approach rests on a simple premise: build a cable once and it lasts indefinitely. That means we commit to the higher up-front investment of skilled hand-soldering in exchange for a connection that never needs retightening, recrimping, or future attention.',
+        'The Forever guarantee is the natural companion to that construction philosophy. A cable terminated with a properly soldered joint, housed in a quality connector with genuine strain relief, should not fail under normal use. If it does, we replace it. For players who want to stop thinking about their cables entirely, that combination, skilled solder work backed by a permanent warranty, is the practical answer we\'d point them toward.',
       ],
     },
   ],
@@ -1694,7 +1694,7 @@ export const blogPosts: BlogPost[] = [
       'best guitar cables lifetime guarantee',
     ],
     publishedAt: '2026-07-28',
-    excerpt: 'Here at LiferLine Labs, we back every Forever Cable with a lifetime guarantee, and we think that promise only means something if the cable is built well enough to justify it. In this article we look at what a lifetime warranty actually covers, why cable build quality determines how often that warranty gets invoked, the real cost-per-year math between cheap and premium cables, and what separates a genuine lifetime guarantee from a marketing claim.',
+    excerpt: 'Here at LiferLine Labs, we back every Forever Cable with a Forever guarantee, and we think that promise only means something if the cable is built well enough to justify it. In this article we look at what a lifetime warranty actually covers, why cable build quality determines how often that warranty gets invoked, the real cost-per-year math between cheap and premium cables, and what separates a genuine lifetime guarantee from a marketing claim.',
     sections: [
     {
       heading: 'What a Lifetime Warranty Actually Promises',
@@ -1732,14 +1732,14 @@ export const blogPosts: BlogPost[] = [
       ],
     },
     {
-      heading: 'Liferline\'s Lifetime Guarantee',
+      heading: 'Liferline\'s Forever Guarantee',
       paragraphs: [
-        'We offer a lifetime guarantee on every Forever Cable we make. Our logic is the same as any genuine lifetime warranty: we hand-solder each cable, use quality connectors with proper strain relief, and build them to last indefinitely. If one fails under normal use, we replace it. Here at LiferLine Labs, our position is that a cable is not a consumable; it\'s infrastructure. It should get built once, get installed on your board, and then disappear from your attention.',
-        'For players who have felt the frustration of a patch cable failing mid-gig, or who have replaced the same cheap cable more than once, the appeal of a hand-soldered cable with a genuine lifetime guarantee is straightforward. It gets better and cheaper over time relative to alternatives that keep needing replacement. And the signal it carries stays clean, which is the entire point.',
+        'We offer a Forever guarantee on every Forever Cable we make. Our logic is the same as any genuine lifetime warranty: we hand-solder each cable, use quality connectors with proper strain relief, and build them to last indefinitely. If one fails under normal use, we replace it. Here at LiferLine Labs, our position is that a cable is not a consumable; it\'s infrastructure. It should get built once, get installed on your board, and then disappear from your attention.',
+        'For players who have felt the frustration of a patch cable failing mid-gig, or who have replaced the same cheap cable more than once, the appeal of a hand-soldered cable with a genuine Forever Guarantee is straightforward. It gets better and cheaper over time relative to alternatives that keep needing replacement. And the signal it carries stays clean, which is the entire point.',
       ],
     },
   ],
-    cta: 'We ship every Forever Cable with a true lifetime guarantee. No exclusions, no fine print.',
+    cta: 'We ship every Forever Cable with a true Forever Guarantee. No exclusions, no fine print.',
     category: 'Gear',
     tags: [
       'lifetime warranty',
@@ -1816,7 +1816,7 @@ export const blogPosts: BlogPost[] = [
       heading: 'Ordering Strategy: Exact Lengths vs. Variety Packs',
       paragraphs: [
         'Many players buy variety packs of patch cables, a set containing several each of 6-inch, 12-inch, and 18-inch cables. That approach is convenient for a first board build where pedal positions aren\'t finalized yet, but it almost always leaves you with cables that are too long for most connections and too short for a few. Variety packs optimize for convenience, not for signal quality or a clean-looking board.',
-        'The better approach for an established board, in our opinion, is to measure every connection, build a precise list of the lengths you need, and order that exact combination. You might end up needing five 6-inch cables, two 8-inch cables, and one 12-inch cable: an unusual assortment, but the right one for your board. That\'s the whole reason we hand-solder every cable to order rather than stock a fixed lineup; we can build any length you actually need, and we back every one of them with our lifetime guarantee.',
+        'The better approach for an established board, in our opinion, is to measure every connection, build a precise list of the lengths you need, and order that exact combination. You might end up needing five 6-inch cables, two 8-inch cables, and one 12-inch cable: an unusual assortment, but the right one for your board. That\'s the whole reason we hand-solder every cable to order rather than stock a fixed lineup; we can build any length you actually need, and we back every one of them with our Forever guarantee.',
       ],
     },
   ],
@@ -1890,7 +1890,7 @@ export const blogPosts: BlogPost[] = [
       heading: 'Conductor Quality: OFC vs Standard Copper',
       paragraphs: [
         'As far as conductor material, oxygen-free copper (OFC) is copper refined to remove dissolved oxygen, which results in higher purity. Standard copper conductors carry trace amounts of oxygen, which can contribute to micro-porosity and slightly higher resistivity. For the short cable runs common in guitar use, the difference in conductivity is small, and we\'d be surprised if anyone could hear it under careful blind testing.',
-        'Where OFC makes a more meaningful difference, in our opinion, is in longevity. Oxygen-free copper resists internal corrosion better over years of use, so the conductor\'s electrical properties stay more stable over time. That\'s part of why we build with Mogami W2524, an OFC core; for a cable we\'re backing with a lifetime guarantee, conductor quality is a specification we\'re not willing to cut corners on, even though the day-one tonal difference is modest.',
+        'Where OFC makes a more meaningful difference, in our opinion, is in longevity. Oxygen-free copper resists internal corrosion better over years of use, so the conductor\'s electrical properties stay more stable over time. That\'s part of why we build with Mogami W2524, an OFC core; for a cable we\'re backing with a Forever guarantee, conductor quality is a specification we\'re not willing to cut corners on, even though the day-one tonal difference is modest.',
       ],
     },
     {
@@ -1908,7 +1908,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We build Forever Cables with Mogami wire, OFC conductors, and gold-plated Neutrik connectors. Every one carries a lifetime guarantee.',
+    cta: 'We build Forever Cables with Mogami wire, OFC conductors, and gold-plated Neutrik connectors. Every one carries a Forever guarantee.',
     category: 'Gear',
     tags: [
       'guitar cables',
@@ -1981,11 +1981,11 @@ export const blogPosts: BlogPost[] = [
       heading: 'What to Look for When Buying',
       paragraphs: [
         'For a first-time pedalboard builder, the factors that matter most are connector quality, cable flexibility, and whether you want fixed-length or custom-length cables. Fixed-length cables from established brands are the simplest starting point: they arrive terminated, tested, and ready to use. The tradeoff is that you\'re unlikely to find perfect lengths for every pedal pair, so some cables will carry more slack than you\'d like.',
-        'Custom-length options, either solderless DIY kits or cables made to order, let you specify exact lengths. If you\'re building a permanent, polished board and want cables that run exactly between jacks with no excess, custom lengths are worth the additional effort or cost. We build our Forever Cables by hand, and we back every one with a lifetime guarantee; useful for players who want to set up their board correctly once and never revisit the cable question again. Whatever option you choose, the connectors should feel solid, the cable should stay flexible without feeling flimsy, and the overall construction should look and feel like someone built it with care.',
+        'Custom-length options, either solderless DIY kits or cables made to order, let you specify exact lengths. If you\'re building a permanent, polished board and want cables that run exactly between jacks with no excess, custom lengths are worth the additional effort or cost. We build our Forever Cables by hand, and we back every one with a Forever guarantee; useful for players who want to set up their board correctly once and never revisit the cable question again. Whatever option you choose, the connectors should feel solid, the cable should stay flexible without feeling flimsy, and the overall construction should look and feel like someone built it with care.',
       ],
     },
   ],
-    cta: 'Here at LiferLine Labs, we hand-solder every Forever Cable ourselves. Every one ships with a lifetime guarantee.',
+    cta: 'Here at LiferLine Labs, we hand-solder every Forever Cable ourselves. Every one ships with a Forever guarantee.',
     category: 'Gear',
     tags: [
       'patch cables',
@@ -2067,7 +2067,7 @@ export const blogPosts: BlogPost[] = [
       heading: 'The Three Tiers of the Patch Cable Market',
       paragraphs: [
         'The entry level consists of generic or house-brand patch cables sold at low price points. These cables typically use lower-grade shielding, thinner conductors, and molded plastic connectors that are difficult to repair. They work adequately in quiet environments with short runs, but nobody builds them for durability. The connectors tend to fail first, either at the jack contact or at the strain relief point where the cable exits the connector housing.',
-        'The mid tier is a wide band of factory-made branded cables: established names that publish specifications, use quality connectors, and design for several years of regular use. Most players end up here. The premium tier, hand-soldered cables with verified quality connectors and a lifetime guarantee, costs more up front but removes the replacement cycle entirely. Here at LiferLine Labs, our Forever Cables sit in this tier: we build them by hand, back them with a lifetime guarantee, and intend for you to buy them once.',
+        'The mid tier is a wide band of factory-made branded cables: established names that publish specifications, use quality connectors, and design for several years of regular use. Most players end up here. The premium tier, hand-soldered cables with verified quality connectors and a Forever guarantee, costs more up front but removes the replacement cycle entirely. Here at LiferLine Labs, our Forever Cables sit in this tier: we build them by hand, back them with a Forever guarantee, and intend for you to buy them once.',
       ],
     },
     {
@@ -2078,7 +2078,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We hand-solder every Forever Cables patch cable here at LiferLine Labs. Every one ships with a lifetime guarantee.',
+    cta: 'We hand-solder every Forever Cables patch cable here at LiferLine Labs. Every one ships with a Forever guarantee.',
     category: 'Gear',
     tags: [
       'patch cables',
@@ -2182,7 +2182,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We build the Forever Cables Stage Cable with Mogami W2524 wire, Neutrik connectors, and hand-soldered joints. We offer it in 10, 15, and 20-foot lengths, backed by a lifetime guarantee.',
+    cta: 'We build the Forever Cables Stage Cable with Mogami W2524 wire, Neutrik connectors, and hand-soldered joints. We offer it in 10, 15, and 20-foot lengths, backed by a Forever guarantee.',
     category: 'Gear',
     tags: [
       'instrument cables',
@@ -2281,7 +2281,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We build the Forever Cables Stage Cable with Mogami W2524 wire and Neutrik connectors, hand-soldered and guaranteed for life. If you want a Mogami guitar cable you never have to replace, this is it.',
+    cta: 'We build the Forever Cables Stage Cable with Mogami W2524 wire and Neutrik connectors, hand-soldered and guaranteed forever. If you want a Mogami guitar cable you never have to replace, this is it.',
     category: 'Gear',
     tags: [
       'mogami',
@@ -2464,7 +2464,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We build the Forever Cables Stage Cable as a proper instrument cable: Mogami W2524 wire, Neutrik connectors, and hand-soldered joints. For running from your guitar to your amp or pedalboard, we build it to last a lifetime.',
+    cta: 'We build the Forever Cables Stage Cable as a proper instrument cable: Mogami W2524 wire, Neutrik connectors, and hand-soldered joints. For running from your guitar to your amp or pedalboard, we build it to last forever.',
     category: 'Gear',
     tags: [
       'instrument cable',
@@ -2559,7 +2559,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'We build the Forever Cables Pedalboard Pack with six hand-soldered patch cables (two 6-inch, two 12-inch, and two 18-inch), using Mogami wire and Neutrik connectors, and we back every one with our lifetime guarantee. One pack, every length you need, built to outlast your board.',
+    cta: 'We build the Forever Cables Pedalboard Pack with six hand-soldered patch cables (two 6-inch, two 12-inch, and two 18-inch), using Mogami wire and Neutrik connectors, and we back every one with our Forever guarantee. One pack, every length you need, built to outlast your board.',
     category: 'Gear',
     tags: [
       'pedalboard',
@@ -2832,7 +2832,7 @@ export const blogPosts: BlogPost[] = [
       ],
     },
   ],
-    cta: 'Ready to hear your bass the way it is meant to sound? We hand-build Forever Cables bass instrument cables here at LiferLine Labs and back every one with a lifetime guarantee. We build every one on Mogami wire for low capacitance and studio-standard performance. Pick your length. Never buy another bass cable again.',
+    cta: 'Ready to hear your bass the way it is meant to sound? We hand-build Forever Cables bass instrument cables here at LiferLine Labs and back every one with a Forever guarantee. We build every one on Mogami wire for low capacitance and studio-standard performance. Pick your length. Never buy another bass cable again.',
     category: 'Buying Guides',
     tags: [
       'bass guitar',

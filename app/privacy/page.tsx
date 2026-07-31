@@ -106,7 +106,7 @@ export default function Privacy() {
             {[
               'Process and ship your order',
               'Send order confirmation and shipping updates',
-              'Honor our lifetime guarantee (we may look up your order history to verify a claim, but we honor claims even without a receipt)',
+              'Honor our Forever Guarantee (we may look up your order history to verify a claim, but we honor claims even without a receipt)',
               'Respond to support requests and questions',
               'Improve our products and website',
             ].map((item) => (
@@ -154,7 +154,7 @@ export default function Privacy() {
         <section>
           <h2 className="font-serif text-2xl text-cream mb-4">Data retention</h2>
           <p>
-            We keep order records as long as needed to fulfill our lifetime guarantee and
+            We keep order records as long as needed to fulfill our Forever Guarantee and
             comply with tax and accounting requirements. If you would like us to delete
             your personal information, email us and we will remove everything we can while
             still meeting our legal obligations.

@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Our Story',
   description:
-    'How LiferLine started: hand-built boutique guitar cables made in the USA with Mogami wire and Neutrik connectors. Why we guarantee every Forever Cable for life.',
+    'How LiferLine started: hand-built boutique guitar cables made in the USA with Mogami wire and Neutrik connectors. Why we guarantee every Forever Cable forever.',
   keywords: [
     'about forever cables',
     'liferline cable company',
@@ -104,8 +104,8 @@ export default function About() {
         </p>
 
         <p>
-          Forever Cables are handmade guitar patch cables built to last the
-          lifetime of your rig. Not the lifetime of a budget cable. Yours.
+          Forever Cables are handmade guitar patch cables built to last as
+          long as your rig does. Not as long as a budget cable. Forever.
         </p>
 
         <h2 className="font-serif text-3xl text-cream pt-4">Who We Are</h2>
@@ -205,7 +205,7 @@ export default function About() {
         </p>
 
         <h2 className="font-serif text-3xl text-cream pt-4">
-          The Lifetime Guarantee
+          The Forever Guarantee
         </h2>
 
         <p>
@@ -243,7 +243,7 @@ export default function About() {
 
         <div className="bg-card border border-border p-8 my-8">
           <p className="font-serif text-2xl text-cream mb-4 leading-snug">
-            &quot;Hand-Built. American-Made. Guaranteed for Life.&quot;
+            &quot;Hand-Built. American-Made. Guaranteed Forever.&quot;
           </p>
           <p className="text-sm text-muted">
             That is not a tagline we brainstormed in a meeting. It is literally a

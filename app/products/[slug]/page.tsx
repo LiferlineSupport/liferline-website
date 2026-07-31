@@ -136,7 +136,7 @@ function ProductJsonLd({ product }: { product: NonNullable<ReturnType<typeof get
     merchantReturnDays: 0,
     returnMethod: 'https://schema.org/ReturnByMail',
     returnFees: 'https://schema.org/FreeReturn',
-    description: 'Lifetime guarantee: if your cable ever fails, we replace it free with no return required.',
+    description: 'Forever Guarantee: if your cable ever fails, we replace it free with no return required.',
   }
 
   const offers = hasRange
@@ -177,7 +177,7 @@ function ProductJsonLd({ product }: { product: NonNullable<ReturnType<typeof get
     hasWarranty: {
       '@type': 'WarrantyPromise',
       warrantyScope: 'https://schema.org/FullLifetimeWarranty',
-      description: 'No-questions-asked lifetime guarantee. If it fails, we replace it.',
+      description: 'No-questions-asked Forever Guarantee. If it fails, we replace it.',
     },
     countryOfOrigin: {
       '@type': 'Country',

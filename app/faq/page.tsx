@@ -4,11 +4,11 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'FAQ',
   description:
-    'Frequently asked questions about Forever Cables: lifetime guarantee details, materials, compatibility, shipping, custom orders, and more.',
+    'Frequently asked questions about Forever Cables: Forever Guarantee details, materials, compatibility, shipping, custom orders, and more.',
   keywords: [
     'forever cables faq',
     'guitar cable questions',
-    'guitar cable lifetime guarantee',
+    'guitar cable forever guarantee',
     'mogami cable faq',
     'mogami w2319 faq',
     'guitar cable compatibility',
@@ -31,14 +31,14 @@ export const metadata: Metadata = {
 const faqItems = [
   {
     q: 'What makes Forever Cables different from cables I can buy at a music store?',
-    a: 'The difference is in how they are built. Mass-produced cables are assembled at volume with components selected to hit a price point. Forever Cables are handmade one at a time using professional-grade Mogami wire (W2319 or W2524), Neutrik connectors, and Cardas silver solder. Each cable is tested and inspected before it ships. And unlike anything you will find at a big box store, every Forever Cable comes with a lifetime guarantee: no time limit, no receipt required.',
+    a: 'The difference is in how they are built. Mass-produced cables are assembled at volume with components selected to hit a price point. Forever Cables are handmade one at a time using professional-grade Mogami wire (W2319 or W2524), Neutrik connectors, and Cardas silver solder. Each cable is tested and inspected before it ships. And unlike anything you will find at a big box store, every Forever Cable comes with a Forever Guarantee: no time limit, no receipt required.',
   },
   {
-    q: 'What is the Lifetime Guarantee?',
+    q: 'What is the Forever Guarantee?',
     a: 'If your Forever Cable ever fails for any reason, we will repair or replace it at no cost to you. There is no expiration date on the guarantee, no registration required, and no fine print. If the cable stops working the way it should, contact us and we will make it right.',
   },
   {
-    q: 'How do I claim the Lifetime Guarantee?',
+    q: 'How do I claim the Forever Guarantee?',
     a: 'Just reach out to us by email. Describe what happened, and we will walk you through the process. You do not need a receipt, the original packaging, or proof of purchase date. If it is a Forever Cable, the guarantee applies.',
   },
   {
@@ -87,7 +87,7 @@ const faqItems = [
   },
   {
     q: 'What is your return policy?',
-    a: 'You can return any unused Forever Cable within 30 days of delivery for a full refund. If your cable is defective or was damaged in shipping, it is covered by our lifetime guarantee and we will replace it immediately. See our returns and exchanges page for full details.',
+    a: 'You can return any unused Forever Cable within 30 days of delivery for a full refund. If your cable is defective or was damaged in shipping, it is covered by our Forever Guarantee and we will replace it immediately. See our returns and exchanges page for full details.',
   },
   {
     q: 'Can I get my cable repaired instead of replaced?',

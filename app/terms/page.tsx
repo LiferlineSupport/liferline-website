@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description:
-    'Terms and conditions for purchasing Forever Cables from Liferline. Covers orders, shipping, returns, lifetime guarantee, and site usage.',
+    'Terms and conditions for purchasing Forever Cables from Liferline. Covers orders, shipping, returns, Forever Guarantee, and site usage.',
   alternates: {
     canonical: 'https://liferline.com/terms',
   },
@@ -129,9 +129,9 @@ export default function Terms() {
         </section>
 
         <section>
-          <h2 className="font-serif text-2xl text-cream mb-4">Lifetime guarantee</h2>
+          <h2 className="font-serif text-2xl text-cream mb-4">Forever guarantee</h2>
           <p className="mb-4">
-            Every Forever Cable is backed by our no-questions-asked lifetime guarantee. If
+            Every Forever Cable is backed by our no-questions-asked Forever Guarantee. If
             your cable fails for any reason, at any time, we will replace it free of charge.
             There is no time limit and no list of exclusions.
           </p>
@@ -146,7 +146,7 @@ export default function Terms() {
           <p>
             Full details of the guarantee are available on our{' '}
             <Link href="/guarantee" className="text-accent hover:underline">
-              Lifetime Guarantee
+              Forever Guarantee
             </Link>{' '}
             page.
           </p>
@@ -163,7 +163,7 @@ export default function Terms() {
             to start a return.
           </p>
           <p className="mb-4">
-            After 30 days, the lifetime guarantee still applies. If the cable fails at any
+            After 30 days, the Forever Guarantee still applies. If the cable fails at any
             point, we replace it. If you simply change your mind after 30 days, we are happy
             to work something out on a case-by-case basis.
           </p>

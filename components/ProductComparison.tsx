@@ -63,7 +63,7 @@ export default function ProductComparison() {
             Choose the Right Cable
           </h2>
           <p className="text-muted text-sm max-w-2xl mx-auto">
-            Every Forever Cable is hand-soldered with premium components and backed by a lifetime guarantee. Here's how to choose the right one for your setup.
+            Every Forever Cable is hand-soldered with premium components and backed by a Forever Guarantee. Here's how to choose the right one for your setup.
           </p>
         </div>
 
@@ -230,7 +230,7 @@ export default function ProductComparison() {
         </div>
 
         <p className="text-center text-xs text-muted mt-8">
-          All cables include Mogami wire, Neutrik gold connectors, and the Forever Cables lifetime guarantee.
+          All cables include Mogami wire, Neutrik gold connectors, and the Forever Cables Forever Guarantee.
         </p>
       </div>
     </section>

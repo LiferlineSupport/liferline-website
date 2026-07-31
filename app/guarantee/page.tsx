@@ -2,12 +2,12 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Lifetime Guarantee | Forever Cables',
+  title: 'Forever Guarantee | Forever Cables',
   description:
-    'Every Forever Cable is backed by a no-questions-asked lifetime warranty. If your guitar cable ever fails, for any reason, we replace it free. No receipts. No expiration. Prepaid return label provided.',
+    'Every Forever Cable is backed by a no-questions-asked Forever Guarantee. If your guitar cable ever fails, for any reason, we replace it free. No receipts. No expiration. Prepaid return label provided.',
   keywords: [
-    'lifetime warranty guitar cable',
-    'lifetime guarantee guitar cable',
+    'forever guarantee guitar cable',
+    'guitar cable guaranteed forever',
     'best guitar cable warranty',
     'guitar cable replacement',
     'forever cables guarantee',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     canonical: 'https://liferline.com/guarantee',
   },
   openGraph: {
-    title: 'Lifetime Guarantee | Forever Cables',
+    title: 'Forever Guarantee | Forever Cables',
     description: 'If your cable ever fails, for any reason, we replace it. No receipts. No expiration. Prepaid return label provided. That is the Forever Cables standard.',
     url: 'https://liferline.com/guarantee',
     type: 'website',
@@ -31,7 +31,7 @@ const guaranteeFaq = [
   },
   {
     q: 'Is there a time limit?',
-    a: 'No. Lifetime means lifetime. Whether you bought the cable last month or five years ago, the guarantee applies.',
+    a: 'No. Forever means forever. Whether you bought the cable last month or five years ago, the guarantee applies.',
   },
   {
     q: 'Do I have to send the broken cable back?',
@@ -82,7 +82,7 @@ function BreadcrumbJsonLd() {
       {
         '@type': 'ListItem',
         position: 2,
-        name: 'Lifetime Guarantee',
+        name: 'Forever Guarantee',
         item: 'https://liferline.com/guarantee',
       },
     ],
@@ -107,7 +107,7 @@ export default function Guarantee() {
             <Link href="/" className="hover:text-cream transition-colors">Home</Link>
           </li>
           <li>/</li>
-          <li className="text-cream">Lifetime Guarantee</li>
+          <li className="text-cream">Forever Guarantee</li>
         </ol>
       </nav>
 
@@ -116,11 +116,11 @@ export default function Guarantee() {
           Our Promise
         </p>
         <h1 className="font-serif text-5xl text-cream leading-tight mb-6">
-          The Forever Cables Lifetime Guarantee
+          The Forever Cables Guarantee
         </h1>
         <p className="text-muted text-lg leading-relaxed max-w-2xl">
-          Every cable we sell is guaranteed for life. Not one year. Not five years.
-          The entire life of the cable. If it fails, we replace it. Period.
+          Every cable we sell is guaranteed forever. Not one year. Not five years.
+          The entire time you own it. If it fails, we replace it. Period.
         </p>
       </div>
 
@@ -199,10 +199,10 @@ export default function Guarantee() {
 
         {/* Why we can do this */}
         <section className="border-t border-border pt-16">
-          <h2 className="font-serif text-3xl text-cream mb-6">Why we can guarantee cables for life</h2>
+          <h2 className="font-serif text-3xl text-cream mb-6">Why we can guarantee cables forever</h2>
           <div className="space-y-6 text-muted leading-relaxed">
             <p>
-              Most cable companies cannot offer a real lifetime guarantee because they cannot control
+              Most cable companies cannot offer a real forever guarantee because they cannot control
               their quality. They buy cables from overseas factories, slap a label on them, and hope
               for the best.
             </p>
@@ -220,7 +220,7 @@ export default function Guarantee() {
             </p>
             <p>
               When you control every step of the build process, you know exactly how long a cable will
-              last. Our return rate is under 1%. The lifetime guarantee is not a marketing gimmick.
+              last. Our return rate is under 1%. The Forever Guarantee is not a marketing gimmick.
               It is just math.
             </p>
           </div>

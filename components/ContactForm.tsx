@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 const SUBJECT_OPTIONS = [
   'General question',
-  'Lifetime guarantee claim',
+  'Forever guarantee claim',
   'Custom cable request',
   'Order question',
   'Wholesale inquiry',

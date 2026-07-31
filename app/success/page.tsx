@@ -34,10 +34,10 @@ export default function Success() {
 
       <div className="bg-card border border-border p-6 mb-10 text-left">
         <p className="text-xs tracking-[0.15em] uppercase text-muted mb-3 font-semibold">
-          Your lifetime guarantee
+          Your Forever guarantee
         </p>
         <p className="text-sm text-muted leading-relaxed">
-          Your cable is covered for life. If it ever fails, for any reason, visit{' '}
+          Your cable is covered forever. If it ever fails, for any reason, visit{' '}
           <a href="/warranty" className="text-accent hover:underline">
             our warranty page
           </a>{' '}

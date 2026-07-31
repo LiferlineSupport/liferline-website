@@ -70,7 +70,7 @@ export async function POST(req: NextRequest) {
       },
       custom_text: {
         submit: {
-          message: 'Every Forever Cable is backed by a no-questions-asked lifetime guarantee.',
+          message: 'Every Forever Cable is backed by a no-questions-asked Forever Guarantee.',
         },
       },
     })

@@ -6,7 +6,7 @@ import ProductCard from '@/components/ProductCard'
 export const metadata: Metadata = {
   title: 'Guitar Patch Cables | Forever Cables',
   description:
-    'Browse the complete Forever Cables lineup: boutique guitar patch cables, guitar pedal patch cables, and instrument cables hand-soldered in the USA with Mogami wire and Neutrik connectors. Every cable guaranteed for life.',
+    'Browse the complete Forever Cables lineup: boutique guitar patch cables, guitar pedal patch cables, and instrument cables hand-soldered in the USA with Mogami wire and Neutrik connectors. Every cable guaranteed forever.',
   keywords: [
     'guitar instrument cable',
     'guitar patch cables',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'Mogami patch cables',
     'Mogami patch cables',
     'Neutrik guitar cables',
-    'lifetime guarantee cables',
+    'forever guarantee cables',
     'american made guitar cables',
     'bass guitar instrument cable',
   ],
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'All Cables | Forever Cables',
     description:
-      'Hand-soldered guitar patch cables and instrument cables. Mogami wire, Neutrik connectors, lifetime guarantee.',
+      'Hand-soldered guitar patch cables and instrument cables. Mogami wire, Neutrik connectors, Forever guarantee.',
     url: 'https://liferline.com/products',
     type: 'website',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by Liferline' }],
@@ -183,7 +183,7 @@ export default function ProductsPage() {
             {[
               { icon: '🔨', label: 'Hand-Soldered', sub: 'One at a time, by hand' },
               { icon: '🇺🇸', label: 'American-Made', sub: 'Built in the USA' },
-              { icon: '♾️', label: 'Lifetime Guarantee', sub: 'We stand behind every cable' },
+              { icon: '♾️', label: 'Forever Guarantee', sub: 'We stand behind every cable' },
               { icon: '📦', label: 'Free US Shipping', sub: 'On every order, every time' },
             ].map((item) => (
               <div key={item.label} className="flex flex-col items-center gap-1">

@@ -15,7 +15,7 @@ export default function Footer() {
             </div>
             <p className="text-muted text-sm leading-relaxed max-w-xs">
               Hand-built boutique guitar cables made in the USA. Every cable is backed by
-              our no-questions-asked lifetime guarantee.
+              our no-questions-asked Forever Guarantee.
             </p>
           </div>
 
@@ -78,7 +78,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/guarantee" className="text-sm text-muted hover:text-cream transition-colors">
-                  Lifetime Guarantee
+                  Forever Guarantee
                 </Link>
               </li>
               <li>
@@ -113,7 +113,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Liferline. All rights reserved.
           </p>
           <p className="text-xs text-muted">
-            Hand-Built. American-Made. Guaranteed for Life.™
+            Hand-Built. American-Made. Guaranteed Forever.™
           </p>
         </div>
       </div>

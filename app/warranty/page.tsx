@@ -6,11 +6,11 @@ import ClaimForm from './ClaimForm'
 export const metadata: Metadata = {
   title: 'Warranty Lookup and Claims | Forever Cables',
   description:
-    'Look up your Forever Cables lifetime warranty status or file a warranty claim. Every Forever Cable is guaranteed for life, no questions asked.',
+    'Look up your Forever Cables guarantee status or file a warranty claim. Every Forever Cable is guaranteed forever, no questions asked.',
   keywords: [
     'forever cables warranty',
     'guitar cable warranty claim',
-    'lifetime warranty lookup',
+    'forever guarantee lookup',
     'guitar cable replacement',
   ],
   alternates: {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Warranty Lookup and Claims | Forever Cables',
-    description: 'Look up your warranty status or file a claim. Every Forever Cable is guaranteed for life.',
+    description: 'Look up your warranty status or file a claim. Every Forever Cable is guaranteed forever.',
     url: 'https://liferline.com/warranty',
     type: 'website',
     images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Forever Cables by LiferLine' }],
@@ -69,14 +69,14 @@ export default function WarrantyPage() {
 
       <div className="mb-16">
         <p className="text-xs tracking-[0.3em] uppercase text-accent mb-4 font-semibold">
-          Lifetime Guarantee
+          Forever Guarantee
         </p>
         <h1 className="font-serif text-5xl text-cream leading-tight mb-6">
           Warranty Lookup
         </h1>
         <p className="text-muted text-lg leading-relaxed max-w-2xl">
           Enter the email address you used when you purchased your cable to see your
-          warranty status. Every Forever Cable is covered for life, no receipt required.
+          warranty status. Every Forever Cable is covered forever, no receipt required.
         </p>
       </div>
 
@@ -99,7 +99,7 @@ export default function WarrantyPage() {
 
       <div className="mt-16 border-t border-border pt-12 flex flex-col sm:flex-row gap-6">
         <Link href="/guarantee" className="btn-ghost text-center">
-          Lifetime Guarantee Details
+          Forever Guarantee Details
         </Link>
         <Link href="/contact" className="btn-ghost text-center">
           Contact Support

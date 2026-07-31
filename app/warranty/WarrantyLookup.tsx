@@ -150,7 +150,7 @@ export default function WarrantyLookup() {
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-green-500 rounded-full" />
                   <span className="text-green-400 text-xs font-semibold tracking-wide uppercase">
-                    Lifetime Warranty Active
+                    Forever Guarantee Active
                   </span>
                 </div>
               </div>
