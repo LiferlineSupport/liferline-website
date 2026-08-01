@@ -300,7 +300,7 @@ export default async function ProductPage({ params }: Props) {
                   Save {formatPrice(savings.saved)} vs. buying separately
                 </p>
                 <p className="text-muted text-xs">
-                  Six individual Workhorse cables would run {formatPrice(savings.totalIfSeparate)}.
+                  {savings.cableCount} individual Workhorse cables would run {formatPrice(savings.totalIfSeparate)}.
                   The pack brings each cable to {formatPrice(savings.perUnit)}.
                 </p>
               </div>
