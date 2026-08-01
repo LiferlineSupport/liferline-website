@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
+import Stripe from 'stripe'
 import { getStripe, isStripeConfigured } from '@/lib/stripe'
-import { products, getVariantPriceId } from '@/lib/products'
+import { products, getVariantPriceId, getConfigurablePrice } from '@/lib/products'
 
 export async function POST(req: NextRequest) {
   if (!isStripeConfigured()) {
@@ -11,7 +12,7 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const { productId, variant, quantity: rawQty } = await req.json()
+    const { productId, variant, endA, endB, finish, quantity: rawQty } = await req.json()
 
     const quantity = Math.min(Math.max(Math.floor(Number(rawQty) || 1), 1), 10)
 
@@ -20,27 +21,61 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Product not found.' }, { status: 404 })
     }
 
-    const priceId = getVariantPriceId(product, variant)
-    if (!priceId) {
-      return NextResponse.json(
-        { error: 'This product is not yet available for purchase online. Contact us to order.' },
-        { status: 503 }
-      )
+    const variantLabel = product.variants.find((v) => v.value === variant)?.label
+
+    let lineItem: Stripe.Checkout.SessionCreateParams.LineItem
+    let endALabel: string | undefined
+    let endBLabel: string | undefined
+    let finishLabel: string | undefined
+
+    if (product.plugCostCents) {
+      const endAOpt = product.endOptions?.find((o) => o.value === endA)
+      const endBOpt = product.endOptions?.find((o) => o.value === endB)
+      const finishOpt = product.finishOptions?.find((o) => o.value === finish)
+      if (!endAOpt || !endBOpt || !finishOpt) {
+        return NextResponse.json({ error: 'Invalid connector or finish selection.' }, { status: 400 })
+      }
+      endALabel = endAOpt.label
+      endBLabel = endBOpt.label
+      finishLabel = finishOpt.label
+
+      const unitAmount = getConfigurablePrice(product, variant, endA, endB, finish)
+      if (!unitAmount) {
+        return NextResponse.json(
+          { error: 'This configuration is not available. Contact us to order.' },
+          { status: 503 }
+        )
+      }
+
+      lineItem = {
+        price_data: {
+          currency: product.currency,
+          unit_amount: unitAmount,
+          product_data: {
+            name: [product.name, variantLabel, `${endALabel}/${endBLabel}`, finishLabel]
+              .filter(Boolean)
+              .join(' - '),
+          },
+        },
+        quantity,
+      }
+    } else {
+      const priceId = getVariantPriceId(product, variant)
+      if (!priceId) {
+        return NextResponse.json(
+          { error: 'This product is not yet available for purchase online. Contact us to order.' },
+          { status: 503 }
+        )
+      }
+      lineItem = { price: priceId, quantity }
     }
 
     const stripe = getStripe()
     const origin = req.headers.get('origin') ?? 'https://liferline.com'
 
-    const variantLabel = product.variants.find((v) => v.value === variant)?.label
-
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
-      line_items: [
-        {
-          price: priceId,
-          quantity,
-        },
-      ],
+      line_items: [lineItem],
       shipping_options: [
         {
           shipping_rate_data: {
@@ -59,6 +94,12 @@ export async function POST(req: NextRequest) {
         productName: product.name,
         variant: variant ?? '',
         variantLabel: variantLabel ?? '',
+        endA: endA ?? '',
+        endALabel: endALabel ?? '',
+        endB: endB ?? '',
+        endBLabel: endBLabel ?? '',
+        finish: finish ?? '',
+        finishLabel: finishLabel ?? '',
         quantity: String(quantity),
       },
       allow_promotion_codes: true,
