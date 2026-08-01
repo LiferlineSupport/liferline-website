@@ -366,13 +366,13 @@ export default async function ProductPage({ params }: Props) {
             {otherProducts.map((p) => (
               <Link key={p.id} href={`/products/${p.slug}`} className="block group">
                 <div className="bg-card border border-border group-hover:border-accent/30 transition-colors duration-300">
-                  <div className="aspect-[2/1] overflow-hidden relative border-b border-border">
+                  <div className="aspect-[1408/768] bg-card-hover overflow-hidden relative border-b border-border">
                     <Image
                       src={p.image}
                       alt={p.name}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover"
+                      className="object-contain"
                     />
                   </div>
                   <div className="p-6">
