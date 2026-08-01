@@ -244,13 +244,13 @@ export default async function ProductPage({ params }: Props) {
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           <div>
-            <div className="aspect-square bg-card border border-border overflow-hidden relative">
+            <div className="aspect-[1408/768] bg-card border border-border overflow-hidden relative">
               <Image
                 src={product.image}
                 alt={product.name}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className="object-contain"
                 priority
               />
             </div>
