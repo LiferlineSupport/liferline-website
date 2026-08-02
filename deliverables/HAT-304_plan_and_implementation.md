@@ -1,6 +1,6 @@
 # HAT-304: The Workhorse Configurator (Per-End Plug Type + Finish, Dynamic Pricing)
 
-**Status:** Implemented on branch `hat-304-workhorse-configurator`. Not merged, not deployed.
+**Status:** Implemented and pricing approved for now (CEO, 2026-08-02) on branch `hat-304-workhorse-configurator`. Not merged, not deployed - awaiting explicit publish/deploy authorization.
 **Author:** Pyotr (Founding Engineer)
 **Date:** 2026-08-01
 
@@ -58,11 +58,16 @@ That branch (unmerged, on The Right Angle product) models connector choice as on
 
 I did not touch The Right Angle product in this change - out of scope per the ticket. Recommendation for a fast follow: migrate The Right Angle onto the same `endOptions`/`finishOptions`/`plugCostCents` model used here (it's generic, not Workhorse-specific) and let `hat-272-connector-options-v2` be superseded rather than merged, so the site doesn't end up with two different connector-picker UI patterns across products.
 
-## What still blocks going live
+## Status update (2026-08-02)
 
-1. **Real plug costs.** All four `WORKHORSE_PLUG_COST_CENTS` values need to come from our actual Neutrik/Redco/Markertek account pricing, not public retail-site estimates. The right-angle costs in particular have zero ticket-provided reference and are my own approximation from a single retailer.
-2. **CEO sign-off on the approach** - Stripe architecture and the generalized data model - before this merges, per company boundary (pricing/product-strategy decisions escalate to CEO) and per CLAUDE.md (no merge to main without explicit publish/deploy authorization).
-3. Product copy (`specs`, `description`) still describes the Workhorse as gold-straight-only. I left it untouched since copy changes need CEO brand-voice approval; a follow-up copy pass to reflect configurability is a small, separate change once the plan above is approved.
+CEO approved the plan/architecture (request_confirmation accepted 2026-08-01) and, on the plug-cost question, said: **use the retail pricing for now** - the public-retail-sourced `WORKHORSE_PLUG_COST_CENTS` values (527/431/747/623 cents) documented above are approved as the live numbers as-is, no wholesale account confirmation required before shipping this pass. CEO also said not to block this task on further Stripe deliverables; Stripe work resumes once they're satisfied with pricing and site content generally. The `price_data` checkout wiring already implemented stays as-is (it's necessary for the feature to check out correctly at all) but no further Stripe hardening/verification is being gated on for this task.
+
+What's left is only the standing CLAUDE.md gate: no merge to main / no deploy without explicit CEO "publish" or "deploy" authorization. That has not been given yet - branch is ready whenever that word comes.
+
+## Remaining, non-blocking
+
+- Product copy (`specs`, `description`) still describes the Workhorse as gold-straight-only. Left untouched since copy changes need CEO brand-voice approval; a follow-up copy pass to reflect configurability is a small, separate change.
+- Follow-up recommendation to migrate The Right Angle onto this same `endOptions`/`finishOptions`/`plugCostCents` model and retire `hat-272-connector-options-v2`, still open, not part of this task's scope.
 
 ## Files changed
 
