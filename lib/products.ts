@@ -67,8 +67,9 @@ function plugCostCents(table: PlugCostTable, endValue: string, finishValue: stri
 // Reference plug costs, cents. Sourced from a quick public-retailer check
 // (Markertek, Aug 2026), same as the estimates in HAT-304 - NOT wholesale
 // account pricing. Confirm real cost from our Neutrik/Redco/Markertek
-// accounts before any price computed from this table goes live.
-const WORKHORSE_PLUG_COST_CENTS: PlugCostTable = {
+// accounts before any price computed from this table goes live. Same
+// Neutrik NP2X/NP2R parts on both Workhorse and Roadie, so one shared table.
+const NEUTRIK_PLUG_COST_CENTS: PlugCostTable = {
   straight: { gold: 527, nickel: 431 },
   rightAngle: { gold: 747, nickel: 623 },
 }
@@ -81,6 +82,17 @@ const WORKHORSE_BASE_COGS_CENTS: Record<string, number> = {
   '6in': 979,
   '12in': 1037,
   '18in': 1124,
+}
+
+// Base COGS (cents) per length for The Roadie: Mogami 2524 cable + rPET
+// braided sleeve, excluding the two end plugs. Derived in the HAT-317 plan
+// from the live Stage Cable prices (cable-only cost) plus an estimated
+// $0.50/ft for the rPET sleeve (the one unconfirmed number, flagged for
+// CEO sign-off same as Workhorse's plug costs were).
+const ROADIE_BASE_COGS_CENTS: Record<string, number> = {
+  '10ft': 3429,
+  '15ft': 4696,
+  '20ft': 5963,
 }
 
 export function getConfigurablePrice(
@@ -128,7 +140,7 @@ export const products: Product[] = [
     ],
     // Starting price: cheapest configurable combination (6", straight/straight, nickel).
     price: cogsToRetail(
-      WORKHORSE_BASE_COGS_CENTS['6in'] + WORKHORSE_PLUG_COST_CENTS.straight.nickel * 2
+      WORKHORSE_BASE_COGS_CENTS['6in'] + NEUTRIK_PLUG_COST_CENTS.straight.nickel * 2
     ),
     currency: 'usd',
     stripePriceId: process.env.STRIPE_PRICE_WORKHORSE_6 ?? '',
@@ -145,7 +157,7 @@ export const products: Product[] = [
       { label: 'Neutrik Gold', value: 'gold' },
       { label: 'Neutrik Nickel/Silver', value: 'nickel' },
     ],
-    plugCostCents: WORKHORSE_PLUG_COST_CENTS,
+    plugCostCents: NEUTRIK_PLUG_COST_CENTS,
     image: '/products/the-workhorse-macro.png',
     featured: true,
   },
@@ -260,6 +272,66 @@ export const products: Product[] = [
       { label: '20ft', value: '20ft', price: 20695, stripePriceId: process.env.STRIPE_PRICE_STAGE_20 ?? '' },
     ],
     image: '/products/the-stage-cable.png',
+  },
+  {
+    id: 'roadie-10',
+    slug: 'the-roadie',
+    name: 'The Roadie',
+    tagline: '10ft Straight-to-Straight',
+    description:
+      'A boutique guitar and bass instrument cable, hand-soldered with Mogami 2524 cable and wrapped in a recycled PET braided sleeve for extra protection on the road. Neutrik gold or nickel plugs, straight or right angle, independently on each end. Ferrite-filtered, wax-secured, individually certified. Guaranteed forever.',
+    longDescription:
+      'The Roadie is built for players who want the same dead-quiet, tour-grade cable as The Stage Cable, wrapped in a recycled PET (rPET) braided sleeve for extra abrasion resistance on the road. Mogami 2524 is a heavier-gauge, ultra-low-noise cable trusted by touring professionals. Every Roadie gets a ferrite bead inserted on the hot wire before soldering for EMI rejection, flat-wax aerospace-grade securing at both cable entries, and individual certification testing for continuity, shield integrity, capacitance, and impedance. Choose Neutrik gold or nickel/silver plugs, straight or right angle, independently on each end. Available in 10, 15, and 20-foot lengths. Guaranteed forever.',
+    specs: [
+      'Mogami 2524 instrument cable',
+      'Recycled PET (rPET) braided cable sleeve',
+      'Neutrik gold or nickel/silver plugs, straight or right angle on each end',
+      'Hand-soldered connections',
+      'Flat-wax aerospace-grade cable securing',
+      'Ferrite bead on hot wire (EMI rejection)',
+      'Individually certified: continuity, shield, capacitance, impedance',
+      'Available in 10ft, 15ft, and 20ft',
+      'Forever Guarantee',
+    ],
+    // Starting price: cheapest configurable combination (10ft, straight/straight, nickel).
+    price: cogsToRetail(
+      ROADIE_BASE_COGS_CENTS['10ft'] + NEUTRIK_PLUG_COST_CENTS.straight.nickel * 2
+    ),
+    currency: 'usd',
+    stripePriceId: process.env.STRIPE_PRICE_ROADIE_10 ?? '',
+    variants: [
+      {
+        label: '10ft',
+        value: '10ft',
+        price: cogsToRetail(ROADIE_BASE_COGS_CENTS['10ft'] + NEUTRIK_PLUG_COST_CENTS.straight.gold * 2),
+        stripePriceId: process.env.STRIPE_PRICE_ROADIE_10 ?? '',
+        baseCogsCents: ROADIE_BASE_COGS_CENTS['10ft'],
+      },
+      {
+        label: '15ft',
+        value: '15ft',
+        price: cogsToRetail(ROADIE_BASE_COGS_CENTS['15ft'] + NEUTRIK_PLUG_COST_CENTS.straight.gold * 2),
+        stripePriceId: process.env.STRIPE_PRICE_ROADIE_15 ?? '',
+        baseCogsCents: ROADIE_BASE_COGS_CENTS['15ft'],
+      },
+      {
+        label: '20ft',
+        value: '20ft',
+        price: cogsToRetail(ROADIE_BASE_COGS_CENTS['20ft'] + NEUTRIK_PLUG_COST_CENTS.straight.gold * 2),
+        stripePriceId: process.env.STRIPE_PRICE_ROADIE_20 ?? '',
+        baseCogsCents: ROADIE_BASE_COGS_CENTS['20ft'],
+      },
+    ],
+    endOptions: [
+      { label: 'Straight', value: 'straight' },
+      { label: 'Right Angle', value: 'right-angle' },
+    ],
+    finishOptions: [
+      { label: 'Neutrik Gold', value: 'gold' },
+      { label: 'Neutrik Nickel/Silver', value: 'nickel' },
+    ],
+    plugCostCents: NEUTRIK_PLUG_COST_CENTS,
+    image: '/products/the-roadie-macro.png',
   },
 ]
 

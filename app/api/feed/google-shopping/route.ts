@@ -56,7 +56,7 @@ function buildItems(): FeedItem[] {
           googleCategory: GOOGLE_CATEGORY,
           identifierExists: false,
           shipping: 'US:::0.00 USD',
-          customLabel0: product.slug === 'the-stage-cable' ? 'instrument-cable' : 'patch-cable',
+          customLabel0: product.slug === 'the-stage-cable' || product.slug === 'the-roadie' ? 'instrument-cable' : 'patch-cable',
         })
       }
     } else {
