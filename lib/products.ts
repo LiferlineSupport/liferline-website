@@ -50,7 +50,7 @@ export const products: Product[] = [
       { label: '12"', value: '12in', price: 7195, stripePriceId: process.env.STRIPE_PRICE_WORKHORSE_12 ?? '' },
       { label: '18"', value: '18in', price: 7495, stripePriceId: process.env.STRIPE_PRICE_WORKHORSE_18 ?? '' },
     ],
-    image: '/products/the-workhorse-macro.png',
+    image: '',
     featured: true,
   },
   {

@@ -38,6 +38,8 @@ function buildItems(): FeedItem[] {
   const items: FeedItem[] = []
 
   for (const product of products) {
+    if (!product.image) continue
+
     if (product.variants.length > 0) {
       for (const variant of product.variants) {
         const variantPrice = variant.price ?? product.price

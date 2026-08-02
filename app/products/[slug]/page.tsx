@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'website',
       images: [
         {
-          url: `https://liferline.com${product.image}`,
+          url: `https://liferline.com${product.image || '/opengraph-image'}`,
           width: 1024,
           height: 1024,
           alt: product.name,
@@ -170,7 +170,7 @@ function ProductJsonLd({ product }: { product: NonNullable<ReturnType<typeof get
     '@type': 'Product',
     name: product.name,
     description: product.longDescription,
-    image: `https://liferline.com${product.image}`,
+    image: `https://liferline.com${product.image || '/opengraph-image'}`,
     brand: { '@type': 'Brand', name: 'Forever Cables' },
     manufacturer: { '@type': 'Organization', name: 'Liferline' },
     offers,
@@ -245,16 +245,20 @@ export default async function ProductPage({ params }: Props) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           <div>
             <div className="aspect-[1408/768] bg-card border border-border overflow-hidden relative">
-              <Image
-                src={product.image}
-                alt={product.name}
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-contain"
-                priority
-              />
+              {product.image && (
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-contain"
+                  priority
+                />
+              )}
             </div>
-            <p className="text-xs text-muted mt-2 text-center">Product visualization</p>
+            {product.image && (
+              <p className="text-xs text-muted mt-2 text-center">Product visualization</p>
+            )}
           </div>
 
           {/* Product info */}
@@ -367,13 +371,15 @@ export default async function ProductPage({ params }: Props) {
               <Link key={p.id} href={`/products/${p.slug}`} className="block group">
                 <div className="bg-card border border-border group-hover:border-accent/30 transition-colors duration-300">
                   <div className="aspect-[1408/768] bg-card-hover overflow-hidden relative border-b border-border">
-                    <Image
-                      src={p.image}
-                      alt={p.name}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-contain"
-                    />
+                    {p.image && (
+                      <Image
+                        src={p.image}
+                        alt={p.name}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-contain"
+                      />
+                    )}
                   </div>
                   <div className="p-6">
                     <h3 className="font-serif text-xl text-cream mb-1">{p.name}</h3>

@@ -94,13 +94,15 @@ export default function ProductCard({ product }: Props) {
       )}
 
       <div className="aspect-[1408/768] bg-card-hover border-b border-border overflow-hidden relative">
-        <Image
-          src={product.image}
-          alt={product.name}
-          fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          className="object-contain"
-        />
+        {product.image && (
+          <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            className="object-contain"
+          />
+        )}
       </div>
 
       <div className="p-6 flex flex-col flex-1">

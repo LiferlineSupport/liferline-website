@@ -249,13 +249,15 @@ export default async function BlogPostPage({ params }: Props) {
                 className="bg-card border border-border hover:border-accent/40 transition-colors group flex gap-4 p-4"
               >
                 <div className="w-20 h-20 flex-shrink-0 bg-card-hover relative overflow-hidden">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    sizes="80px"
-                    className="object-cover"
-                  />
+                  {product.image && (
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      sizes="80px"
+                      className="object-cover"
+                    />
+                  )}
                 </div>
                 <div className="flex flex-col justify-center min-w-0">
                   <p className="text-cream font-semibold text-sm group-hover:text-accent transition-colors">
