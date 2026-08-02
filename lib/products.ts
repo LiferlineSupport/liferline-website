@@ -113,17 +113,18 @@ export const products: Product[] = [
     name: 'The Workhorse',
     tagline: '6" Straight-to-Straight',
     description:
-      'Hand-soldered in the USA, with Mogami W2319 cable and Neutrik gold straight plugs. Ferrite-interference filtered core, aerospace inspired strain relief, and individually tested and characterized by LiferLine Labs before it even gets packaged.',
+      'Hand-soldered in the USA, with Mogami W2319 cable and Neutrik plugs in your choice of gold or nickel/silver finish, straight or right-angle on either end. Ferrite-interference filtered core, aerospace inspired strain relief, and individually tested and characterized by LiferLine Labs before it even gets packaged.',
     longDescription:
-      'Hand-soldered in the USA, with Mogami W2319 cable and Neutrik gold straight plugs, ferrite interference filtering core, aerospace inspired strain relief, and individually tested and characterized by LiferLine Labs before it even gets packaged.',
+      'Hand-soldered in the USA, with Mogami W2319 cable and Neutrik plugs configurable in gold or nickel/silver finish, straight or right-angle on either end, ferrite interference filtering core, aerospace inspired strain relief, and individually tested and characterized by LiferLine Labs before it even gets packaged.',
     specs: [
       'Mogami W2319 cable',
-      'Neutrik NP2X-B gold straight plugs',
-      'Hand-soldered connections',
-      'Flat-wax aerospace-grade cable securing',
-      'Ferrite bead on hot wire (EMI rejection)',
-      'Individually certified: continuity, shield, capacitance, impedance',
+      'Neutrik plugs; Gold or Nickel and Silver',
+      'High-quality hand-soldered in the USA',
+      'Aerospace inspired cable flex relief',
+      'Ferrite-beaded hot wire (EMI filtering)',
+      'Each cable is LiferLine Labs tested, serial numbered, certified and characterized; continuity, shielding, EMI filtering, capacitance, impedance',
       'Available in 6", 12", and 18"',
+      'Straight or Right-angle on A or B end',
       'Forever Guarantee',
     ],
     // Starting price: cheapest configurable combination (6", straight/straight, nickel).
