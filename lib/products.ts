@@ -163,7 +163,7 @@ export const products: Product[] = [
       { label: '15ft', value: '15ft', price: 17195, stripePriceId: process.env.STRIPE_PRICE_STAGE_15 ?? '' },
       { label: '20ft', value: '20ft', price: 20695, stripePriceId: process.env.STRIPE_PRICE_STAGE_20 ?? '' },
     ],
-    image: '',
+    image: '/products/the-stage-cable.png',
   },
 ]
 
