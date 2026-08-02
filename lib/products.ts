@@ -3,6 +3,24 @@ export interface ProductVariant {
   value: string
   price?: number
   stripePriceId?: string
+  // COGS in cents for this length, excluding the two end plugs. Only set on
+  // products with per-end/finish configurable pricing (see plugCostCents).
+  baseCogsCents?: number
+}
+
+export interface EndPlugOption {
+  label: string
+  value: string
+}
+
+export interface FinishOption {
+  label: string
+  value: string
+}
+
+export interface PlugCostTable {
+  straight: { gold: number; nickel: number }
+  rightAngle: { gold: number; nickel: number }
 }
 
 export interface Product {
@@ -17,9 +35,75 @@ export interface Product {
   currency: string
   stripePriceId: string
   variants: ProductVariant[]
+  // Per-end connector choice (straight / right angle) and finish (gold /
+  // nickel-silver), each independently priced. When set, BuyButton renders
+  // the two extra selector groups and price is computed via getConfigurablePrice
+  // instead of getVariantPrice.
+  endOptions?: EndPlugOption[]
+  finishOptions?: FinishOption[]
+  plugCostCents?: PlugCostTable
   image: string
   badge?: string
   featured?: boolean
+}
+
+// retail = COGS x 2.15 x 1.6, per company pricing model (HAT-266).
+export const PRICING_MULTIPLIER = 2.15 * 1.6
+
+function roundToNinetyFiveCents(cents: number): number {
+  return Math.round(cents / 100) * 100 - 5
+}
+
+function cogsToRetail(cogsCents: number): number {
+  return roundToNinetyFiveCents(cogsCents * PRICING_MULTIPLIER)
+}
+
+function plugCostCents(table: PlugCostTable, endValue: string, finishValue: string): number {
+  const finishKey = finishValue === 'nickel' ? 'nickel' : 'gold'
+  const endTable = endValue === 'right-angle' ? table.rightAngle : table.straight
+  return endTable[finishKey]
+}
+
+// Reference plug costs, cents. Sourced from a quick public-retailer check
+// (Markertek, Aug 2026), same as the estimates in HAT-304 - NOT wholesale
+// account pricing. Confirm real cost from our Neutrik/Redco/Markertek
+// accounts before any price computed from this table goes live.
+const WORKHORSE_PLUG_COST_CENTS: PlugCostTable = {
+  straight: { gold: 527, nickel: 431 },
+  rightAngle: { gold: 747, nickel: 623 },
+}
+
+// Base COGS (cents) per length, excluding the two end plugs. Back-derived
+// from the live 6/12/18" straight-straight-gold retail prices using the
+// HAT-266 formula, so the configurable pricing reproduces today's prices
+// exactly for that combination.
+const WORKHORSE_BASE_COGS_CENTS: Record<string, number> = {
+  '6in': 979,
+  '12in': 1037,
+  '18in': 1124,
+}
+
+export function getConfigurablePrice(
+  product: Product,
+  variantValue: string | undefined,
+  endA: string | undefined,
+  endB: string | undefined,
+  finish: string | undefined
+): number | undefined {
+  if (!product.plugCostCents) return undefined
+  const variant = product.variants.find((v) => v.value === variantValue) ?? product.variants[0]
+  if (!variant || variant.baseCogsCents == null) return undefined
+
+  const endAValue = endA ?? product.endOptions?.[0]?.value ?? 'straight'
+  const endBValue = endB ?? product.endOptions?.[0]?.value ?? 'straight'
+  const finishValue = finish ?? product.finishOptions?.[0]?.value ?? 'gold'
+
+  const cogs =
+    variant.baseCogsCents +
+    plugCostCents(product.plugCostCents, endAValue, finishValue) +
+    plugCostCents(product.plugCostCents, endBValue, finishValue)
+
+  return cogsToRetail(cogs)
 }
 
 export const products: Product[] = [
@@ -42,14 +126,26 @@ export const products: Product[] = [
       'Available in 6", 12", and 18"',
       'Forever Guarantee',
     ],
-    price: 6995,
+    // Starting price: cheapest configurable combination (6", straight/straight, nickel).
+    price: cogsToRetail(
+      WORKHORSE_BASE_COGS_CENTS['6in'] + WORKHORSE_PLUG_COST_CENTS.straight.nickel * 2
+    ),
     currency: 'usd',
     stripePriceId: process.env.STRIPE_PRICE_WORKHORSE_6 ?? '',
     variants: [
-      { label: '6"', value: '6in', price: 6995, stripePriceId: process.env.STRIPE_PRICE_WORKHORSE_6 ?? '' },
-      { label: '12"', value: '12in', price: 7195, stripePriceId: process.env.STRIPE_PRICE_WORKHORSE_12 ?? '' },
-      { label: '18"', value: '18in', price: 7495, stripePriceId: process.env.STRIPE_PRICE_WORKHORSE_18 ?? '' },
+      { label: '6"', value: '6in', price: 6995, stripePriceId: process.env.STRIPE_PRICE_WORKHORSE_6 ?? '', baseCogsCents: WORKHORSE_BASE_COGS_CENTS['6in'] },
+      { label: '12"', value: '12in', price: 7195, stripePriceId: process.env.STRIPE_PRICE_WORKHORSE_12 ?? '', baseCogsCents: WORKHORSE_BASE_COGS_CENTS['12in'] },
+      { label: '18"', value: '18in', price: 7495, stripePriceId: process.env.STRIPE_PRICE_WORKHORSE_18 ?? '', baseCogsCents: WORKHORSE_BASE_COGS_CENTS['18in'] },
     ],
+    endOptions: [
+      { label: 'Straight', value: 'straight' },
+      { label: 'Right Angle', value: 'right-angle' },
+    ],
+    finishOptions: [
+      { label: 'Neutrik Gold', value: 'gold' },
+      { label: 'Neutrik Nickel/Silver', value: 'nickel' },
+    ],
+    plugCostCents: WORKHORSE_PLUG_COST_CENTS,
     image: '/products/the-workhorse-macro.png',
     featured: true,
   },
