@@ -180,13 +180,13 @@ export const products: Product[] = [
     id: 'custom-pro-pack',
     slug: 'the-custom-pro-pack',
     name: 'The Custom Pro Pack',
-    tagline: '13-Pack, Mixed Lengths',
+    tagline: '14-Pack, Mixed Lengths',
     description:
-      'Thirteen guitar pedal patch cables for serious pedalboard builders. Five 6", four 12", four 18" Workhorses. Every cable ferrite-filtered, wax-secured, and individually certified. All guaranteed forever.',
+      'Fourteen guitar pedal patch cables for serious pedalboard builders. Six 6", four 12", four 18" Workhorses. Every cable ferrite-filtered, wax-secured, and individually certified. All guaranteed forever.',
     longDescription:
-      'The Custom Pro Pack is built for serious pedalboard builders with thirteen Workhorse cables: five 6-inch, four 12-inch, and four 18-inch. Built with Mogami W2319 wire, Neutrik gold connectors, flat-wax aerospace securing, a ferrite bead on the hot wire, and individual certification testing on every cable. Every one carries the Forever Cables Forever Guarantee. You save over $230 compared to buying thirteen cables individually.',
+      'The Custom Pro Pack is built for serious pedalboard builders with fourteen Workhorse cables: six 6-inch, four 12-inch, and four 18-inch. Built with Mogami W2319 wire, Neutrik gold connectors, flat-wax aerospace securing, a ferrite bead on the hot wire, and individual certification testing on every cable. Every one carries the Forever Cables Forever Guarantee. You save over $300 compared to buying fourteen cables individually.',
     specs: [
-      '5x 6" Workhorse cables',
+      '6x 6" Workhorse cables',
       '4x 12" Workhorse cables',
       '4x 18" Workhorse cables',
       'Mogami W2319 cable throughout',
@@ -276,9 +276,9 @@ export function getBundleSavings(product: Product): { perUnit: number; totalIfSe
     totalIfSeparate = p6 * 3 + p12 * 2 + p18 * 2
     cableCount = 7
   } else if (product.slug === 'the-custom-pro-pack') {
-    // 5x 6", 4x 12", 4x 18"
-    totalIfSeparate = p6 * 5 + p12 * 4 + p18 * 4
-    cableCount = 13
+    // 6x 6", 4x 12", 4x 18"
+    totalIfSeparate = p6 * 6 + p12 * 4 + p18 * 4
+    cableCount = 14
   } else {
     return null
   }
