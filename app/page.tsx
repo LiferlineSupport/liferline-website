@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { products } from '@/lib/products'
 import { blogPosts } from '@/lib/blog-posts'
-import ProductCard from '@/components/ProductCard'
+import ProductCarousel from '@/components/ProductCarousel'
 import EmailSignup from '@/components/EmailSignup'
 import Testimonials from '@/components/Testimonials'
 
@@ -133,7 +133,7 @@ export default function Home() {
               No outsourcing. And if it ever fails, for any reason, we replace it. No questions asked.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#products" className="btn-primary text-center">
+              <Link href="/products" className="btn-primary text-center">
                 Shop Cables
               </Link>
               <Link href="/about" className="btn-ghost text-center">
@@ -167,9 +167,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Products */}
-      <section id="products" className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
-        <div className="mb-12">
+      {/* Products carousel */}
+      <section id="products" className="max-w-5xl mx-auto px-4 sm:px-6 py-20">
+        <div className="mb-10 text-center">
           <h2 className="section-heading">Forever Cables</h2>
           <p className="section-subheading">
             Premium guitar patch cables and instrument cables built to spec with Mogami wire
@@ -177,23 +177,18 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.map((product) => (
-            <div key={product.id} className="relative">
-              <Link
-                href={`/products/${product.slug}`}
-                className="absolute top-4 left-4 z-10 text-xs text-muted hover:text-accent tracking-wide transition-colors"
-              >
-                View details
-              </Link>
-              <ProductCard product={product} />
-            </div>
-          ))}
-        </div>
+        <ProductCarousel products={products} />
 
-        <p className="text-center text-xs text-muted mt-10">
-          Need something custom? <Link href="/contact" className="text-accent hover:underline">Contact us</Link>, we build to spec.
-        </p>
+        <div className="text-center mt-10 space-y-3">
+          <div>
+            <Link href="/products" className="btn-primary inline-block">
+              See All Products
+            </Link>
+          </div>
+          <p className="text-xs text-muted">
+            Need something custom? <Link href="/contact" className="text-accent hover:underline">Contact us</Link>, we build to spec.
+          </p>
+        </div>
       </section>
 
       {/* Guarantee section */}
@@ -328,7 +323,7 @@ export default function Home() {
         <p className="text-muted mb-10 max-w-lg mx-auto">
           Stop replacing cheap cables. Buy once, keep forever.
         </p>
-        <Link href="#products" className="btn-primary">
+        <Link href="/products" className="btn-primary">
           Shop All Cables
         </Link>
       </section>
