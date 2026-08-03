@@ -151,35 +151,6 @@ export const products: Product[] = [
     featured: true,
   },
   {
-    id: 'workhorse-ra',
-    slug: 'the-right-angle',
-    name: 'The Right Angle',
-    tagline: 'Straight-to-Right-Angle',
-    description:
-      'The guitar pedal patch cable for tight layouts. One straight, one angled. Ferrite-filtered, wax-secured, and individually certified. Fits flush to any pedal housing.',
-    longDescription:
-      'Same Mogami W2319 cable and Neutrik gold build quality as The Workhorse, with a right-angle connector on one end for flush-mounted pedal jacks and tight pedalboard spacing. Like every Forever Cable, it gets a ferrite bead on the hot wire before soldering, flat-wax aerospace-grade securing at the cable entry, and individual certification testing. The angled plug sits flush against pedal housings and saves precious millimeters on crowded boards.',
-    specs: [
-      'Mogami W2319 cable',
-      'Neutrik NP2RX-B gold right-angle + NP2X-B gold straight plugs',
-      'Hand-soldered connections',
-      'Flat-wax aerospace-grade cable securing',
-      'Ferrite bead on hot wire (EMI rejection)',
-      'Individually certified: continuity, shield, capacitance, impedance',
-      'Available in 6", 12", and 18"',
-      'Forever Guarantee',
-    ],
-    price: 6995,
-    currency: 'usd',
-    stripePriceId: process.env.STRIPE_PRICE_RIGHT_ANGLE ?? '',
-    variants: [
-      { label: '6"', value: '6in', price: 6995, stripePriceId: process.env.STRIPE_PRICE_RIGHT_ANGLE_6 ?? process.env.STRIPE_PRICE_RIGHT_ANGLE ?? '' },
-      { label: '12"', value: '12in', price: 7195, stripePriceId: process.env.STRIPE_PRICE_RIGHT_ANGLE_12 ?? '' },
-      { label: '18"', value: '18in', price: 7495, stripePriceId: process.env.STRIPE_PRICE_RIGHT_ANGLE_18 ?? '' },
-    ],
-    image: '/products/the-right-angle.png',
-  },
-  {
     id: 'custom-pack',
     slug: 'the-custom-pack',
     name: 'The Custom Pack',
