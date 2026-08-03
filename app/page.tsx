@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { products } from '@/lib/products'
 import { blogPosts } from '@/lib/blog-posts'
-import ProductCard from '@/components/ProductCard'
+import ProductCarousel from '@/components/ProductCarousel'
 import EmailSignup from '@/components/EmailSignup'
 import Testimonials from '@/components/Testimonials'
 
@@ -133,7 +133,7 @@ export default function Home() {
               No outsourcing. And if it ever fails, for any reason, we replace it. No questions asked.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="#products" className="btn-primary text-center">
+              <Link href="/products" className="btn-primary text-center">
                 Shop Cables
               </Link>
               <Link href="/about" className="btn-ghost text-center">
@@ -167,7 +167,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Products */}
+      {/* Products carousel */}
       <section id="products" className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
         <div className="mb-12">
           <h2 className="section-heading">Forever Cables</h2>
@@ -177,17 +177,26 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <ProductCarousel />
+
+        {/* Product links */}
+        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {products.map((product) => (
-            <div key={product.id} className="relative">
-              <Link
-                href={`/products/${product.slug}`}
-                className="absolute top-4 left-4 z-10 text-xs text-muted hover:text-accent tracking-wide transition-colors"
-              >
-                View details
-              </Link>
-              <ProductCard product={product} />
-            </div>
+            <Link
+              key={product.id}
+              href={`/products/${product.slug}`}
+              className="flex flex-col gap-1 border border-border hover:border-accent px-5 py-4 transition-colors duration-150 group"
+            >
+              <span className="text-xs tracking-[0.15em] uppercase text-accent font-semibold">
+                {product.tagline}
+              </span>
+              <span className="font-serif text-lg text-cream group-hover:text-accent transition-colors duration-150 leading-snug">
+                {product.name}
+              </span>
+              <span className="text-xs text-muted mt-1">
+                Full specs, options &amp; pricing &rarr;
+              </span>
+            </Link>
           ))}
         </div>
 
@@ -328,7 +337,7 @@ export default function Home() {
         <p className="text-muted mb-10 max-w-lg mx-auto">
           Stop replacing cheap cables. Buy once, keep forever.
         </p>
-        <Link href="#products" className="btn-primary">
+        <Link href="/products" className="btn-primary">
           Shop All Cables
         </Link>
       </section>
