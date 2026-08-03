@@ -33,7 +33,7 @@ export default function ProductCarousel({ products }: Props) {
               src={product.image}
               alt={product.name}
               fill
-              sizes="100vw"
+              sizes="(max-width: 1024px) 100vw, 1024px"
               className="object-contain transition-transform duration-500 group-hover:scale-[1.02]"
               priority={current === 0}
             />

@@ -1,5 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    // Optimized product photos rarely change; default is 60s, which forces
+    // the resize/re-encode to redo on almost every request. Product images
+    // get new filenames when swapped (see HAT-305), so a long TTL is safe.
+    minimumCacheTTL: 2678400, // 31 days
+  },
   async redirects() {
     return [
       {
