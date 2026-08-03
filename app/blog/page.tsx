@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { blogPosts } from '@/lib/blog-posts'
+import { getBlogPostsWithOverrides } from '@/lib/copy-overrides'
 
 export const metadata: Metadata = {
   title: 'Blog | Forever Cables',
@@ -60,7 +60,7 @@ function BlogListJsonLd() {
     name: 'Forever Cables Blog',
     description: 'Guides and expert advice about guitar patch cables, pedalboard setup, and cable quality.',
     url: 'https://liferline.com/blog',
-    hasPart: blogPosts.map((post) => ({
+    hasPart: getBlogPostsWithOverrides().map((post) => ({
       '@type': 'BlogPosting',
       headline: post.title,
       url: `https://liferline.com/blog/${post.slug}`,
@@ -112,7 +112,7 @@ export default function Blog() {
       </div>
 
       <div className="space-y-8">
-        {blogPosts.map((post) => (
+        {getBlogPostsWithOverrides().map((post) => (
           <Link
             key={post.slug}
             href={`/blog/${post.slug}`}

@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { blogPosts, getBlogPost } from '@/lib/blog-posts'
+import { blogPosts, BlogPost } from '@/lib/blog-posts'
+import { getBlogPostWithOverrides, getBlogPostsWithOverrides } from '@/lib/copy-overrides'
 import { products, formatPrice } from '@/lib/products'
 import Image from 'next/image'
 import EmailSignup from '@/components/EmailSignup'
@@ -16,7 +17,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
-  const post = getBlogPost(slug)
+  const post = getBlogPostWithOverrides(slug)
   if (!post) return {}
 
   return {
@@ -45,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-function BlogPostJsonLd({ post }: { post: NonNullable<ReturnType<typeof getBlogPost>> }) {
+function BlogPostJsonLd({ post }: { post: BlogPost }) {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -125,7 +126,7 @@ function getRecommendedProducts(tags: string[]) {
   return products.filter((p) => topSlugs.includes(p.slug))
 }
 
-function BreadcrumbJsonLd({ post }: { post: NonNullable<ReturnType<typeof getBlogPost>> }) {
+function BreadcrumbJsonLd({ post }: { post: BlogPost }) {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -160,14 +161,15 @@ function BreadcrumbJsonLd({ post }: { post: NonNullable<ReturnType<typeof getBlo
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params
-  const post = getBlogPost(slug)
+  const post = getBlogPostWithOverrides(slug)
   if (!post) notFound()
 
-  const currentIndex = blogPosts.findIndex((p) => p.slug === slug)
-  const prevPost = currentIndex > 0 ? blogPosts[currentIndex - 1] : null
-  const nextPost = currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null
+  const allPosts = getBlogPostsWithOverrides()
+  const currentIndex = allPosts.findIndex((p) => p.slug === slug)
+  const prevPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null
+  const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null
 
-  const relatedPosts = blogPosts
+  const relatedPosts = allPosts
     .filter((p) => p.slug !== slug)
     .map((p) => ({
       ...p,
