@@ -1,3 +1,9 @@
+import type { StaticImageData } from 'next/image'
+import theWorkhorseMacro from '@/assets/products/the-workhorse-macro.png'
+import theRightAngle from '@/assets/products/the-right-angle.png'
+import thePedalboardPack from '@/assets/products/the-pedalboard-pack.png'
+import theStageCable from '@/assets/products/the-stage-cable.png'
+
 export interface ProductVariant {
   label: string
   value: string
@@ -42,7 +48,11 @@ export interface Product {
   endOptions?: EndPlugOption[]
   finishOptions?: FinishOption[]
   plugCostCents?: PlugCostTable
-  image: string
+  // StaticImageData from a next/image static import, so Next.js emits a
+  // content-hashed /_next/static/media/ filename that changes automatically
+  // whenever the source file changes (see HAT-305). Do not switch this back
+  // to a plain public/ path string.
+  image: StaticImageData
   badge?: string
   featured?: boolean
 }
@@ -146,7 +156,7 @@ export const products: Product[] = [
       { label: 'Neutrik Nickel/Silver', value: 'nickel' },
     ],
     plugCostCents: WORKHORSE_PLUG_COST_CENTS,
-    image: '/products/the-workhorse-macro.png',
+    image: theWorkhorseMacro,
     featured: true,
   },
   {
@@ -176,7 +186,7 @@ export const products: Product[] = [
       { label: '12"', value: '12in', price: 7195, stripePriceId: process.env.STRIPE_PRICE_RIGHT_ANGLE_12 ?? '' },
       { label: '18"', value: '18in', price: 7495, stripePriceId: process.env.STRIPE_PRICE_RIGHT_ANGLE_18 ?? '' },
     ],
-    image: '/products/the-right-angle.png',
+    image: theRightAngle,
   },
   {
     id: 'custom-pack',
@@ -202,7 +212,7 @@ export const products: Product[] = [
     currency: 'usd',
     stripePriceId: process.env.STRIPE_PRICE_CUSTOM_PACK ?? '',
     variants: [],
-    image: '/products/the-pedalboard-pack.png',
+    image: thePedalboardPack,
     badge: 'Pro Rig',
   },
   {
@@ -229,7 +239,7 @@ export const products: Product[] = [
     currency: 'usd',
     stripePriceId: process.env.STRIPE_PRICE_CUSTOM_PRO_PACK ?? '',
     variants: [],
-    image: '/products/the-pedalboard-pack.png',
+    image: thePedalboardPack,
     badge: 'XL Rig',
   },
   {
@@ -259,7 +269,7 @@ export const products: Product[] = [
       { label: '15ft', value: '15ft', price: 17195, stripePriceId: process.env.STRIPE_PRICE_STAGE_15 ?? '' },
       { label: '20ft', value: '20ft', price: 20695, stripePriceId: process.env.STRIPE_PRICE_STAGE_20 ?? '' },
     ],
-    image: '/products/the-stage-cable.png',
+    image: theStageCable,
   },
 ]
 

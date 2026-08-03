@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'website',
       images: [
         {
-          url: `https://liferline.com${product.image}`,
+          url: `https://liferline.com${product.image.src}`,
           width: 1024,
           height: 1024,
           alt: product.name,
@@ -170,7 +170,7 @@ function ProductJsonLd({ product }: { product: NonNullable<ReturnType<typeof get
     '@type': 'Product',
     name: product.name,
     description: product.longDescription,
-    image: `https://liferline.com${product.image}`,
+    image: `https://liferline.com${product.image.src}`,
     brand: { '@type': 'Brand', name: 'Forever Cables' },
     manufacturer: { '@type': 'Organization', name: 'Liferline' },
     offers,
