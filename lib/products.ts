@@ -200,7 +200,7 @@ export const products: Product[] = [
     currency: 'usd',
     stripePriceId: process.env.STRIPE_PRICE_CUSTOM_PRO_PACK ?? '',
     variants: [],
-    image: '/products/the-pedalboard-pack.png',
+    image: '/products/the-custom-pro-pack.png',
     badge: 'XL Rig',
   },
   {
