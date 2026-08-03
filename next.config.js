@@ -22,6 +22,11 @@ const nextConfig = {
         destination: '/blog',
         permanent: true,
       },
+      {
+        source: '/products/the-right-angle',
+        destination: '/products',
+        permanent: true,
+      },
     ]
   },
   async headers() {

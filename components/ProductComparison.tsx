@@ -26,15 +26,6 @@ const columns: ProductColumn[] = [
     price: '$39.99+',
   },
   {
-    name: 'The Right Angle',
-    slug: 'the-right-angle',
-    connector: 'Straight to Right Angle',
-    lengths: '6", 12"',
-    use: { label: 'Tight Layouts', highlight: true },
-    bestFor: 'Space-saving connections on crowded boards',
-    price: '$39.99+',
-  },
-  {
     name: 'The Stage Cable',
     slug: 'the-stage-cable',
     connector: 'Straight to Straight',
