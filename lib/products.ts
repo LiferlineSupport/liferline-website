@@ -173,7 +173,7 @@ export const products: Product[] = [
     currency: 'usd',
     stripePriceId: process.env.STRIPE_PRICE_CUSTOM_PACK ?? '',
     variants: [],
-    image: '/products/the-pedalboard-pack.png',
+    image: '/products/the-custom-pack.png',
     badge: 'Pro Rig',
   },
   {
