@@ -155,7 +155,7 @@ export const products: Product[] = [
     name: 'The Custom Pack',
     tagline: '7-Pack, Mixed Lengths',
     description:
-      'Seven guitar pedal patch cables for larger pedalboard rigs. Three 6", two 12", two 18" Workhorses. Every cable ferrite-filtered, wax-secured, and individually certified. All guaranteed forever.',
+      'Seven guitar pedal patch cables for larger pedalboard rigs. Three 6", two 12", two 18" Workhorses. Using Neutrik Gold plugs and the Mogami cable chosen by studio, touring, and influential musicians, every cable is hand-soldered in the USA, has our custom ferrite interference filtering on the core, aerospace inspired cable tensioning, and is individually quality control tested and individually characterized by LiferLine Labs. You know what you are getting! It is for these reasons, and more, that LiferLine Forever Cables are guaranteed FOREVER!',
     longDescription:
       'The Custom Pack covers larger rigs with seven Workhorse cables: three 6-inch, two 12-inch, and two 18-inch. Built with Mogami W2319 wire, Neutrik gold connectors, flat-wax aerospace securing, a ferrite bead on the hot wire, and individual certification testing on every cable. Every one carries the Forever Cables Forever Guarantee. You save over $100 compared to buying seven cables individually.',
     specs: [
@@ -182,7 +182,7 @@ export const products: Product[] = [
     name: 'The Custom Pro Pack',
     tagline: '13-Pack, Mixed Lengths',
     description:
-      'Thirteen guitar pedal patch cables for serious pedalboard builders. Five 6", four 12", four 18" Workhorses. Every cable ferrite-filtered, wax-secured, and individually certified. All guaranteed forever.',
+      'Thirteen guitar pedal patch cables for serious pedalboard builders. Five 6", four 12", four 18" Workhorses. Using Neutrik Gold plugs and the Mogami cable chosen by studio, touring, and influential musicians, every cable is hand-soldered in the USA, has our custom ferrite interference filtering on the core, aerospace inspired cable tensioning, and is individually quality control tested and individually characterized by LiferLine Labs. You know what you are getting! It is for these reasons, and more, that LiferLine Forever Cables are guaranteed FOREVER!',
     longDescription:
       'The Custom Pro Pack is built for serious pedalboard builders with thirteen Workhorse cables: five 6-inch, four 12-inch, and four 18-inch. Built with Mogami W2319 wire, Neutrik gold connectors, flat-wax aerospace securing, a ferrite bead on the hot wire, and individual certification testing on every cable. Every one carries the Forever Cables Forever Guarantee. You save over $230 compared to buying thirteen cables individually.',
     specs: [
