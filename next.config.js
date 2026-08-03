@@ -53,7 +53,10 @@ const nextConfig = {
         // Next.js JS chunks use content-hashed filenames (immutable), but HTML pages
         // reference those hashes — if HTML is cached too long, users get stale HTML
         // pointing to non-existent chunk filenames → "We hit a snag" error.
-        source: '/:path*',
+        // Excludes /_next/static so it doesn't override the immutable rule above:
+        // this source previously matched /_next/static/* too, and being the later
+        // rule in this array, its s-maxage=60 was winning over the immutable header.
+        source: '/:path((?!_next/static).*)',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=0, s-maxage=60, must-revalidate' },
         ],
