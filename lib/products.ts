@@ -83,6 +83,21 @@ const WORKHORSE_BASE_COGS_CENTS: Record<string, number> = {
   '18in': 1124,
 }
 
+// Stage Cable uses the same Neutrik TS connectors as the Workhorse.
+// Plug costs identical; kept as a separate constant for clarity.
+const STAGE_CABLE_PLUG_COST_CENTS: PlugCostTable = {
+  straight: { gold: 527, nickel: 431 },
+  rightAngle: { gold: 747, nickel: 623 },
+}
+
+// Back-derived from the live 10/15/20ft straight-straight-gold retail
+// prices using the HAT-266 formula.
+const STAGE_CABLE_BASE_COGS_CENTS: Record<string, number> = {
+  '10ft': 2927,
+  '15ft': 3945,
+  '20ft': 4962,
+}
+
 export function getConfigurablePrice(
   product: Product,
   variantValue: string | undefined,
@@ -210,27 +225,41 @@ export const products: Product[] = [
     name: 'The Stage Cable',
     tagline: '10ft Instrument Cable',
     description:
-      'A premium guitar and bass instrument cable, hand-soldered with Mogami W2524 and Neutrik gold plugs. Ferrite-filtered, wax-secured, individually certified. Dead quiet, tour-grade, guaranteed forever.',
+      'A premium guitar and bass instrument cable, hand-soldered with Mogami W2524 and Neutrik plugs in your choice of gold or nickel/silver finish, straight or right-angle on either end. Recycled PET sleeve, ferrite-filtered, wax-secured, individually certified.',
     longDescription:
-      'The Stage Cable is built for players who are done with instrument cables that crackle, fail, or color their tone. Mogami W2524 is a heavier-gauge, ultra-low-noise cable trusted by touring professionals. Every Stage Cable gets a ferrite bead inserted on the hot wire before soldering for EMI rejection, flat-wax aerospace-grade securing at both cable entries, and individual certification testing for continuity, shield integrity, capacitance, and impedance. Paired with Neutrik NP2X gold plugs and hand-soldered connections. Available in 10, 15, and 20-foot lengths. Guaranteed forever.',
+      'The Stage Cable is built for players who are done with instrument cables that crackle, fail, or color their tone. Mogami W2524 is a heavier-gauge, ultra-low-noise cable trusted by touring professionals. Wrapped in a recycled PET braided sleeve for durability and a premium look. Every Stage Cable gets a ferrite bead inserted on the hot wire before soldering for EMI rejection, flat-wax aerospace-grade securing at both cable entries, and individual certification testing for continuity, shield integrity, capacitance, and impedance. Neutrik plugs configurable in gold or nickel/silver finish, straight or right-angle on either end. Available in 10, 15, and 20-foot lengths. Guaranteed forever.',
     specs: [
       'Mogami W2524 instrument cable',
-      'Neutrik NP2X-B gold straight plugs',
+      'Neutrik plugs; Gold or Nickel and Silver',
+      'Recycled PET braided cable sleeve',
       'Hand-soldered connections',
       'Flat-wax aerospace-grade cable securing',
       'Ferrite bead on hot wire (EMI rejection)',
       'Individually certified: continuity, shield, capacitance, impedance',
       'Available in 10ft, 15ft, and 20ft',
+      'Straight or Right-angle on A or B end',
       'Forever Guarantee',
     ],
-    price: 13695,
+    // Starting price: cheapest configurable combination (10ft, straight/straight, nickel).
+    price: cogsToRetail(
+      STAGE_CABLE_BASE_COGS_CENTS['10ft'] + STAGE_CABLE_PLUG_COST_CENTS.straight.nickel * 2
+    ),
     currency: 'usd',
     stripePriceId: process.env.STRIPE_PRICE_STAGE_10 ?? process.env.STRIPE_PRICE_STAGE ?? '',
     variants: [
-      { label: '10ft', value: '10ft', price: 13695, stripePriceId: process.env.STRIPE_PRICE_STAGE_10 ?? process.env.STRIPE_PRICE_STAGE ?? '' },
-      { label: '15ft', value: '15ft', price: 17195, stripePriceId: process.env.STRIPE_PRICE_STAGE_15 ?? '' },
-      { label: '20ft', value: '20ft', price: 20695, stripePriceId: process.env.STRIPE_PRICE_STAGE_20 ?? '' },
+      { label: '10ft', value: '10ft', price: 13695, stripePriceId: process.env.STRIPE_PRICE_STAGE_10 ?? process.env.STRIPE_PRICE_STAGE ?? '', baseCogsCents: STAGE_CABLE_BASE_COGS_CENTS['10ft'] },
+      { label: '15ft', value: '15ft', price: 17195, stripePriceId: process.env.STRIPE_PRICE_STAGE_15 ?? '', baseCogsCents: STAGE_CABLE_BASE_COGS_CENTS['15ft'] },
+      { label: '20ft', value: '20ft', price: 20695, stripePriceId: process.env.STRIPE_PRICE_STAGE_20 ?? '', baseCogsCents: STAGE_CABLE_BASE_COGS_CENTS['20ft'] },
     ],
+    endOptions: [
+      { label: 'Straight', value: 'straight' },
+      { label: 'Right Angle', value: 'right-angle' },
+    ],
+    finishOptions: [
+      { label: 'Neutrik Gold', value: 'gold' },
+      { label: 'Neutrik Nickel/Silver', value: 'nickel' },
+    ],
+    plugCostCents: STAGE_CABLE_PLUG_COST_CENTS,
     image: '/products/the-stage-cable.png',
   },
 ]
