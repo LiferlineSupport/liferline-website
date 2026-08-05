@@ -297,7 +297,7 @@ export default async function BlogPostPage({ params }: Props) {
               {post.sources.map((source, i) => (
                 <li key={i} className="text-xs text-muted leading-relaxed">
                   <span className="text-cream font-medium">{source.publication}</span>
-                  {' — '}
+                  {': '}
                   {source.url ? (
                     <a
                       href={source.url}
@@ -310,7 +310,7 @@ export default async function BlogPostPage({ params }: Props) {
                   ) : (
                     <span>{source.title}</span>
                   )}
-                  {source.note && <span className="text-muted/70"> — {source.note}</span>}
+                  {source.note && <span className="text-muted/70">, {source.note}</span>}
                 </li>
               ))}
             </ol>
