@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
-import { products, getProductBySlug, formatPrice, getVariantPrice, getBundleSavings } from '@/lib/products'
+import { products, formatPrice, getVariantPrice, getBundleSavings, Product } from '@/lib/products'
 import { blogPosts } from '@/lib/blog-posts'
+import { getProductBySlugWithOverrides, getProductsWithOverrides } from '@/lib/copy-overrides'
 import BuyButton from '@/components/BuyButton'
 
 interface Props {
@@ -16,7 +17,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
-  const product = getProductBySlug(slug)
+  const product = getProductBySlugWithOverrides(slug)
   if (!product) return {}
 
   const isInstrumentCable = product.slug === 'the-stage-cable'
@@ -61,7 +62,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-function BreadcrumbJsonLd({ product }: { product: NonNullable<ReturnType<typeof getProductBySlug>> }) {
+function BreadcrumbJsonLd({ product }: { product: Product }) {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -94,7 +95,7 @@ function BreadcrumbJsonLd({ product }: { product: NonNullable<ReturnType<typeof 
   )
 }
 
-function ProductJsonLd({ product }: { product: NonNullable<ReturnType<typeof getProductBySlug>> }) {
+function ProductJsonLd({ product }: { product: Product }) {
   const variantPrices = product.variants
     .map((v) => v.price)
     .filter((p): p is number => p != null)
@@ -212,10 +213,10 @@ function getRelatedBlogPosts(productSlug: string) {
 
 export default async function ProductPage({ params }: Props) {
   const { slug } = await params
-  const product = getProductBySlug(slug)
+  const product = getProductBySlugWithOverrides(slug)
   if (!product) notFound()
 
-  const otherProducts = products.filter((p) => p.id !== product.id).slice(0, 3)
+  const otherProducts = getProductsWithOverrides().filter((p) => p.id !== product.id).slice(0, 3)
   const savings = getBundleSavings(product)
   const relatedGuides = getRelatedBlogPosts(slug)
 

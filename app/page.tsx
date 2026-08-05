@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { products } from '@/lib/products'
-import { blogPosts } from '@/lib/blog-posts'
+import { getProductsWithOverrides, getBlogPostsWithOverrides } from '@/lib/copy-overrides'
 import ProductCarousel from '@/components/ProductCarousel'
 import EmailSignup from '@/components/EmailSignup'
 import Testimonials from '@/components/Testimonials'
@@ -52,7 +51,7 @@ function WebSiteJsonLd() {
 }
 
 function ProductListJsonLd() {
-  const items = products.map((p, i) => {
+  const items = getProductsWithOverrides().map((p, i) => {
     const variantPrices = p.variants
       .map((v) => v.price)
       .filter((pr): pr is number => pr != null)
@@ -99,7 +98,7 @@ function ProductListJsonLd() {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: 'Forever Cables',
-    numberOfItems: products.length,
+    numberOfItems: getProductsWithOverrides().length,
     itemListElement: items,
   }
   return (
@@ -177,7 +176,7 @@ export default function Home() {
           </p>
         </div>
 
-        <ProductCarousel products={products} />
+        <ProductCarousel products={getProductsWithOverrides()} />
 
         <div className="text-center mt-10 space-y-3">
           <div>
@@ -273,7 +272,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {blogPosts.slice(0, 3).map((post) => (
+            {getBlogPostsWithOverrides().slice(0, 3).map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}

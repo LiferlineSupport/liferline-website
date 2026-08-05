@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { products, formatPrice } from '@/lib/products'
+import { formatPrice } from '@/lib/products'
+import { getProductsWithOverrides } from '@/lib/copy-overrides'
 import ProductCard from '@/components/ProductCard'
 
 export const metadata: Metadata = {
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
 }
 
 function ProductListJsonLd() {
-  const items = products.map((p, i) => {
+  const items = getProductsWithOverrides().map((p, i) => {
     const variantPrices = p.variants
       .map((v) => v.price)
       .filter((pr): pr is number => pr != null)
@@ -87,7 +88,7 @@ function ProductListJsonLd() {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: 'Forever Cables',
-    numberOfItems: products.length,
+    numberOfItems: getProductsWithOverrides().length,
     itemListElement: items,
   }
   return (
@@ -162,7 +163,7 @@ export default function ProductsPage() {
       {/* Product grid */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.map((product) => (
+          {getProductsWithOverrides().map((product) => (
             <div key={product.id} className="relative">
               <Link
                 href={`/products/${product.slug}`}
