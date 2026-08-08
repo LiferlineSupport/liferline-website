@@ -1,6 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+<<<<<<< HEAD
 import { getProductsWithOverrides, getBlogPostsWithOverrides } from '@/lib/copy-overrides'
+=======
+import { products } from '@/lib/products'
+import { blogPosts } from '@/lib/blog-posts'
+>>>>>>> origin/hat-339-homepage-carousel
 import ProductCarousel from '@/components/ProductCarousel'
 import EmailSignup from '@/components/EmailSignup'
 import Testimonials from '@/components/Testimonials'
@@ -167,8 +172,13 @@ export default function Home() {
       </section>
 
       {/* Products carousel */}
+<<<<<<< HEAD
       <section id="products" className="max-w-5xl mx-auto px-4 sm:px-6 py-20">
         <div className="mb-10 text-center">
+=======
+      <section id="products" className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
+        <div className="mb-12">
+>>>>>>> origin/hat-339-homepage-carousel
           <h2 className="section-heading">Forever Cables</h2>
           <p className="section-subheading">
             Premium guitar patch cables and instrument cables built to spec with Mogami wire
@@ -176,7 +186,32 @@ export default function Home() {
           </p>
         </div>
 
+<<<<<<< HEAD
         <ProductCarousel products={getProductsWithOverrides()} />
+=======
+        <ProductCarousel />
+
+        {/* Product links */}
+        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {products.map((product) => (
+            <Link
+              key={product.id}
+              href={`/products/${product.slug}`}
+              className="flex flex-col gap-1 border border-border hover:border-accent px-5 py-4 transition-colors duration-150 group"
+            >
+              <span className="text-xs tracking-[0.15em] uppercase text-accent font-semibold">
+                {product.tagline}
+              </span>
+              <span className="font-serif text-lg text-cream group-hover:text-accent transition-colors duration-150 leading-snug">
+                {product.name}
+              </span>
+              <span className="text-xs text-muted mt-1">
+                Full specs, options &amp; pricing &rarr;
+              </span>
+            </Link>
+          ))}
+        </div>
+>>>>>>> origin/hat-339-homepage-carousel
 
         <div className="text-center mt-10 space-y-3">
           <div>
